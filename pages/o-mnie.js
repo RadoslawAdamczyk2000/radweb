@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+// import { NextPage } from "next";
 import Layout from "../schemas/Layout";
 import { about } from "../content/pages/about";
 import full from '../assets/images/full.webp';
@@ -10,7 +10,7 @@ import Content from "../components/atoms/AboutPage/Content";
 import Poster from "../components/atoms/AboutPage/Poster";
 import pizza from '../assets/images/pizza.webp';
 import snow from '../assets/images/snow.webp';
-const Page:NextPage = () => {
+const Page = () => {
   const {hero,seo,story,hobbies} = about.pl;
   const {education,born,skills,passions} = story;
   return(

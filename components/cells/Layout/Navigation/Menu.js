@@ -2,13 +2,13 @@ import { navigation } from "../../../../data/navigation";
 import MenuItem from "../../../atoms/Layout/Navigation/MenuItem";
 import Submenu from "../../../bacterias/Layout/Navigation/Submenu";
 import { MenuWrapper } from "./styles/MenuWrapper";
-interface i {
-    blogValue : boolean,
-    blogAction : any,
-    offerValue : boolean,
-    offerAction : any
-}
-const Menu = ({blogValue,blogAction,offerValue,offerAction}:i) => {
+// interface i {
+//     blogValue : boolean,
+//     blogAction : any,
+//     offerValue : boolean,
+//     offerAction : any
+// }
+const Menu = ({blogValue,blogAction,offerValue,offerAction}) => {
     const {menu,blog,offers} = navigation.pl;
     return(
         <MenuWrapper>
@@ -64,13 +64,16 @@ const Menu = ({blogValue,blogAction,offerValue,offerAction}:i) => {
                 title={menu[4].title}
             >
                 <>
-                {offers.map(({path,title}) => <MenuItem 
+                {offers.map(({path,title}) => 
+                    <MenuItem 
                         isExpand={false} 
                         isMain={false} 
-                        isSubmenu={true} 
+                        isSubmenu={true}
+                        key={title} 
                         path={path}
                         title={title}
-                    />)}
+                    />
+                )}
                 </>
             </Submenu>
             <MenuItem 
