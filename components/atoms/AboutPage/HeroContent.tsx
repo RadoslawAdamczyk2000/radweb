@@ -2,7 +2,7 @@ import Button from "../AllPages/Button"
 import { HeroContentWrapper } from "./styles/HeroContentWrapper";
 interface i {
     content : string,
-    links : Array<string>,
+    links : Array<string> | any,
     title : string
 }
 const HeroContent = ({content,links,title}:i) => {
