@@ -4,11 +4,11 @@ import {VscClose} from 'react-icons/vsc'
 import { faq } from '../../../content/pages/faq';
 import { FormWrapper } from './styles/FormWrapper';
 import { useState } from 'react';
-interface i {
-    closeForm : any,
-    openForm : any
-}
-const validate = (form:any) => {
+// interface i {
+//     closeForm : any,
+//     openForm : any
+// }
+const validate = form => {
     if(!form.email){
         return "Uzupełnij e-mail";
     }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(form.email)){
@@ -28,7 +28,7 @@ const validate = (form:any) => {
     }
     return null;
 }
-const Form = ({closeForm,openForm}:i) => {
+const Form = ({closeForm,openForm}) => {
     const {button,email,firstName,message} = faq.pl.form;
     const [error,setError] = useState(null);
     const [form,setForm] = useState({
@@ -36,13 +36,13 @@ const Form = ({closeForm,openForm}:i) => {
         email:'',
         message:''
     })
-    const updateField  = (e:any) => {
+    const updateField  = e => {
         setForm({
             ...form,
             [e.target.name]:e.target.value
         })
     }
-    const handleSubmit = async (e:any) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         closeForm();
         const err = validate(form);
