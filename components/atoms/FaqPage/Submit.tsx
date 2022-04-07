@@ -1,10 +1,11 @@
 import { SubmitWrapper } from "./styles/SubmitWrapper";
 interface i {
+    handle : any,
     title : string
 }
-const Submit = ({title}:i) => {
+const Submit = ({handle,title}:i) => {
     return(
-        <SubmitWrapper>
+        <SubmitWrapper onClick={handle} onKeyPress={handle}>
             {title}
         </SubmitWrapper>
     )
