@@ -38,7 +38,7 @@ export const HeroContentWrapper = styled.div`
         flex-direction:row;
         flex-wrap:wrap;
         gap:2rem;
-        justify-content:flex-start
+        justify-content:flex-start;
         padding:2rem 4rem;
         width:100%;
         @media only screen and (max-width:1200px){
@@ -48,4 +48,5 @@ export const HeroContentWrapper = styled.div`
     @media only screen and (max-width:1200px){
         align-items:center;
     }
+
 `
