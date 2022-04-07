@@ -4,14 +4,14 @@ import Search from "../../atoms/AllPages/Search";
 import Title from "../../atoms/AllPages/Title";
 import { motion } from 'framer-motion';
 import { HeroWrapper } from "./styles/HeroWrapper";
-// interface i {
-//     altImage : string,
-//     content : string,
-//     image : string,
-//     isPage ?: boolean,
-//     title : string,
-// }
-const Hero = ({altImage,content,image,isPage=false,title}) => {
+interface i {
+    altImage : string,
+    content : string,
+    image : string,
+    isPage ?: boolean,
+    title : string,
+}
+const Hero = ({altImage,content,image,isPage=false,title}:i) => {
     return(
         <>
             {

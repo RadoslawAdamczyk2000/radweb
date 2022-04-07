@@ -2,13 +2,13 @@ import { navigation } from "../../../../data/navigation";
 import MenuItem from "../../../atoms/Layout/Navigation/MenuItem";
 import Submenu from "../../../bacterias/Layout/Navigation/Submenu";
 import { MenuWrapper } from "./styles/MenuWrapper";
-// interface i {
-//     blogValue : boolean,
-//     blogAction : any,
-//     offerValue : boolean,
-//     offerAction : any
-// }
-const Menu = ({blogValue,blogAction,offerValue,offerAction}) => {
+interface i {
+    blogValue : boolean,
+    blogAction : any,
+    offerValue : boolean,
+    offerAction : any
+}
+const Menu = ({blogValue,blogAction,offerValue,offerAction}:i) => {
     const {menu,blog,offers} = navigation.pl;
     return(
         <MenuWrapper>

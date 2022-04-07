@@ -4,10 +4,10 @@ import {VscClose} from 'react-icons/vsc'
 import { faq } from '../../../content/pages/faq';
 import { FormWrapper } from './styles/FormWrapper';
 import { useState } from 'react';
-// interface i {
-//     closeForm : any,
-//     openForm : any
-// }
+interface i {
+    closeForm : any,
+    openForm : any
+}
 const validate = form => {
     if(!form.email){
         return "Uzupełnij e-mail";
@@ -28,7 +28,7 @@ const validate = form => {
     }
     return null;
 }
-const Form = ({closeForm,openForm}) => {
+const Form = ({closeForm,openForm}:i) => {
     const {button,email,firstName,message} = faq.pl.form;
     const [error,setError] = useState(null);
     const [form,setForm] = useState({

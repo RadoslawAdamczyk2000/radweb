@@ -3,14 +3,14 @@ import { ReactElement } from "react";
 import Button from "../../AllPages/Button";
 import { ProjectCardWrapper } from "./styles/ProjectCardWrapper";
 import {VscClose} from 'react-icons/vsc'
-// interface i {
-//     closeModal : any,
-//     content : string,
-//     image : string,
-//     tech : Array<ReactElement>,
-//     title : string
-// }
-const ProjectCard = ({closeModal,content,image,tech,title}) => {
+interface i {
+    closeModal : any,
+    content : string,
+    image : string,
+    tech : Array<ReactElement>,
+    title : string
+}
+const ProjectCard = ({closeModal,content,image,tech,title}:i) => {
     return(
         <ProjectCardWrapper onClick={closeModal}>
             <div className="card">

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { PosterWrapper } from "./styles/PosterWrapper";
-// interface i{
-//     altImage : string,
-//     image : string,
-//     isHero ?: boolean,
-// }
-const Poster = ({altImage,image,isHero=false}) => {
+interface i{
+    altImage : string,
+    image : string,
+    isHero ?: boolean,
+}
+const Poster = ({altImage,image,isHero=false}:i) => {
     return(
         <>
             {

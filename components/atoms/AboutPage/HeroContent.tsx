@@ -1,11 +1,11 @@
 import Button from "../AllPages/Button"
 import { HeroContentWrapper } from "./styles/HeroContentWrapper";
-// interface i {
-//     content : string,
-//     links : Array<string> | any,
-//     title : string
-// }
-const HeroContent = ({content,links,title}) => {
+interface i {
+    content : string,
+    links : Array<string> | any,
+    title : string
+}
+const HeroContent = ({content,links,title}:i) => {
     return(
         <HeroContentWrapper>
             <section className="content">

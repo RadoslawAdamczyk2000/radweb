@@ -3,10 +3,10 @@ import Menu from "../../../cells/Layout/Navigation/Menu";
 import Options from "../../../bacterias/Layout/Navigation/Options";
 import { NavigationWrapper } from "./styles/NavigationWrapper";
 import { useEffect, useState } from "react";
-// interface i {
-//     changeTheme : any
-// }
-const Navigation = ({changeTheme}) => {
+interface i {
+    changeTheme : any
+}
+const Navigation = ({changeTheme}:i) => {
     const [isBlog,setBlog] = useState(false);
     const [isOffer,setOffer] = useState(false);
     const [openMenu,setOpenMenu] = useState(false);

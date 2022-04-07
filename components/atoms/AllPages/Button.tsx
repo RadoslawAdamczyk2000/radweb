@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { ButtonWrapper } from "./styles/ButtonWrapper";
 import {VscArrowRight} from  'react-icons/vsc';
-// interface i {
-//     isPage : boolean,
-//     isSecondary : boolean,
-//     isSection : boolean,
-//     path : string | any,
-//     title : string
-// }
-const Button = ({isPage,isSecondary,isSection,path,title}) => {
+interface i {
+    isPage : boolean,
+    isSecondary : boolean,
+    isSection : boolean,
+    path : string | any,
+    title : string
+}
+const Button = ({isPage,isSecondary,isSection,path,title}:i) => {
     return(
         <>
             {

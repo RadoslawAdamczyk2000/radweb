@@ -2,15 +2,15 @@ import Link from "next/link"
 import { useEffect, useState } from "react";
 import {RiArrowDownSLine} from 'react-icons/ri';
 import { MenuItemWrapper } from "./styles/MenuItemWrapper";
-// interface i {
-//     submenuAction ?: any,
-//     isExpand : boolean,
-//     isMain : boolean,
-//     isSubmenu : boolean,
-//     path : string,
-//     title : string
-// }
-const MenuItem = ({submenuAction,isExpand,isMain,isSubmenu,path,title}) => {
+interface i {
+    submenuAction ?: any,
+    isExpand : boolean,
+    isMain : boolean,
+    isSubmenu : boolean,
+    path : string,
+    title : string
+}
+const MenuItem = ({submenuAction,isExpand,isMain,isSubmenu,path,title}:i) => {
     const [isScroll,setScroll] = useState(false);
     const currentPosY = () => {
         window?.addEventListener('scroll', () => {
