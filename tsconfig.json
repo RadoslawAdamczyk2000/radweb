@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/atoms/AboutPage/HeroContent.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/atoms/AboutPage/HeroContent.js", "components/atoms/ProjectsPage/Projects/ProjectCard.js", "components/atoms/ProjectsPage/Projects/Project.js", "components/atoms/Layout/Navigation/MenuItem.js", "components/atoms/Layout/Navigation/MenuButton.js", "components/atoms/HomePage/Hero/Buttons.js", "components/atoms/FaqPage/Search.js", "components/atoms/FaqPage/Input.js", "components/atoms/AllPages/Title.js", "components/atoms/AllPages/Search.js", "components/atoms/AllPages/Poster.js", "components/atoms/AllPages/Input.js", "components/atoms/AllPages/Content.js", "components/atoms/AllPages/Button.js"],
   "exclude": ["node_modules"]
 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { MenuButtonWrapper } from "./styles/MenuButtonWrapper";
-interface i {
-    handleMenu : any
-}
+// interface i {
+//     handleMenu : any
+// }
 const MenuButton = ({handleMenu}) => {
     const [isOpen, setOpen] = useState(false)
     const handleClick = () => {

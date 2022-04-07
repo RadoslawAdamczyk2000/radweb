@@ -11,6 +11,7 @@ const Buttons = () => {
                         isPage={true}
                         isSecondary={false}
                         isSection={false}
+                        key={path}
                         path={path}
                         title={title}
                     />  
