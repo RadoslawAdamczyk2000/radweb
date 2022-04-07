@@ -5,7 +5,7 @@ interface i {
     isPage : boolean,
     isSecondary : boolean,
     isSection : boolean,
-    path : string,
+    path : string | any,
     title : string
 }
 const Button = ({isPage,isSecondary,isSection,path,title}:i) => {
