@@ -1,19 +1,19 @@
 import { InputWrapper } from "./styles/InputWrapper";
 
-interface i {
-    handle : any,
-    inputId ?: string,
-    inputName ?: string,
-    inputType ?: string,
-    isInput ?: boolean,
-    isSubmit ?: boolean,
-    isText ?: boolean,
-    place ?: string,
-    refVal : any,
-    title : string,
-    val : any
-}
-const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit=false,isText=false,place,refVal,title,val}:i) => {
+// interface i {
+//     handle : any,
+//     inputId ?: string,
+//     inputName ?: string,
+//     inputType ?: string,
+//     isInput ?: boolean,
+//     isSubmit ?: boolean,
+//     isText ?: boolean,
+//     place ?: string,
+//     refVal : any,
+//     title : string,
+//     val : any
+// }
+const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit=false,isText=false,place,refVal,title,val}) => {
     return(
         <>
             {

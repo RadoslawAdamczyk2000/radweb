@@ -1,10 +1,10 @@
 import { ContentWrapper } from "./styles/ContentWrapper";
 
-interface i {
-    content : string,
-    isHero ?: boolean,
-}
-const Content = ({content,isHero}:i) => {
+// interface i {
+//     content : string,
+//     isHero ?: boolean,
+// }
+const Content = ({content,isHero}) => {
     return(
         <>
             {
