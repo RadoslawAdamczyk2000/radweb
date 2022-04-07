@@ -9,7 +9,7 @@ const Content = () => {
     const {offer} = home.pl;
     const {cards} = offer;
     const wrapper = useRef(null);
-    const box:null|any = wrapper.current;
+    const box = wrapper.current;
     useEffect(() => {
         gsap.from(box,{duration:.2,opacity:0,scale:0,visibility:'hidden'});
         gsap.to(box,{duration:.5,opacity:1,scale:1,visibility:'visible'});

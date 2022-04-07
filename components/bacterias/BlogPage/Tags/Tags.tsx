@@ -9,31 +9,6 @@ const Tags = () => {
             <Tag title="administracja"/>
             <Tag title="podróże"/>
             <Tag title="recenzje"/>
-            {/*  */}
-            <Tag title="programowanie"/>
-            <Tag title="seo"/>
-            <Tag title="historia"/>
-            <Tag title="administracja"/>
-            <Tag title="podróże"/>
-            <Tag title="recenzje"/>
-            <Tag title="programowanie"/>
-            <Tag title="seo"/>
-            <Tag title="historia"/>
-            <Tag title="administracja"/>
-            <Tag title="podróże"/>
-            <Tag title="recenzje"/>
-            <Tag title="programowanie"/>
-            <Tag title="seo"/>
-            <Tag title="historia"/>
-            <Tag title="administracja"/>
-            <Tag title="podróże"/>
-            <Tag title="recenzje"/>
-            <Tag title="programowanie"/>
-            <Tag title="seo"/>
-            <Tag title="historia"/>
-            <Tag title="administracja"/>
-            <Tag title="podróże"/>
-            <Tag title="recenzje"/>
         </TagsWrapper>
     )
 }

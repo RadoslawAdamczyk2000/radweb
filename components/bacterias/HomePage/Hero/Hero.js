@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import Buttons from "../../../atoms/HomePage/Hero/Buttons"
 import Content from "../../../atoms/HomePage/Hero/Content"
 import Poster from "../../../atoms/HomePage/Hero/Poster"
