@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components";
-export const ButtonWrapper = styled.a`
+interface j {
+    page ?: boolean,
+    section ?: boolean,
+} 
+export const ButtonWrapper = styled.a<j>`
     cursor:pointer;
     user-select:none;
     ${({page}) => page && css`

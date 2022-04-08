@@ -1,4 +1,26 @@
-export const darkTheme = {
+interface i {
+    colors:{
+        background : string,
+        color : string,
+        primary : string,
+        secondary : string,
+        tertiary : string
+    },
+    fonts:{
+        family:{
+            primary : string
+        }
+    },
+    shadows:{
+        button : string,
+        navigation : string
+    },
+    filter: {
+        search : string
+    }
+}
+
+export const darkTheme:i = {
     colors:{
         background:'#1f2028',
         color:'#ffffff',
@@ -9,9 +31,7 @@ export const darkTheme = {
     fonts:{
         family:{
             primary:"'Montserrat', sans-serif"
-        },
-        size:{},
-        weight:{}
+        }
     },
     shadows:{
         button:'0 0 2rem hsla(0,100%,100%,.35)',
@@ -21,7 +41,7 @@ export const darkTheme = {
         search:'brightness(125%)'
     }
 }
-export const lightTheme = {
+export const lightTheme:i = {
     colors:{
         background:'#fff',
         color:'#000',
@@ -33,8 +53,6 @@ export const lightTheme = {
         family:{
             primary:"'Fira Sans', sans-serif"
         },
-        size:{},
-        weight:{}
     },
     shadows:{
         button:'0 0 2rem hsla(0,100%,0%,.35)',
