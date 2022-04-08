@@ -8,11 +8,9 @@ interface i {
     isSubmit ?: boolean,
     isText ?: boolean,
     place ?: string,
-    refVal : any,
     title : string,
-    val : any
 }
-const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit=false,isText=false,place,refVal,title,val}:i) => {
+const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit=false,isText=false,place,title}:i) => {
     return(
         <>
             {
@@ -24,10 +22,8 @@ const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit
                             id={inputId} 
                             name={inputName} 
                             placeholder={place}
-                            onInput={(e) => handle(e.target.value)}
-                            ref={refVal}
+                            onInput={handle}
                             type={inputType}
-                            value={val}
                         />
                         <span/>
                     </div>
@@ -41,10 +37,8 @@ const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit
                         <textarea 
                             id={inputId} 
                             name={inputName} 
-                            onInput={(e) => handle(e.target.value)}
+                            onInput={handle}
                             placeholder={place}
-                            ref={refVal}
-                            value={val}
                         />
                     </div>
                 </InputWrapper>

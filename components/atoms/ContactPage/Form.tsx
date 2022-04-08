@@ -1,103 +1,71 @@
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import { contact } from "../../../content/pages/contact";
 import Input from "../AllPages/Input";
 import { FormWrapper } from "./styles/FormWrapper";
 const Form = () => {
-
-
-    const [fullName,setFullName] = useState('');
-    let correctFullName = '';
-    const fullNameRef = useRef(null);
-    
-    const [phone,setPhone] = useState('');
-    let correctPhone = '';
-
-    const [email,setEmail] = useState('');
-    let correctMail = '';
-
-
-    const [message,setMessage] = useState('');
-    let correctMessage = '';
-
-    const {register,handleSubmit} = useForm();
-    const handleOnSubmit = data => console.log(data);
-    const checkValues = () => {
-        if(fullName){
-            if(fullName.length > 2 && fullName.length < 35){
-                if(fullName.includes(" ",0)){
-                    correctFullName = fullName;
-                }
-            }
-        }
-        if(phone){
-            if(phone.length > 8 && phone.length < 16){
-                correctPhone = phone;
-                console.log(phone);
-            }
-        }
-        if(email){
-            if(email.length > 2){
-                if((email.includes("@",0) && email.includes(".",0)) && (email.includes(".com",0) || email.includes(".pl",0))){
-                    correctMail = email;
-                }
-            }
-        }
-
-        if(message && message.length > 9){
-            correctMessage = message;
-        }
+    const formRef = useRef(null);
+    const {email,fullname,phone} = contact.pl.form;
+    const [form,setForm] = useState({
+        fullname:'',
+        phone:'',
+        email:'',
+        message:''
+    })
+    const updateFields = (e:any) => {
+        setForm({
+            ...form,
+            [e.target.name]:e.target.value
+        });
+        console.log(form.fullname);
+        console.log(form.phone);
+        console.log(form.email);
+        console.log(form.message);
     }
+
+    const handleSubmit = async (e:any) => {
+        e.preventDefault();
+    }
+    
     useEffect(() => {
-        // console.log(correctMail);
-        // console.log(correctMessage);
-        // console.log(correctPhone);
-        // console.log(correctFullName);
-        // console.log(`firstname : ${firstName}`);
-        // console.log(`phone : ${phone}`);
-        // console.log(`email : ${email}`);
-        // console.log(fullNameRef.current)
     });
 
     return(
         <FormWrapper>
-            <form action="" onSubmit={handleSubmit(checkValues)} method='post'>
+            <form action="" onSubmit={handleSubmit} method='post' ref={formRef}>
                 <Input
-                    handle={setFullName}
-                    inputId="fullname"
-                    inputName="fullname"
+                    handle={updateFields}
+                    inputId={fullname.inputId}
+                    inputName={fullname.inputName}
                     isInput
-                    place="Imię i nazwisko"
-                    title="Imię i nazwisko"
-                    val={fullName}
+                    place={fullname.place}
+                    title={fullname.title}
                 />
                 <Input
-                    handle={setPhone}
-                    inputId="phone"
+                    handle={updateFields}
+                    inputId={phone.inputId}
                     isInput
-                    inputName="phone"
-                    place="Telefon"
-                    title="Numer telefonu"
+                    inputName={phone.inputName}
+                    place={phone.place}
+                    title={phone.title}
                     inputType="tel"
-                    val={phone}
                 />
                 <Input
-                    handle={setEmail}
-                    inputId="email"
-                    inputName="email"
-                    place="E-mail"
-                    title="Adres e-mail"
+                    handle={updateFields}
+                    inputId={email.inputId}
+                    inputName={email.inputName}
+                    place={email.place}
+                    title={email.title}
                     inputType="email"
                     isInput
-                    val={email}
                 />
                 <Input
-                    handle={setMessage}
+                    handle={updateFields}
                     inputId="message"
                     inputName="message"
                     place="Wiadomość"
                     title="Wiadomość"
                     isText
-                    val={message}
                 />
                 <Input
                     title="Wyślij"
