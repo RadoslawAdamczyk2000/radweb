@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import {RiSearchLine} from 'react-icons/ri';
 import { SearchWrapper } from './styles/SearchWrapper';
-const Search = () => {
+interface i {
+    handle ?: any,
+}
+const Search = ({handle}:i) => {
     const [isActive,setActive] = useState(false);
     return(
         <SearchWrapper active={isActive} onMouseLeave={() => setActive(false)} onHover={() => setActive(true)} onMouseOver={() => setActive(true)}>
@@ -11,6 +14,7 @@ const Search = () => {
                 id="" 
                 placeholder='Szukaj'  
                 onFocus={() => setActive(true)}
+                onInput={handle}
                 onHover={() => setActive(true)}
             />
             <button><RiSearchLine/></button>

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { contact } from "../../../content/pages/contact";
 import Input from "../AllPages/Input";
 import { FormWrapper } from "./styles/FormWrapper";
+import emailjs from '@emailjs/browser';
 const Form = () => {
     const formRef = useRef(null);
     const {email,fullname,phone} = contact.pl.form;
@@ -17,14 +18,11 @@ const Form = () => {
             ...form,
             [e.target.name]:e.target.value
         });
-        console.log(form.fullname);
-        console.log(form.phone);
-        console.log(form.email);
-        console.log(form.message);
     }
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
+        emailjs.sendForm('contact','contact',formRef.current,'jiBzcCuVYQCjwhBEu')
     }
     
     useEffect(() => {

@@ -4,11 +4,12 @@ import Tags from "../../bacterias/FaqPage/Tags";
 import { HeroWrapper } from "./styles/HeroWrapper";
 interface i {
     content : string,
+    handle : any,
     place : string,
     tags : Array<any>,
     title : string
 }
-const Hero = ({content,place,tags,title}:i) => {
+const Hero = ({content,handle,place,tags,title}:i) => {
     return(
         <HeroWrapper
             initial={{opacity:0,visibility:'hidden'}}
@@ -23,7 +24,7 @@ const Hero = ({content,place,tags,title}:i) => {
                     <Tags tags={tags}/>
                 </div>
                 <div>
-                    <Search/>
+                    <Search handle={handle}/>
                 </div>
             </div>
         </HeroWrapper>
