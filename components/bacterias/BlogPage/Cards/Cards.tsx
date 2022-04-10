@@ -6,7 +6,7 @@ const Cards = () => {
             <Card
                 date="Sun Apr 10 2022 23:21:16 GMT+0200 (czas środkowoeuropejski letni)"
                 image="http://placeimg.com/640/480"
-                path="#"
+                path="/blog/narzedzia-dla-developera"
                 time={34}
                 title="Dynamic Infrastructure Liaison"
             />

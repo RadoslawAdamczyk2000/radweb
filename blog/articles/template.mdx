@@ -1,0 +1,42 @@
+---
+seoTitle:''
+seoDesc:''
+seoImg:''
+layout:''
+title:''
+time:'' # czas obecny z konsoli new Date().now()
+---
+import Layout from '../../schemas/Layout.tsx';
+import Hero from '../../components/atoms/AllPages/Hero.tsx';
+import PostContent from '../../components/atoms/AllPages/PostContent.tsx';
+export const meta = {
+    seoTitle:'',
+    seoDesc:'',
+    seoImg:'',
+    layout:'',
+    title:'',
+    time:''
+}
+<Layout
+    title={meta.seoTitle}
+    desc={meta.seoDesc}
+>
+    <Hero
+        alt=''
+        image={meta.seoImg}
+        stack={[]}
+        tags={[]}
+        title={meta.title}
+        time={meta.time}
+    >
+    
+    </Hero>
+    <PostContent
+        heading={}
+        isH2={}
+        title=''
+    >
+
+    </PostContent>
+
+</Layout>
