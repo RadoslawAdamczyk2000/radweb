@@ -147,3 +147,56 @@ export const tech = [
         value:'seo'
     }
 ]
+
+export const techObj = {
+    html:{
+        icon:<SiHtml5/>,
+        title:'HTML',
+        value:'html'
+    },
+    css:{
+        icon:<SiCss3/>,
+        title:'CSS',
+        value:'css'
+    },
+    bootstrap:{
+        icon:<SiBootstrap/>,
+        title:'Bootstrap',
+        value:'bootstrap'
+    },
+    sass:{
+        icon:<SiSass/>,
+        title:'Sass',
+        value:'sass'
+    },
+    javascript:{
+        icon:<SiJavascript/>,
+        title:'JavaScript',
+        value:'javascript'
+    },
+    typescript:{
+        icon:<SiTypescript/>,
+        title:'TypeScript',
+        value:'typescript'
+    },
+    react:{
+        icon:<SiReact/>,
+        title:'React',
+        value:'react'
+    },
+    gatsby:{
+        icon:<RiGatsbyLine/>,
+        title:'GatsbyJS',
+        value:'gatsby'
+    },
+    next:{
+        icon:<SiNextdotjs/>,
+        title:'NextJS',
+        value:'next'
+    },
+    seo:{
+        icon:<RiGoogleLine/>,
+        title:'SEO',
+        value:'seo'
+    }
+}
