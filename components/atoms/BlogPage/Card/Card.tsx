@@ -3,7 +3,6 @@ import Link from "next/link"
 import {RiTimeLine} from 'react-icons/ri';
 import { CardWrapper } from "./styles/CardWrapper";
 interface i {
-    date : string,
     image : string,
     path : string,
     readTime : number | string,
