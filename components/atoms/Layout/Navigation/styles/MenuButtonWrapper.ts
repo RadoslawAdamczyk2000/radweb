@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
-export const MenuButtonWrapper = styled.button`
+interface i {
+    open : boolean
+}
+export const MenuButtonWrapper = styled.button<i>`
     @media only screen and (max-width:980px){
         align-items:center;
         display:flex;

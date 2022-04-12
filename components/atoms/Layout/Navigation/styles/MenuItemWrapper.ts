@@ -1,5 +1,11 @@
 import styled, { css } from "styled-components";
-export const MenuItemWrapper = styled.li`
+interface i {
+    scrolled ?: boolean,
+    expand ?: boolean,
+    main ?: boolean,
+    submenu ?: boolean
+}
+export const MenuItemWrapper = styled.li<i>`
     a{
         color:${({theme}) => theme.colors.primary};
         font-size:${({scrolled}) => scrolled ? '1.85rem' : '2.1rem'};
