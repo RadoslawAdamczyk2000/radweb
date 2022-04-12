@@ -1,42 +1,41 @@
----
-seoTitle:''
-seoDesc:''
-seoImg:''
-layout:''
-title:''
-time:'' # czas obecny z konsoli new Date().now()
----
-import Layout from '../../schemas/Layout.tsx';
-import Hero from '../../components/atoms/AllPages/Hero.tsx';
-import PostContent from '../../components/atoms/AllPages/PostContent.tsx';
+import Date from '../../components/atoms/PostPage/Date';
+import Img from '../../components/atoms/PostPage/Img';
+import Hero from '../../components/atoms/AllPages/Hero';
+import Layout from '../../schemas/Layout';
+import {Title,H3,H2,Content,Excerpt} from '../../components/atoms/PostPage/Post.ts';
+import {tagsObj} from '../../data/tags.ts';
+import {techObj,tech} from '../../data/tech.tsx';
+import Tags from '../../components/atoms/PostPage/Tags.tsx';
+import Stack from '../../components/atoms/PostPage/Stack.tsx';
 export const meta = {
-    seoTitle:'',
-    seoDesc:'',
-    seoImg:'',
-    layout:'',
     title:'',
-    time:''
+    description:'',
 }
-<Layout
-    title={meta.seoTitle}
-    desc={meta.seoDesc}
->
-    <Hero
-        alt=''
-        image={meta.seoImg}
-        stack={[]}
-        tags={[]}
-        title={meta.title}
-        time={meta.time}
-    >
-    
-    </Hero>
-    <PostContent
-        heading={}
-        isH2={}
-        title=''
-    >
 
-    </PostContent>
+<Title></Title>
+<Date></Date>
+<Tags tags={[
+    tagsObj.seo.name,
+    tagsObj.historia.name,
+    tagsObj.html.name
+]}></Tags>
+<Excerpt>
 
-</Layout>
+</Excerpt>
+<Img 
+isMain={true} 
+path='' 
+title=''
+/>
+<H2> </H2>
+<Content>
+
+</Content>
+
+<H2></H2>
+
+<Content>
+
+</Content>
+
+export default ({children}) => <Layout title={meta.title} desc={meta.description}>{children}</Layout>

@@ -7,11 +7,12 @@ import { HeroWrapper } from "./styles/HeroWrapper";
 interface i {
     altImage : string,
     content : string,
+    handle ?: any,
     image : string,
     isPage ?: boolean,
     title : string,
 }
-const Hero = ({altImage,content,image,isPage=false,title}:i) => {
+const Hero = ({altImage,content,handle,image,isPage=false,title}:i) => {
     return(
         <>
             {
@@ -33,7 +34,7 @@ const Hero = ({altImage,content,image,isPage=false,title}:i) => {
                             />
                         </div>
                         <div>
-                            <Search/>
+                            <Search handle={handle} />
                         </div>
                     </motion.div>
                     <motion.div 

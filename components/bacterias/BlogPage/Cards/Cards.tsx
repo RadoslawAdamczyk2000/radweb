@@ -1,11 +1,14 @@
 import { posts } from "../../../../data/posts";
 import Card from "../../../atoms/BlogPage/Card/Card";
 import { CardsWrapper } from "./styles/CardsWrapper";
-const Cards = () => {
+interface i {
+    search : string
+}
+const Cards = ({search}:i) => {
     const {articles} = posts;
     return(
         <CardsWrapper>
-            {articles.map(({poster,path,time,title,readTime}) => 
+            {articles.filter(i => i.title.toLowerCase().includes(search.toLowerCase())).map(({poster,path,time,title,readTime}) => 
                 <Card
                     key={title}
                     image={poster}

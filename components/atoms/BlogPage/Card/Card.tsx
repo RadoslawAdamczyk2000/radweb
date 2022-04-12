@@ -6,7 +6,7 @@ interface i {
     date : string,
     image : string,
     path : string,
-    readTime : number,
+    readTime : number | string,
     time : string,
     title : string
 }
