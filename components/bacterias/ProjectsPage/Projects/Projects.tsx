@@ -5,7 +5,10 @@ import { posts } from "../../../../data/posts";
 import Project from "../../../atoms/ProjectsPage/Projects/Project";
 import ProjectCard from "../../../atoms/ProjectsPage/Projects/ProjectCard";
 import {ProjectsWrapper} from './styles/ProjectsWrapper';
-const Projects = () => {
+interface i {
+    search : string
+}
+const Projects = ({search}:i) => {
     const [xyz,setXyz] = useState(false);
     const {projects} = posts;
     const [currentProject,setCurrentPage] = useState({
@@ -16,15 +19,19 @@ const Projects = () => {
         path:'',
     });
     const {title,image,stack,excerpt,path} = currentProject;
-    useEffect(() => {
-        console.log(currentProject);
-    });
+    const searchFnc = (data:any) => {
+        return data.filter(
+            (i:any) =>
+            i.excerpt.toLowerCase().includes(search.toLowerCase()) ||
+            i.title.toLowerCase().includes(search.toLowerCase()) 
+        )
+    }
     return(
         <>
             <ProjectsWrapper>
                 <ul>
                     {
-                        projects.map(({title,image,stack,excerpt,path},key) => 
+                        searchFnc(projects).map(({title,image,stack,excerpt,path},key) => 
                             <Project
                                 image={image}
                                 openModal={() => setXyz(true)}

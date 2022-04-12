@@ -8,9 +8,6 @@ import {useEffect, useState} from 'react';
 const Page:NextPage = () => {
   const {seo,head} = blog.pl;
   const [search,setSearch] = useState('');
-  useEffect(() => {
-    console.log(search);
-  })
   return(
     <Layout 
       title={seo.title}
