@@ -12,13 +12,7 @@ const Input = ({handle,inputId,inputName,isMail=false,isText=false,title}:i) => 
     return(
         <>
             {
-                isText ?
-                <InputWrapper isText>
-                    <label htmlFor={inputName} >{title}</label>
-                    <div>
-                        <textarea name={inputName} id={inputId}/>
-                    </div>
-                </InputWrapper> :
+                isText ??
                 <InputWrapper isInput>
                     <label htmlFor={inputName} >{title}</label>
                     <div>

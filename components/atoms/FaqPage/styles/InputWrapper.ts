@@ -1,5 +1,8 @@
 import styled,{ css } from 'styled-components';
-export const InputWrapper = styled.div`
+interface i {
+    isInput : boolean
+}
+export const InputWrapper = styled.div<i>`
     align-items:start;
     display:flex;
     flex-direction:row;
