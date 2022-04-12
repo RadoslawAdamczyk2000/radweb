@@ -1,6 +1,6 @@
 import { InputWrapper } from "./styles/InputWrapper";
 interface i {
-    handle : any,
+    handle ?: any,
     inputId ?: string,
     inputName ?: string,
     inputType ?: string,
