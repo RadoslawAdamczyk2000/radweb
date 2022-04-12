@@ -16,9 +16,10 @@ const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit
             {
                 isInput &&
                 <InputWrapper isInput>
-                    <label htmlFor={inputId}>{title}</label>
+                    <label htmlFor={inputName ? inputName : 'input'}>{title}</label>
                     <div>
                         <input 
+                            aria-label={inputName ? inputName : 'input'} 
                             id={inputId} 
                             name={inputName} 
                             placeholder={place}

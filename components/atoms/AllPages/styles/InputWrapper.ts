@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components';
-export const InputWrapper = styled.div`
+interface i {
+    isInput ?: boolean,
+    isText ?: boolean,
+    isButton ?: boolean
+}
+export const InputWrapper = styled.div<i>`
     ${({isInput}) => isInput && css`
         width:100%;
         & > label{
