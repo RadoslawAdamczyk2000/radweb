@@ -7,7 +7,7 @@ interface i {
 const Search = ({handle}:i) => {
     const [isActive,setActive] = useState(false);
     return(
-        <SearchWrapper active={isActive} onMouseLeave={() => setActive(false)} onHover={() => setActive(true)} onMouseOver={() => setActive(true)}>
+        <SearchWrapper active={isActive} onMouseLeave={() => setActive(false)} onMouseOver={() => setActive(true)}>
             <input 
                 type="text"
                 name="" 
@@ -15,9 +15,8 @@ const Search = ({handle}:i) => {
                 placeholder='Szukaj'  
                 onFocus={() => setActive(true)}
                 onInput={handle}
-                onHover={() => setActive(true)}
             />
-            <button><RiSearchLine/></button>
+            <div><RiSearchLine/></div>
         </SearchWrapper>
     )
 }

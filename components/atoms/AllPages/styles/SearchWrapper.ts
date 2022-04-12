@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
-export const SearchWrapper = styled(motion.div)`
+interface i{
+    active:boolean
+}
+export const SearchWrapper = styled(motion.div)<i>`
     align-items:center;
     background-color:${({theme}) => theme.colors.background};
     box-shadow:0 0 .2rem .1rem ${({active,theme}) => active ? theme.colors.tertiary : theme.colors.primary}; 
@@ -39,7 +42,7 @@ export const SearchWrapper = styled(motion.div)`
             font-weight:700;
         }
     }
-    & > button{
+    & > div{
         align-items:center;
         color:${({theme}) => theme.colors.primary};
         display:flex;

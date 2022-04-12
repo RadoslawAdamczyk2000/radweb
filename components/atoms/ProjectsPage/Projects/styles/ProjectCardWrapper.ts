@@ -27,12 +27,13 @@ export const ProjectCardWrapper = styled.div`
            justify-content:end;
            padding-right:2rem;
            &,
-           & > button{
+           & > div{
             align-items:center;
             display:flex;
            }
-           & > button{
+           & > div{
                color:#000;
+               cursor:pointer;
                font-size:2.75rem;
                height:3rem;
                justify-content:center;

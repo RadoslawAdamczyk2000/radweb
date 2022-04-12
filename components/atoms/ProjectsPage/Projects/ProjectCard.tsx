@@ -16,9 +16,9 @@ const ProjectCard = ({closeModal,content,image,tech,title,path}:i) => {
         <ProjectCardWrapper onClick={closeModal}>
             <div className="card">
                 <div className="close">
-                    <button onClick={closeModal}>
+                    <div onClick={closeModal}>
                         <VscClose/>
-                    </button>
+                    </div>
                 </div>
                 <div className="box">
                     <div className="picture">
@@ -35,7 +35,7 @@ const ProjectCard = ({closeModal,content,image,tech,title,path}:i) => {
                     <div className="content">
                         <h2>{title}</h2>
                         <p>{content.substring(0,187)}...</p>
-                        <ul>{tech.map(i => <li key={i}>{i}</li>)}</ul>
+                        <ul>{tech.map((i:any,key) => <li key={key}>{i}</li>)}</ul>
                         <Button
                             isPage={false}
                             isSecondary={false}
