@@ -18,7 +18,9 @@ module.exports = withMDX({
   images: {
     domains: [
       "cdn.pixabay.com", 
-      "placeimg.com"
+      "placeimg.com",
+      "localhost",
+      "localhost:3000"
     ],
   },
 });

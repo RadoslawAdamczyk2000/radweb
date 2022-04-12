@@ -1,5 +1,6 @@
+import { DateWrapper } from "./Post";
 interface i {
     children : string | number,
 }
-const Date = ({children}:i) => <small>{children}</small>
+const Date = ({children}:i) => <DateWrapper>{children}</DateWrapper>
 export default Date;
