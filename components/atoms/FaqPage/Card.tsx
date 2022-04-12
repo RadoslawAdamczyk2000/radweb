@@ -1,7 +1,6 @@
 import { CardWrapper } from "./styles/CardWrapper";
-
 interface i {
-    content : string,
+    content : string | any, 
     tags : Array<string>,
     title : string
 }
