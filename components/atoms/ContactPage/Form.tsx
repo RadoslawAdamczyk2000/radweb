@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
 import { contact } from "../../../content/pages/contact";
 import Input from "../AllPages/Input";
 import { FormWrapper } from "./styles/FormWrapper";
 import emailjs from '@emailjs/browser';
 const Form = () => {
-    const formRef = useRef(null);
+    const formRef = useRef<null | HTMLFormElement>(null);
     const {email,fullname,phone} = contact.pl.form;
     const [form,setForm] = useState({
         fullname:'',
@@ -22,7 +21,7 @@ const Form = () => {
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
-        emailjs.sendForm('contact','contact',formRef.current,'jiBzcCuVYQCjwhBEu')
+       if(formRef.current){emailjs.sendForm('contact','contact',formRef.current,'jiBzcCuVYQCjwhBEu')}
     }
     
     useEffect(() => {
