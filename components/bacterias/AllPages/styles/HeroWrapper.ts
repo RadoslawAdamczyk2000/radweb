@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
-export const HeroWrapper = styled(motion.header)`
+interface i {
+    isPage ?: boolean
+}
+export const HeroWrapper = styled(motion.header)<i>`
     ${({isPage}) => isPage && css`
-        /* background-color:red; */
         display:grid;
         grid-template-columns:3fr 3.5fr;
         min-height:65rem;
