@@ -12,7 +12,7 @@ const HeroContent = ({content,links,title}:i) => {
                 <h1>{title}</h1>
                 <p>{content}</p>
             </section>
-            <ul className="buttons">
+            {/* <ul className="buttons">
                 {links.map( ({path,title}) => 
                     <Button 
                         isPage={true} 
@@ -23,7 +23,7 @@ const HeroContent = ({content,links,title}:i) => {
                         title={title}  
                     />
                 )}
-            </ul>
+            </ul> */}
         </HeroContentWrapper>
     )
 }
