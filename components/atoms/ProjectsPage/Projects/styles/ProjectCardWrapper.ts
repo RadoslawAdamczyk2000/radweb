@@ -9,7 +9,7 @@ export const ProjectCardWrapper = styled.div`
     position:fixed;
     top:0;
     width:100vw;
-    z-index:999;
+    z-index:9999999999999999999999;
    .card{
        background-color:#fff;
        border-radius:.85rem;

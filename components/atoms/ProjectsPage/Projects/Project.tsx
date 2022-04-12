@@ -2,14 +2,27 @@ import Image from "next/image";
 import { ReactElement } from "react";
 import { ProjectWrapper } from "./styles/ProjectWrapper";
 interface i {
+    handle : any,
     image : string,
     openModal : any,
     tech : Array<ReactElement>,
+    path:string,
+    excerpt:string,
     title : string
 }
-const Project = ({image,openModal,tech,title}:i) => {
+const Project = ({handle,path,excerpt,image,openModal,tech,title}:i) => {
+    const click = () => {
+        openModal();
+        handle({
+            title:title,
+            image:image,
+            stack:[...tech],
+            path:path,
+            excerpt:excerpt
+        });
+    }
     return(
-        <ProjectWrapper onClick={openModal}>
+        <ProjectWrapper onClick={() => click()}>
             <figure>
                 <Image
                     alt={`${title} image`}
@@ -24,7 +37,7 @@ const Project = ({image,openModal,tech,title}:i) => {
                 <div>
                     <h4>{title}</h4>
                     <ul>
-                        {tech.map(i => <li key={i}>{i}</li>)}
+                        {tech.map((i:any,key) => <li key={key}>{i}</li>)}
                     </ul>
                 </div>
             </div>

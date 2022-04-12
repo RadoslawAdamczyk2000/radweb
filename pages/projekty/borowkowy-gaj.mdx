@@ -1,0 +1,59 @@
+import Date from '../../components/atoms/PostPage/Date';
+import Img from '../../components/atoms/PostPage/Img';
+import Hero from '../../components/atoms/AllPages/Hero';
+import Layout from '../../schemas/Layout';
+import {Title,H3,H2,Content,Excerpt} from '../../components/atoms/PostPage/Post.ts';
+import {tagsObj} from '../../data/tags.ts';
+import {techObj,tech} from '../../data/tech.tsx';
+import Tags from '../../components/atoms/PostPage/Tags.tsx';
+import Stack from '../../components/atoms/PostPage/Stack.tsx';
+export const meta = {
+    title:'RadWEB - Borókowy Gaj, strona o borówkach amerykańskich',
+    description:'Każdy ma swój pierwszy raz. Moją pierwszą stroną zrealizowaną dla klienta był Borówkowy Gaj, który zajmuje się plantacją ekologicznych borówek pod Kórnikiem',
+}
+
+<Title>Borówkowy Gaj</Title>
+<Stack stacks={[
+    techObj.html.icon,
+    techObj.css.icon,
+    techObj.bootstrap.icon,
+    techObj.javascript.icon,
+]}></Stack>
+<Excerpt>
+    Każdy postawia swój pierwszy krok na rynku. Moim pierwszym krokiem była strona zrealizowana dla Borókowego Gaju - gospodarstwa, które należy do ojca mojego kolegi. Niedługo minie rok od zrealizowania tej strony. Dziś napewno napisałbym lepiej tą stronę, jednak z perspektywy pozycjonera statystyki są idealne.
+</Excerpt>
+<Img 
+isMain={true} 
+path='https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/projekty/zdjecia/borowkowy-gaj.png?raw=true' 
+title='Borówkowy Gaj - zdjęcie strony'
+/>
+<H2>Dobór narzędzi</H2>
+<Content>
+Podstawą każdej pracy, jest wcześniejsze przygotowanie się do niej. W przypadku tworzenia stron internetowych jest to **dobór technologii**. Chciałem postawić na prostotę, bo ona zawsze się obroni. Wybrałem [HTML](/blog/czym-jest-html-historia-czy-terazniejszosc), CSS wraz z jego najpopularniejszym frameworkiem Bootstrapem oraz prosty JavaScript. 
+</Content>
+<Content>
+Strona składa się z 7 podstron: 
+- start
+- o nas
+- bio produktów
+- specjalistów
+- oferty
+- galerii
+- kontaktu
+</Content>
+<Content>
+Jednak powyższe menu nie prowadzi do nowych podstron, tylko kieruje do odpowiednik sekcji o odpowiednim id. Przy użyciu właściwości **scroll-behaviour** w CSS, odpowiadającej przewijaniu na stronie i ustawieniu na **smooth** daje uczucie płynności podczas przeglądania strony.
+</Content>
+<H2>Wyniki w wyszukiwarce</H2>
+<Content>
+Prywatnie jestem bardzo zadowolony z osiągnięć tej strony w Google. Wedle stanu na 12 kwietnia 2022 wyniki SEO prezentują się następująco:
+- **48** kliknięć,
+- **1003** wyświetlenia,
+- oraz średnia pozycja to **4,2**.
+</Content>
+<Content>
+Jak na stronę o tak relatywnie długim stażu to naprawdę rewelacyjny wynik. Jednak każdy kto ma ambicje, wie co by można zmienić w stronie, aby lepiej propserowała w internecie, a także spełniała wszystkie [cechy dobrej strony internetowej](/blog/cechy-dobrej-strony-internetowej). 
+W pierwszej kolejności zmieniłbym zdjęcie w tle na obrazek wektorowy, zrobiłbym baner ze zdjęciem o niższej jakości lub wogóle zrezygnował z fotografii. Dalszym krokiem byłoby stworzenie kolejnych podstron, które przenosiłby na kolejne adresy. Dałoby to możliwość praktyczniejszego odnalezienie tych informacji, których domaga się użytkownik. To w dłuższej perspektywie pozwoliłoby dostać się do słynnego **TOP 3** w Google.
+</Content>
+
+export default ({children}) => <Layout title={meta.title} desc={meta.description}>{children}</Layout>

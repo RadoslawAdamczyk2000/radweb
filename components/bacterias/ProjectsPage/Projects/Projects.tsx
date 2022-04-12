@@ -1,24 +1,42 @@
 import { motion,AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { example } from "../../../../data/example";
+import { posts } from "../../../../data/posts";
 import Project from "../../../atoms/ProjectsPage/Projects/Project";
 import ProjectCard from "../../../atoms/ProjectsPage/Projects/ProjectCard";
 import {ProjectsWrapper} from './styles/ProjectsWrapper';
 const Projects = () => {
-    const [xyz,setXyz] = useState(false)
+    const [xyz,setXyz] = useState(false);
+    const {projects} = posts;
+    const [currentProject,setCurrentPage] = useState({
+        title:'',
+        image:'',
+        stack:[],
+        excerpt:'',
+        path:'',
+    });
+    const {title,image,stack,excerpt,path} = currentProject;
+    useEffect(() => {
+        console.log(currentProject);
+    });
     return(
         <>
             <ProjectsWrapper>
                 <ul>
-                    {example.map(({id,title,content,tag,tech,picture}) =>
-                        <Project
-                            image={picture}
-                            openModal={() => setXyz(true)}
-                            tech={tech}
-                            title={title}
-                            key={id}
-                        />
-                    )}
+                    {
+                        projects.map(({title,image,stack,excerpt,path},key) => 
+                            <Project
+                                image={image}
+                                openModal={() => setXyz(true)}
+                                tech={stack}
+                                title={title}
+                                handle={setCurrentPage}
+                                path={path}
+                                excerpt={excerpt}
+                                key={key}
+                            />
+                        )
+                    }
                 </ul>
             </ProjectsWrapper>
             <AnimatePresence>
@@ -32,10 +50,11 @@ const Projects = () => {
                     >
                         <ProjectCard
                             closeModal={() => setXyz(false)}
-                            content={example[0].content}
-                            image={example[0].picture}
-                            tech={example[0].tech}
-                            title={example[0].title}
+                            content={excerpt}
+                            image={image}
+                            tech={stack}
+                            title={title}
+                            path={path}
                         />
                     </motion.div>
                 }

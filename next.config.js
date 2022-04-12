@@ -19,7 +19,7 @@ module.exports = withMDX({
     domains: [
       "cdn.pixabay.com", 
       "placeimg.com",
-      "localhost",
+      "github.com",
       "localhost:3000"
     ],
   },

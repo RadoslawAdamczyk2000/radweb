@@ -8,9 +8,10 @@ interface i {
     content : string,
     image : string,
     tech : Array<ReactElement>,
-    title : string
+    title : string,
+    path : string,
 }
-const ProjectCard = ({closeModal,content,image,tech,title}:i) => {
+const ProjectCard = ({closeModal,content,image,tech,title,path}:i) => {
     return(
         <ProjectCardWrapper onClick={closeModal}>
             <div className="card">
@@ -33,13 +34,13 @@ const ProjectCard = ({closeModal,content,image,tech,title}:i) => {
                     </div>
                     <div className="content">
                         <h2>{title}</h2>
-                        <p>{content}</p>
+                        <p>{content.substring(0,187)}...</p>
                         <ul>{tech.map(i => <li key={i}>{i}</li>)}</ul>
                         <Button
                             isPage={false}
                             isSecondary={false}
                             isSection={true}
-                            path=''
+                            path={path}
                             title="Więcej"
                         />
                     </div>
