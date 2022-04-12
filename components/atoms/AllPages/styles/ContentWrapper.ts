@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
-export const ContentWrapper = styled.div`
+interface i {
+ isHero : boolean   
+}
+export const ContentWrapper = styled.div<i>`
     ${({isHero}) => isHero && css`
         font-size:1.85rem;
         line-height:3rem;
