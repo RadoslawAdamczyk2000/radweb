@@ -1,0 +1,185 @@
+[33mcommit 88e2df7947a246c4d5a46753f6fd3106b62726b8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Apr 12 18:10:57 2022 +0200
+
+    repair button.tsx
+
+[33mcommit a921ceb11130160332c8344186f300c5226ee039[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Apr 12 16:08:48 2022 +0200
+
+    rename brand
+
+[33mcommit 19bae2ab709d05c5382c2abdc613a198ed65361d[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Apr 12 16:08:10 2022 +0200
+
+    add search to projects page
+
+[33mcommit 7d934cc58689c1cffcbf920ed8e439b1f7b5053e[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Apr 12 15:33:00 2022 +0200
+
+    add page about borowkowy gaj
+
+[33mcommit 1d258544f98ad3ad5e9e5b35ae7d8a8861a8180e[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Apr 12 12:52:23 2022 +0200
+
+    add dynamic tags
+
+[33mcommit cd57c8f124670be222e46bbca6ed1d945b184afa[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Apr 12 12:41:43 2022 +0200
+
+    add search to blog page
+
+[33mcommit 477b26a1f282fea474135aaab92fa64373035614[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Apr 12 12:02:15 2022 +0200
+
+    create pages
+
+[33mcommit 47e3abd232a6de94a6b0eb759621fd7452290acd[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Mon Apr 11 21:24:05 2022 +0200
+
+    styles of post page
+
+[33mcommit 1b369a1c6efdef3465f9d7edde9dfb54a7214de2[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Mon Apr 11 11:44:57 2022 +0200
+
+     add new page
+
+[33mcommit ea44d4a5ce8d78e4ce05170662bf5b8435124490[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Mon Apr 11 11:32:53 2022 +0200
+
+    replaced example article in pages directory
+
+[33mcommit ee8be8fa1074ae4b25fa8a7590a467ac88692b50[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Mon Apr 11 11:22:59 2022 +0200
+
+    changes in nextjs config file
+
+[33mcommit 4a86293de1cd2ba735dfed389392f137896f2c08[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Mon Apr 11 10:54:21 2022 +0200
+
+    create new post, add object of tech stack
+
+[33mcommit 11c78fcab408f10d5d6e3640e4040f1dbc24572d[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Sun Apr 10 21:25:40 2022 +0200
+
+    template of layout article post
+
+[33mcommit 4f2f4b557bf748d870f1f91accd472a7f22d77cb[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Sat Apr 9 12:11:15 2022 +0200
+
+    add functionaly search in faq page
+
+[33mcommit a587e4ad841dc5b71b18a945f07722182148e316[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Fri Apr 8 21:18:16 2022 +0200
+
+    add mailing from faq form with emailjs
+
+[33mcommit 425486f4ee37e51d6784099f2e771bfeb737442e[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Fri Apr 8 16:55:21 2022 +0200
+
+    add types to button and theme
+
+[33mcommit 3c8295189cff318279275eb1878012e8d278b0b1[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 21:04:44 2022 +0200
+
+    rename global
+
+[33mcommit a36f84cd0d7e89131a13162c5e7002994df824aa[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 21:03:06 2022 +0200
+
+    restore changes
+
+[33mcommit ccc243a4de930eff9e8bd6c8ae9ab905960f33d5[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 20:25:35 2022 +0200
+
+    rename global
+
+[33mcommit 4983102b3149878b55d1f6b235ff96543358008c[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 20:22:01 2022 +0200
+
+    rename
+
+[33mcommit 362a19e31cecdb3ad08584a29aaa2a2d7d263369[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 20:09:56 2022 +0200
+
+    remove tsx
+
+[33mcommit 5a9606850f1aa30d3903c4f72ef0df44ce05b53f[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 20:07:04 2022 +0200
+
+    rename extensitons
+
+[33mcommit af67d024978216b703c6956684d16d9d9b93d9ed[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 19:54:33 2022 +0200
+
+    remove tsx
+
+[33mcommit d98fefbba0d665f6964cd66050ae4717b634b1bc[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 19:46:06 2022 +0200
+
+    rename files ext
+
+[33mcommit b874761b476aed84e675dbf8f60a9ebf6e676c44[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 19:37:32 2022 +0200
+
+    remove tsx
+
+[33mcommit 125eed16574b941a9c8b1157a26519445bcb7ec9[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 19:33:25 2022 +0200
+
+    remove tsx
+
+[33mcommit 9dfc2cdd28db16548e0d23ac5babad044db8ce6b[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 19:31:19 2022 +0200
+
+    add any
+
+[33mcommit bc7371c7929bb26174f686da330ce5bd5ef12c2b[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 19:29:01 2022 +0200
+
+    add any
+
+[33mcommit 40b64693671abc475fc00146e305a043aedf7a0b[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 19:25:48 2022 +0200
+
+    form
+
+[33mcommit 3975ab7df0a85dd7b05addd81b7b2693d1c382fe[m[33m ([m[1;33mtag: 1.0[m[33m)[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Thu Apr 7 12:24:43 2022 +0200
+
+    template of page
+
+[33mcommit c2aadf8d3dff591d58442e19fe588e0098be017e[m
+Author: Radosław Adamczyk <greatpolandweb@gmail.com>
+Date:   Tue Mar 29 08:46:39 2022 +0200
+
+    Initial commit from Create Next App
