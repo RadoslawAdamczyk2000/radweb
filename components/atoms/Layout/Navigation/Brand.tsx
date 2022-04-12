@@ -1,3 +1,3 @@
 import { BrandWrapper } from "./styles/BrandWrapper";
-const Brand = () => <BrandWrapper><p>BUDex</p></BrandWrapper>
+const Brand = () => <BrandWrapper><p>RadWEB</p></BrandWrapper>
 export default Brand;
