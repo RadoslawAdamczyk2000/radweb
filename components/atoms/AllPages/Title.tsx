@@ -1,5 +1,4 @@
 import { TitleWrapper } from "./styles/TitleWrapper";
-
 interface i {
     isPage ?: boolean,
     title : string,
