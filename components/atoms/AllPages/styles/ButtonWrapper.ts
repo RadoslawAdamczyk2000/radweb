@@ -67,7 +67,7 @@ export const ButtonWrapper = styled.a<j>`
             font-weight:700;
             transition:.2s linear color;
         }
-        & > button{
+        & > div{
             flex-shrink:0;
             font-size:3rem;
             height:5rem;

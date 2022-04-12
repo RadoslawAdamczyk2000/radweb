@@ -5,7 +5,7 @@ interface i {
     isPage : boolean,
     isSecondary : boolean,
     isSection : boolean,
-    path : string | any,
+    path : string,
     title : string
 }
 const Button = ({isPage,isSecondary,isSection,path,title}:i) => {
@@ -14,7 +14,7 @@ const Button = ({isPage,isSecondary,isSection,path,title}:i) => {
             {
                 isPage &&
                 <Link href={path}>
-                    <ButtonWrapper secondary={isSecondary} page={isPage}>
+                    <ButtonWrapper page={isPage}>
                         {title}
                     </ButtonWrapper>
                 </Link>
@@ -26,11 +26,11 @@ const Button = ({isPage,isSecondary,isSection,path,title}:i) => {
                     <p>
                       {title}
                     </p>
-                    <button>
+                    <div>
                       <i>
                         <VscArrowRight/>
                       </i>
-                    </button>
+                    </div>
                   </ButtonWrapper>
                 </Link>
             }   
