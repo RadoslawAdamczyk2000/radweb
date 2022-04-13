@@ -5,13 +5,15 @@ import OfferCard from "../../../atoms/HomePage/Offer/OfferCard";
 import OfferItem from "../../../atoms/HomePage/Offer/OfferItem";
 import { ContentWrapper } from "./styles/ContentWrapper";
 const Content = () => {
-    let [activeCard,setActiveCard] = useState<'www'|'seo'|'opt'|string>('www');
+    let [activeCard,setActiveCard] = useState<'www'|'seo'|'opt'>('www');
+    const [value,setValue] = useState<string>('')
     const {offer} = home.pl;
     const wrapper = useRef<null>(null);
     const box = wrapper.current;
     useEffect(() => {
         gsap.from(box,{duration:.2,opacity:0,scale:0,visibility:'hidden'});
         gsap.to(box,{duration:.5,opacity:1,scale:1,visibility:'visible'});
+        setActiveCard(value); 
     })
     const {cards} = offer;
     return (
@@ -19,7 +21,7 @@ const Content = () => {
             <div>
                 {
                     offer.buttons.map(({title,value}) =>
-                        <OfferItem title={title} key={value} handleCard={() => setActiveCard(value)} />
+                        <OfferItem title={title} key={value} handleCard={() => setValue(value)} />
                     )
                 }
             </div>
