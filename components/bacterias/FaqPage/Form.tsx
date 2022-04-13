@@ -37,7 +37,7 @@ const Form = ({closeForm,openForm}:i) => {
     const handleSubmit = async (e:any) => {
         e.preventDefault();
         closeForm();
-        error && emailjs.sendForm('service_h8wyrna','template_by3hado',formRef.current,'jiBzcCuVYQCjwhBEu')
+        error && if(formRef.current){emailjs.sendForm('service_h8wyrna','template_by3hado',formRef.current,'jiBzcCuVYQCjwhBEu')}
     }
     
     useEffect(() => {
