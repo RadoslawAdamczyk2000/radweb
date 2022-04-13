@@ -4,9 +4,9 @@ import { OfferCardWrapper } from "./styles/OfferCardWrapper";
 interface i {
     button : any|string,
     children : any,
-    image : any | string,
-    path : any | string,
-    title : any | string
+    image : any,
+    path : any ,
+    title : any
 }
 const OfferCard = ({button,children,image,path,title}:i) => {
     return(

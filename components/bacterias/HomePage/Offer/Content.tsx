@@ -5,7 +5,7 @@ import OfferCard from "../../../atoms/HomePage/Offer/OfferCard";
 import OfferItem from "../../../atoms/HomePage/Offer/OfferItem";
 import { ContentWrapper } from "./styles/ContentWrapper";
 const Content = () => {
-    let [activeCard,setActiveCard] = useState<any | string>('www');
+    let [activeCard,setActiveCard] = useState<'www'|'button'|'seo'|'opt'>('www');
     const {offer} = home.pl;
     const wrapper = useRef<null>(null);
     const box = wrapper.current;
