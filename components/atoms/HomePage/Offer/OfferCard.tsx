@@ -2,11 +2,11 @@ import Image from "next/image";
 import Button from "../../AllPages/Button";
 import { OfferCardWrapper } from "./styles/OfferCardWrapper";
 interface i {
-    button : string,
+    button : any|string,
     children : any,
-    image : string,
-    path : string,
-    title : string
+    image : any | string,
+    path : any | string,
+    title : any | string
 }
 const OfferCard = ({button,children,image,path,title}:i) => {
     return(

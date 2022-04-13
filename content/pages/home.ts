@@ -43,10 +43,10 @@ export const home = {
                 //     title:'Analityka stron',
                 //     value:'ana'
                 // },
-                // {
-                //     title:'Optymalizacja stron',
-                //     value:'opt'
-                // }
+                {
+                    title:'Optymalizacja stron',
+                    value:'opt'
+                }
             ],
             cards:{
                 button:'Sprawdź',
@@ -68,12 +68,12 @@ export const home = {
                 //     content:`Chcesz zmodyfikować stronę, ale nie wiesz w jakim kierunku powinna pójść modernizacja serwisu? Dzięki realizowanej bezpłatnej analityce stron dowiesz się, które elementy powinny być realizowane priorytetowo`,
                 //     path:'/oferty/analityka-stron',
                 // },
-                // opt:{
-                //     image:'https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_960_720.png',
-                //     title:'Optymalizacja stron internetowych',
-                //     content:`Potrzebujesz modernizacji Twojej strony internetowej w postaci odświeżenia wyglądu, dodania nowej funkcjonalności lub rozwiązania problemu? Te wszystkie czynności można zawrzeć jednym słowem - optymalizacja.`,
-                //     path:'/oferty/optymalizacja-stron',
-                // }
+                opt:{
+                    image:'https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_960_720.png',
+                    title:'Optymalizacja stron internetowych',
+                    content:`Potrzebujesz modernizacji Twojej strony internetowej w postaci odświeżenia wyglądu, dodania nowej funkcjonalności lub rozwiązania problemu? Te wszystkie czynności można zawrzeć jednym słowem - optymalizacja.`,
+                    path:'/oferty/optymalizacja-stron',
+                }
             }
         },
         blog:{
