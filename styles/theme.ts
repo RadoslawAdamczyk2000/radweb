@@ -1,26 +1,6 @@
 import { DefaultTheme } from "styled-components"
-interface i {
-    colors:{
-        background : string,
-        color : string,
-        primary : string,
-        secondary : string,
-        tertiary : string
-    },
-    fonts:{
-        family:{
-            primary : string
-        }
-    },
-    shadows:{
-        button : string,
-        navigation : string
-    },
-    filter: {
-        search : string
-    }
-}
-export const darkTheme:i = {
+
+export const darkTheme:DefaultTheme = {
     colors:{
         background:'#1f2028',
         color:'#ffffff',
@@ -41,7 +21,7 @@ export const darkTheme:i = {
         search:'brightness(125%)'
     }
 }
-export const lightTheme:i = {
+export const lightTheme:DefaultTheme = {
     colors:{
         background:'#fff',
         color:'#000',
