@@ -1,5 +1,5 @@
 import { motion,AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { example } from "../../../../data/example";
 import { posts } from "../../../../data/posts";
 import Project from "../../../atoms/ProjectsPage/Projects/Project";
@@ -7,6 +7,13 @@ import ProjectCard from "../../../atoms/ProjectsPage/Projects/ProjectCard";
 import {ProjectsWrapper} from './styles/ProjectsWrapper';
 interface i {
     search : string
+}
+interface j {
+    title : string,
+    image : string,
+    stack : Array<ReactElement>,
+    excerpt : string,
+    path :  string
 }
 const Projects = ({search}:i) => {
     const [xyz,setXyz] = useState(false);
@@ -31,7 +38,7 @@ const Projects = ({search}:i) => {
             <ProjectsWrapper>
                 <ul>
                     {
-                        searchFnc(projects).map(({title,image,stack,excerpt,path},key) => 
+                        searchFnc(projects).map(({title,image,stack,excerpt,path}:j,key:any) => 
                             <Project
                                 image={image}
                                 openModal={() => setXyz(true)}
