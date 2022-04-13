@@ -19,7 +19,7 @@ const Content = () => {
             <div>
                 {
                     offer.buttons.map(({title,value}) =>
-                        <OfferItem title={title} item={value} key={value} handleCard={() => setActiveCard(value)} />
+                        <OfferItem title={title} key={value} handleCard={() => setActiveCard(value)} />
                     )
                 }
             </div>
