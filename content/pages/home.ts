@@ -95,4 +95,4 @@ export const home = {
             button:'Sprawdź obsługiwane lokalizacje'
         }
     }
-}
+} as const;

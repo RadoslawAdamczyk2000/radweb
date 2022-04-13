@@ -4,9 +4,10 @@ import { home } from "../../../../content/pages/home"
 import OfferCard from "../../../atoms/HomePage/Offer/OfferCard";
 import OfferItem from "../../../atoms/HomePage/Offer/OfferItem";
 import { ContentWrapper } from "./styles/ContentWrapper";
+type Card = 'www'|'seo'|'opt';
 const Content = () => {
-    let [activeCard,setActiveCard] = useState<'www'|'seo'|'opt'>('www');
-    const [value,setValue] = useState<string>('')
+    let [activeCard,setActiveCard] = useState<Card>('www');
+    const [value,setValue] = useState<Card>('www')
     const {offer} = home.pl;
     const wrapper = useRef<null>(null);
     const box = wrapper.current;
