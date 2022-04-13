@@ -12,7 +12,7 @@ interface i {
 const Form = ({closeForm,openForm}:i) => {
     const {button,email,firstName,message} = faq.pl.form;
     const [error,setError] = useState(false);
-    const formRef = useRef(null);
+    const formRef = useRef<null>(null);
     const [form,setForm] = useState({
         firstname:'',
         email:'',
@@ -24,7 +24,6 @@ const Form = ({closeForm,openForm}:i) => {
             [e.target.name]:e.target.value
         })
     }
-
     const valid = () => {
         const {email,firstname,message} = form;
         if(firstname && email && message){
@@ -33,16 +32,14 @@ const Form = ({closeForm,openForm}:i) => {
             setError(false)
         }
     }
-
-    const handleSubmit = async (e:any) => {
-        e.preventDefault();
-        closeForm();
-        error && if(formRef.current){emailjs.sendForm('service_h8wyrna','template_by3hado',formRef.current,'jiBzcCuVYQCjwhBEu')}
-    }
-    
     useEffect(() => {
         valid();
     })
+    const handleSubmit = async (e:any) => {
+        e.preventDefault();
+        closeForm();
+        if(formRef.current && error){emailjs.sendForm('service_h8wyrna','template_by3hado',formRef.current,'jiBzcCuVYQCjwhBEu')}
+    }
     return(
         <FormWrapper>
             <div className='box'>
