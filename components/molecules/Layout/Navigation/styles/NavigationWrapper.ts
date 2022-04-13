@@ -1,5 +1,8 @@
 import styled from "styled-components";
-export const NavigationWrapper = styled.nav`
+interface i {
+    scrolled ?: boolean
+}
+export const NavigationWrapper = styled.nav<i>`
     background-color:${({theme}) => theme.colors.background};
     box-shadow:${({scrolled,theme}) => scrolled && theme.shadows.navigation};
     color:${({theme}) => theme.colors.color};
