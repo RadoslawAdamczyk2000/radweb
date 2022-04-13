@@ -4,7 +4,7 @@ import { HeroWrapper } from "./styles/HeroWrapper";
 interface i {
     content : string,
     image : string,
-    links : Array<string>,
+    links : Array<string>|Array<any>,
     title:string
 }
 const Hero = ({content,image,links,title}:i) => {

@@ -1,16 +1,12 @@
-// import { NextPage } from "next";
+import { NextPage } from "next";
 import Layout from "../schemas/Layout";
 import { about } from "../content/pages/about";
-import full from '../assets/images/full.webp';
-import Image from "next/image";
 import Hero from "../components/bacterias/AboutPage/Hero";
 import Movies from "../components/atoms/AboutPage/Movies";
 import Hobbies from "../components/atoms/AboutPage/Hobbies";
 import Content from "../components/atoms/AboutPage/Content";
 import Poster from "../components/atoms/AboutPage/Poster";
-import pizza from '../assets/images/pizza.webp';
-import snow from '../assets/images/snow.webp';
-const Page = () => {
+const Page:NextPage = () => {
   const {hero,seo,story,hobbies} = about.pl;
   const {education,born,skills,passions} = story;
   return(
@@ -20,7 +16,7 @@ const Page = () => {
     >
       <Hero
         content={hero.content}
-        image={full}
+        image='../assets/images/full.webp'
         links={hero.buttons}
         title={hero.title}
       />
@@ -30,7 +26,7 @@ const Page = () => {
           title={born.heading}
         />
         <Poster
-          image={snow}
+          image='../assets/images/snow.webp'
           imageTitle="Zdjęcię z klasą z liceum"
         />
         <Content
@@ -45,7 +41,7 @@ const Page = () => {
           title={skills.heading}
         />
         <Poster
-          image={pizza}
+          image='../assets/images/pizza.webp'
           imageTitle="Urodzinowa pizza"
         />
         <Content
