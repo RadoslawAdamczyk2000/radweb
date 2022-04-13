@@ -1,12 +1,4 @@
-interface i {
-    pl:{
-        id : number,
-        title : string,
-        tags : string[],
-        content : string
-    }
-}
-export const faq:i = {
+export const faq = {
     pl:[
         {
             id:1,
