@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { PosterWrapper } from "./styles/PosterWrapper";
 interface i {
-    path: string,
+    path: string | any,
     title : string
 }
 const Poster = ({path,title}:i) => {

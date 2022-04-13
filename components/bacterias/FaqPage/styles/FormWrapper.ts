@@ -34,7 +34,8 @@ export const FormWrapper = styled.div`
             justify-content:flex-end;
             padding-right:2rem;
             width:100%;
-            & > button{
+            & > div{
+                cursor:pointer;
                 font-size:3.5rem;
                 height:4rem;
                 transition:.2s linear transform;

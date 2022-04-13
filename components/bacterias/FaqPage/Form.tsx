@@ -44,9 +44,9 @@ const Form = ({closeForm,openForm}:i) => {
         <FormWrapper>
             <div className='box'>
                 <div className='close'>
-                    <button onClick={closeForm}>
+                    <div onClick={closeForm}>
                         <VscClose/>
-                    </button>
+                    </div>
                 </div>
                 <form action="" className='form' onSubmit={handleSubmit} ref={formRef}>
                     <Input 
