@@ -1,3 +1,4 @@
+import { DefaultTheme } from "styled-components"
 interface i {
     colors:{
         background : string,
@@ -19,7 +20,6 @@ interface i {
         search : string
     }
 }
-
 export const darkTheme:i = {
     colors:{
         background:'#1f2028',
