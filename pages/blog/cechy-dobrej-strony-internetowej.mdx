@@ -8,8 +8,9 @@ import {techObj,tech} from '../../data/tech.tsx';
 import Tags from '../../components/atoms/PostPage/Tags.tsx';
 import Stack from '../../components/atoms/PostPage/Stack.tsx';
 export const meta = {
-    title:'',
-    description:'',
+    title:'Dobra strona internetowa, jak wygląda dobra strona - RadWEB',
+    description:'W internecie jest sporo stron internetowych, lecz większość nie jest dobra, a też jest sporo wręcz niepoprawnych. Dowiesz się jak powinna wyglądać dobra strona. Zapraszam.',
+    seoImage:'https://cdn.pixabay.com/photo/2015/09/05/21/51/reading-925589_960_720.jpg'
 }
 
 <Title>Cechy dobrej strony internetowej.</Title>
@@ -42,4 +43,4 @@ Każdy z nas, nie może przejść obojętnie na widok płci przeciwnej przyodzia
 <Content>
 Dobre strony, nie są jeszcze chlebem powszednim w sieci, ale warto podjąć wszystkie możliwe działania aby tak się właśnie stało. Mam nadzieję, że tymi poradami wskazałem Tobie, do czego przywiązać szczególną uwagę.
 </Content>
-export default ({children}) => <Layout title={meta.title} desc={meta.description}>{children}</Layout>
+export default ({children}) => <Layout seoImage={meta.seoImage} title={meta.title} desc={meta.description}>{children}</Layout>

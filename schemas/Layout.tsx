@@ -10,9 +10,10 @@ import { darkTheme, lightTheme } from "../styles/theme";
 interface i {
     children : any,
     description : string,
+    seoImg : string,
     title : string
 }
-const Layout = ({children,description,title}:i) => {
+const Layout = ({children,description,seoImg,title}:i) => {
     const [theme,setTheme] = useState(false);
     return(
         <ThemeProvider theme={theme ? lightTheme : darkTheme}>
@@ -20,6 +21,9 @@ const Layout = ({children,description,title}:i) => {
                 <meta name='author' content='Radoslaw Adamczyk - RadWEB'/>
                 <meta name="description" content={description} />
                 <title>{title}</title>
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={seoImg} />
             </Head>
             <Global/>
             <Navigation changeTheme={() => setTheme(!theme)}/>

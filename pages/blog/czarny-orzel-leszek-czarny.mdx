@@ -10,6 +10,7 @@ import Stack from '../../components/atoms/PostPage/Stack.tsx';
 export const meta = {
     title:'Książę Leszek Czarny, historia Polski - RadWEB',
     description:'Leszek Czarny jest niezwykle niedocenionym władcą. Jeśli chcesz poznać oskarżonego  księcia przez żonę o impotencję to zapraszam.',
+    seoImage:'https://cdn.pixabay.com/photo/2018/12/04/14/24/warrior-3855706_960_720.jpg' 
 }
 
 <Title>Czarny orzeł - Leszek Czarny</Title>
@@ -38,4 +39,4 @@ Po objęciu władzy w dzielnicy krakowsko-sandomierskiej 7 grudnia 1279 roku Les
 Poza potyczkami militarnymi równie ciekawy jest konflikt Leszka Czarnego z kolaicją biskupa krakowskiego Pawła z Przemankowa i Janusza Starzyny, która stała się niezwykle irytującą lokalną opozcją - totalną opozycją. Konflikt między tymi panami rozwinął się w latach 80. XIII wieku z powodu niezaakceptowania kolejnych nadań oraz specjalnych immunitetów dla episkopatu. Leszek znając sentencję "Historia est magistra vitae" oraz biografię przodka Bolesława III Śmiałego, kiedy to podczas zjazdu w Łęczycy na przełomie 1282 i 1283 roku uwięził łakomego biskupa w swoim sieradzkim mateczniku. Ordynariusz krakowski odzyskał wolność po 7 latach niewoli, poprzez naciski sojuszu purpurowych sutann - biskupów. Do zgody między zwaśnonymi stronami doszło 30 listopada 1286 roku, kiedy to Piast zdecydował się zapłacić 300 grzywien ( około 5 ton kruszczcu) i zaaprobował immunitety. Leszek Czarny zmarł bezpotomnie 30 września 1288 roku, dając bez żadnych wątpliwości zalążek ponownie zjednoczonego państwa Polskiego.  Książę sieradzki, krakowski oraz sandomierski został pochowany w krakowskim kościele pod wezwaniem Świętej Trójcy. Władzę po tym niedocenionym władcy w skutek krawych walk przejął późniejszy król Polski - Wacław II z dynastii Przemyślidów.
 </Content>
 
-export default ({children}) => <Layout title={meta.title} desc={meta.description}>{children}</Layout>
+export default ({children}) => <Layout seoImage={meta.seoImage} title={meta.title} desc={meta.description}>{children}</Layout>

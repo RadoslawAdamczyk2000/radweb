@@ -8,7 +8,10 @@ export const HeroWrapper = styled.header`
     justify-content:center;
     min-height:60rem;
     padding:2rem 0;
-    &.home{
+    &.about,
+    &.home,
+    &.page,
+    &.search{
         flex-wrap:wrap-reverse;
         justify-content:space-evenly;
         & > article{
@@ -18,7 +21,7 @@ export const HeroWrapper = styled.header`
             justify-content:center;
             margin:auto;
             max-width:85%;
-            width:60rem;
+            width:65rem;
             & > * {
                 margin:1rem 0;
                 padding:.75rem;
@@ -51,14 +54,37 @@ export const HeroWrapper = styled.header`
             position:relative;
             height:60rem;
             margin:auto;
-            width:45rem;
+            width:50rem;
+            @media only screen and (max-width:1083px){
+                aspect-ratio:16/9;
+                position:relative;
+                height:50rem;
+                max-width:95%;
+                width:auto;               
+            }
         }
     }
     &.about{
 
     }
     &.page{
-
+        flex-direction:column;
+        & > article{
+            align-items:start;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            margin:auto;
+            max-width:85%;
+            width:90rem;
+        }
+        & > figure{
+            aspect-ratio:16/9;
+            position:relative;
+            height:50rem;
+            max-width:95%;
+            width:auto;
+        }
     }
 
 `

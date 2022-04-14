@@ -13,6 +13,7 @@ const Page:NextPage = () => {
   const {content,image,title} = hero;
   return(
     <Layout 
+      seoImg={image}
       title={seo.title}
       description={seo.desc}
     >

@@ -8,7 +8,7 @@ export const blog = {
             title:'Blog o IT i historii',
             alt:'Blog o IT i historii - zdjęcie',
             image:'https://cdn.pixabay.com/photo/2018/04/16/10/13/newspaper-3324168_960_720.jpg',
-            content:`W świecie technologi internetowych zestaw i rozwój narzędzi jest nieustanny. Dlatego, żeby być ciągle na bieżąco trzeba się ich uczyć, a najlepszym sposobem na naukę jest praktyka. Dla mnie najlepszym sposobem nauki jest pisanie stron internetowych oraz aplikacji webowych. Do tworzenia wcześniej wspomnianych stron i aplikacji korzystam z technologii front-endowych takich jak Vanila JavaScript, GatsbyJS, NextJS, React, Vue oraz Angular. Ponadto mam doświadczenie pracy z technologiami backendowymi, czyli z PHP, a także MySQL, które wykorzystywałem podczas zadań na Wordpressie, Joomli oraz Shopperze.`
+            content:`Każda osoba, która mnie zna, będzie irytować to że większość spraw sprowadzam do historii. Faktycznie tak jest, bo wiem że większość sytuacji miała już miejsce w przeszłości - przez co wiem jakich błędów nie powtarzać. Pasjonuję się również wszystkim co jest związane ze stronami internetowymi - począwszy od procesu tworzenia po zadbanie o widoczność w sieci. Ponadto posiadam nieukrytą satysfakcję podczas podróży po Polsce, a w szczególności po wielkopolsce, bo uwielbiam podróżować po terenach Rzeczypospolitej. O tym wszystkim będzie traktował blog: o programowaniu, historii oraz podróżach, co nie oznacza że zamierzam ograniczać się jedynie do tych tematów.`
         }
     }
 }
