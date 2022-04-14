@@ -1,19 +1,16 @@
-import { AnimatePresence,motion } from "framer-motion";
+// import { AnimatePresence,motion } from "framer-motion";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
-import Button from "../components/atoms/FaqPage/Button";
+// import Button from "../components/atoms/FaqPage/Button";
 import Hero from "../components/atoms/Page/Hero";
 import Cards from "../components/bacterias/FaqPage/Cards";
-import Form from "../components/bacterias/FaqPage/Form";
+// import Form from "../components/bacterias/FaqPage/Form";
 import { faq as pages} from "../content/pages/faq";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
   const {seo,hero} = pages.pl;
-  const [openForm,setOpenForm] = useState(false);
+  // const [openForm,setOpenForm] = useState(false);
   const [search,setSearch] = useState('');
-  useEffect(() => {
-    console.log()
-  })
   return(
     <Layout 
       seoImg={'https://cdn.pixabay.com/photo/2017/09/10/18/25/question-2736480_960_720.jpg'}
@@ -32,7 +29,7 @@ const Page:NextPage = () => {
       <main className="larger">
         <Cards search={search}/>
       </main>
-      <Button openForm={() => setOpenForm(true)} />
+      {/* <Button openForm={() => setOpenForm(true)} />
       <AnimatePresence>
         {
           openForm &&
@@ -47,7 +44,7 @@ const Page:NextPage = () => {
             />
           </motion.div>
         }
-      </AnimatePresence>
+      </AnimatePresence> */}
     </Layout>
   )
 }
