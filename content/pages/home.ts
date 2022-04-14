@@ -1,8 +1,14 @@
 export const home = {
     pl: {
+        seo:{
+            title:'RadWEB - Strony internetowe, pozycjonowanie, Śrem, Poznań',
+            desc:'Jeśli szukasz specialisty, który napisze i wypozycjonuje Twoją stronę internetową to idealnie trafiłeś/trafiłaś. Strony internetowe to schludność i bezpieczeństwo. Zapraszam!',
+            image:'https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/assets/river.jpg?raw=true'
+        },
         hero:{
-            image:'../../assets/images/river.webp',
-            content:`Witaj, nazywam się <h2>Radosław Adamczyk</h2> i znajdujesz się na stronie <h1>RadWEB</h1> gdzie możesz zaznajomić się z wieloma informacjami z dziedzin takich jak programowanie i tworzenie stron internetowych, pozycjonowanie oraz historia. Ponadto dowiesz się w jakiej formie możesz podjąć ze mną współpracę, a także jakie projekty prywatne i komerycjne zrealizowałem w ostatnim czasie.<br/> Zapraszam do lektury`,
+            image:'https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/assets/river.jpg?raw=true',
+            title:'RadWEB - Programowanie i SEO',
+            content:`Witaj, nazywam się Radosław Adamczyk i znajdujesz się na stronie RadWEB gdzie możesz zaznajomić się z wieloma informacjami z dziedzin takich jak programowanie i tworzenie stron internetowych, pozycjonowanie oraz historia. Ponadto dowiesz się w jakiej formie możesz podjąć ze mną współpracę, a także jakie projekty prywatne i komerycjne zrealizowałem w ostatnim czasie. Zapraszam do lektury`,
             buttons:[
                 {
                     path:'/o-mnie',
