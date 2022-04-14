@@ -9,7 +9,7 @@ const Content = () => {
             <div>
                 <p>{content}</p>
             </div>
-            <div>
+            {/* <div>
                 <Button
                     isPage={false}
                     isSecondary={false}
@@ -17,7 +17,7 @@ const Content = () => {
                     path={path}
                     title={button}
                 />
-            </div>
+            </div> */}
         </ContentWrapper>
     )
 }

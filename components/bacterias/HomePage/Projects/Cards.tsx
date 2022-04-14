@@ -1,23 +1,23 @@
+import { posts } from "../../../../data/posts";
 import Card from "../../../atoms/HomePage/Projects/Card";
 import { CardsWrapper } from "./styles/CardsWrapper";
 
 const Cards = () => {
+    const {projects} = posts;
     return(
         <CardsWrapper>
             <Card
                 button="Przeczytaj"
-                content="Well, you're in the right place. My website is your one stop shop for everything you need to build JavaScript apps.Well, you're in the right place. My website is your one stop shop for everything you need to build JavaScript apps."
-                image="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849826_960_720.jpg"
-                path=""
-                title="Somebody App"
+                content={projects[projects.length - 1].excerpt}
+                path={projects[projects.length - 1].path}
+                title={projects[projects.length - 1].title}
             />
-            <Card
+            {/* <Card
                 button="Przeczytaj"
-                content="Well, you're in the right place. My website is your one stop shop for everything you need to build JavaScript apps.Well, you're in the right place. My website is your one stop shop for everything you need to build JavaScript apps."
-                image="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849826_960_720.jpg"
-                path=""
-                title="Somebody App"
-            />
+                content={projects[projects.length - 1].excerpt}
+                path={projects[projects.length - 1].path}
+                title={projects[projects.length - 1].title}
+            /> */}
         </CardsWrapper>
     )
 }

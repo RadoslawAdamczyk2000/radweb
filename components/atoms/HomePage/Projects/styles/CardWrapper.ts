@@ -1,50 +1,46 @@
 import styled from "styled-components";
 export const CardWrapper = styled.figure`
     align-items:center;
-    background-color:lime;
+    border:.5rem solid ${({theme}) => theme.colors.secondary};
+    border-radius:2rem;
     display:flex;
-    height:40rem;
+    height:35rem;
     justify-content:center;
-    margin:auto;
     position:relative;
-    width:60rem;
-    & > figcaption{
-        background-color:${({theme}) => theme.colors.secondary};
-        height:100%;
-        position:absolute;
-        left:0;
-        transition:.2s linear transform;
-        width:35rem;
-        a{
-            padding:1rem 2rem;
-            width:18rem;
+    width:30rem;
+    a{
+        padding:1rem 2rem;
+        &:last-of-type{
+            margin-left:2rem;
+            font-size:1.8rem;
+            width:15rem;
         }
-        &,
-        & > div{
-            align-items:start;
+    }
+    &,
+    & > div{
+        align-items:start;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    & > div{
+        padding:.75rem;
+        row-gap:1.5rem;
+        h5{
+            align-items:center;
+            color:${({theme}) => theme.colors.tertiary};
             display:flex;
-            flex-direction:column;
-            justify-content:center;
+            justify-content:start;
+            font-size:2.2rem;
+            text-align:start;
+            width:100%;
         }
-        & > div{
-            padding:.75rem;
-            row-gap:1.5rem;
-            h5{
-                align-items:center;
-                color:${({theme}) => theme.colors.tertiary};
-                display:flex;
-                justify-content:start;
-                font-size:2.2rem;
-                text-align:start;
-                width:100%;
-            }
-            p{
-                font-size:1.75rem;
-                line-height:3rem;
-                padding:.85rem;
-                text-align:start;
-                width:100%;
-            }
+        p{
+            font-size:1.45rem;
+            line-height:2.7rem;
+            padding:.85rem;
+            text-align:start;
+            width:100%;
         }
     }
     &:focus,

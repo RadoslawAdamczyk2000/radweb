@@ -4,7 +4,7 @@ export const CardsWrapper = styled.div`
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    gap:2rem;
+    gap:1rem;
     justify-content:center;
     padding:3rem;
     width:100%;
