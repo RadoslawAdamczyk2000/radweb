@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const ContentWrapper = styled.article`
     margin:3rem auto;
-    width:85%;
+    width:95%;
     & > h2,
     & > section > p {
         padding: 1rem 2rem;
