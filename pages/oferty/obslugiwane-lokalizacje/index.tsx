@@ -1,21 +1,23 @@
-import Hero from "../../../components/bacterias/AllPages/Hero";
 import Layout from "../../../schemas/Layout";
 import { blog } from "../../../content/pages/blog";
 import { NextPage } from "next";
+import Hero from "../../../components/atoms/Page/Hero";
 const Page:NextPage = () => {
-  const {seo,head} = blog.pl;
+  const {seo,head:hero} = blog.pl;
   return(
     <Layout 
       title={seo.title}
       description={seo.desc}
-    >
-      <Hero
-        altImage={head.alt}
-        content={head.content}
-        image={head.image}
-        isPage={true}
-        title={head.title}
-      />
+      seoImg={hero.image}
+      >
+        <Hero
+          image={hero.image}
+          imageTitle={`${hero.title} - zdjęcie`}
+          title={hero.title}
+          isPage={true}
+        >
+          {hero.content}
+        </Hero>
       <main>
       </main>
     </Layout>

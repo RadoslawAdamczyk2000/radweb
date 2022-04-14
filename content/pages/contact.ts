@@ -2,7 +2,8 @@ export const contact = {
     pl:{
         seo:{
             title:'Specjalista stron www i SEO, kontakt, Śrem, Poznań - RadWEB',
-            desc:'Szukasz kontaktu ze specjalistą z zakresu stron internetowych i pozycjonowania? Jeśli tak to dobrze trafiłeś.'
+            desc:'Szukasz kontaktu ze specjalistą z zakresu stron internetowych i pozycjonowania? Jeśli tak to dobrze trafiłeś.',
+            image:'https://cdn.pixabay.com/photo/2016/11/29/11/39/computer-1869236_960_720.jpg'
         },
         content:{
             title:'Kontakt ze specjalistą',

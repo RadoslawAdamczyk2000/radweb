@@ -8,12 +8,13 @@ interface i {
     image : string,
     imageTitle : string,
     isAbout ?: boolean,
+    isFaq ?: boolean,
     isHome ?: boolean,
     isPage ?: boolean,
     isSearch ?: boolean,
     title : string
 }
-const Hero = ({children,handle,image,imageTitle,isAbout=false,isHome=false,isPage=false,isSearch=false,title}:i) => {
+const Hero = ({children,handle,image,imageTitle,isAbout=false,isFaq=false,isHome=false,isPage=false,isSearch=false,title}:i) => {
     return(
         <>
             {
@@ -81,6 +82,30 @@ const Hero = ({children,handle,image,imageTitle,isAbout=false,isHome=false,isPag
             }
             {
                 isSearch &&
+                <HeroWrapper className='search'>
+                    <article>
+                        <h1>{title}</h1>
+                        <p>{children}</p>
+                        <Search
+                            handle={handle}
+                        />
+                    </article>
+                    <figure>
+                        <Image
+                            alt={imageTitle}
+                            layout='fill'
+                            objectFit='cover'
+                            objectPosition='center'
+                            src={image}
+                            style={{
+                                borderRadius:'3rem'
+                            }}
+                        />
+                    </figure>
+                </HeroWrapper>
+            }
+            {
+                isFaq &&
                 <HeroWrapper className='search'>
                     <article>
                         <h1>{title}</h1>

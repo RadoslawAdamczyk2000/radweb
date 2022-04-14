@@ -1,26 +1,28 @@
-import Hero from "../../components/bacterias/AllPages/Hero";
 import Layout from "../../schemas/Layout";
 import Projects from "../../components/bacterias/ProjectsPage/Projects/Projects";
 import Tech from "../../components/atoms/ProjectsPage/Tech/Tech";
 import { NextPage } from "next";
 import { projects } from "../../content/pages/projects";
 import { useState } from "react";
+import Hero from "../../components/atoms/Page/Hero";
 const Page:NextPage = () => {
-  const {seo,head} = projects.pl;
+  const {seo,head:hero} = projects.pl;
   const [search,setSearch] = useState('');
   return(
-    <Layout 
+    <Layout
+      seoImg={hero.image}
       title={seo.title}
       description={seo.desc}
     >
       <Hero
-        altImage={head.alt}
-        content={head.content}
-        image={head.image}
-        isPage={true}
+        image={hero.image}
+        imageTitle={`${hero.title} - zdjęcie`}
+        title={hero.title}
         handle={(e:any) => setSearch(e.target.value)}
-        title={head.title}
-      />
+        isSearch={true}
+      >
+        {hero.content}
+      </Hero>
       <main>
         {/* <Tech/> */}
         <Projects search={search}/>

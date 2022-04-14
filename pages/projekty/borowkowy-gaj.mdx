@@ -10,6 +10,7 @@ import Stack from '../../components/atoms/PostPage/Stack.tsx';
 export const meta = {
     title:'RadWEB - Borókowy Gaj, strona o borówkach amerykańskich',
     description:'Każdy ma swój pierwszy raz. Moją pierwszą stroną zrealizowaną dla klienta był Borówkowy Gaj, który zajmuje się plantacją ekologicznych borówek pod Kórnikiem',
+    seoImg:'https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/projekty/zdjecia/borowkowy-gaj.png?raw=true'
 }
 
 <Title>Borówkowy Gaj</Title>
@@ -56,4 +57,4 @@ Jak na stronę o tak relatywnie długim stażu to naprawdę rewelacyjny wynik. J
 W pierwszej kolejności zmieniłbym zdjęcie w tle na obrazek wektorowy, zrobiłbym baner ze zdjęciem o niższej jakości lub wogóle zrezygnował z fotografii. Dalszym krokiem byłoby stworzenie kolejnych podstron, które przenosiłby na kolejne adresy. Dałoby to możliwość praktyczniejszego odnalezienie tych informacji, których domaga się użytkownik. To w dłuższej perspektywie pozwoliłoby dostać się do słynnego **TOP 3** w Google.
 </Content>
 
-export default ({children}) => <Layout title={meta.title} desc={meta.description}>{children}</Layout>
+export default ({children}) => <Layout seoImg={meta.seoImg} title={meta.title} desc={meta.description}>{children}</Layout>

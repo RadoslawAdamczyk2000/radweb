@@ -2,9 +2,9 @@ import { AnimatePresence,motion } from "framer-motion";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Button from "../components/atoms/FaqPage/Button";
+import Hero from "../components/atoms/Page/Hero";
 import Cards from "../components/bacterias/FaqPage/Cards";
 import Form from "../components/bacterias/FaqPage/Form";
-import Hero from "../components/cells/FaqPage/Hero";
 import { faq as pages} from "../content/pages/faq";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
@@ -16,17 +16,20 @@ const Page:NextPage = () => {
   })
   return(
     <Layout 
+      seoImg={'https://cdn.pixabay.com/photo/2017/09/10/18/25/question-2736480_960_720.jpg'}
       title={seo.title}
       description={seo.desc}
     >
       <Hero
-        content={hero.content}
-        handle={(e:any) => setSearch(e.target.value)}
-        place={hero.search.place}
-        tags={hero.tags}
+        image="https://cdn.pixabay.com/photo/2017/09/10/18/25/question-2736480_960_720.jpg"
+        imageTitle={`${hero.title} - zdjęcie`}
         title={hero.title}
-      />
-      <main style={{width:'95%'}}>
+        handle={(e:any) => setSearch(e.target.value)}
+        isSearch={true}
+      >
+        {hero.content}
+      </Hero>
+      <main className="larger">
         <Cards search={search}/>
       </main>
       <Button openForm={() => setOpenForm(true)} />

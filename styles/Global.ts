@@ -35,8 +35,9 @@ export const Global = createGlobalStyle`
         font-size:62.5%;
     }
     main{
-        /* border-left:.25rem solid red;
-        border-right:.25rem solid red; */
+        .larger{
+            width:90%;
+        }
         margin:4rem auto;
         padding:1rem 0;
         width:85%;

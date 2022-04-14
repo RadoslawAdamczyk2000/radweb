@@ -9,6 +9,7 @@ const Page:NextPage = () => {
     <Layout 
       title={seo.title}
       description={seo.desc}
+      seoImg={seo.image}
     >
       <main>
         <Content
