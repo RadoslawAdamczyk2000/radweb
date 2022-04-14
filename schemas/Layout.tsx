@@ -24,6 +24,7 @@ const Layout = ({children,description,seoImg,title}:i) => {
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={seoImg} />
+         
             </Head>
             <Global/>
             <Navigation changeTheme={() => setTheme(!theme)}/>
