@@ -6,17 +6,10 @@ interface i {
     date : string,
     image : string,
     path : string,
-    time : number,
+    time : number | string,
     title : string
 }
 const Card = ({date,image,path,time,title}:i) => {
-    const articleTime = new Date(date);
-    const articleYear = articleTime.getFullYear();
-    let articleMonth:number|string = articleTime.getMonth();
-    if(articleMonth < 10){articleMonth = `0${articleMonth}`}
-    let articleDay:number|string = articleTime.getDate();
-    if(articleDay < 10){articleDay = `0${articleDay}`}
-    const article:string = `${articleDay}/${articleMonth}/${articleYear}`;
     return(
         <Link href={path}>
             <a>
@@ -35,7 +28,7 @@ const Card = ({date,image,path,time,title}:i) => {
                         />
                     </figure>
                     <figcaption>
-                        <p>{article} - <i><RiTimeLine/></i>{time}min</p>
+                        <p>{date} - <i><RiTimeLine/></i>{time}min</p>
                         <h5>{title}</h5>
                     </figcaption>
                 </CardWrapper>
