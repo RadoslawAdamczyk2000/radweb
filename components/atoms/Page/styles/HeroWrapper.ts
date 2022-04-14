@@ -16,6 +16,7 @@ export const HeroWrapper = styled.header`
             display:flex;
             flex-direction:column;
             justify-content:center;
+            margin:auto;
             max-width:85%;
             width:60rem;
             & > * {

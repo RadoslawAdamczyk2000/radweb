@@ -20,7 +20,7 @@ module.exports = withMDX({
       "cdn.pixabay.com", 
       "placeimg.com",
       "github.com",
-      "localhost:3000"
+      "raw.githubusercontent.com"
     ],
   },
 });

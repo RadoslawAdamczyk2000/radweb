@@ -16,7 +16,7 @@ const Page:NextPage = () => {
     >
       <Hero
         content={hero.content}
-        image='../assets/images/full.webp'
+        image='https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/assets/276976195_390490625839906_3507921385087957587_n.jpg?raw=true'
         links={hero.buttons}
         title={hero.title}
       />
@@ -26,7 +26,7 @@ const Page:NextPage = () => {
           title={born.heading}
         />
         <Poster
-          image='../assets/images/snow.webp'
+          image='https://raw.githubusercontent.com/RadoslawAdamczyk2000/rad-web-content/main/assets/snow.webp'
           imageTitle="Zdjęcię z klasą z liceum"
         />
         <Content
@@ -41,7 +41,7 @@ const Page:NextPage = () => {
           title={skills.heading}
         />
         <Poster
-          image='../assets/images/pizza.webp'
+          image='https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/assets/72426717_1251619528372354_2772731960315871232_n.jpg?raw=true'
           imageTitle="Urodzinowa pizza"
         />
         <Content
