@@ -6,6 +6,8 @@ export const WhyMeWrapper = styled.section`
     display:grid;
     grid-template-columns:2fr 3fr;
     padding:6rem 3rem;
+    margin:auto;
+    max-width:99%;
     @media only screen and (max-width:1300px){
         align-items:center;
         display:flex;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const OfferItemWrapper = styled.li`
+margin:2rem 0;
     & > button{
         display:flex;
         flex-direction:row;

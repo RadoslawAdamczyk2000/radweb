@@ -21,6 +21,7 @@ export const ContentWrapper = styled.section`
     @media only screen and (max-width:1000px){
         display:flex;
         flex-direction:column;
+        padding:2rem 0;
         & > div{
             &:first-of-type{
                 flex-direction:row;

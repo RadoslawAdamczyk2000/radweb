@@ -25,6 +25,7 @@ export const OfferCardWrapper = styled.article`
     @media only screen and (max-width:1010px){
         row-gap:1.2rem;
         max-width:95%;
+        margin:auto;
         width:35rem;
         & > figure{
             width:100%;
