@@ -4,10 +4,10 @@ export const CardWrapper = styled.article`
     margin:auto;
     max-height:auto;
     max-width:90%;
-    min-height:50rem;
-    width:45rem;
+    min-height:30rem;
+    width:35rem;
     & > figure{
-        height:50rem;
+        height:35rem;
         filter:grayscale(85%) brightness(75%);
         position:relative;
         transition:.2s linear filter;
@@ -19,7 +19,7 @@ export const CardWrapper = styled.article`
             align-items:center;
             color:${({theme}) => theme.colors.primary};
             display:flex;
-            font-size:2.1rem;
+            font-size:1.7rem;
             font-weight:400;
             gap:.45rem;
             justify-content:flex-end;
@@ -34,7 +34,7 @@ export const CardWrapper = styled.article`
         }
         & > h5{
             color:${({theme}) => theme.colors.color};
-            font-size:2.75rem;
+            font-size:2.25rem;
             padding:.4rem .75rem;
             transition:.2s linear color;
         }
