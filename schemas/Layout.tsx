@@ -24,7 +24,11 @@ const Layout = ({children,description,seoImg,title}:i) => {
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={seoImg} />
-         
+                <script 
+                    async 
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145985197806639" 
+                    crossOrigin="anonymous"
+                />
             </Head>
             <Global/>
             <Navigation changeTheme={() => setTheme(!theme)}/>
