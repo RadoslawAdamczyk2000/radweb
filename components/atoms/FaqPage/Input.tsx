@@ -16,7 +16,12 @@ const Input = ({handle,inputId,inputName,isMail=false,isText=false,title}:i) => 
                 <InputWrapper isInput>
                     <label htmlFor={inputName} >{title}</label>
                     <div>
-                        <input type={isMail ? 'email' : 'text'} name={inputName} id={inputId} onInput={handle}/>
+                        <input 
+                            type={isMail ? 'email' : 'text'}
+                            name={inputName} 
+                            id={inputId} 
+                            onInput={handle}
+                        />
                     </div>
                 </InputWrapper>
             }

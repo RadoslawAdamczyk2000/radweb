@@ -23,13 +23,13 @@ export const footer = {
             form:{
                 firstName:{
                     label:'Imię',
-                    inputId:'firstName',
-                    inputName:'firstName'
+                    inputId:'firstname',
+                    inputName:'firstname'
                 },
                 eMail:{
                     label:'E-mail',
-                    inputId:'Email',
-                    inputName:'Email'
+                    inputId:'email',
+                    inputName:'email'
                 },
             }
         },

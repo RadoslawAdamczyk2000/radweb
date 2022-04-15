@@ -21,7 +21,7 @@ export const NewsletterWrapper = styled.div`
             line-height:3rem;
         }
     }
-    & > div:nth-of-type(2){
+    & > form{
         width:100%;
     }
 `

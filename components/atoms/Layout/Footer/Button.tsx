@@ -2,7 +2,7 @@ import {RiArrowRightLine} from 'react-icons/ri';
 import { ButtonWrapper } from './styles/ButtonWrapper';
 const Button = ({title}:{title:string}) => {
     return(
-        <ButtonWrapper>
+        <ButtonWrapper type='submit'>
             <p>{title}</p>
             <div>
                 <i>
