@@ -35,6 +35,9 @@ export const Global = createGlobalStyle`
         font-size:62.5%;
     }
     main{
+        .big{
+            width:99%;
+        }
         .larger{
             width:90%;
         }

@@ -20,7 +20,7 @@ const Page:NextPage = () => {
       >
         {hero.content}
       </Hero>
-      <main className="larger">
+      <main className="larger" style={{width:'100%'}}>
         <Cards>
           {content.map(({content,path,title}) =>
             <Card

@@ -18,7 +18,7 @@ const Page:NextPage = () => {
       >
         {hero.content}
       </Hero>
-      <main className="larger">
+      <main className="larger"  style={{width:'100%'}}>
       </main>
     </Layout>
   )
