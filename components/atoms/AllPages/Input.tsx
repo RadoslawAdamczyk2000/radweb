@@ -23,8 +23,10 @@ const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit
                             id={inputId} 
                             name={inputName} 
                             placeholder={place}
+                            minLength={3}
                             onInput={handle}
                             type={inputType}
+                            required
                         />
                         <span/>
                     </div>
@@ -38,6 +40,8 @@ const Input = ({handle,inputId,inputName,inputType='text',isInput=false,isSubmit
                         <textarea 
                             id={inputId} 
                             name={inputName} 
+                            required
+                            minLength={10}
                             onInput={handle}
                             placeholder={place}
                         />
