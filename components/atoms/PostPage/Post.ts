@@ -26,6 +26,11 @@ export const ImgWrapper = styled.figure`
         height:65rem;
         max-width:90%;
     }
+    &.section{
+        aspect-ratio:9/3;
+        height:35rem;
+        max-width:90%;
+    }
 `
 export const H2 = styled.h2`
     color:${({theme}) => theme.colors.color};

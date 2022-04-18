@@ -23,6 +23,13 @@ export const posts = {
             title:'Czarny orzeł - Leszek Czarny',
             readTime:'32'
         },
+        {
+            poster:'https://cdn.pixabay.com/photo/2020/06/11/19/00/programming-5287885_960_720.jpg',
+            path:'/blog/pseudo-css',
+            time:'11:50 18/04/2022',
+            title:'Pseudo CSS I - pseudoklasy',
+            readTime:'32'
+        },
         // {
         //     poster:'',
         //     path:'',
