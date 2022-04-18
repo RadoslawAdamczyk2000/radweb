@@ -12,7 +12,7 @@ interface i {
     seoImg : string,
     title : string,
     canonical?:string,
-    robots:string,
+    robots?:string,
     typePage ?: string
 }
 const Layout = ({canonical,children,description,seoImg,robots,title,typePage='website'}:i) => {
