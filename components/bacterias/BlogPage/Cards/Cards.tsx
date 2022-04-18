@@ -8,7 +8,7 @@ const Cards = ({search}:i) => {
     const {articles} = posts;
     return(
         <CardsWrapper>
-            {articles.filter(i => i.title.toLowerCase().includes(search.toLowerCase())).map(({poster,path,time,title,readTime}) => 
+            {articles.filter(i => i.title.toLowerCase().includes(search.toLowerCase())).reverse().map(({poster,path,time,title,readTime}) => 
                 <Card
                     key={title}
                     image={poster}
