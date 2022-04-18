@@ -1,10 +1,9 @@
 import Head from "next/head"
 import { useState } from "react"
 import { ThemeProvider } from "styled-components"
-import Socials from "../components/atoms/Layout/Footer/Socials";
 import Footer from "../components/cells/Layout/Footer/Footer";
 import Navigation from "../components/molecules/Layout/Navigation/Navigation";
-import { footer } from "../data/footer";
+import ld from '../data/ld.json';
 import { Global } from "../styles/Global";
 import { darkTheme, lightTheme } from "../styles/theme";
 interface i {
@@ -29,6 +28,11 @@ const Layout = ({children,description,seoImg,title}:i) => {
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145985197806639" 
                     crossOrigin="anonymous"
                 />
+                <script 
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{__html:JSON.stringify(ld)}}
+                />
+                    
             </Head>
             <Global/>
             <Navigation changeTheme={() => setTheme(!theme)}/>
