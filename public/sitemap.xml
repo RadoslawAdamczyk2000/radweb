@@ -9,58 +9,63 @@
 
 <url>
   <loc>https://rad-web.vercel.app/</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://rad-web.vercel.app/blog/pseudo-css</loc>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://rad-web.vercel.app/blog/czarny-orzel-leszek-czarny</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/blog/cechy-dobrej-strony-internetowej</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rad-web.vercel.app/blog/czym-jest-html-historia-czy-terazniejszosc</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/projekty/borowkowy-gaj</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/o-mnie</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/blog</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/projekty</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/oferty</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/faq</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rad-web.vercel.app/kontakt</loc>
-  <lastmod>2022-04-14T12:40:30+00:00</lastmod>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rad-web.vercel.app/blog/czym-jest-html-historia-czy-terazniejszosc</loc>
+  <lastmod>2022-04-18T16:34:50+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
