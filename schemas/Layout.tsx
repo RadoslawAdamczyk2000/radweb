@@ -10,9 +10,12 @@ interface i {
     children : any,
     description : string,
     seoImg : string,
-    title : string
+    title : string,
+    canonical?:string,
+    robots:string,
+    typePage ?: string
 }
-const Layout = ({children,description,seoImg,title}:i) => {
+const Layout = ({canonical,children,description,seoImg,robots,title,typePage='website'}:i) => {
     const [theme,setTheme] = useState(false);
     return(
         <ThemeProvider theme={theme ? lightTheme : darkTheme}>
@@ -23,6 +26,18 @@ const Layout = ({children,description,seoImg,title}:i) => {
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={seoImg} />
+                <meta property="og:site_name" content="RadWEB - Programowanie i SEO" />
+                <meta property="og:type" content={typePage} />
+                <meta property="og:locale" content='pl' />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={seoImg} />
+                <meta name="twitter:title" content={title}/>
+                <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+                <meta name="twitter:description" content={description}/>
+                <meta name="twitter:image" content={seoImg}/>
+                {robots && <meta name='robots' content={robots}/>}
+                {canonical && <link rel='canonical' href={canonical}/>}
                 <script 
                     async 
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145985197806639" 
@@ -32,7 +47,6 @@ const Layout = ({children,description,seoImg,title}:i) => {
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{__html:JSON.stringify(ld)}}
                 />
-                    
             </Head>
             <Global/>
             <Navigation changeTheme={() => setTheme(!theme)}/>
