@@ -45,7 +45,7 @@ export interface IntThemeButton{
     isLight:boolean
 }
 export interface IntSubmenu {
-    children:ReactElement,
+    children:ReactElement|ReactElement[],
     path:string,
     title:string
 }
