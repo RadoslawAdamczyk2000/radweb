@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled,{css} from 'styled-components';
 interface menuButton {
     active:boolean
 }
@@ -12,6 +12,19 @@ export const AuthorWrapper = styled.div`
         font-weight:800;
         text-align:center;
         user-select:none;
+    }
+`
+export const BrandWrapper = styled.div`
+    & > a{
+        color:${({theme}) => theme.colors.color};
+        font-size:1.9rem;
+        font-weight:700;
+        transition:.12s linear text-shadow;
+        user-select:none;
+        &:focus,
+        &:hover{
+            text-shadow:0 0 2rem ${({theme}) => theme.colors.color};
+        }
     }
 `
 export const FooterWrapper = styled.footer`
@@ -76,7 +89,46 @@ export const MapWrapper = styled.div`
     }
 `
 export const MenuButtonWrapper = styled.div<menuButton>`
-    background-color:red;
+    align-items:center;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    height:3.5rem;
+    justify-content:space-around;
+    padding:.25rem;
+    position:relative;
+    width:3.5rem;
+    & > span{
+        background-color:${({theme}) => theme.colors.color};
+        height:.3rem;
+        transition:.2s .2s linear display, .2s linear opacity, .2s linear transform, .2s linear visibility;
+        width:100%;
+    }
+    &:focus,
+    &:hover{
+        & > span{
+            transform:scale(.8);
+        }
+    }
+    ${({active}) => active && css`
+        & > span{
+            left:50%;
+            position:absolute;
+            top:50%;
+            width:85%;
+            &:first-of-type{
+                transform:translate(-50%,-50%) rotate(45deg);
+            }
+            &:last-of-type{
+                transform:translate(-50%,-50%) rotate(-45deg);
+            }
+            &:nth-of-type(2){
+                display:none;
+                opacity:0;
+                visibility:hidden;
+            }
+        }
+    `}
 `
 export const MenuFooterWrapper = styled.div`
     align-items:start;
@@ -117,6 +169,27 @@ export const MenuFooterWrapper = styled.div`
             }
         }
     }
+`
+export const Nav = styled.nav`
+    position:sticky;
+    top:0;
+    z-index:9999999999999999;
+`
+export const NavMobileWrapper = styled(Nav)`
+    background-color:${({theme}) => theme.colors.secondary};
+    & > div{
+        &:first-of-type{
+            align-items:center;
+            background:darkblue;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            height:4rem;
+            padding:0 2rem;
+        }
+        &:last-of-type{}
+    }
+
 `
 export const NewsletterWrapper = styled.div`
     align-items:baseline;
@@ -231,8 +304,30 @@ export const NewsletterWrapper = styled.div`
     }
    
 `
+export const OptionsWrapper = styled.div`
+    align-items:center;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    gap:1rem;
+    justify-content:center;
+`
 export const ThemeButtonWrapper = styled.div<themeButton>`
-    background-color:red;
+    align-items:center;
+    color:${({theme}) => theme.colors.color};
+    cursor:pointer;
+    display:flex;
+    font-size:2rem;
+    height:3.75rem;
+    justify-content:center;
+    width:3.75rem;
+    & > *{
+        transition:.2s linear transform;
+    }
+    &:focus > *,
+    &:hover > *{
+        transform:scale(.95);       
+    }
 `
 export const SocialsWrapper = styled.ul`
     align-items:center;

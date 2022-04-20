@@ -2,7 +2,7 @@ import Head from "next/head"
 import { useState } from "react"
 import { ThemeProvider } from "styled-components"
 import Footer from "../components/Layout/Footer";
-import Navigation from "../components/molecules/Layout/Navigation/Navigation";
+import Navigation from "../components/Layout/Navigation";
 import ld from '../data/ld.json';
 import { Global } from "../styles/Global";
 import { darkTheme, lightTheme } from "../styles/theme";
@@ -17,6 +17,9 @@ interface i {
 }
 const Layout = ({canonical,children,description,seoImg,robots,title,typePage='website'}:i) => {
     const [theme,setTheme] = useState(false);
+    const handleTheme = () => {
+        setTheme(!theme);
+    }
     return(
         <ThemeProvider theme={theme ? lightTheme : darkTheme}>
             <Head>
@@ -48,8 +51,8 @@ const Layout = ({canonical,children,description,seoImg,robots,title,typePage='we
                     dangerouslySetInnerHTML={{__html:JSON.stringify(ld)}}
                 />
             </Head>
+            <Navigation setTheme={() => handleTheme()} theme={theme} />
             <Global/>
-            <Navigation changeTheme={() => setTheme(!theme)}/>
             <div>
                 {children}
             </div>

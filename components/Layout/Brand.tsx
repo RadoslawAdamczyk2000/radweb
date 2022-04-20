@@ -1,3 +1,4 @@
 import Link from "next/link";
-const Brand = () => <div><Link href='/'><a>RadWEB</a></Link></div>;
+import { BrandWrapper } from "./styles";
+const Brand = () => <BrandWrapper><Link href='/'><a>RadWEB</a></Link></BrandWrapper>;
 export default Brand;

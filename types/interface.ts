@@ -60,3 +60,13 @@ export interface IntSeo{
     title:string,
     typePage?:string
 }
+export interface IntOptions {
+    active:boolean,
+    handleMenuButton:MouseEventHandler,
+    handleThemeButton:MouseEventHandler,
+    isLight:boolean
+}
+export interface IntNavigation {
+    setTheme:MouseEventHandler,
+    theme:boolean
+}
