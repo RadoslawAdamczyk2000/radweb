@@ -5,6 +5,15 @@ interface menuButton {
 interface themeButton {
     light:boolean
 }
+export const AuthorWrapper = styled.div`
+    & > p{
+        color:${({theme}) => theme.colors.primary};
+        font-size:1.5rem;
+        font-weight:800;
+        text-align:center;
+        user-select:none;
+    }
+`
 export const FooterWrapper = styled.footer`
     align-items:center;
     border-top:.15rem solid ${({theme}) => theme.colors.secondary};
@@ -111,18 +120,108 @@ export const MenuFooterWrapper = styled.div`
 `
 export const NewsletterWrapper = styled.div`
     align-items:baseline;
-    background:red;
     display:flex;
     flex-direction:column;
     flex-wrap:wrap;
     justify-content:center;
-    gap:3rem;
+    gap:1rem;
     max-width:95%;
-    width:75rem;
+    padding:2rem 0;
+    width:85rem;
+    & > form {
+        align-items:start;
+        flex-direction:column;
+        gap:2.5rem;
+        &,
+        & > div{
+            width:100%;
+        }
+        &,
+        & > div,
+        & > button{
+            align-items:center;
+            display:flex;
+        }
+        & > div{
+            flex-flow:row wrap;
+            gap:1.5rem;
+            justify-content:flex-start;
+            padding:.75rem;
+            & > div.field{
+                max-width:99%;
+                width:35rem;
+                & > label{
+                    align-items:center;
+                    display:flex;
+                    font-size:2rem;
+                    font-weight:700;
+                    justify-content:start;
+                    padding:.5rem 1rem;
+                    width:100%;
+                }
+                & > div{
+                    height:5.5rem;
+                    position:relative;
+                    & > input{
+                        background-color:${({theme}) => theme.colors.secondary};
+                        color:${({theme}) => theme.colors.color};
+                        font-size:1.75rem;
+                        height:100%;
+                        padding:0 1rem;
+                        transition:.12s linear color;
+                        width:100%;
+                        &::placeholder{
+                            color:${({theme}) => theme.colors.primary};
+                            font-size:1.8rem;
+                            padding:0 0;
+                            text-indent:2rem;
+                        }
+                        &:focus + span,
+                        &:hover + span{
+                            background-color:${({theme}) => theme.colors.color};
+                            height:.35rem;
+                        }
+                        &:invalid{
+                            color:red;
+                        }
+                        &:valid{
+                            color:green;
+                        }
+                    }
+                    & > span{
+                        background-color:${({theme}) => theme.colors.primary};
+                        bottom:0;
+                        left:0;
+                        height:.25rem;
+                        position:absolute;
+                        transition:.2s linear background-color, .2s linear height;
+                        width:100%;
+                    }
+                }
+            }
+        }
+        & > button{
+            border-radius:1rem;
+            color:${({theme}) => theme.colors.color};
+            font-size:2rem;
+            font-weight:900;
+            height:4rem;
+            justify-content:center;
+            transition:.2s linear background-color,.2s linear color, .2s .2s linear transform;
+            width:14rem;
+            &:focus,
+            &:hover{
+                background-color:${({theme}) => theme.colors.color};
+                color:${({theme}) => theme.colors.background};
+                transform:scaleX(.9);
+            }
+        }
+    }
     & > section{
-        background-color:darkgreen;
+        padding:1rem;
         & > h4{
             font-size:2.6rem;
+            line-height:5rem;
         }
         & > p{
             color:${({theme}) => theme.colors.primary};

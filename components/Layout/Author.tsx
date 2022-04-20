@@ -1,7 +1,8 @@
+import { AuthorWrapper } from "./styles";
 const Author = () => {
     const year:number = new Date().getFullYear();
     return(
-        <div><p>RadWEB - Radosław Adamczyk &copy; 2021 - {year}</p></div>
+        <AuthorWrapper><p>RadWEB - Radosław Adamczyk &copy; 2021 - {year}</p></AuthorWrapper>
     )
 }
 export default Author;
