@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { IntMenuItem } from "../../types/interface";
 import {VscArrowSmallDown} from 'react-icons/vsc';
+import { MenuItemWrapper } from "./styles";
 const MenuItem = ({isExpand,isMain,isSubmenu,path,title}:IntMenuItem) => {
     return(
         <>
@@ -8,7 +9,7 @@ const MenuItem = ({isExpand,isMain,isSubmenu,path,title}:IntMenuItem) => {
                 isMain &&
                 (
                     isExpand ?
-                    <div className='expand'>
+                    <MenuItemWrapper className='expand' as='div'>
                         <Link href={path}>
                             <a>
                                 {title}
@@ -17,25 +18,25 @@ const MenuItem = ({isExpand,isMain,isSubmenu,path,title}:IntMenuItem) => {
                         <div className='button'>
                             <VscArrowSmallDown/>
                         </div>
-                    </div> :
-                    <li className='main'>
+                    </MenuItemWrapper> :
+                    <MenuItemWrapper className='main'>
                         <Link href={path}>
                             <a>
                                 {title}
                             </a>
                         </Link>
-                    </li>
+                    </MenuItemWrapper>
                 )
             }
             {
                 isSubmenu &&
-                <li className='submenu'>
+                <MenuItemWrapper className='submenu'>
                     <Link href={path}>
                         <a>
                             {title}
                         </a>
                     </Link>
-                </li>
+                </MenuItemWrapper>
             }
         </>
     )

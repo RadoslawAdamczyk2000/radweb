@@ -24,7 +24,7 @@ const Navigation = ({theme,setTheme}:IntNavigation) => {
                 </div>
             </nav> */}
             <NavMobileWrapper>
-                <div>
+                <div className='top'>
                     <Brand/>
                     <Options
                         active={menuButton}
@@ -33,9 +33,11 @@ const Navigation = ({theme,setTheme}:IntNavigation) => {
                         isLight={theme}
                     />
                 </div>
-                <div>
-                    <Menu isFooter={false} />
-                </div>
+                {menuButton &&
+                    <div className='bottom'>
+                        <Menu isFooter={false} />
+                    </div>
+                }
             </NavMobileWrapper>
         </>
     )

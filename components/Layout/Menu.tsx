@@ -44,8 +44,6 @@ const Menu = ({isFooter}:IntMenu) => {
                     </div>
                 </MenuFooterWrapper> :
                 <menu>
-                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path='' title='' />
-
                     <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[0].path} title={menu[0].title} />
                     <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[1].path} title={menu[1].title} />
                     <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[2].path} title={menu[2].title} />
@@ -55,6 +53,8 @@ const Menu = ({isFooter}:IntMenu) => {
                             <MenuItem isExpand={false} isMain={false} isSubmenu={true} path={path} title={title} key={key}/>
                         )}
                     </Submenu>
+                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[5].path} title={menu[5].title} />
+                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[6].path} title={menu[6].title} />
                 </menu>
             }
         </>

@@ -170,6 +170,22 @@ export const MenuFooterWrapper = styled.div`
         }
     }
 `
+export const MenuItemWrapper = styled.li`
+    @media only screen {
+        @media (max-width:750px){
+            color:${({theme}) => theme.colors.primary};
+            font-size:1.65rem;
+            margin:.15rem auto;
+            max-width:95%;
+            transition:.12s linear color;
+            width:25rem;
+            &:focus,
+            &:hover{
+                color:${({theme}) => theme.colors.color};
+            }
+        }
+    }
+`
 export const Nav = styled.nav`
     position:sticky;
     top:0;
@@ -177,17 +193,30 @@ export const Nav = styled.nav`
 `
 export const NavMobileWrapper = styled(Nav)`
     background-color:${({theme}) => theme.colors.secondary};
+    transition:.12s linear height;
     & > div{
-        &:first-of-type{
+        &.top{
             align-items:center;
-            background:darkblue;
             display:flex;
             flex-direction:row;
             justify-content:space-between;
             height:4rem;
             padding:0 2rem;
         }
-        &:last-of-type{}
+        &.bottom{
+            align-items:center;
+            padding:1rem 0;            
+            transition:.12s linear height;
+            &,
+            & > menu{
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+            }
+            & > menu{
+                align-items:start;
+            }
+        }
     }
 
 `
@@ -370,6 +399,27 @@ export const SocialsWrapper = styled.ul`
                 transform:scale(1.25);
                 &::before{
                     width:100%;
+                }
+            }
+        }
+    }
+`
+export const SubmenuWrapper = styled.li`
+    @media only screen {
+        @media (max-width:750px){
+            color:${({theme}) => theme.colors.primary};
+            .expand{
+                column-gap:1rem;
+                flex-flow:row nowrap;
+                &,
+                & > div{
+                    align-items:center;
+                    display:flex;
+                    justify-content:start;
+                }
+                & > div{
+                    cursor:pointer;
+                    font-size:2rem;
                 }
             }
         }
