@@ -97,5 +97,5 @@ export interface IntHeroPage {
 
 export interface IntSearch {
    handle:FormEventHandler,
-   name:string 
+   name:string|undefined 
 }

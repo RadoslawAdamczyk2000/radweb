@@ -40,6 +40,9 @@ const Hero = ({content,handle,image,imageTitle,isHome,nameSearch,title}:IntHeroP
                             objectFit='cover'
                             objectPosition='center'
                             src={image}
+                            style={{
+                                borderRadius:'1.75rem'
+                            }}
                         />
                     </figure>
                 </HeroWrapper>
