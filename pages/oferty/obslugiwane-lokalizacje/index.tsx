@@ -1,7 +1,7 @@
 import Layout from "../../../schemas/Layout";
 import { blog } from "../../../content/pages/blog";
 import { NextPage } from "next";
-import Hero from "../../../components/atoms/Page/Hero";
+import Hero from "../../../components/Page/Hero";
 const Page:NextPage = () => {
   const {seo,head:hero} = blog.pl;
   return(
@@ -11,13 +11,12 @@ const Page:NextPage = () => {
       seoImg={hero.image}
       >
         <Hero
+          content={hero.content}
           image={hero.image}
           imageTitle={`${hero.title} - zdjęcie`}
+          isHome={true}
           title={hero.title}
-          isPage={true}
-        >
-          {hero.content}
-        </Hero>
+        />
       <main  style={{width:'100%'}}>
       </main>
     </Layout>
