@@ -5,7 +5,7 @@ import { IntMenu } from "../../types/interface";
 import MenuItem from "./MenuItem";
 import Submenu from './Submenu';
 import { MenuFooterWrapper } from "./styles";
-const Menu = ({isFooter}:IntMenu) => {
+const Menu = ({isFooter,handleClose,handleOffer,offer}:IntMenu) => {
     const {title,email,phone} = footer.pl.contact;
     const {menu,blog,offers} = navigation.pl;
     return(
@@ -44,17 +44,17 @@ const Menu = ({isFooter}:IntMenu) => {
                     </div>
                 </MenuFooterWrapper> :
                 <menu>
-                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[0].path} title={menu[0].title} />
-                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[1].path} title={menu[1].title} />
-                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[2].path} title={menu[2].title} />
-                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[3].path} title={menu[3].title} />
-                    <Submenu path={menu[4].path} title={menu[4].title}>
+                    <MenuItem isExpand={false} handle={handleClose} isMain={true} isSubmenu={false} path={menu[0].path} title={menu[0].title} />
+                    <MenuItem isExpand={false} handle={handleClose} isMain={true} isSubmenu={false} path={menu[1].path} title={menu[1].title} />
+                    <MenuItem isExpand={false} handle={handleClose} isMain={true} isSubmenu={false} path={menu[2].path} title={menu[2].title} />
+                    <MenuItem isExpand={false} handle={handleClose} isMain={true} isSubmenu={false} path={menu[3].path} title={menu[3].title} />
+                    <Submenu path={menu[4].path} title={menu[4].title} handle={handleOffer} cards={offer}>
                         {offers.map(({path,title},key) =>
-                            <MenuItem isExpand={false} isMain={false} isSubmenu={true} path={path} title={title} key={key}/>
+                            <MenuItem isExpand={false} isMain={false} isSubmenu={true} path={path} title={title} key={key} handle={handleClose}/>
                         )}
                     </Submenu>
-                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[5].path} title={menu[5].title} />
-                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[6].path} title={menu[6].title} />
+                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[5].path} title={menu[5].title} handle={handleClose}/>
+                    <MenuItem isExpand={false} isMain={true} isSubmenu={false} path={menu[6].path} title={menu[6].title} handle={handleClose}/>
                 </menu>
             }
         </>

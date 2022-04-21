@@ -2,6 +2,9 @@ import styled,{css} from 'styled-components';
 interface menuButton {
     active:boolean
 }
+interface nav {
+    scroll:boolean
+}
 interface themeButton {
     light:boolean
 }
@@ -89,46 +92,49 @@ export const MapWrapper = styled.div`
     }
 `
 export const MenuButtonWrapper = styled.div<menuButton>`
-    align-items:center;
-    cursor:pointer;
-    display:flex;
-    flex-direction:column;
-    height:3.5rem;
-    justify-content:space-around;
-    padding:.25rem;
-    position:relative;
-    width:3.5rem;
-    & > span{
-        background-color:${({theme}) => theme.colors.color};
-        height:.3rem;
-        transition:.2s .2s linear display, .2s linear opacity, .2s linear transform, .2s linear visibility;
-        width:100%;
-    }
-    &:focus,
-    &:hover{
+    display:none;
+    @media only screen and (max-width:750px){
+        align-items:center;
+        cursor:pointer;
+        display:flex;
+        flex-direction:column;
+        height:3.5rem;
+        justify-content:space-around;
+        padding:.25rem;
+        position:relative;
+        width:3.5rem;
         & > span{
-            transform:scale(.8);
+            background-color:${({theme}) => theme.colors.color};
+            height:.3rem;
+            transition:.2s .2s linear display, .2s linear opacity, .2s linear transform, .2s linear visibility;
+            width:100%;
         }
-    }
-    ${({active}) => active && css`
-        & > span{
-            left:50%;
-            position:absolute;
-            top:50%;
-            width:85%;
-            &:first-of-type{
-                transform:translate(-50%,-50%) rotate(45deg);
-            }
-            &:last-of-type{
-                transform:translate(-50%,-50%) rotate(-45deg);
-            }
-            &:nth-of-type(2){
-                display:none;
-                opacity:0;
-                visibility:hidden;
+        &:focus,
+        &:hover{
+            & > span{
+                transform:scale(.8);
             }
         }
-    `}
+        ${({active}) => active && css`
+            & > span{
+                left:50%;
+                position:absolute;
+                top:50%;
+                width:85%;
+                &:first-of-type{
+                    transform:translate(-50%,-50%) rotate(45deg);
+                }
+                &:last-of-type{
+                    transform:translate(-50%,-50%) rotate(-45deg);
+                }
+                &:nth-of-type(2){
+                    display:none;
+                    opacity:0;
+                    visibility:hidden;
+                }
+            }
+        `}
+    }
 `
 export const MenuFooterWrapper = styled.div`
     align-items:start;
@@ -184,6 +190,48 @@ export const MenuItemWrapper = styled.li`
                 color:${({theme}) => theme.colors.color};
             }
         }
+        @media (min-width:750px){
+            column-gap:.75rem;
+            flex-flow:row nowrap;
+            font-size:1.65rem;
+            font-weight:400;
+            height:3.5rem;
+            min-width:10rem;
+            padding:0 1rem;
+            a{
+                color:${({theme}) => theme.colors.primary};
+                transition:.12s linear color;
+            }
+            &:focus,
+            &:hover{
+                a{
+                    color:${({theme}) => theme.colors.color};
+                }
+            }
+            &,
+            & > div{
+                align-items:center;
+                display:flex;
+                justify-content:center;
+            }
+            & > div{
+                cursor:pointer;
+                font-size:4rem;
+                height:3rem;
+                transition:.2s linear color;
+                width:3rem;
+                & > *{
+                    transition:.2s linear transform;
+                }
+                &:focus,
+                &:hover{
+                    color:${({theme}) => theme.colors.color};
+                    & > *{
+                        transform:scale(.95);
+                    }
+                }
+            }
+        }
     }
 `
 export const Nav = styled.nav`
@@ -191,34 +239,62 @@ export const Nav = styled.nav`
     top:0;
     z-index:9999999999999999;
 `
-export const NavMobileWrapper = styled(Nav)`
-    background-color:${({theme}) => theme.colors.secondary};
-    transition:.12s linear height;
-    & > div{
-        &.top{
+export const NavDesktopWrapper = styled(Nav)<nav>`
+    display:none;
+    @media only screen and (min-width:750px){
+        background-color:${({theme}) => theme.colors.background};
+        height:5.5rem;
+        justify-content:space-between;
+        padding:0 2rem;
+        transition:.12s linear box-shadow;
+        ${({scroll}) => scroll && css`
+            box-shadow:${({theme}) => theme.shadows.navigation};
+        `}
+        &,
+        & > div,
+        & > div > menu{
             align-items:center;
             display:flex;
             flex-direction:row;
-            justify-content:space-between;
-            height:4rem;
-            padding:0 2rem;
         }
-        &.bottom{
-            align-items:center;
-            padding:1rem 0;            
-            transition:.12s linear height;
-            &,
+        & > div{
+            gap:1rem;
             & > menu{
-                display:flex;
-                flex-direction:column;
-                justify-content:center;
-            }
-            & > menu{
-                align-items:start;
+                gap:.75rem;
             }
         }
     }
-
+`
+export const NavMobileWrapper = styled(Nav)`
+    display:none;
+    @media only screen and (max-width:750px){
+        background-color:${({theme}) => theme.colors.secondary};
+        transition:.12s linear height;
+        & > div{
+            &.top{
+                align-items:center;
+                display:flex;
+                flex-direction:row;
+                justify-content:space-between;
+                height:4rem;
+                padding:0 2rem;
+            }
+            &.bottom{
+                align-items:center;
+                padding:1rem 0;            
+                transition:.12s linear height;
+                &,
+                & > menu{
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                }
+                & > menu{
+                    align-items:start;
+                }
+            }
+        }
+    }
 `
 export const NewsletterWrapper = styled.div`
     align-items:baseline;
@@ -336,8 +412,7 @@ export const NewsletterWrapper = styled.div`
 export const OptionsWrapper = styled.div`
     align-items:center;
     display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
+    flex-flow:row nowrap;
     gap:1rem;
     justify-content:center;
 `
@@ -421,6 +496,20 @@ export const SubmenuWrapper = styled.li`
                     cursor:pointer;
                     font-size:2rem;
                 }
+            }
+            .submenu{
+                padding-left:1rem;
+            }
+        }
+        @media (min-width:750px){
+            position:relative;
+            & > ul{
+                border-radius:0 0 1.5rem 1.5rem;
+                box-shadow:0 0 .25rem ${({theme}) => theme.colors.primary};
+                padding:1rem 1.5rem;
+                background-color:${({theme}) => theme.colors.secondary};
+                position:absolute;
+                margin-top:.15rem;
             }
         }
     }

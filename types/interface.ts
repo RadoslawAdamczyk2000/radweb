@@ -31,12 +31,13 @@ export interface IntTitleArticle{
 }
 export interface IntMenuButton{
     active:boolean,
-    handleMenuButton:MouseEventHandler
+    handleMenuButton:MouseEventHandler,
 }
 export interface IntMenuItem{
     isExpand:boolean,
     isMain:boolean,
     isSubmenu:boolean,
+    handle?:MouseEventHandler,
     path:string,
     title:string
 }
@@ -46,11 +47,16 @@ export interface IntThemeButton{
 }
 export interface IntSubmenu {
     children:ReactElement|ReactElement[],
+    cards:boolean|undefined,
+    handle:MouseEventHandler|undefined,
     path:string,
     title:string
 }
 export interface IntMenu {
-    isFooter:boolean
+    isFooter:boolean,
+    handleOffer:MouseEventHandler,
+    handleClose?:MouseEventHandler,
+    offer?:boolean
 }
 export interface IntSeo{
     canonical?:string,

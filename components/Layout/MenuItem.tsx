@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IntMenuItem } from "../../types/interface";
 import {VscArrowSmallDown} from 'react-icons/vsc';
 import { MenuItemWrapper } from "./styles";
-const MenuItem = ({isExpand,isMain,isSubmenu,path,title}:IntMenuItem) => {
+const MenuItem = ({isExpand,isMain,isSubmenu,handle,path,title}:IntMenuItem) => {
     return(
         <>
             {
@@ -11,17 +11,17 @@ const MenuItem = ({isExpand,isMain,isSubmenu,path,title}:IntMenuItem) => {
                     isExpand ?
                     <MenuItemWrapper className='expand' as='div'>
                         <Link href={path}>
-                            <a>
+                            <a onClick={handle}>
                                 {title}
                             </a>
                         </Link>
-                        <div className='button'>
+                        <div className='button' onClick={handle}>
                             <VscArrowSmallDown/>
                         </div>
                     </MenuItemWrapper> :
                     <MenuItemWrapper className='main'>
                         <Link href={path}>
-                            <a>
+                            <a onClick={handle}>
                                 {title}
                             </a>
                         </Link>
@@ -32,7 +32,7 @@ const MenuItem = ({isExpand,isMain,isSubmenu,path,title}:IntMenuItem) => {
                 isSubmenu &&
                 <MenuItemWrapper className='submenu'>
                     <Link href={path}>
-                        <a>
+                        <a onClick={handle}>
                             {title}
                         </a>
                     </Link>
