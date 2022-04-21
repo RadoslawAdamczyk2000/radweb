@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, MouseEventHandler, ReactChild, ReactElement, ReactText } from "react"
+import { DetailedHTMLProps, FormEventHandler, KeyboardEventHandler, MouseEventHandler, ReactChild, ReactElement, ReactText } from "react"
 export interface IntCite {
     author:string,
     cite:string
@@ -84,4 +84,18 @@ export interface IntProjectCard {
     path:string,
     socials:ReactElement|ReactElement[],
     title:string
+}
+export interface IntHeroPage {
+    content:ReactText,
+    image:string,
+    imageTitle:string,
+    isHome:boolean,
+    handle:KeyboardEventHandler|MouseEventHandler|FormEventHandler,
+    nameSearch:string, 
+    title:string,
+}
+
+export interface IntSearch {
+   handle:KeyboardEventHandler|MouseEventHandler|FormEventHandler,
+   name:string 
 }
