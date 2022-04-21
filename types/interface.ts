@@ -76,3 +76,12 @@ export interface IntNavigation {
     setTheme:MouseEventHandler,
     theme:boolean
 }
+export interface IntProjectCard {
+    excerpt?:string,
+    image:string,
+    imageTitle:string,
+    isHome:boolean,
+    path:string,
+    socials:ReactElement|ReactElement[],
+    title:string
+}
