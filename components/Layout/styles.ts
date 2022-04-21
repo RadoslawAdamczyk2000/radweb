@@ -266,7 +266,6 @@ export const NavDesktopWrapper = styled(Nav)<nav>`
     }
 `
 export const NavMobileWrapper = styled(Nav)`
-    display:none;
     @media only screen and (max-width:750px){
         background-color:${({theme}) => theme.colors.secondary};
         transition:.12s linear height;
@@ -294,6 +293,9 @@ export const NavMobileWrapper = styled(Nav)`
                 }
             }
         }
+    }
+    @media only screen and (min-width:750px){
+        display:none;
     }
 `
 export const NewsletterWrapper = styled.div`
