@@ -90,12 +90,12 @@ export interface IntHeroPage {
     image:string,
     imageTitle:string,
     isHome:boolean,
-    handle:KeyboardEventHandler|MouseEventHandler|FormEventHandler,
-    nameSearch:string, 
+    handle?:KeyboardEventHandler|MouseEventHandler|FormEventHandler,
+    nameSearch?:string, 
     title:string,
 }
 
 export interface IntSearch {
-   handle:KeyboardEventHandler|MouseEventHandler|FormEventHandler,
+   handle:FormEventHandler,
    name:string 
 }

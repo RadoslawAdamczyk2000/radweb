@@ -93,7 +93,7 @@ export const MapWrapper = styled.div`
 `
 export const MenuButtonWrapper = styled.div<menuButton>`
     display:none;
-    @media only screen and (max-width:750px){
+    @media only screen and (max-width:900px){
         align-items:center;
         cursor:pointer;
         display:flex;
@@ -196,7 +196,7 @@ export const MenuItemWrapper = styled.li`
             font-size:1.65rem;
             font-weight:400;
             height:3.5rem;
-            min-width:10rem;
+            min-width:5rem;
             padding:0 1rem;
             a{
                 color:${({theme}) => theme.colors.primary};
@@ -241,7 +241,7 @@ export const Nav = styled.nav`
 `
 export const NavDesktopWrapper = styled(Nav)<nav>`
     display:none;
-    @media only screen and (min-width:750px){
+    @media only screen and (min-width:900px){
         background-color:${({theme}) => theme.colors.background};
         height:5.5rem;
         justify-content:space-between;
@@ -266,7 +266,7 @@ export const NavDesktopWrapper = styled(Nav)<nav>`
     }
 `
 export const NavMobileWrapper = styled(Nav)`
-    @media only screen and (max-width:750px){
+    @media only screen and (max-width:900px){
         background-color:${({theme}) => theme.colors.secondary};
         transition:.12s linear height;
         & > div{
@@ -294,7 +294,7 @@ export const NavMobileWrapper = styled(Nav)`
             }
         }
     }
-    @media only screen and (min-width:750px){
+    @media only screen and (min-width:900px){
         display:none;
     }
 `
@@ -483,7 +483,7 @@ export const SocialsWrapper = styled.ul`
 `
 export const SubmenuWrapper = styled.li`
     @media only screen {
-        @media (max-width:750px){
+        @media (max-width:900px){
             color:${({theme}) => theme.colors.primary};
             .expand{
                 column-gap:1rem;
@@ -503,7 +503,7 @@ export const SubmenuWrapper = styled.li`
                 padding-left:1rem;
             }
         }
-        @media (min-width:750px){
+        @media (min-width:900px){
             position:relative;
             & > ul{
                 border-radius:0 0 1.5rem 1.5rem;

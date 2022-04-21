@@ -5,7 +5,7 @@ import Movies from "../components/atoms/AboutPage/Movies";
 import Hobbies from "../components/atoms/AboutPage/Hobbies";
 import Content from "../components/atoms/AboutPage/Content";
 import Poster from "../components/atoms/AboutPage/Poster";
-import Hero from "../components/atoms/Page/Hero";
+import Hero from "../components/Page/Hero";
 const Page:NextPage = () => {
   const {hero,seo,story,hobbies} = about.pl;
   const {education,born,skills,passions} = story;
@@ -16,15 +16,12 @@ const Page:NextPage = () => {
       description={seo.desc}
     >
       <Hero
+        content={hero.content}
         image="https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/assets/276976195_390490625839906_3507921385087957587_n.jpg?raw=true"
         imageTitle={`${hero.title} - zdjęcie`}
+        isHome={true}
         title={hero.title}
-        isAbout={true}
-        isHome={false}
-        isPage={false}
-      >
-        {hero.content}
-      </Hero>
+      />
       <main>
         <Content
           content={born.content}

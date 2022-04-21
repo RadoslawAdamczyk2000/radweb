@@ -1,13 +1,12 @@
 import { NextPage } from "next";
 import Layout from "../schemas/Layout";
 import { home } from "../content/pages/home";
-import Link from "next/link";
 import About from "../components/bacterias/HomePage/About/About";
 import Offer from "../components/cells/HomePage/Offer/Offer";
 import Projects from "../components/cells/HomePage/Projects/Projects";
 import WhyMe from "../components/bacterias/HomePage/WhyMe/WhyMe";
 import Blog from "../components/cells/HomePage/Blog/Blog";
-import Hero from "../components/atoms/Page/Hero";
+import Hero from "../components/Page/Hero";
 const Page:NextPage = () => {
   const {hero,seo} = home.pl;
   const {content,image,title} = hero;
@@ -18,15 +17,12 @@ const Page:NextPage = () => {
       description={seo.desc}
     >
       <Hero
+        content={content}
         image={image}
-        imageTitle={`${title} - zdjęcie`}
-        title={title}
-        isAbout={false}
+        imageTitle={`${title} - wieża widokowa Śrem - zdjęcie`}
         isHome={true}
-        isPage={false}
-      >
-        {content}
-      </Hero>
+        title={title}
+      />
       <main>
         <About/>
         <Offer/>

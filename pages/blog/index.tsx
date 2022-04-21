@@ -4,7 +4,7 @@ import Tags from "../../components/bacterias/BlogPage/Tags/Tags";
 import { blog } from "../../content/pages/blog";
 import { NextPage } from "next";
 import {useEffect, useState} from 'react';
-import Hero from "../../components/atoms/Page/Hero";
+import Hero from "../../components/Page/Hero";
 const Page:NextPage = () => {
   const {seo,head} = blog.pl;
   const [search,setSearch] = useState('');
@@ -15,25 +15,14 @@ const Page:NextPage = () => {
       description={seo.desc}
     >
       <Hero
-        image={head.image}
-        title={head.title}
-        handle={(e:any) => setSearch(e.target.value)}
-        imageTitle={`${head.title} - zdjęcie`}
-        isAbout={false}
-        isHome={false}
-        isPage={false}
-        isSearch={true}
-      >
-        {head.content}
-      </Hero>
-      {/* <Hero
-        altImage={head.alt}
         content={head.content}
-        handle={(e:any) => setSearch(e.target.value)}
         image={head.image}
-        isPage={true}
+        imageTitle={head.alt}
+        isHome={false}
         title={head.title}
-      /> */}
+        handle={(e:any) => setSearch(e.target.value)}
+        nameSearch='blog'
+      />
       <main>
           <Tags/>
           <Cards search={search} />
