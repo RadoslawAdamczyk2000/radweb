@@ -94,8 +94,30 @@ export interface IntHeroPage {
     nameSearch?:string, 
     title:string,
 }
-
 export interface IntSearch {
    handle:FormEventHandler,
    name:string|undefined 
+}
+export interface IntContentPage {
+    button?:string,
+    content:ReactText,
+    imagePath?:string,
+    imageTitle?:string,
+    isVertical?:boolean,
+    movie?:boolean,
+    moviePath?:string,
+    path?:string,
+    primary:boolean,
+    title:string,
+    withMedia?:boolean
+}
+export interface IntBlogCard {
+    date:string,
+    image:string,
+    isHome:boolean,
+    path:string,
+    title:string
+}
+export interface IntHobbies {
+    hobbies:any[]
 }

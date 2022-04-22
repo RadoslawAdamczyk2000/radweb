@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { IntContentPage } from "../../types/interface";
-const Content = ({button,content,imagePath='',imageTitle,movie,moviePath,path='',primary,title,withMedia=false}:IntContentPage) => {
+const Content = ({button,content,imagePath='',imageTitle,isVertical,movie,moviePath,path='',primary,title,withMedia=false}:IntContentPage) => {
     return(
         <>
             {
-                withMedia &&
+                withMedia ?
                 <section className={primary ? 'primary' : 'secondary'}>
                     <div className='media'>
                         {
@@ -34,6 +34,13 @@ const Content = ({button,content,imagePath='',imageTitle,movie,moviePath,path=''
                         <p>{content}</p>
                         {button && <Link href={path}><a>{button}</a></Link>}
                     </div>
+                </section> :
+                <section className={isVertical ? 'vertical' : 'horizontal'}>
+                    <article>
+                        <h2>{title}</h2>
+                        <p>{content}</p>
+                        {button && <Link href={path}><a>{button}</a></Link>}
+                    </article>
                 </section>
             }
         </>
