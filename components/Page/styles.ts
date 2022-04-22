@@ -12,8 +12,6 @@ export const ContentMediaWrapper = styled.section`
         padding:2rem 1rem;
     }
     & > .media{
-        background:darkblue;
-        max-width:95%;
         & > div{
             aspect-ratio:16/9;
             height:30rem;
@@ -53,6 +51,21 @@ export const ContentMediaWrapper = styled.section`
                 all:unset;
                 height:100%;
                 width:100%;
+            }
+        }
+        & > figure{
+            align-items:center;
+            display:flex;
+            justify-content:center;
+            position:relative;
+            height:55rem;
+            max-width:85%;
+            margin:auto;
+            width:40rem;
+            @media only screen {
+                @media (max-width:950px){
+                    height:35rem;
+                }
             }
         }
     }
@@ -109,6 +122,7 @@ export const ContentMediaWrapper = styled.section`
         user-select:none;
         &::before{
             background-color:${({theme}) => theme.colors.tertiary};
+            background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
             bottom:0;
             left:0;
             height:.35rem;
@@ -239,6 +253,106 @@ export const HeroWrapper = styled.header`
                     width:75rem;
                 }
             }
+        }
+    }
+`
+export const OfferCardHomeWrapper = styled.section`
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    padding: 0 0 1rem 0;
+    max-width:90%;
+    min-height:45rem;
+    width:40rem;
+    & > *:not(a){
+        width:100%;
+    }
+    & > figure{
+        height:15rem;
+        position:relative;
+    }
+    & > h3{
+        color:${({theme}) => theme.colors.color};
+        font-size:2rem;
+        padding:.5rem 1rem;
+    }
+    & > p{
+        color:${({theme}) => theme.colors.primary};
+        font-size:1.52rem;
+        line-height:3rem;
+        padding:.5rem;
+    }
+    & > a{
+        color:${({theme}) => theme.colors.color};
+        font-size:2.2rem;
+        font-weight:700;
+        transition:.12s ease-in-out color,.12s ease-in-out color;
+        padding:1rem 2rem;
+        position:relative;
+        user-select:none;
+        &::before{
+            background-color:${({theme}) => theme.colors.tertiary};
+            background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
+            bottom:0;
+            left:0;
+            height:.35rem;
+            transform:skewX(-35deg);
+            transition:.15s linear width;
+            width:0%;
+        }
+        &:focus,
+        &:hover{    
+            color:${({theme}) => theme.colors.tertiary};
+            &::before{
+                width:100%;
+            }
+        }
+    }
+
+`
+export const OffersHomeWrapper = styled.section`
+    background-color:${({theme}) => theme.colors.secondary};
+    border-radius:1.75rem;
+    padding:1rem 2rem;
+    & > div{
+        display:grid;
+        grid-template-columns:2fr 4fr;
+        min-height:50rem;
+        & > ul{
+            align-items:start;
+            display:flex;
+            flex-flow:column;
+            justify-content:start;
+            padding:3rem 2rem;
+            row-gap:1.75rem;
+            & > li{
+                cursor:pointer;
+                font-size:1.9rem;
+                font-weight:500;
+                position:relative;
+                user-select:none;
+                &::before{
+                    background-image:linear-gradient(to right,${({theme}) => theme.colors.color},${({theme}) => theme.colors.primary},${({theme}) => theme.colors.secondary});
+                    border-radius:1rem;
+                    bottom:-.5rem;
+                    left:0;
+                    height:.4rem;
+                    transition:.25s ease-in-out width;
+                    width:0;
+                }
+                &:focus,
+                &:hover{
+                    &::before{
+                        width:100%;
+                    }
+                }
+            }
+        }
+        & > div{
+            align-items:center;
+            display:flex;
+            justify-content:center;
         }
     }
 `

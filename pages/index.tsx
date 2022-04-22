@@ -8,8 +8,9 @@ import WhyMe from "../components/bacterias/HomePage/WhyMe/WhyMe";
 import Blog from "../components/cells/HomePage/Blog/Blog";
 import Hero from "../components/Page/Hero";
 import Content from "../components/Page/Content";
+import Offers from "../components/Page/Offers";
 const Page:NextPage = () => {
-  const {about,hero,seo} = home.pl;
+  const {about,hero,seo,whyMe} = home.pl;
   return(
     <Layout 
       seoImg={hero.image}
@@ -34,10 +35,18 @@ const Page:NextPage = () => {
           path={about.path}
           withMedia={true}
         />
+        <Offers isHome={true} />
         <Offer/>
         <Blog/>
         <Projects/>
-        <WhyMe/>
+        <Content
+          content={whyMe.content}
+          title={whyMe.title}
+          movie={false}
+          primary={false}
+          imagePath={whyMe.image}
+          withMedia={true}
+        />
       </main>
     </Layout>
   )

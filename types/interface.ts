@@ -130,5 +130,21 @@ export interface IntBlog {
     title:string
 }
 export interface IntProjects {
+    button?:string,
+    children:ReactElement[]|ReactElement,
+    content?:ReactText,
+    isHome:boolean,
+    path?:string,
+    title?:string,
+}
+export interface IntOfferCard {
+    content:string,
+    image?:string,
+    isHome:boolean,
+    path:string,
+    title:string
+}
+export interface IntOffers {
+    children?:ReactElement|ReactElement[],
     isHome:boolean,
 }

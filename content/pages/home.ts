@@ -33,7 +33,7 @@ export const home = {
         },
         offer:{
             title:'Możliwości współpracy',
-            content:`Istnieje wiele sposobów nawiązania ze mną efektywnej współpracy. <b>Co oferuję?</b> Znajdziesz u mnie głównie możliwość napisania strony internetowej typu blog, czy też portfolio. Ponadto istnieje opcja nawiązania komercyjnej współpracy przy pozycjonowaniu oraz optymalizacji, czyli wprowadzaniu zmian na istniejących już stronach.`,
+            content:`Istnieje wiele sposobów nawiązania ze mną efektywnej współpracy. Co oferuję? Znajdziesz u mnie głównie możliwość napisania strony internetowej typu blog, czy też portfolio. Ponadto istnieje opcja nawiązania komercyjnej współpracy przy pozycjonowaniu oraz optymalizacji, czyli wprowadzaniu zmian na istniejących już stronach.`,
             path:'/oferty',
             button:'Sprawdź wszystkie usługi',
             buttons:[
@@ -97,6 +97,7 @@ export const home = {
         whyMe:{
             title:'Dlaczego warto mnie wybrać?',
             content:`Z racji tego, że dopiero rozpycham się w tej branży zależy mi na zyskiwaniu świadomości oraz zdobywaniu zaufania klientów poprzez realizację usług na jak najwyższym poziomie. Moje strony internetowe cechują się wykorzystaniem najlepszych narzędzi na rynku oraz niepowtarzalnym wyglądem. Natomiast strony internetowe, które pozycjonuję są wsparte moim pełnym zaangażowaniem. Wszystkie realizowane przeze mnie usługi wykonuję i będę wykonywał uczciwie z jak najwyższym standardem.`,
+            image:'https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/assets/277117133_359233982608687_7597092082183253323_n.jpg?raw=true',
             path:'/oferty/obslugiwane-lokalizacje',
             button:'Sprawdź obsługiwane lokalizacje'
         }

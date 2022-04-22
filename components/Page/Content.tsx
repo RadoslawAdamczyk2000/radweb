@@ -26,7 +26,8 @@ const Content = ({button,content,imagePath='',imageTitle,isVertical,movie,movieP
                                     objectPosition='center'
                                     src={imagePath}
                                     style={{
-                                        borderRadius:'1rem'
+                                        borderRadius:'1rem',
+                                        margin:'auto'
                                     }}
                                 />
                             </figure>
