@@ -1,4 +1,130 @@
 import styled from 'styled-components';
+export const ContentMediaWrapper = styled.section`
+    align-items:start;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-evenly;
+    padding:.5rem 0;
+    row-gap:2rem;
+    &.secondary{
+        background-color:${({theme}) => theme.colors.secondary};
+        border-radius:2.5rem;
+        padding:2rem 1rem;
+    }
+    & > .media{
+        background:darkblue;
+        max-width:95%;
+        & > div{
+            aspect-ratio:16/9;
+            height:30rem;
+            @media only screen{
+                @media (max-width:1270px){
+                    height:25rem;
+                }
+                @media (max-width:1000px){
+                    height:22rem;
+                }
+                @media (max-width:930px){
+                    height:35rem;
+                }
+                @media (max-width:800px){
+                    height:30rem;
+                }
+                @media (max-width:700px){
+                    height:27rem;
+                }
+                @media (max-width:600px){
+                    height:25rem;
+                }
+                @media (max-width:550px){
+                    height:20rem;
+                }
+                @media (max-width:450px){
+                    height:18rem;
+                }
+                @media (max-width:400px){
+                    height:15rem;
+                }
+                @media (max-width:350px){
+                    display:none;
+                }
+            }
+            & > iframe{
+                all:unset;
+                height:100%;
+                width:100%;
+            }
+        }
+    }
+    & > .content{
+        padding:1rem .25rem 2rem .25rem;
+        width:70rem;
+        @media only screen{
+            @media (max-width:1500px){
+                width:50rem;
+            }
+            @media (max-width:1120px){
+                width:40rem;
+            }
+            @media (max-width:950px){
+                width:40rem;
+                & > h2{
+                    color:${({theme}) => theme.colors.primary};
+                    font-size:1.95rem;
+                    padding:.75rem 1.5rem;
+                }
+                & > p{
+                    color:${({theme}) => theme.colors.primary};
+                    font-size:1.65rem;
+                    line-height:3rem;
+                    padding:.5rem;
+                }
+            }
+            @media (max-width:930px){
+                width:90%;
+            }
+        }
+        & > *{
+            margin:.5rem 0;
+        }
+        & > h2{
+            color:${({theme}) => theme.colors.color};
+            font-size:2.95rem;
+            padding:1rem 1.5rem;
+        }
+        & > p{
+            color:${({theme}) => theme.colors.primary};
+            font-size:1.75rem;
+            line-height:3.5rem;
+            padding:.75rem;
+        }
+    }
+    a{
+        color:${({theme}) => theme.colors.color};
+        font-size:2.2rem;
+        font-weight:700;
+        transition:.12s ease-in-out color,.12s ease-in-out color;
+        padding:1rem 2rem;
+        position:relative;
+        user-select:none;
+        &::before{
+            background-color:${({theme}) => theme.colors.tertiary};
+            bottom:0;
+            left:0;
+            height:.35rem;
+            transform:skewX(-35deg);
+            transition:.15s linear width;
+            width:0%;
+        }
+        &:focus,
+        &:hover{    
+            color:${({theme}) => theme.colors.tertiary};
+            &::before{
+                width:100%;
+            }
+        }
+    }
+`
 export const HeroWrapper = styled.header`
     align-items:center;
     display:flex;

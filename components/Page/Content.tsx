@@ -1,20 +1,23 @@
 import Image from "next/image"
 import Link from "next/link"
 import { IntContentPage } from "../../types/interface";
+import { ContentMediaWrapper } from "./styles";
 const Content = ({button,content,imagePath='',imageTitle,isVertical,movie,moviePath,path='',primary,title,withMedia=false}:IntContentPage) => {
     return(
         <>
             {
                 withMedia ?
-                <section className={primary ? 'primary' : 'secondary'}>
+                <ContentMediaWrapper className={primary ? 'primary' : 'secondary'}>
                     <div className='media'>
                         {
                             movie ?
-                            <iframe 
-                                src={moviePath}
-                                title="YouTube video player" 
-                                allowFullScreen
-                            /> :
+                            <div>
+                                <iframe 
+                                    src={moviePath}
+                                    title="YouTube video player" 
+                                    allowFullScreen
+                                /> 
+                            </div>:
                             <figure>
                                 <Image
                                     alt={imageTitle}
@@ -34,7 +37,7 @@ const Content = ({button,content,imagePath='',imageTitle,isVertical,movie,movieP
                         <p>{content}</p>
                         {button && <Link href={path}><a>{button}</a></Link>}
                     </div>
-                </section> :
+                </ContentMediaWrapper> :
                 <section className={isVertical ? 'vertical' : 'horizontal'}>
                     <article>
                         <h2>{title}</h2>

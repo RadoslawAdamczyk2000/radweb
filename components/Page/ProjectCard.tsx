@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ReactElement } from "react"
 import { IntProjectCard } from "../../types/interface"
-const ProjectCard = ({excerpt='',image,imageTitle,isHome,path,socials=[],title}:IntProjectCard) => {
+const ProjectCard = ({excerpt='',image,imageTitle,isHome,path,socials,title}:IntProjectCard) => {
     return(
         <>
             {

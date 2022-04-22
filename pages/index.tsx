@@ -7,24 +7,33 @@ import Projects from "../components/cells/HomePage/Projects/Projects";
 import WhyMe from "../components/bacterias/HomePage/WhyMe/WhyMe";
 import Blog from "../components/cells/HomePage/Blog/Blog";
 import Hero from "../components/Page/Hero";
+import Content from "../components/Page/Content";
 const Page:NextPage = () => {
-  const {hero,seo} = home.pl;
-  const {content,image,title} = hero;
+  const {about,hero,seo} = home.pl;
   return(
     <Layout 
-      seoImg={image}
+      seoImg={hero.image}
       title={seo.title}
       description={seo.desc}
     >
       <Hero
-        content={content}
-        image={image}
-        imageTitle={`${title} - wieża widokowa Śrem - zdjęcie`}
+        content={hero.content}
+        image={hero.image}
+        imageTitle={`${hero.title} - wieża widokowa Śrem - zdjęcie`}
         isHome={true}
-        title={title}
+        title={hero.title}
       />
       <main>
-        <About/>
+        <Content
+          content={about.content}
+          primary={true}
+          title={about.title}
+          button={about.button}
+          movie={true}
+          moviePath={about.movie}
+          path={about.path}
+          withMedia={true}
+        />
         <Offer/>
         <Blog/>
         <Projects/>

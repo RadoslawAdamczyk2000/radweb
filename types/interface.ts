@@ -121,3 +121,14 @@ export interface IntBlogCard {
 export interface IntHobbies {
     hobbies:any[]
 }
+export interface IntBlog {
+    button:string,
+    children:ReactElement[]|ReactElement,
+    content:ReactText,
+    isHome:boolean,
+    path:string,
+    title:string
+}
+export interface IntProjects {
+    isHome:boolean,
+}
