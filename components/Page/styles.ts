@@ -315,6 +315,9 @@ export const OffersHomeWrapper = styled.section`
     background-color:${({theme}) => theme.colors.secondary};
     border-radius:1.75rem;
     padding:1rem 2rem;
+    & > article{
+        padding:0 2rem;
+    }
     & > div{
         display:grid;
         grid-template-columns:2fr 4fr;
