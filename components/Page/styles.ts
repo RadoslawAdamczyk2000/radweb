@@ -139,6 +139,82 @@ export const ContentMediaWrapper = styled.section`
         }
     }
 `
+export const ContentWithoutMediaWrapper = styled.section`
+    & > article{
+        align-items:start;
+        display:flex;
+        justify-content:space-evenly;
+        & > h2{
+            color:${({theme}) => theme.colors.color};
+            font-size:2.95rem;
+            padding:.75rem 1.5rem;
+        }
+        & > div{
+            padding:1rem 0;
+            & > p{
+                color:${({theme}) => theme.colors.primary};
+                font-size:1.75rem;
+                line-height:3.5rem;
+                padding:.75rem;
+            }
+        }
+    }
+    a{
+        color:${({theme}) => theme.colors.color};
+        font-size:2.2rem;
+        font-weight:700;
+        transition:.12s ease-in-out color,.12s ease-in-out color;
+        margin:2rem 0 0 0;
+        padding:1rem 2rem;
+        position:relative;
+        user-select:none;
+        &::before{
+            background-color:${({theme}) => theme.colors.tertiary};
+            background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
+            bottom:0;
+            left:0;
+            height:.35rem;
+            transform:skewX(-35deg);
+            transition:.15s linear width;
+            width:0%;
+        }
+        &:focus,
+        &:hover{    
+            color:${({theme}) => theme.colors.tertiary};
+            &::before{
+                width:100%;
+            }
+        }
+    }
+    &.horizontal{
+        & > article{
+            flex-flow:column;
+            & > div{
+                align-items:flex-start;
+                justify-content:flex-start;
+                padding:2rem 0 3rem;
+            }
+        }
+    }
+    &.vertical{
+        & > article{
+            flex-flow:row wrap;
+            & > h2{
+                width:40rem;
+            }
+            & > div{
+                width:55rem;
+                & > p{
+                    color:${({theme}) => theme.colors.primary};
+                    font-size:1.75rem;
+                    line-height:3.5rem;
+                    padding:.75rem;
+                }
+            }
+        }
+    }
+
+`
 export const HeroWrapper = styled.header`
     align-items:center;
     display:flex;
@@ -264,7 +340,7 @@ export const OfferCardHomeWrapper = styled.section`
     padding: 0 0 1rem 0;
     max-width:90%;
     min-height:45rem;
-    width:40rem;
+    width:35rem;
     & > *:not(a){
         width:100%;
     }
@@ -313,10 +389,10 @@ export const OfferCardHomeWrapper = styled.section`
 `
 export const OffersHomeWrapper = styled.section`
     background-color:${({theme}) => theme.colors.secondary};
-    border-radius:1.75rem;
+    border-radius:2.75rem;
     padding:1rem 2rem;
     & > article{
-        padding:0 2rem;
+        padding:5rem 2rem;
     }
     & > div{
         display:grid;

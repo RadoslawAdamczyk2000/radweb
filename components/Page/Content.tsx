@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { IntContentPage } from "../../types/interface";
-import { ContentMediaWrapper } from "./styles";
+import { ContentMediaWrapper, ContentWithoutMediaWrapper } from "./styles";
 const Content = ({button,content,imagePath='',imageTitle,isVertical,movie,moviePath,path='',primary,title,withMedia=false}:IntContentPage) => {
     return(
         <>
@@ -39,13 +39,15 @@ const Content = ({button,content,imagePath='',imageTitle,isVertical,movie,movieP
                         {button && <Link href={path}><a>{button}</a></Link>}
                     </div>
                 </ContentMediaWrapper> :
-                <section className={isVertical ? 'vertical' : 'horizontal'}>
+                <ContentWithoutMediaWrapper className={isVertical ? 'vertical' : 'horizontal'}>
                     <article>
                         <h2>{title}</h2>
-                        <p>{content}</p>
-                        {button && <Link href={path}><a>{button}</a></Link>}
+                        <div>
+                            <p>{content}</p>
+                            {button && <Link href={path}><a>{button}</a></Link>}
+                        </div>
                     </article>
-                </section>
+                </ContentWithoutMediaWrapper>
             }
         </>
     )
