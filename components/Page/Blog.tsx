@@ -1,8 +1,9 @@
 import { IntBlog } from "../../types/interface"
 import Content from "./Content"
+import { BlogWrapper } from "./styles";
 const Blog = ({button,children,content,isHome,path,title}:IntBlog) => {
     return(
-        <section>
+        <BlogWrapper>
             {
                 isHome &&
                 <Content
@@ -18,7 +19,7 @@ const Blog = ({button,children,content,isHome,path,title}:IntBlog) => {
             <ul>
                 {children}
             </ul>
-        </section>
+        </BlogWrapper>
     )
 }
 export default Blog;

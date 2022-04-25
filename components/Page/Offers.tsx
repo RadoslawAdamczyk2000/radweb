@@ -22,7 +22,7 @@ const Offers = ({children,isHome}:IntOffers) => {
                         <Content
                             button={button}
                             content={content}
-                            isVertical={true}
+                            isVertical={false}
                             primary={false}
                             path={path}
                             title={title}

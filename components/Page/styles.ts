@@ -2,6 +2,17 @@ import styled from 'styled-components';
 interface blogCard {
     isHome:boolean
 }
+export const BlogWrapper = styled.section`
+    & > ul {
+        align-items:center;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:center;
+        & > * {
+            margin:auto;
+        }
+    }
+`
 export const BlogCardWrapper = styled.li<blogCard>`
     max-width:95%;
     width:30rem;
@@ -191,6 +202,11 @@ export const ContentMediaWrapper = styled.section`
         padding:1rem 2rem;
         position:relative;
         user-select:none;
+        @media only screen {
+            @media (max-width:800px){
+                font-size:1.8rem;
+            }
+        }
         &::before{
             background-color:${({theme}) => theme.colors.tertiary};
             background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
@@ -211,6 +227,8 @@ export const ContentMediaWrapper = styled.section`
     }
 `
 export const ContentWithoutMediaWrapper = styled.section`
+    max-width:100%;
+    width:60rem;
     & > article{
         align-items:start;
         display:flex;
@@ -239,6 +257,11 @@ export const ContentWithoutMediaWrapper = styled.section`
         padding:1rem 2rem;
         position:relative;
         user-select:none;
+        @media only screen {
+            @media (max-width:800px){
+                font-size:1.8rem;
+            }
+        }
         &::before{
             background-color:${({theme}) => theme.colors.tertiary};
             background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
@@ -438,6 +461,11 @@ export const OfferCardHomeWrapper = styled.section`
         padding:1rem 2rem;
         position:relative;
         user-select:none;
+        @media only screen {
+            @media (max-width:800px){
+                font-size:1.8rem;
+            }
+        }
         &::before{
             background-color:${({theme}) => theme.colors.tertiary};
             background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
@@ -538,4 +566,4 @@ export const SearchWrapper = styled.div`
             padding:0 2rem;
         }
     }
-`
+` 
