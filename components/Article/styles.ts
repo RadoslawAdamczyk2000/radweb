@@ -70,6 +70,14 @@ export const ContentWrapper = styled.section`
             flex-flow:column;
             justify-content:center;
             row-gap:.5rem;
+            & > li{
+                padding-left:4rem;
+            }
+        }
+        ul,
+        ul > li{
+            list-style:disc;
+            list-style-position:inside;
         }
     }
 `
