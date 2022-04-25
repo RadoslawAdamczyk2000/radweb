@@ -2,12 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { ReactElement } from "react"
 import { IntProjectCard } from "../../types/interface"
+import { ProjectCardWrapper } from "./styles"
 const ProjectCard = ({excerpt='',image,imageTitle,isHome,path,socials,title}:IntProjectCard) => {
     return(
         <>
             {
                 isHome ? 
-                <li className='home'>
+                <ProjectCardWrapper className='home'>
                     <Link href={path}>
                         <a rel='index follow'>
                             <figcaption className='content'>
@@ -26,8 +27,8 @@ const ProjectCard = ({excerpt='',image,imageTitle,isHome,path,socials,title}:Int
                             </figure>
                         </a>
                     </Link>
-                </li> :
-                <li>
+                </ProjectCardWrapper> :
+                <ProjectCardWrapper className='page'>
                     <Link href={path}>
                         <a rel='index follow'>
                             <figure className='image'>
@@ -45,7 +46,7 @@ const ProjectCard = ({excerpt='',image,imageTitle,isHome,path,socials,title}:Int
                             </figcaption>
                         </a>
                     </Link>
-                </li>
+                </ProjectCardWrapper>
             }
         </>
     )

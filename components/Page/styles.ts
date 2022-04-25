@@ -546,6 +546,98 @@ export const OffersHomeWrapper = styled.section`
         }
     }
 `
+export const ProjectCardWrapper = styled.section`
+    &.home{
+        background-color:${({theme}) => theme.colors.secondary};
+        height:20rem;
+        width:70rem;
+        @media only screen{
+            @media (max-width:800px){
+                height:auto;
+                max-width:95%;
+                width:40rem;
+            }
+        }
+        & > a{
+            align-items:center;
+            display:flex;
+            flex-flow:row;
+            justify-content:center;
+            position:relative;
+            @media only screen{
+                @media (max-width:800px){
+                    flex-flow:column-reverse;
+                }
+            }
+            & > .content{
+                height:20rem;
+                width:40rem;
+                @media only screen{
+                    @media (max-width:800px){
+                        width:100%;
+                    }
+                }
+                & > *{
+                    width:100%;
+                }
+                & > .title{
+                    color:${({theme}) => theme.colors.color};
+                    font-size:1.95rem;
+                    padding:1rem 1.75rem;
+                    transition:.12s linear color;
+                }
+                & > .socials{
+                    flex-flow:row wrap;
+                    gap:1rem;
+                    justify-content:flex-start;
+                    padding:.15rem 1.5rem;
+                    &,
+                    & > .social{
+                        align-items:center;
+                        display:flex;
+                    }
+                    & > .social{
+                        color:${({theme}) => theme.colors.primary};
+                        filter:brightness(110%) hue-rotate(180deg);
+                        font-size:2rem;
+                        height:2.5rem;
+                        opacity:.75;
+                        justify-content:center;
+                        transition:.12s linear color;
+                        width:2.5rem;
+                    }
+                }
+                & > .excerpt{
+                    color:${({theme}) => theme.colors.primary};
+                    font-size:1.55rem;
+                    line-height:2.7rem;
+                    padding:1rem;
+                }
+            }
+            & > .image{
+                height:20rem;
+                position:relative;
+                width:calc(100% - 40rem);
+                @media only screen{
+                    @media (max-width:800px){
+                        height:40rem;
+                        width:100%;
+                    }
+                    @media (max-width:550px){
+                        height:20rem;
+                    }
+                }
+            }
+        }
+        &:focus,
+        &:hover{
+            .title,
+            .social{
+                color:${({theme}) => theme.colors.tertiary} !important;
+            }
+        }
+    }
+`
 export const SearchWrapper = styled.div`
     display:flex;
     height:4.75rem;

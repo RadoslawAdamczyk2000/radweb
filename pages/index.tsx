@@ -1,20 +1,17 @@
 import { NextPage } from "next";
-import Layout from "../schemas/Layout";
-import { home } from "../content/pages/home";
-import About from "../components/bacterias/HomePage/About/About";
-import Offer from "../components/cells/HomePage/Offer/Offer";
-import Projects from "../components/cells/HomePage/Projects/Projects";
-import WhyMe from "../components/bacterias/HomePage/WhyMe/WhyMe";
-// import Blog from "../components/cells/HomePage/Blog/Blog";
-import Hero from "../components/Page/Hero";
-import Content from "../components/Page/Content";
-import Offers from "../components/Page/Offers";
 import Blog from "../components/Page/Blog";
-import { posts } from "../data/posts";
 import BlogCard from "../components/Page/BlogCard";
+import Content from "../components/Page/Content";
+import Hero from "../components/Page/Hero";
+import Offers from "../components/Page/Offers";
+import ProjectCard from "../components/Page/ProjectCard";
+import Projects from "../components/Page/Projects";
+import { home } from "../content/pages/home";
+import { posts } from "../data/posts";
+import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
-  const {about,blog,hero,seo,whyMe} = home.pl;
-  const {articles} = posts;
+  const {about,blog,hero,seo,projects,whyMe} = home.pl;
+  const {articles,projects:cases} = posts;
   return(
     <Layout 
       seoImg={hero.image}
@@ -68,9 +65,51 @@ const Page:NextPage = () => {
             path={articles[articles.length -3].path} 
             title={articles[articles.length -3].title}
           />
-
         </Blog>
-        <Projects/>
+        <Projects
+          button={projects.button}
+          content={projects.content}
+          isHome={true}
+          path={projects.path}
+          title={projects.title}
+        > 
+          <ProjectCard 
+            excerpt={cases[cases.length - 1].excerpt}
+            image={cases[cases.length - 1].image}
+            imageTitle={`${cases[cases.length - 1].title} - zdjęcie`}
+            isHome={true}
+            path={cases[cases.length - 1].path}
+            socials={cases[cases.length - 1].stack}
+            title={cases[cases.length - 1].title}
+          />
+          <ProjectCard 
+            excerpt={cases[cases.length - 1].excerpt}
+            image={cases[cases.length - 1].image}
+            imageTitle={`${cases[cases.length - 1].title} - zdjęcie`}
+            isHome={true}
+            path={cases[cases.length - 1].path}
+            socials={cases[cases.length - 1].stack}
+            title={cases[cases.length - 1].title}
+          />
+          <ProjectCard 
+            excerpt={cases[cases.length - 1].excerpt}
+            image={cases[cases.length - 1].image}
+            imageTitle={`${cases[cases.length - 1].title} - zdjęcie`}
+            isHome={true}
+            path={cases[cases.length - 1].path}
+            socials={cases[cases.length - 1].stack}
+            title={cases[cases.length - 1].title}
+          />
+          <ProjectCard 
+            excerpt={cases[cases.length - 1].excerpt}
+            image={cases[cases.length - 1].image}
+            imageTitle={`${cases[cases.length - 1].title} - zdjęcie`}
+            isHome={true}
+            path={cases[cases.length - 1].path}
+            socials={cases[cases.length - 1].stack}
+            title={cases[cases.length - 1].title}
+          />
+        </Projects>
         <Content
           content={whyMe.content}
           title={whyMe.title}
