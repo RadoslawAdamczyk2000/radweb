@@ -123,7 +123,7 @@ export interface IntHobbies {
 }
 export interface IntBlog {
     button:string,
-    children:ReactElement[]|ReactElement,
+    children:ReactElement[]|ReactElement|Array<any>|undefined,
     content:ReactText,
     isHome:boolean,
     path:string,

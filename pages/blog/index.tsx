@@ -1,12 +1,21 @@
 import Cards from "../../components/bacterias/BlogPage/Cards/Cards";
 import Layout from "../../schemas/Layout";
-import Tags from "../../components/bacterias/BlogPage/Tags/Tags";
 import { blog } from "../../content/pages/blog";
 import { NextPage } from "next";
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import Hero from "../../components/Page/Hero";
+import Blog from "../../components/Page/Blog";
+import { posts } from "../../data/posts";
+import BlogCard from "../../components/Page/BlogCard";
+interface i{
+  poster:string,
+  path:string,
+  time:string,
+  title:string
+}
 const Page:NextPage = () => {
   const {seo,head} = blog.pl;
+  const {articles} = posts;
   const [search,setSearch] = useState('');
   return(
     <Layout 
@@ -24,8 +33,20 @@ const Page:NextPage = () => {
         nameSearch='blog'
       />
       <main>
-          <Tags/>
-          <Cards search={search} />
+          <Blog isHome={false} button="" content='' path='' title=''>
+            {
+              articles && articles.filter(item => item.title.toLowerCase().includes(search.toLowerCase())).reverse().map(({poster,path,time,title}:i,key:number) =>
+                <BlogCard
+                  key={key}
+                  date={time}
+                  image={poster}
+                  isHome={false}
+                  path={path}
+                  title={title}
+                />
+              )
+            }
+          </Blog>
       </main>
     </Layout>
   )

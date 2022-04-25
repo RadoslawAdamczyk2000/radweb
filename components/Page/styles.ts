@@ -4,13 +4,11 @@ interface blogCard {
 }
 export const BlogWrapper = styled.section`
     & > ul {
-        align-items:center;
+        align-items:start;
         display:flex;
         flex-flow:row wrap;
         justify-content:center;
-        & > * {
-            margin:auto;
-        }
+        gap:1rem;
     }
 `
 export const BlogCardWrapper = styled.li<blogCard>`
@@ -22,7 +20,7 @@ export const BlogCardWrapper = styled.li<blogCard>`
         flex-flow:column;
         justify-content:center;
         & > figure{
-            height:${({isHome}) => isHome ? '42rem' : '32rem'};
+            height:${({isHome}) => isHome ? '42rem' : '35rem'};
             width:100%;
             position:relative;
             & > *{
