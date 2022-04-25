@@ -1,9 +1,10 @@
 import { IntDate } from "../../types/interface";
-const Date = ({children}:IntDate) => {
+import { DateWrapper } from "./styles";
+const Date1 = ({children}:IntDate) => {
     return(
-        <div>
+        <DateWrapper>
             <p>{children}</p>
-        </div>
+        </DateWrapper>
     )
 }
-export default Date;
+export default Date1;

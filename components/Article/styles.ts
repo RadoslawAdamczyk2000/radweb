@@ -73,6 +73,15 @@ export const ContentWrapper = styled.section`
         }
     }
 `
+export const DateWrapper = styled.div`
+    color:${({theme}) => theme.colors.color};
+    font-size:1.55rem;
+    margin:1.5rem auto;
+    max-width:75%;
+    opacity:.7;
+    text-align:center;
+    width:65rem;
+`
 export const ImageWrapper = styled.section`
     & > figure{
         height:100%;
