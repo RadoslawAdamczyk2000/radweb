@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Content from "../components/atoms/ContactPage/Content";
 import Form from "../components/atoms/ContactPage/Form";
+import ContactForm from "../components/Page/ContactForm";
 import { contact } from "../content/pages/contact";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
@@ -16,7 +17,7 @@ const Page:NextPage = () => {
           content={content.content}
           title={content.title}
         />
-        <Form/>
+        <ContactForm/>
       </main>
     </Layout>
   )

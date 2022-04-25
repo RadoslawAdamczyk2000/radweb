@@ -73,6 +73,91 @@ export const BlogCardWrapper = styled.li<blogCard>`
         }
     }
 `
+export const ContactFormWrapper = styled.form`
+    align-items:center;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    row-gap:2rem;
+    & > .field{
+        align-items:center;
+        background:red;
+        display:flex;
+        justify-content:center;
+        position:relative;
+        max-width:99%;
+        width:45rem;
+    }
+    & > .input{
+        height:5rem;
+        & > input{
+            background-color:${({theme}) => theme.colors.secondary};
+            color:${({theme}) => theme.colors.color};
+            font-size:1.65rem;
+            height:100%;
+            padding:0 2rem;
+            width:100%;
+            &:focus + span{
+                background-color:${({theme}) => theme.colors.color};
+            }
+            &:valid + span{
+                background-color:palegreen;
+            }
+            &::placeholder{
+                color:${({theme}) => theme.colors.primary};
+                font-size:1.8rem;
+            }
+        }
+        & > span{
+            background-color:${({theme}) => theme.colors.primary};
+            border-radius:.5rem;
+            bottom:0;
+            height:.2rem;
+            left:0;
+            position:absolute;
+            transition:.15s linear background-color;
+            width:100%;
+        }
+    }
+    & > .area{
+        height:18rem;
+        max-height:auto;
+        & > textarea{
+            background-color:${({theme}) => theme.colors.secondary};
+            border-radius:.75rem;
+            border:.2rem solid ${({theme}) => theme.colors.primary};
+            color:${({theme}) => theme.colors.color};
+            font-size:1.55rem;
+            height:100%;
+            padding:1rem;
+            resize:none;
+            transition:.12s linear border;
+            width:100%;
+            &:valid{
+                border:.2rem solid palegreen;
+            }
+            &::placeholder{
+                color:${({theme}) => theme.colors.primary};
+                font-size:1.8rem;
+            }
+        }
+    }
+    & > .submit{
+        border-radius:1.5rem;
+        color:${({theme}) => theme.colors.color};
+        font-size:2rem;
+        font-weight:700;
+        padding:1rem 3rem;
+        text-transform:lowercase;
+        transition:.15s linear background-color, .15s linear color, .15s linear transform;
+        &:focus,
+        &:hover{
+            background-color:${({theme}) => theme.colors.color};
+            color:${({theme}) => theme.colors.background};
+            transform:scaleX(.85);
+        }
+    }
+`
 export const ContentMediaWrapper = styled.section`
     align-items:start;
     display:flex;
