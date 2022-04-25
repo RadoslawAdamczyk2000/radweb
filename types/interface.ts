@@ -4,7 +4,7 @@ export interface IntCite {
     cite:string
 }
 export interface IntCode {
-    children:ReactChild
+    children:any
 }
 export interface IntContentArticle {
     children:ReactChild,
