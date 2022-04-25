@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, FormEventHandler, KeyboardEventHandler, MouseEventHandler, ReactChild, ReactElement, ReactText } from "react"
+import { TypeTags } from "./types"
 export interface IntCite {
     author:string,
     cite:string
@@ -152,4 +153,8 @@ export interface IntOffers {
 export interface IntFaqCard {
     content:string|undefined,
     title:string
+}
+export interface IntTags {
+    tags:TypeTags,
+    tech:boolean
 }
