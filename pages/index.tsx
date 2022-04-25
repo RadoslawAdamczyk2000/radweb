@@ -82,33 +82,6 @@ const Page:NextPage = () => {
             socials={cases[cases.length - 1].stack}
             title={cases[cases.length - 1].title}
           />
-          <ProjectCard 
-            excerpt={cases[cases.length - 1].excerpt}
-            image={cases[cases.length - 1].image}
-            imageTitle={`${cases[cases.length - 1].title} - zdjęcie`}
-            isHome={true}
-            path={cases[cases.length - 1].path}
-            socials={cases[cases.length - 1].stack}
-            title={cases[cases.length - 1].title}
-          />
-          <ProjectCard 
-            excerpt={cases[cases.length - 1].excerpt}
-            image={cases[cases.length - 1].image}
-            imageTitle={`${cases[cases.length - 1].title} - zdjęcie`}
-            isHome={true}
-            path={cases[cases.length - 1].path}
-            socials={cases[cases.length - 1].stack}
-            title={cases[cases.length - 1].title}
-          />
-          <ProjectCard 
-            excerpt={cases[cases.length - 1].excerpt}
-            image={cases[cases.length - 1].image}
-            imageTitle={`${cases[cases.length - 1].title} - zdjęcie`}
-            isHome={true}
-            path={cases[cases.length - 1].path}
-            socials={cases[cases.length - 1].stack}
-            title={cases[cases.length - 1].title}
-          />
         </Projects>
         <Content
           content={whyMe.content}

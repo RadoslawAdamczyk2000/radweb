@@ -1,5 +1,6 @@
 import { IntProjects } from "../../types/interface"
 import Content from "./Content";
+import { ProjectsWrapper } from "./styles";
 const Projects = ({button,children,content='',isHome,path='',title=''}:IntProjects) => {
     return(
         <>
@@ -15,13 +16,13 @@ const Projects = ({button,children,content='',isHome,path='',title=''}:IntProjec
                         title={title}
                         withMedia={false}
                     />
-                    <ul>
+                    <ProjectsWrapper>
                         {children}
-                    </ul>
+                    </ProjectsWrapper>
                 </section>:
-                <ul>
+                <ProjectsWrapper>
                     {children}
-                </ul>
+                </ProjectsWrapper>
             }
         </>
     )

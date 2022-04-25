@@ -574,6 +574,7 @@ export const ProjectCardWrapper = styled.section`
                 width:40rem;
                 @media only screen{
                     @media (max-width:800px){
+                        height:auto;
                         width:100%;
                     }
                 }
@@ -636,6 +637,17 @@ export const ProjectCardWrapper = styled.section`
                 color:${({theme}) => theme.colors.tertiary} !important;
             }
         }
+    }
+`
+export const ProjectsWrapper = styled.section`
+    align-items:center;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    gap:1rem;
+    padding:1.5rem .25rem;
+    & > *{
+        margin:auto;
     }
 `
 export const SearchWrapper = styled.div`
