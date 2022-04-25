@@ -534,6 +534,60 @@ export const HeroWrapper = styled.header`
         }
     }
 `
+export const OfferCardWrapper = styled.li`
+    margin:0 auto;
+    max-width:95%;
+    width:55rem;
+    & > h2{
+        color:${({theme}) => theme.colors.color};
+        font-size:2.2rem;
+        font-weight:500;
+    }
+    & > .content{
+        color:${({theme}) => theme.colors.primary};
+        font-size:1.65rem;
+        line-height:3rem;
+    }
+    & > .price{
+        color:${({theme}) => theme.colors.color};
+        font-size:2rem;
+        font-weight:900;
+        padding:.75rem;
+        text-align:center;
+    }
+    & > a{
+        color:${({theme}) => theme.colors.color};
+        font-size:1.8rem;
+        font-weight:700;
+        transition:.12s ease-in-out color,.12s ease-in-out color;
+        margin:2rem 0 0 0;
+        padding:1rem 2rem;
+        position:relative;
+        user-select:none;
+        @media only screen {
+            @media (max-width:800px){
+                font-size:1.65rem;
+            }
+        }
+        &::before{
+            background-color:${({theme}) => theme.colors.tertiary};
+            background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
+            bottom:0;
+            left:0;
+            height:.35rem;
+            transform:skewX(-35deg);
+            transition:.15s linear width;
+            width:0%;
+        }
+        &:focus,
+        &:hover{    
+            color:${({theme}) => theme.colors.tertiary};
+            &::before{
+                width:100%;
+            }
+        }
+    }
+`
 export const OfferCardHomeWrapper = styled.section`
     align-items:center;
     display:flex;
@@ -593,6 +647,14 @@ export const OfferCardHomeWrapper = styled.section`
         }
     }
 
+`
+export const OfferCardsWrapper = styled.ul`
+    align-items:flex-start;
+    display:flex;
+    flex-flow:row wrap;
+    gap:3rem 2rem;
+    justify-content:center;
+    padding:8rem 0;
 `
 export const OffersHomeWrapper = styled.section`
     background-color:${({theme}) => theme.colors.secondary};

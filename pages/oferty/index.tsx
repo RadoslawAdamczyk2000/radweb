@@ -1,9 +1,9 @@
 import Layout from "../../schemas/Layout";
 import { NextPage } from "next";
 import { offers } from "../../content/pages/offers/offers";
-import Cards from "../../components/bacterias/OffersPage/Cards";
-import Card from "../../components/atoms/OffersPage/Card";
 import Hero from "../../components/Page/Hero";
+import OfferCard from "../../components/Page/OfferCard";
+import { OfferCardsWrapper } from "../../components/Page/styles";
 const Page:NextPage = () => {
   const {seo,hero,content} = offers.pl;
   return(
@@ -20,16 +20,18 @@ const Page:NextPage = () => {
         title={hero.title}
       />
       <main className="larger" style={{width:'100%'}}>
-        <Cards>
-          {content.map(({content,path,title}) =>
-            <Card
+        <OfferCardsWrapper>
+          {content.map(({content,path,title},key) =>
+            <OfferCard
               content={content}
-              key={title}
+              isHome={false}
+              button={true}
               path={path}
               title={title}
+              key={key}
             />
           )}
-        </Cards>
+        </OfferCardsWrapper>
       </main>
     </Layout>
   )

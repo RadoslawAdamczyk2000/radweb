@@ -1,9 +1,9 @@
 import Layout from "../../../schemas/Layout";
 import { NextPage } from "next";
 import { pos } from "../../../content/pages/offers/pos";
-import Cards from "../../../components/bacterias/OffersPage/Cards";
-import Card from "../../../components/atoms/OffersPage/Card";
 import Hero from "../../../components/Page/Hero";
+import { OfferCardsWrapper } from "../../../components/Page/styles";
+import OfferCard from "../../../components/Page/OfferCard";
 const Page:NextPage = () => {
   const {seo,hero,content} = pos.pl;
   return(
@@ -20,15 +20,17 @@ const Page:NextPage = () => {
         title={hero.title}
       />
       <main className="larger"  style={{width:'100%'}}>
-        <Cards>
+        <OfferCardsWrapper>
           {content.map(({content,title}) =>
-            <Card
+            <OfferCard
+              button={false}
               content={content}
+              isHome={false}
               key={title}
               title={title}
             />
           )}
-        </Cards>
+        </OfferCardsWrapper>
       </main>
     </Layout>
   )

@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { IntOfferCard } from "../../types/interface";
-import { OfferCardHomeWrapper } from "./styles";
-const OfferCard = ({content,image='',isHome,path,title}:IntOfferCard) => {
+import { OfferCardHomeWrapper, OfferCardWrapper } from "./styles";
+const OfferCard = ({button,content,image='',isHome,path='',price,title}:IntOfferCard) => {
     return(
         <>
             {
@@ -26,15 +26,16 @@ const OfferCard = ({content,image='',isHome,path,title}:IntOfferCard) => {
                         </a>
                     </Link>
                 </OfferCardHomeWrapper>:
-                <li>
+                <OfferCardWrapper>
                     <h2>{title}</h2>
-                    <p>{content}</p>
-                    <Link href={path}>
+                    <p className="content">{content}</p>
+                    {price && <p className="price">{price}</p>}
+                    {button && <Link href={path}>
                         <a rel='index follow'>
                             Sprawdź
                         </a>
-                    </Link>
-                </li>
+                    </Link>}
+                </OfferCardWrapper>
             }
         </>
     )

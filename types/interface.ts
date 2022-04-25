@@ -138,10 +138,12 @@ export interface IntProjects {
     title?:string,
 }
 export interface IntOfferCard {
+    button?:boolean,
     content:string,
     image?:string,
     isHome:boolean,
-    path:string,
+    path?:string,
+    price?:number,
     title:string
 }
 export interface IntOffers {

@@ -4,6 +4,8 @@ import { www } from "../../../content/pages/offers/www";
 import Cards from "../../../components/bacterias/OffersPage/Cards";
 import Card from "../../../components/atoms/OffersPage/Card";
 import Hero from "../../../components/Page/Hero";
+import { OfferCardsWrapper } from "../../../components/Page/styles";
+import OfferCard from "../../../components/Page/OfferCard";
 const Page:NextPage = () => {
   const {seo,hero,content} = www.pl;
   return(
@@ -20,16 +22,18 @@ const Page:NextPage = () => {
         title={hero.title}
       />
       <main className="larger"  style={{width:'100%'}}>
-        <Cards>
+        <OfferCardsWrapper>
           {content.map(({content,price,title}) => 
-            <Card
+            <OfferCard
+              isHome={false}
+              button={false}
               content={content}
               title={title}
               price={price}
               key={title}
             />
           )}
-        </Cards>
+        </OfferCardsWrapper>
       </main>
     </Layout>
   )
