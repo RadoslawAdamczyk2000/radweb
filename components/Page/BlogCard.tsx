@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { IntBlogCard } from "../../types/interface"
+import { BlogCardWrapper } from "./styles"
 const BlogCard = ({date,image,isHome,path,title}:IntBlogCard) => {
     return(
-        <li>
+        <BlogCardWrapper isHome={isHome}>
             <Link href={path}>
                 <a>
                     <figure>
@@ -14,7 +15,10 @@ const BlogCard = ({date,image,isHome,path,title}:IntBlogCard) => {
                             objectFit='cover'
                             objectPosition='center'
                             src={image}
-                            quality={65}
+                            style={{
+                                borderRadius:'1.2rem'
+                            }}
+                            quality={45}
                         />
                     </figure>
                     <figcaption>
@@ -27,7 +31,7 @@ const BlogCard = ({date,image,isHome,path,title}:IntBlogCard) => {
                     </figcaption>
                 </a>
             </Link>
-        </li>
+        </BlogCardWrapper>
     )
 }
 export default BlogCard;

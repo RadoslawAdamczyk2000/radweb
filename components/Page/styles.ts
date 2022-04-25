@@ -1,4 +1,69 @@
 import styled from 'styled-components';
+interface blogCard {
+    isHome:boolean
+}
+export const BlogCardWrapper = styled.li<blogCard>`
+    max-width:95%;
+    width:30rem;
+    & > a{
+        align-items:start;
+        display:flex;
+        flex-flow:column;
+        justify-content:center;
+        & > figure{
+            height:${({isHome}) => isHome ? '42rem' : '32rem'};
+            width:100%;
+            position:relative;
+            & > *{
+                filter:grayscale(95%) brightness(45%);
+                transition:.12s linear filter;
+                user-select:none;
+            }
+        }
+        & > figcaption{
+            width:100%;
+            & > *{
+                align-items:center;
+                display:flex;
+                user-select:none;
+                transition:.12s linear color;
+                width:100%;
+            }
+            & > h3,
+            & > h4{
+                color:${({theme}) => theme.colors.color};
+                font-size:${({isHome}) => isHome ? '2rem' : '1.85rem'};
+                font-weight:500;
+                justify-content:center;
+                padding:1rem .75rem;
+                text-align:center;
+            }
+            & > p{
+                color:${({theme}) => theme.colors.primary};
+                font-size:1.5rem;
+                justify-content:end;
+                padding:.5rem 1rem;
+            }
+        }
+    }
+    &:focus,
+    &:hover{
+        & > a{
+            & > figure > *{
+                filter:grayscale(0%) brightness(95%);
+            }
+            & > figcaption{
+                & > h3,
+                & > h4{
+                    color:${({theme}) => theme.colors.tertiary};
+                }
+                & > p{
+                    color:${({theme}) => theme.colors.color};
+                }
+            }
+        }
+    }
+`
 export const ContentMediaWrapper = styled.section`
     align-items:start;
     display:flex;
@@ -398,6 +463,13 @@ export const OffersHomeWrapper = styled.section`
         display:grid;
         grid-template-columns:2fr 4fr;
         min-height:50rem;
+        @media only screen {
+            @media (max-width:850px){
+                display:flex;
+                flex-flow:column;
+                row-gap:1rem;
+            }
+        }
         & > ul{
             align-items:start;
             display:flex;
@@ -405,6 +477,11 @@ export const OffersHomeWrapper = styled.section`
             justify-content:start;
             padding:3rem 2rem;
             row-gap:1.75rem;
+            @media only screen {
+                @media (max-width:850px){
+                    align-items:center;
+                }
+            }
             & > li{
                 cursor:pointer;
                 font-size:1.9rem;
