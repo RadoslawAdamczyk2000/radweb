@@ -1,6 +1,6 @@
 import { IntTitleArticle } from "../../types/interface";
 import { TitleWrapper } from "./styles";
-const Title1 = ({isH2,isH3,isH4,main,title}:IntTitleArticle) => {
+const Title = ({isH2,isH3,isH4,main,title}:IntTitleArticle) => {
     return(
         <>
             {
@@ -22,4 +22,4 @@ const Title1 = ({isH2,isH3,isH4,main,title}:IntTitleArticle) => {
         </>
     )
 }
-export default Title1;
+export default Title;

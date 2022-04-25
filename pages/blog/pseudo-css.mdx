@@ -1,13 +1,9 @@
 import Code from '../../components/Article/Code';
-import Content1 from '../../components/Article/Content';
-import Date1 from '../../components/Article/Date';
-import Title1 from '../../components/Article/Title';
-import Img1 from '../../components/Article/Img';
-import Date from '../../components/atoms/PostPage/Date';
-import Img from '../../components/atoms/PostPage/Img';
-import Hero from '../../components/atoms/AllPages/Hero';
+import Content from '../../components/Article/Content';
+import Date from '../../components/Article/Date';
+import Title from '../../components/Article/Title';
+import Img from '../../components/Article/Img';
 import Layout from '../../schemas/Layout';
-import {Title,H3,H2,Content,Excerpt} from '../../components/atoms/PostPage/Post.ts';
 import {tagsObj} from '../../data/tags.ts';
 import {techObj,tech} from '../../data/tech.tsx';
 import Tags from '../../components/atoms/PostPage/Tags.tsx';
@@ -18,21 +14,21 @@ export const meta = {
     seoImg:'https://cdn.pixabay.com/photo/2020/06/11/19/00/programming-5287885_960_720.jpg'
 }
 
-<Title1 main={true} title='Pseudo CSS I - pseudoklasy'/>
-<Date1>11:50 18/04/2022</Date1>
-<Content1 isExcerpt={true}>
+<Title main={true} title='Pseudo CSS I - pseudoklasy'/>
+<Date>11:50 18/04/2022</Date>
+<Content isExcerpt={true}>
 W najprostszym a i jednocześnie w najbardziej wymagającym języku opisowym jakim jest CSS (*Cascading Style Sheets*) posiadamy do wyboru wiele klas oraz atrybutów. CSS w stronach internetowych wykorzystywany jest do tworzenia styli oraz animacji, często bardzo zaaawansowanych. W tym ogromie autorzy Kaskadowych Arkuszy Styli (*CSS*) postanowili zaimplementować pseudo-elementy oraz tytułowe pseudo-klasy, w celu doboru interesujących nas elementów znajdujących się poza DOMem.
-</Content1>
-<Img1 
+</Content>
+<Img 
 isMain={true} 
 image='https://cdn.pixabay.com/photo/2020/06/11/19/00/programming-5287885_960_720.jpg' 
 title={`${meta.title} - zdjęcie`}
 />
-<Title1 isH2={true} title='Pseudoklasy (Pseudo-classes)'/>
-<Content1 isExcerpt={false}>
+<Title isH2={true} title='Pseudoklasy (Pseudo-classes)'/>
+<Content isExcerpt={false}>
 Pseudoklasa jest specjalnym słowem kluczowym dodanym już w pierwszej specyfikacji CSS , która ma na celu pobieranie elementów w specyficznym stanie. Dla przykładu pseudoklasa **:hover** pozwala nam zdefniować style dla przycisku - ***`<button>`*** - w momencie najechania na niego kursorem przez użytkownika. 
-</Content1>
-<Content1>
+</Content>
+<Content>
 <Code>
     ```
         button:hover{
@@ -42,12 +38,12 @@ Pseudoklasa jest specjalnym słowem kluczowym dodanym już w pierwszej specyfika
         }
     ```    
 </Code>
-</Content1>
-<Content1>
+</Content>
+<Content>
 Pseudoklasy umożliwiają również w intuicycjnym poruszaniu się po serwisie, np. po przez podpowiedzeniu userowi (*użytkownikowi*) jakie strony już zdołał odwiedzić implementując do ```<a></a>``` w CSS pseudoklasę ***:visited***.
-</Content1>
-<Title1 isH2={true} title='Spis wszystkich pseudoklas'/>
-<Content1>
+</Content>
+<Title isH2={true} title='Spis wszystkich pseudoklas'/>
+<Content>
     - **:active** aktywne linki
     - **:autofill** autouzupełnione pola formularza
     - **:checked** zaznaczony element formularza ```<input type='checkbox'/>```
@@ -84,15 +80,15 @@ Pseudoklasy umożliwiają również w intuicycjnym poruszaniu się po serwisie, 
     </Code>
     - **:valid** nadanie styli polom formularza, które zostały poprawnie uzupełnione
     - **:visited** ostylowanie linków, które zostały odwiedzone przez użytkownika
-</Content1>
-<Img1 
+</Content>
+<Img 
 isMain={false} 
 image='https://cdn.pixabay.com/photo/2021/08/11/16/06/mountain-6538890_960_720.jpg' 
 title={`${meta.title} - zdjęcie`}
 />
-<Content1>
+<Content>
 Sam język CSS, przez niektórych lekceważony poprzez stwierdzenia, że nie ma w nim żadnego programowania to nadal się rozwija. Ostatnia duża aktualizacja miała miejsce już prawie 6 lat temu **w 2016 roku**. Mimo to średnio co roku są dodawane najpierw eksperymentalnie, a później oficjalnie nowe properties (*właściwości*) CSS jak chociażby zmienne. Uważam, że świat CSS jeszcze nie raz zaskoczy i definitywnie pokona preprocesory stylów, takie jak Sass, Scss czy też Less, bo jedyne co nam brakuje w czystych Cascading Style Sheets to dodawanie funkcji, instrukcji warunkowych oraz zagnieżdżania.
-</Content1>
+</Content>
 
 
 export default ({children}) => <Layout title={meta.title} desc={meta.description} typePage='article' seoImg={meta.seoImg}>{children}</Layout>
