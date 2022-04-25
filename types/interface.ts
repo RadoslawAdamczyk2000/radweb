@@ -23,10 +23,10 @@ export interface IntSources {
     sources:string[]
 }
 export interface IntTitleArticle{
-    isH2:boolean,
-    isH3:boolean,
-    isH4:boolean,
-    main:boolean,
+    isH2?:boolean,
+    isH3?:boolean,
+    isH4?:boolean,
+    main?:boolean,
     title:string
 }
 export interface IntMenuButton{

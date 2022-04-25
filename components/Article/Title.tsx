@@ -1,24 +1,25 @@
 import { IntTitleArticle } from "../../types/interface";
-const Title = ({isH2,isH3,isH4,main,title}:IntTitleArticle) => {
+import { TitleWrapper } from "./styles";
+const Title1 = ({isH2,isH3,isH4,main,title}:IntTitleArticle) => {
     return(
         <>
             {
                 main &&
-                <h1>{title}</h1>
+                <TitleWrapper as='h1' className='title'>{title}</TitleWrapper>
             }
             {
                 isH2 && 
-                <h2>{title}</h2>
+                <TitleWrapper as='h2' className='other'>{title}</TitleWrapper>
             }
             {
                 isH3 &&
-                <h3>{title}</h3>
+                <TitleWrapper as='h3' className='other'>{title}</TitleWrapper>
             }
             {
                 isH4 &&
-                <h4>{title}</h4>
+                <TitleWrapper as='h4' className='other'>{title}</TitleWrapper>
             }
         </>
     )
 }
-export default Title;
+export default Title1;

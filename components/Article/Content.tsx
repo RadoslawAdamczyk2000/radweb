@@ -1,9 +1,10 @@
 import { IntContentArticle } from "../../types/interface"
-const Content = ({children,isExcerpt}:IntContentArticle) => {
+import { ContentWrapper } from "./styles";
+const Content1 = ({children,isExcerpt}:IntContentArticle) => {
     return(
-        <section className={isExcerpt ? 'excerpt' : 'section'} >
+        <ContentWrapper className={isExcerpt ? 'excerpt' : 'regular'} >
             {children}
-        </section>
+        </ContentWrapper>
     )
 }
-export default Content;
+export default Content1;
