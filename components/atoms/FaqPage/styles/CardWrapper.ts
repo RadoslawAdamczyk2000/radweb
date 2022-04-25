@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const CardWrapper = styled.article`
     max-width:85%;
-    width:55rem;
+    width:45rem;
     & > * {
         padding:1rem 2rem;
         transition:.2s linear background-color, .2s linear color;

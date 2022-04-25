@@ -148,3 +148,7 @@ export interface IntOffers {
     children?:ReactElement|ReactElement[],
     isHome:boolean,
 }
+export interface IntFaqCard {
+    content:string|undefined,
+    title:string
+}

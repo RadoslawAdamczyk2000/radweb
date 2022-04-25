@@ -307,6 +307,31 @@ export const ContentWithoutMediaWrapper = styled.section`
     }
 
 `
+export const FaqWrapper = styled.section`
+    align-items:start;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+`
+export const FaqCardWrapper = styled.article`
+    margin:auto;
+    max-width:85%;
+    width:45rem;
+    & > * {
+        padding:.5rem 1rem;
+    }
+    & > h4{
+        color:${({theme}) => theme.colors.color};
+        font-size:2.4rem;
+        text-align:start;
+    }
+    & > p{
+        color:${({theme}) => theme.colors.primary};
+        font-size:1.65rem;
+        line-height:2.8rem;
+        text-align:start;
+    }
+`
 export const HeroWrapper = styled.header`
     align-items:center;
     display:flex;
