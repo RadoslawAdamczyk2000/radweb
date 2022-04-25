@@ -1,19 +1,23 @@
 import Image from "next/image"
 import { IntImgArticle } from "../../types/interface";
-const Img = ({article,image,isMain,title}:IntImgArticle) => {
+import { ImageWrapper } from "./styles";
+const Img1 = ({image,isMain,title}:IntImgArticle) => {
     return(
-        <section>
-            <figure className={isMain ? 'main' : 'regular'} >
+        <ImageWrapper className={isMain ? 'main' : 'regular'}>
+            <figure>
                 <Image
-                    alt={`${article} - ${title} - zdjęcie`}
+                    alt={`${title} - zdjęcie`}
                     layout='fill'
                     objectFit='cover'
                     objectPosition='center'
                     src={image}
+                    style={{
+                        borderRadius:'2rem'
+                    }}
+                    quality={isMain ? 85 : 55}
                 />
             </figure>
-            {title && <figcaption>{title}</figcaption>}
-        </section>
+        </ImageWrapper>
     )
 }
-export default Img;
+export default Img1;

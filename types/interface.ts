@@ -14,10 +14,9 @@ export interface IntDate {
     children:ReactText
 }
 export interface IntImgArticle {
-    article:string,
     image:string,
     isMain:boolean,
-    title?:string
+    title:string
 }
 export interface IntSources {
     sources:string[]

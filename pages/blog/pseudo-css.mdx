@@ -1,6 +1,7 @@
 import Code from '../../components/Article/Code';
 import Content1 from '../../components/Article/Content';
 import Title1 from '../../components/Article/Title';
+import Img1 from '../../components/Article/Img';
 import Date from '../../components/atoms/PostPage/Date';
 import Img from '../../components/atoms/PostPage/Img';
 import Hero from '../../components/atoms/AllPages/Hero';
@@ -21,9 +22,9 @@ export const meta = {
 <Content1 isExcerpt={true}>
 W najprostszym a i jednocześnie w najbardziej wymagającym języku opisowym jakim jest CSS (*Cascading Style Sheets*) posiadamy do wyboru wiele klas oraz atrybutów. CSS w stronach internetowych wykorzystywany jest do tworzenia styli oraz animacji, często bardzo zaaawansowanych. W tym ogromie autorzy Kaskadowych Arkuszy Styli (*CSS*) postanowili zaimplementować pseudo-elementy oraz tytułowe pseudo-klasy, w celu doboru interesujących nas elementów znajdujących się poza DOMem.
 </Content1>
-<Img 
+<Img1 
 isMain={true} 
-path='https://cdn.pixabay.com/photo/2020/06/11/19/00/programming-5287885_960_720.jpg' 
+image='https://cdn.pixabay.com/photo/2020/06/11/19/00/programming-5287885_960_720.jpg' 
 title={`${meta.title} - zdjęcie`}
 />
 <Title1 isH2={true} title='Pseudoklasy (Pseudo-classes)'/>
@@ -83,9 +84,9 @@ Pseudoklasy umożliwiają również w intuicycjnym poruszaniu się po serwisie, 
     - **:valid** nadanie styli polom formularza, które zostały poprawnie uzupełnione
     - **:visited** ostylowanie linków, które zostały odwiedzone przez użytkownika
 </Content1>
-<Img 
+<Img1 
 isMain={false} 
-path='https://cdn.pixabay.com/photo/2021/08/11/16/06/mountain-6538890_960_720.jpg' 
+image='https://cdn.pixabay.com/photo/2021/08/11/16/06/mountain-6538890_960_720.jpg' 
 title={`${meta.title} - zdjęcie`}
 />
 <Content1>
