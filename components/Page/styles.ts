@@ -124,12 +124,18 @@ export const ContentMediaWrapper = styled.section`
             justify-content:center;
             position:relative;
             height:55rem;
-            max-width:85%;
             margin:auto;
             width:40rem;
             @media only screen {
                 @media (max-width:950px){
                     height:35rem;
+                    width:40rem;
+                }
+                @media (max-width:500px){
+                    width:30rem;
+                }
+                @media (max-width:370px){
+                    width:80%;
                 }
             }
         }
