@@ -65,7 +65,7 @@ export interface IntImgArticle {
 }
 export interface IntMenu {
     isFooter:boolean,
-    handleOffer:MouseEventHandler,
+    handleOffer?:MouseEventHandler,
     handleClose?:MouseEventHandler,
     offer?:boolean
 }
