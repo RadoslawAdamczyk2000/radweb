@@ -584,6 +584,16 @@ export const MoviesWrapper = styled.div`
 
 `
 export const OfferCardWrapper = styled.li`
+    align-items:start;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    row-gap:1.45rem;
+    @media only screen and (min-width:950px){
+        background-color:${({theme}) => theme.colors.secondary};
+        border-radius:2rem;
+        padding:2.5rem 3rem;
+    }
     margin:0 auto;
     max-width:95%;
     width:55rem;
@@ -609,7 +619,6 @@ export const OfferCardWrapper = styled.li`
         font-size:1.8rem;
         font-weight:700;
         transition:.12s ease-in-out color,.12s ease-in-out color;
-        margin:2rem 0 0 0;
         padding:1rem 2rem;
         position:relative;
         user-select:none;
@@ -698,12 +707,11 @@ export const OfferCardHomeWrapper = styled.section`
 
 `
 export const OfferCardsWrapper = styled.ul`
-    align-items:flex-start;
+    align-items:start;
     display:flex;
     flex-flow:row wrap;
-    gap:3rem 2rem;
     justify-content:center;
-    padding:8rem 0;
+    gap:2rem;
 `
 export const OffersHomeWrapper = styled.section`
     background-color:${({theme}) => theme.colors.secondary};

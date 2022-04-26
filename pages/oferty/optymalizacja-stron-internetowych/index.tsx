@@ -20,7 +20,7 @@ const Page:NextPage = () => {
         isHome={true}
         title={hero.title}
       />
-      <main className="larger" style={{width:'100%'}}>
+      <main>
         <OfferCardsWrapper>
           {content.map(({content,title}) =>
             <OfferCard
