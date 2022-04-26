@@ -3,10 +3,10 @@ import Content from '../../components/Article/Content';
 import Date from '../../components/Article/Date';
 import Title from '../../components/Article/Title';
 import Img from '../../components/Article/Img';
+import Tags from '../../components/Article/Tags';
 import Layout from '../../schemas/Layout';
 import {tagsObj} from '../../data/tags.ts';
 import {techObj,tech} from '../../data/tech.tsx';
-import Tags from '../../components/atoms/PostPage/Tags.tsx';
 import Stack from '../../components/atoms/PostPage/Stack.tsx';
 export const meta = {
     title:'RadWEB - Borókowy Gaj, strona o borówkach amerykańskich',
@@ -15,12 +15,10 @@ export const meta = {
 }
 
 <Title main={true} title='Borówkowy Gaj'/>
-<Stack stacks={[
-    techObj.html.icon,
-    techObj.css.icon,
-    techObj.bootstrap.icon,
-    techObj.javascript.icon,
-]}></Stack>
+<Tags 
+    tech={true}
+    tags={[techObj.html.icon,techObj.css.icon,techObj.bootstrap.icon,techObj.javascript.icon]}
+/>
 <Content isExcerpt={true}>
     Każdy postawia swój pierwszy krok na rynku. Moim pierwszym krokiem była strona zrealizowana dla Borókowego Gaju - gospodarstwa, które należy do ojca mojego kolegi. Niedługo minie rok od zrealizowania tej strony. Dziś napewno napisałbym lepiej tą stronę, jednak z perspektywy pozycjonera statystyki są idealne.
 </Content>

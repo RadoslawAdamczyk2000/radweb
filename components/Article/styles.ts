@@ -110,6 +110,28 @@ export const ImageWrapper = styled.section`
     }
 
 `
+export const TagsWrapper = styled.ul`
+    flex-flow:row wrap;
+    gap:1.5rem;
+    margin:1.5rem auto;
+    max-width:75%;
+    padding:1rem 1.5rem;
+    width:65rem;
+    &,
+    & > .tech{
+        align-items:center;
+        display:flex;
+        justify-content:center;
+    }
+    & > .tech{
+        color:${({theme}) => theme.colors.primary};
+        font-size:2.5rem;
+        height:3rem;
+        opacity:.65;
+        user-select:none;
+        width:3rem;
+    }
+`
 export const TitleWrapper = styled.h1`
     max-width:98%;
     word-wrap:break-word;

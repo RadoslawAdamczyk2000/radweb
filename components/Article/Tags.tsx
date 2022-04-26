@@ -1,9 +1,9 @@
-import { ReactElement } from "react"
 import { IntTags } from "../../types/interface";
 import { TypeTag } from "../../types/types";
+import { TagsWrapper } from "./styles";
 const Tags = ({tech,tags}:IntTags) => {
     return(
-        <ul>
+        <TagsWrapper>
             {
                 tech ?
                 tags.map((tag:TypeTag,key:number) =>
@@ -13,7 +13,7 @@ const Tags = ({tech,tags}:IntTags) => {
                     <li className='tag' key={key}>{tag}</li>
                 )
             }
-        </ul>
+        </TagsWrapper>
     )
 }
 export default Tags;
