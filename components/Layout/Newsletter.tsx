@@ -10,7 +10,12 @@ const Newsletter = () => {
             </section>
             <form
                 autoComplete='off'
+                id="contactform" 
+                action="https://formsubmit.io/send/radoslaw.adamczyk2000@gmail.com" 
+                method="POST"
             >
+                <input name="_formsubmit_id" type="text" style={{display:'none'}}/>
+                <input name="_redirect" type="hidden" id="name" value="https://rad-web.vercel.app/newsletter"/>
                 <div>
                     <div className='field'>
                         <label htmlFor={form.firstName.inputId}>

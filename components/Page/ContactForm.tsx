@@ -3,25 +3,11 @@ import emailjs from '@emailjs/browser';
 import { ContactFormWrapper } from "./styles";
 const ContactForm = () => {
     const formRef = useRef<null | HTMLFormElement>(null);
-    const [form,setForm] = useState({
-        fullname:'',
-        phone:'',
-        email:'',
-        message:''
-    })
-    const updateFields = (e:any) => {
-        setForm({
-            ...form,
-            [e.target.name]:e.target.value
-        });
-    }
-
-    const handleSubmit = async (e:any) => {
-        e.preventDefault();
+    const handleSubmit = async () => {
        if(formRef.current){emailjs.sendForm('contact','contact',formRef.current,'jiBzcCuVYQCjwhBEu')}
     }
     return(
-        <ContactFormWrapper>
+        <ContactFormWrapper onSubmit={handleSubmit} ref={formRef} method='POST'>
             <div className="field input">
                 <input
                     autoComplete="off"
