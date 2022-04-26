@@ -1,4 +1,5 @@
 import Document, {Html,Head,Main,NextScript,DocumentContext,} from "next/document";
+import ld from '../lib/ld.json';
 import { ServerStyleSheet } from "styled-components";
   class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -28,7 +29,19 @@ import { ServerStyleSheet } from "styled-components";
       return (
         <Html>
           <Head>
-            
+            <meta property="og:site_name" content='RadWEB'/>
+            <meta name="twitter:site" content="@rad_web2000"/>
+            <meta name="twitter:creator" content="@rad_web2000"/>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+            <script 
+                  async 
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145985197806639" 
+                  crossOrigin="anonymous"
+              />
+              <script 
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{__html:JSON.stringify(ld)}}
+              />
           </Head>
           <body>
             <Main />

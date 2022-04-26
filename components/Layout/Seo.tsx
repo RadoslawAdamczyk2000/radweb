@@ -23,11 +23,3 @@ const Seo = ({canonical,description,image,robots,title,typePage='website'}:IntSe
     )
 }
 export default Seo;
-
-/**
- * For document
- * <meta property="og:site_name" content='RadWEB'/>
- * <meta name="twitter:site" content="@rad_web2000"/>
- * <meta name="twitter:creator" content="@rad_web2000"/>
- * <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
- */
