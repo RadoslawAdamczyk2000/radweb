@@ -1,7 +1,14 @@
+import { useRef } from 'react';
 import {footer} from '../../data/footer';
 import { NewsletterWrapper } from './styles';
+import emailjs from '@emailjs/browser';
 const Newsletter = () => {
     const {title,content,button,form} = footer.pl.newsletter;
+    const formRef = useRef<null | HTMLFormElement>(null);
+    const handleSubmit = async () => {
+       if(formRef.current){emailjs.sendForm('newsletter','newsletter',formRef.current,'jiBzcCuVYQCjwhBEu')};
+       window?.location.replace('https://rad-web.vercel.app/newsletter');
+    }
     return(
         <NewsletterWrapper>
             <section>
@@ -10,12 +17,10 @@ const Newsletter = () => {
             </section>
             <form
                 autoComplete='off'
-                id="contactform" 
-                action="https://formsubmit.io/send/radoslaw.adamczyk2000@gmail.com" 
+                onSubmit={handleSubmit}
                 method="POST"
+                ref={formRef}
             >
-                <input name="_formsubmit_id" type="text" style={{display:'none'}}/>
-                <input name="_redirect" type="hidden" id="name" value="https://rad-web.vercel.app/newsletter"/>
                 <div>
                     <div className='field'>
                         <label htmlFor={form.firstName.inputId}>
