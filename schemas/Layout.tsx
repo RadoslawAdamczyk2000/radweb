@@ -1,10 +1,8 @@
-import Head from "next/head"
 import { useState } from "react"
 import { ThemeProvider } from "styled-components"
 import Footer from "../components/Layout/Footer";
 import Navigation from "../components/Layout/Navigation";
 import Seo from "../components/Layout/Seo";
-import ld from '../data/ld.json';
 import { Global } from "../styles/Global";
 import { darkTheme, lightTheme } from "../styles/theme";
 interface i {
