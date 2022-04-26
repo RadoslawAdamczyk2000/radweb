@@ -60,13 +60,13 @@ export const home = {
                     image:'https://cdn.pixabay.com/photo/2017/05/14/03/45/gui-2311259_960_720.png',
                     title:'Tworzenie stron internetowych',
                     content:`Strony internetowe są wyrazem tego, że Ty, bądź też Twoja firma lub organizacja istnieje. Po przez odpowiednio zbudowane witryny internetowe, czyli schludne, resposywne oraz szybkie, możesz na dłużej zachować potencjonalnego klienta przy sobie.`,
-                    path:'/oferty/strony-internetowe',
+                    path:'/oferty/tworzenie-stron-internetowych',
                 },
                 seo:{
                     image:'https://cdn.pixabay.com/photo/2017/05/14/03/45/gui-2311261_960_720.png',
                     title:'Pozycjonowanie stron internetowych',
                     content:`Skoro już posiadasz własną stronę internetową, to pora być widocznym w internetcie. Zadanie realizujące właśnie to założenie nazywa się pozycjonowaniem, bądź też SEO. Jest to proces długotrwały, odwdzięczający się rozpoznawalnością w sieci, co równoznaczne jest z potencjalnym pozyskaniem nowych klientów.`,
-                    path:'/oferty/pozycjonowanie-stron',
+                    path:'/oferty/pozycjonowanie-stron-internetowych',
                 },
                 // ana:{
                 //     image:'https://cdn.pixabay.com/photo/2018/08/08/21/48/interface-3593269_960_720.png',
@@ -78,7 +78,7 @@ export const home = {
                     image:'https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_960_720.png',
                     title:'Optymalizacja stron internetowych',
                     content:`Potrzebujesz modernizacji Twojej strony internetowej w postaci odświeżenia wyglądu, dodania nowej funkcjonalności lub rozwiązania problemu? Te wszystkie czynności można zawrzeć jednym słowem - optymalizacja.`,
-                    path:'/oferty/optymalizacja-stron',
+                    path:'/oferty/optymalizacja-stron-internetowych',
                 }
             }
         },

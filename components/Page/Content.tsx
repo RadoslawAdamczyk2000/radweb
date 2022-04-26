@@ -42,10 +42,8 @@ const Content = ({button,content,imagePath='',imageTitle,isVertical,movie,movieP
                 <ContentWithoutMediaWrapper className={isVertical ? 'vertical' : 'horizontal'}>
                     <article>
                         <h2>{title}</h2>
-                        <div>
-                            <p>{content}</p>
-                            {button && <Link href={path}><a>{button}</a></Link>}
-                        </div>
+                        <p>{content}</p>
+                        {button && <Link href={path}><a>{button}</a></Link>}
                     </article>
                 </ContentWithoutMediaWrapper>
             }

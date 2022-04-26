@@ -268,12 +268,19 @@ export const ContentMediaWrapper = styled.section`
             color:${({theme}) => theme.colors.color};
             font-size:2.95rem;
             padding:1rem 1.5rem;
+            @media only screen and (max-width:500px){
+                font-size:1.95rem;
+            }
         }
         & > p{
             color:${({theme}) => theme.colors.primary};
             font-size:1.75rem;
             line-height:3.5rem;
             padding:.75rem;
+            @media only screen and (max-width:500px){
+                font-size:1.45rem;
+                line-height:2.7rem;
+            }
         }
     }
     a{
@@ -309,82 +316,105 @@ export const ContentMediaWrapper = styled.section`
     }
 `
 export const ContentWithoutMediaWrapper = styled.section`
+    align-items:center;
+    display:flex;
+    justify-content:start;
     max-width:100%;
-    width:60rem;
+    padding:2rem 1rem;
+    @media only screen{
+        @media (min-width:1500px){
+            justify-content:center;
+        }
+        @media (max-width:950px){
+            padding:1rem .25rem;
+        }
+    }
     & > article{
         align-items:start;
         display:flex;
-        justify-content:space-evenly;
+        flex-flow:column;
+        justify-content:start;
+        padding:2rem 3rem;
+        max-width:95%;
+        row-gap:2rem;
+        width:60rem;
+        @media only screen{
+            @media (min-width:1500px){
+                width:100rem;
+            }
+            @media (max-width:950px){
+                padding:.5rem .25rem;
+            }
+            @media (max-width:350px){
+                width:250px;
+            }
+        }
+        a{
+            color:${({theme}) => theme.colors.color};
+            font-size:2.2rem;
+            font-weight:700;
+            transition:.12s ease-in-out color,.12s ease-in-out color;
+            padding:1rem 2rem;
+            position:relative;
+            user-select:none;
+            @media only screen {
+                @media (max-width:800px){
+                    font-size:1.8rem;
+                }
+                @media (max-width:500px){
+                    font-size:1.585rem;
+                }
+            }
+            &::before{
+                background-color:${({theme}) => theme.colors.tertiary};
+                background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
+                bottom:0;
+                left:0;
+                height:.35rem;
+                transform:skewX(-35deg);
+                transition:.15s linear width;
+                width:0%;
+            }
+            &:focus,
+            &:hover{    
+                color:${({theme}) => theme.colors.tertiary};
+                &::before{
+                    width:100%;
+                }
+            }
+        }
         & > h2{
             color:${({theme}) => theme.colors.color};
             font-size:2.95rem;
-            padding:.75rem 1.5rem;
-        }
-        & > div{
-            padding:1rem 0;
-            & > p{
-                color:${({theme}) => theme.colors.primary};
-                font-size:1.75rem;
-                line-height:3.5rem;
-                padding:.75rem;
+            padding:1rem 1.5rem;
+            @media only screen{
+                @media (min-width:1500px){
+                    font-size:3.95rem;
+                }
+                @media (max-width:950px){
+                    font-size:1.95rem;
+                    padding:.75rem .25rem;
+                }
             }
         }
-    }
-    a{
-        color:${({theme}) => theme.colors.color};
-        font-size:2.2rem;
-        font-weight:700;
-        transition:.12s ease-in-out color,.12s ease-in-out color;
-        margin:2rem 0 0 0;
-        padding:1rem 2rem;
-        position:relative;
-        user-select:none;
-        @media only screen {
-            @media (max-width:800px){
-                font-size:1.8rem;
-            }
-        }
-        &::before{
-            background-color:${({theme}) => theme.colors.tertiary};
-            background-image:linear-gradient(to left,${({theme}) => theme.colors.tertiary},${({theme}) => theme.colors.color});
-            bottom:0;
-            left:0;
-            height:.35rem;
-            transform:skewX(-35deg);
-            transition:.15s linear width;
-            width:0%;
-        }
-        &:focus,
-        &:hover{    
-            color:${({theme}) => theme.colors.tertiary};
-            &::before{
-                width:100%;
-            }
-        }
-    }
-    &.horizontal{
-        & > article{
-            flex-flow:column;
-            & > div{
-                align-items:flex-start;
-                justify-content:flex-start;
-                padding:2rem 0 3rem;
-            }
-        }
-    }
-    &.vertical{
-        & > article{
-            flex-flow:row wrap;
-            & > h2{
-                width:40rem;
-            }
-            & > div{
-                width:55rem;
-                & > p{
-                    color:${({theme}) => theme.colors.primary};
-                    font-size:1.75rem;
-                    line-height:3.5rem;
-                    padding:.75rem;
+        & > p{
+            color:${({theme}) => theme.colors.primary};
+            font-size:1.75rem;
+            line-height:3.5rem;
+            padding:.75rem;
+            @media only screen{
+                @media (min-width:1500px){
+                    font-size:2.1rem;
+                    line-height:4.2rem;
+                }
+                @media (max-width:950px){
+                    font-size:1.65rem;
+                    line-height:2.9rem;
+                    padding:.5rem;
+                }
+                @media (max-width:500px){
+                    font-size:1.45rem;
+                    line-height:2.7rem;
                 }
             }
         }
@@ -581,7 +611,6 @@ export const MoviesWrapper = styled.div`
         all:unset;
         max-width:95%;
     }
-
 `
 export const OfferCardWrapper = styled.li`
     align-items:start;
@@ -594,7 +623,6 @@ export const OfferCardWrapper = styled.li`
         border-radius:2rem;
         padding:2.5rem 3rem;
     }
-    margin:0 auto;
     max-width:95%;
     width:55rem;
     & > h2{
@@ -653,25 +681,41 @@ export const OfferCardHomeWrapper = styled.section`
     justify-content:start;
     padding: 0 0 1rem 0;
     max-width:90%;
-    min-height:45rem;
     width:35rem;
+    @media only screen {
+        @media (min-width:1500px){
+            /* background:lime;
+            flex-flow:row nowrap;
+            width:85rem; */
+            margin:auto;
+            width:75rem;
+        }
+    }
     & > *:not(a){
         width:100%;
-    }
-    & > figure{
-        height:15rem;
-        position:relative;
     }
     & > h3{
         color:${({theme}) => theme.colors.color};
         font-size:2rem;
         padding:.5rem 1rem;
+        @media only screen {
+            @media (min-width:1500px){
+                font-size:2.5rem;
+            }
+        }
     }
     & > p{
         color:${({theme}) => theme.colors.primary};
         font-size:1.52rem;
         line-height:3rem;
         padding:.5rem;
+        @media only screen {
+            @media (min-width:1500px){
+                font-size:1.65rem;
+                line-height:3.3rem;
+                padding:.5rem .75rem;
+            }
+        }
     }
     & > a{
         color:${({theme}) => theme.colors.color};
@@ -717,13 +761,20 @@ export const OffersHomeWrapper = styled.section`
     background-color:${({theme}) => theme.colors.secondary};
     border-radius:2.75rem;
     padding:1rem 2rem;
+    @media only screen and (max-width:500px){
+        padding:1rem .25rem;
+    }
     & > article{
         padding:5rem 2rem;
+        @media only screen and (max-width:500px){
+            padding:2rem 1rem;
+        }
     }
     & > div{
         display:grid;
         grid-template-columns:2fr 4fr;
-        min-height:50rem;
+        min-height:20rem;
+        padding:2rem 0 4rem;
         @media only screen {
             @media (max-width:850px){
                 display:flex;
@@ -737,7 +788,7 @@ export const OffersHomeWrapper = styled.section`
             flex-flow:column;
             justify-content:start;
             padding:3rem 2rem;
-            row-gap:1.75rem;
+            gap:1.75rem;
             @media only screen {
                 @media (max-width:850px){
                     align-items:center;
@@ -779,6 +830,10 @@ export const ProjectCardWrapper = styled.section`
         height:20rem;
         width:70rem;
         @media only screen{
+            @media (min-width:950px){
+                height:30rem;
+                width:75rem;
+            }
             @media (max-width:800px){
                 height:auto;
                 max-width:95%;
@@ -800,6 +855,10 @@ export const ProjectCardWrapper = styled.section`
                 height:20rem;
                 width:40rem;
                 @media only screen{
+                    @media (min-width:950px){
+                        height:30rem;
+                        padding:2rem 0;
+                    }
                     @media (max-width:800px){
                         height:auto;
                         width:100%;
@@ -813,6 +872,9 @@ export const ProjectCardWrapper = styled.section`
                     font-size:1.95rem;
                     padding:1rem 1.75rem;
                     transition:.12s linear color;
+                    @media only screen and (min-width:950px){
+                        font-size:2.4rem;
+                    }
                 }
                 & > .socials{
                     flex-flow:row wrap;
@@ -840,6 +902,11 @@ export const ProjectCardWrapper = styled.section`
                     font-size:1.55rem;
                     line-height:2.7rem;
                     padding:1rem;
+                    @media only screen and (min-width:950px){
+                        font-size:1.7rem;
+                        line-height:3.4rem;
+                        padding:1.5rem;
+                    }
                 }
             }
             & > .image{
@@ -847,6 +914,9 @@ export const ProjectCardWrapper = styled.section`
                 position:relative;
                 width:calc(100% - 40rem);
                 @media only screen{
+                    @media (min-width:950px){
+                        height:30rem;
+                    }
                     @media (max-width:800px){
                         height:40rem;
                         width:100%;

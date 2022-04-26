@@ -9,7 +9,6 @@ const Offers = ({children,isHome}:IntOffers) => {
     const [defaultValue,setDefaultValue] = useState<'www'|'seo'|'opt'>('www');
     const current = {
         content:cards?.[defaultValue].content,
-        image:cards?.[defaultValue].image,
         title:cards?.[defaultValue].title,
         path:cards?.[defaultValue].path,
     }
@@ -43,7 +42,6 @@ const Offers = ({children,isHome}:IntOffers) => {
                                 isHome={true}
                                 path={current.path}
                                 title={current.title}
-                                image={current.image}
                             />
                         </div>
                     </div>
