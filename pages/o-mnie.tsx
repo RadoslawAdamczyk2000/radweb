@@ -3,9 +3,11 @@ import Layout from "../schemas/Layout";
 import { about } from "../content/pages/about";
 import Movies from "../components/atoms/AboutPage/Movies";
 import Hobbies from "../components/atoms/AboutPage/Hobbies";
-import Content from "../components/atoms/AboutPage/Content";
 import Poster from "../components/atoms/AboutPage/Poster";
 import Hero from "../components/Page/Hero";
+import Content from "../components/Article/Content";
+import Title from "../components/Article/Title";
+import Img from "../components/Article/Img";
 const Page:NextPage = () => {
   const {hero,seo,story,hobbies} = about.pl;
   const {education,born,skills,passions} = story;
@@ -23,33 +25,29 @@ const Page:NextPage = () => {
         title={hero.title}
       />
       <main>
-        <Content
-          content={born.content}
-          title={born.heading}
-        />
-        <Poster
+        <Title isH2={true} title={born.heading}/>
+        <Content isExcerpt={false}>{born.content}</Content>
+        <Img
+          isMain={true}
           image='https://raw.githubusercontent.com/RadoslawAdamczyk2000/rad-web-content/main/assets/snow.webp'
-          imageTitle="Zdjęcię z klasą z liceum"
+          title="Zdjęcię z klasą z liceum"
         />
-        <Content
-          content={education.content}
-          title={education.heading}
-        />
+        {/* <Title isH2={true} title={}/>
+        <Content isExcerpt={false}>{}</Content> */}
+        <Title isH2={true} title={education.heading}/>
+        <Content isExcerpt={false}>{education.content}</Content>
         <Movies
           movies={story.education.movies}
         />
-        <Content
-          content={skills.content}
-          title={skills.heading}
-        />
-        <Poster
+        <Title isH2={true} title={skills.heading}/>
+        <Content isExcerpt={false}>{skills.content}</Content>
+        <Img
+          isMain={true}
           image='https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/assets/72426717_1251619528372354_2772731960315871232_n.jpg?raw=true'
-          imageTitle="Urodzinowa pizza"
+          title="Urodzinowa pizza"
         />
-        <Content
-          content={passions.content}
-          title={passions.heading}
-        />
+        <Title isH2={true} title={passions.heading}/>
+        <Content isExcerpt={false}>{passions.content}</Content>
         <Hobbies
           hobbies={hobbies}
         />

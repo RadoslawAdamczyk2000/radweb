@@ -23,7 +23,7 @@ export interface IntCode {
     children:any
 }
 export interface IntContentArticle {
-    children:ReactChild,
+    children:ReactChild|string|string[],
     isExcerpt:boolean,
 }
 export interface IntContentPage {

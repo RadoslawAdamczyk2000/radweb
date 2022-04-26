@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { IntImgArticle } from "../../types/interface";
 import { ImageWrapper } from "./styles";
-const Img1 = ({image,isMain,title}:IntImgArticle) => {
+const Img = ({image,isMain,title}:IntImgArticle) => {
     return(
         <ImageWrapper className={isMain ? 'main' : 'regular'}>
             <figure>
@@ -20,4 +20,4 @@ const Img1 = ({image,isMain,title}:IntImgArticle) => {
         </ImageWrapper>
     )
 }
-export default Img1;
+export default Img;
