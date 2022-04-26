@@ -1,4 +1,3 @@
-import Cards from "../../components/bacterias/BlogPage/Cards/Cards";
 import Layout from "../../schemas/Layout";
 import { blog } from "../../content/pages/blog";
 import { NextPage } from "next";
