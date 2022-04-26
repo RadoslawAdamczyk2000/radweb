@@ -81,6 +81,9 @@ export interface IntMenuItem{
     path:string,
     title:string
 }
+export interface IntMovies {
+    movies:string[]
+}
 export interface IntNavigation {
     setTheme:MouseEventHandler,
     theme:boolean

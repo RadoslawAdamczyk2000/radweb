@@ -534,6 +534,56 @@ export const HeroWrapper = styled.header`
         }
     }
 `
+export const HobbiesWrapper = styled.ul`
+    flex-flow:row wrap;
+    gap:1rem;
+    padding:1.5rem 2rem;
+    width:100%;
+    &,
+    & > li{
+        align-items:center;
+        display:flex;
+        justify-content:center;
+    }
+    & > li{
+        flex-flow:column;
+        height:10rem;
+        user-select:none;
+        width:15rem;
+        & > span{
+            color:${({theme}) => theme.colors.tertiary};
+            font-size:4rem;
+        }
+        & > p{
+            font-size:1.75rem;
+            text-transform:lowercase;
+        }
+        @media only screen and (max-width:750px){
+            height:8rem;
+            width:10rem;
+            & > span{
+                font-size:2.2rem;
+            }
+            & > p{
+                font-size:1.45rem;
+            }   
+        }
+    }
+`
+export const MoviesWrapper = styled.div`
+    align-items:center;
+    display:flex;
+    flex-flow:row wrap;
+    gap:1rem;
+    justify-content:center;
+    padding:2rem 1rem;
+    width:100%;
+    & > iframe{
+        all:unset;
+        max-width:95%;
+    }
+
+`
 export const OfferCardWrapper = styled.li`
     margin:0 auto;
     max-width:95%;

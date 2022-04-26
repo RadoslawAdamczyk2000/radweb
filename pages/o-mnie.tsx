@@ -1,13 +1,12 @@
 import { NextPage } from "next";
 import Layout from "../schemas/Layout";
 import { about } from "../content/pages/about";
-import Movies from "../components/atoms/AboutPage/Movies";
-import Hobbies from "../components/atoms/AboutPage/Hobbies";
-import Poster from "../components/atoms/AboutPage/Poster";
 import Hero from "../components/Page/Hero";
 import Content from "../components/Article/Content";
 import Title from "../components/Article/Title";
 import Img from "../components/Article/Img";
+import Movies from "../components/Page/Movies";
+import Hobbies from "../components/Page/Hobbies";
 const Page:NextPage = () => {
   const {hero,seo,story,hobbies} = about.pl;
   const {education,born,skills,passions} = story;
@@ -32,8 +31,6 @@ const Page:NextPage = () => {
           image='https://raw.githubusercontent.com/RadoslawAdamczyk2000/rad-web-content/main/assets/snow.webp'
           title="Zdjęcię z klasą z liceum"
         />
-        {/* <Title isH2={true} title={}/>
-        <Content isExcerpt={false}>{}</Content> */}
         <Title isH2={true} title={education.heading}/>
         <Content isExcerpt={false}>{education.content}</Content>
         <Movies

@@ -1,7 +1,8 @@
 import { IntHobbies } from "../../types/interface";
+import { HobbiesWrapper } from "./styles";
 const Hobbies = ({hobbies}:IntHobbies) => {
     return(
-        <ul>
+        <HobbiesWrapper>
             {hobbies.map(({icon,title},key) =>
                 <li key={key}>
                     <span>
@@ -10,7 +11,7 @@ const Hobbies = ({hobbies}:IntHobbies) => {
                     <p>{title}</p>
                 </li>
             )}
-        </ul>
+        </HobbiesWrapper>
     )
 }
 export default Hobbies;
