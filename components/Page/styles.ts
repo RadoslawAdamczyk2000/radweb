@@ -81,7 +81,6 @@ export const ContactFormWrapper = styled.form`
     row-gap:2rem;
     & > .field{
         align-items:center;
-        background:red;
         display:flex;
         justify-content:center;
         position:relative;
