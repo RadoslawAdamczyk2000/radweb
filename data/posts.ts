@@ -30,6 +30,13 @@ export const posts = {
             title:'Pseudo CSS I - pseudoklasy',
             readTime:'32'
         },
+        {
+            poster:'https://cdn.pixabay.com/photo/2015/04/20/17/39/man-731900_960_720.jpg',
+            path:'/blog/co-to-jest-seo',
+            time:'16:57 01/05/2022',
+            title:'Co to jest SEO?',
+            readTime:'17'
+        },
         // {
         //     poster:'',
         //     path:'',
