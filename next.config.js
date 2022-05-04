@@ -20,7 +20,8 @@ module.exports = withMDX({
       "cdn.pixabay.com", 
       "placeimg.com",
       "github.com",
-      "raw.githubusercontent.com"
+      "raw.githubusercontent.com",
+      "images.unsplash.com"
     ],
   },
 });

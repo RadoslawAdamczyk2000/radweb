@@ -1,33 +1,19 @@
-import Image from "next/image";
 import {CgPlayTrackNext,CgPlayPause,CgPlayTrackPrev} from "react-icons/cg";
+import { slides } from "../../../../data/slides";
+import Slide from "./Slide";
+import { HeroWrapper } from "./styles";
 const Hero = () => { 
     return(
-        <header>
-            <div>
-                <figure>
-                    <Image
-                        alt=''
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='center'
-                        title=''
-                        quality={85}
-                        src='https://cdn.pixabay.com/photo/2022/02/23/05/10/tiramisu-7030032_960_720.jpg'
-                    />
-                </figure>
-                <figure>
-                    <Image
-                        alt=''
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='center'
-                        title=''
-                        quality={95}
-                        src='https://cdn.pixabay.com/photo/2022/04/06/20/54/man-7116367_960_720.jpg'
-                    />
-                </figure>
-            </div>
-            <div>
+        <HeroWrapper>
+            <Slide
+                button={slides[0].button}
+                content={slides[0].content}
+                image={slides[0].image}
+                isMain={slides[0].isMain}
+                link={slides[0].link}
+                title={slides[0].title}
+            />
+            <div className='options'>
                 <div className="progress">
                     <div className="bar"/>
                 </div>
@@ -44,7 +30,7 @@ const Hero = () => {
                     <CgPlayTrackNext/>
                 </div>
             </div>
-        </header>
+        </HeroWrapper>
     )
 }
 export default Hero;
