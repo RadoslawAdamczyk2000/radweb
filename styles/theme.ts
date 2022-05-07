@@ -1,5 +1,5 @@
 import { DefaultTheme } from "styled-components"
-
+// light special: #6363ff
 export const darkTheme:DefaultTheme = {
     colors:{
         background:'#1f2028',

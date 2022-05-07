@@ -1,35 +1,39 @@
-import {CgPlayTrackNext,CgPlayPause,CgPlayTrackPrev} from "react-icons/cg";
+import { useState } from "react";
 import { slides } from "../../../../data/slides";
+import Options from "./Options";
 import Slide from "./Slide";
 import { HeroWrapper } from "./styles";
+
 const Hero = () => { 
+    const [slide,setSlide] = useState(0);
+    const nextSlide = () => {
+        if(slide > (slides.length - 2)){
+            setSlide(0);
+        }else{
+            setSlide(slide + 1);
+        }
+    }
+    const prevSlide = () => {
+        if(slide < 1){
+            setSlide(slides.length - 1);
+        }else{
+            setSlide(slide - 1);
+        }
+    }
     return(
         <HeroWrapper>
             <Slide
-                button={slides[0].button}
-                content={slides[0].content}
-                image={slides[0].image}
-                isMain={slides[0].isMain}
-                link={slides[0].link}
-                title={slides[0].title}
+                button={slides[slide].button}
+                content={slides[slide].content}
+                image={slides[slide].image.light}
+                link={slides[slide].link}
+                title={slides[slide].title}
             />
-            <div className='options'>
-                <div className="progress">
-                    <div className="bar"/>
-                </div>
-                <p className="slide">
-                    01
-                </p>
-                <div className="button">
-                    <CgPlayTrackPrev/>
-                </div>
-                <div className="button">
-                    <CgPlayPause/>
-                </div>
-                <div className="button">
-                    <CgPlayTrackNext/>
-                </div>
-            </div>
+            <Options
+                handleNext={() => nextSlide()}
+                slide={slide}
+                handlePrev={() => prevSlide()}
+            />
         </HeroWrapper>
     )
 }
