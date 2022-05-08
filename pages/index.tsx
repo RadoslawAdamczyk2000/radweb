@@ -1,37 +1,15 @@
 import { NextPage } from "next";
+import Blog from "../components/Page/Home/Blog/Blog";
 import Hero from "../components/Page/Home/Hero/Hero";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
   return(
     <Layout>
       <Hero/>
+      <main>
+        <Blog/>
+      </main>
       <ul>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
         <li>a</li>
         <li>a</li>
         <li>a</li>

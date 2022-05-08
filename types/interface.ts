@@ -1,4 +1,11 @@
 import { MouseEventHandler, ReactElement } from "react";
+export interface IntBlogCard {
+    date:number|string;
+    image:string;
+    link:string;
+    tags:any[];
+    title:string;
+}
 export interface IntLayout {
     children:any;
 }

@@ -220,11 +220,12 @@ export const MenuItemSubmenuWrapper = styled(MenuItem)`
         }
     }
     @media only screen {
-        @media (min-width:1500px){
+        @media (min-width:1300px){
             min-width:20rem;
             & > a{
                 border-radius:.85rem;
                 font-size:1.75rem;
+                padding:.35rem 0 .35rem .85rem;
             }
         }
         @media (max-width:690px){
@@ -316,6 +317,7 @@ export const SubmenuWrapper = styled.li`
                 align-items:start;
                 background-color:#ddd;
                 border-radius:.65rem;
+                box-shadow:0 1rem 2rem .25rem hsla(0,100%,0%,.25);
                 display:flex;
                 flex-flow:column nowrap;
                 justify-content:flex-start;
