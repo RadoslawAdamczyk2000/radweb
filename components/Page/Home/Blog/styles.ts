@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const BlogWrapper = styled.section`
-    background: #eee;
+    background: #ddd;
     border-radius:2rem;
     flex-flow:column;
     justify-content:start;
@@ -30,9 +30,9 @@ export const BlogWrapper = styled.section`
         }
     }
     & > ul{
-        flex-flow:row wrap;
+        flex-flow:row nowrap;
         gap:1.5rem;
-        justify-content:center;
+        justify-content:flex-start;
         padding:3rem 2rem;
     }
 `
@@ -51,7 +51,7 @@ export const CardWrapper = styled.li`
         }
         & > figure{
             height:30rem;
-            filter:saturate(40%);
+            filter:saturate(40%) brightness(85%);
             position:relative;
             transition:.2s linear filter;
         }
@@ -62,8 +62,6 @@ export const CardWrapper = styled.li`
             }
             & > h3{
                 font-size:1.7rem;
-                text-decoration:underline;
-                text-decoration-thickness:.15rem;
                 transition:.2s linear color;
             }
             & > p {
@@ -102,7 +100,7 @@ export const CardWrapper = styled.li`
     &:hover{
         & > a{
             & > figure{
-                filter:saturate(100%);
+                filter:saturate(100%) brightness(100%);
             }
             & > figcaption > h3 {
                 color:purple;

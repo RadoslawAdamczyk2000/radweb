@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Blog from "../components/Page/Home/Blog/Blog";
 import Hero from "../components/Page/Home/Hero/Hero";
+import Offer from "../components/Page/Home/Offer/Offer";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
   return(
@@ -8,6 +9,7 @@ const Page:NextPage = () => {
       <Hero/>
       <main>
         <Blog/>
+        <Offer/>
       </main>
       <ul>
         <li>a</li>

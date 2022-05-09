@@ -31,6 +31,13 @@ export interface IntNavigationOptions {
     menuHandle:MouseEventHandler;
     themeHandle:MouseEventHandler;
 }
+export interface IntOfferCardHome {
+    content:string;
+    id:number;
+    image:string;
+    link:string;
+    title:string;
+}
 export interface IntOptionsHeroHome {
     handleNext:MouseEventHandler;
     handlePrev:MouseEventHandler;
