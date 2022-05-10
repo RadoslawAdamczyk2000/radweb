@@ -113,7 +113,7 @@ export const CardWrapper = styled.li`
                 & > p{
                     font-size:1.55rem;
                     font-weight:500;
-                    line-height:calc(1.55rem * 1.5);
+                    line-height:calc(1.55rem * 2);
                     padding:.75rem .65rem;
                     text-align:flex-start;
                     @media only screen {
@@ -159,7 +159,6 @@ export const OfferWrapper = styled.section`
         width:55rem;
         @media only screen{
             @media (min-width:1500px){
-                background:red;
                 height:54rem;
                 margin:0 auto;
                 width:57rem;
@@ -195,6 +194,7 @@ export const OfferWrapper = styled.section`
         }
         & > p{
             padding:1rem;
+            line-height:calc(1.6rem * 2);
             @media only screen{
                 @media (min-width:1500px){
                     font-size:2.15rem;
@@ -236,7 +236,6 @@ export const OfferWrapper = styled.section`
         width:calc(100% - 55rem);
         @media only screen{
             @media (min-width:1500px){
-                background:yellow;
                 width:calc(100% - 80rem);
             }
             @media (max-width:1120px){

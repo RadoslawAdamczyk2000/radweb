@@ -43,6 +43,14 @@ export interface IntOptionsHeroHome {
     handlePrev:MouseEventHandler;
     slide:number;
 }
+export interface IntProjectHomeCard {
+    content:string;
+    image:string;
+    isBig:boolean;
+    link:string;
+    stack:any[];
+    title:string;
+}
 export interface IntSlideHomePage {
     button:string;
     content:string;
