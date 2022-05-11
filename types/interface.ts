@@ -61,6 +61,11 @@ export interface IntStackItemHome {
     icon:ReactElement;
     title:string;
 }
+export interface IntStepHome {
+    content:string;
+    index:string;
+    title:string;
+}
 export interface IntSubmenu {
     handle:MouseEventHandler;
     path:string;

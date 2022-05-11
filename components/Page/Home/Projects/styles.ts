@@ -136,10 +136,12 @@ export const ProjectsWrapper = styled.section`
         padding:1rem 0;
         & > a{
             background-color:black;
-            border-radius:2.5rem;
+            border-radius:5%;
             color:white;
+            font-size:3rem;
             margin:.75rem auto;
             padding:1.25rem 2rem;
+            text-align:center;
             transition:.2s linear background-color, .2s linear color, .2s linear transform;
             &:focus,
             &:hover{
@@ -149,10 +151,15 @@ export const ProjectsWrapper = styled.section`
             }
             @media only screen{
                 @media (min-width:1500px){
-                    border-radius:3.5rem;
-                    font-size:2.15rem;
+                    font-size:4rem;
                     font-weight:700;
                     padding:1.5rem 3.1rem;
+                }
+                @media (max-width:400px){
+                    font-size:2.7rem;
+                }
+                @media (max-width:300px){
+                    font-size:2.2rem;
                 }
             }
         }
