@@ -50,6 +50,12 @@ export interface IntProjectHomeCard {
     stack:any[];
     title:string;
 }
+export interface IntReview {
+    author:string;
+    comment:string;
+    image:string;
+    rate:number;
+}
 export interface IntSlideHomePage {
     button:string;
     content:string;
