@@ -124,3 +124,23 @@ export const StepWrapper = styled.li`
         }
     }
 `
+export const StepsWrapper = styled.section`
+    & > article{
+        padding:4rem 2rem;
+        & > h2{
+            font-size:4.5rem;
+            text-align:center;
+            @media only screen{
+                @media (min-width:1500px){
+                    font-size:6.5rem;
+                }
+                @media (max-width:900px){
+                    font-size:4rem;
+                }
+                @media (max-width:220px){
+                    font-size:3rem;
+                }
+            }
+        }
+    }
+`

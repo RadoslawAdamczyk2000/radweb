@@ -1,9 +1,10 @@
 import { steps } from "../../../../data/steps";
 import Step from "./Step";
+import { StepsWrapper } from "./styles";
 
 const Steps = () => {
     return(
-        <section>
+        <StepsWrapper>
             <article>
                 <h2>Proces realizacji zamówień</h2>
             </article>
@@ -17,7 +18,7 @@ const Steps = () => {
                     />
                 )}
             </ul>
-        </section>
+        </StepsWrapper>
     )
 }
 export default Steps; 

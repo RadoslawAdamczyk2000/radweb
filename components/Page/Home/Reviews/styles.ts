@@ -2,6 +2,7 @@ import styled from 'styled-components';
 export const ReviewWrapper = styled.div`
     align-items:center;
     background-color:gray;
+    border-radius:2.25rem;
     display:flex;
     flex-flow:column;
     min-height:40rem;
