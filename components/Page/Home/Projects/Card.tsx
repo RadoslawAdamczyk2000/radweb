@@ -2,14 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { ReactElement } from "react"
 import { IntProjectHomeCard } from "../../../../types/interface";
+import StackItem from "./StackItem";
 import { CardWrapper } from "./styles";
 interface i {
     icon:ReactElement;
     title:string;
 }
-const Card = ({content,image,isBig,link,stack,title}:IntProjectHomeCard) => {
+const Card = ({content,image,link,stack,title}:IntProjectHomeCard) => {
     return(
-        <CardWrapper className={isBig ? 'big' : 'small'}>
+        <CardWrapper title={title}>
             <Link href={link}>
                 <a>
                     <figure>
@@ -19,24 +20,22 @@ const Card = ({content,image,isBig,link,stack,title}:IntProjectHomeCard) => {
                             objectFit='cover'
                             objectPosition='center'
                             src={image}
-                            title={title}
                         />
                     </figure>
                     <figcaption>
-                        <ul>
-                            {stack.map(({icon,title}:i,key:number) => 
-                                <li key={key} title={title}>
-                                    {icon}
-                                </li>
-                            )}
-                        </ul>
-                        <h3>{title}</h3>
-                        <p>{
-                            isBig ?
-                            content.substr(0,170):
-                            content.substr(0,100)
-                            
-                        }...</p>
+                        <div>
+                            <h3>{title}</h3>
+                            <ul>
+                                {stack.map(({icon,title}:i,key:number) =>
+                                    <StackItem
+                                        icon={icon}
+                                        key={key}
+                                        title={title}
+                                    />
+                                )}
+                            </ul>
+                            <p>{content.substr(0,155)}...</p>
+                        </div>
                     </figcaption>
                 </a>
             </Link>

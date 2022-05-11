@@ -1,217 +1,95 @@
 import styled from 'styled-components';
 export const CardWrapper = styled.li`
-    background-color:#eee;
-    transition:.2s linear background-color;
-    & > a{
-        align-items:center;
-        display:flex;
+    background:pink;
+    display:flex;
+    height:30rem;
+    overflow:hidden;
+    width:50rem;
+    @media only screen {
+        @media (max-width:380px){
+            height:40rem;
+        }
+        @media (max-width:250px){
+            height:50rem;
+        }
+    }
+    & > a {
+        height:100%;
+        position:relative;
+        width:100%;
         & > figure{
+            height:100%;
             position:relative;
+            width:100%;
         }
         & > figcaption{
-            align-items:center;
-            display:flex;
-            flex-flow:column;
+            background-color:hsla(0,100%,100%,1);
+            height:100%;
+            left:0;
+            position:absolute;
+            top:0;
+            opacity:0;
+            transition:.15s linear opacity, .15s linear visibility;
+            visibility:hidden;
             width:100%;
-            & > * {
-                width:100%;
+            @media only screen {
+                @media (max-width:500px){
+                    background-color:hsla(0,100%,100%,.8);
+                    opacity:1;
+                    visibility:visible;
+                }
             }
-            & > ul{
+            & > div{
                 align-items:center;
                 display:flex;
-                flex-flow:row;
-                & > li{
+                flex-flow:column;
+                height:100%;
+                justify-content:center;
+                position:absolute;
+                row-gap:1rem;
+                width:100%;
+                & > p,
+                & > ul{
                     align-items:center;
-                    color:#333;
                     display:flex;
                     justify-content:center;
                 }
-            }
-            & > h3 {
-                align-items:center;
-                display:flex;
-                font-weight:500;
-                justify-content:flex-end;
-            }
-            & > p{
-                color:#333;
-            }
-        }
-    }
-    &.big{
-        width:100%;
-        @media only screen {
-            @media (min-width:1500px){
-                height:30rem;
-            }
-            @media (max-width:670px){
-                margin:auto;
-                width:80%;
-            }
-            @media (max-width:350px){
-                width:95%;
-            }
-        }
-        & > a{
-            flex-flow:row;
-            height:100%;
-            @media only screen {
-                @media (max-width:1050px){
-                    flex-flow:column;
-                    & > *{
-                        width:100%;
-                    }
-                }
-            }
-            & >figure{
-                height:100%;
-                width:25rem;
-                @media only screen {
-                    @media (min-width:1500px){
-                        width:35rem;
-                    }
-                    @media (max-width:1050px){
-                        height:30rem;
-                        width:100%;
-                    }
-                }
-            }
-            & > figcaption{
-                height:100%;
-                width:calc(100% - 20rem);
-                @media only screen {
-                    @media (min-width:1500px){
-                        width:calc(100% - 35rem);
-                    }
-                    @media (max-width:1050px){
-                        height:auto;
-                        padding:2rem 0;
-                        width:100%;
-                    }
-                }
-                & > * { 
-                    width:100%;
-                }
-                & > ul{
-                    gap:.25rem;
-                    justify-content:flex-end;
-                    margin:.85rem 0;
+                & > h3 {
+                    font-size:2.5rem;
                     @media only screen {
-                        @media (min-width:1500px){
-                            padding-right:1rem;
-                        }
-                    }
-                    & > li{
-                        font-size:2.6rem;
-                        height:2.85rem;
-                        width:2.85rem;
-                        @media only screen {
-                            @media (min-width:1500px){
-                                font-size:3.25rem;
-                                height:3.5rem;
-                                width:3.5rem;
-                            }
-                        }
-                    }
-                }
-                & > h3{
-                    font-size:2.8rem;
-                    padding:0 1rem;
-                    @media only screen {
-                        @media (min-width:1500px){
-                            font-size:3.3rem;
-                        }
-                    }
-                }
-                & > p {
-                    font-size:1.65rem;
-                    line-height:calc(1.65rem * 2);
-                    padding:.75rem;
-                    @media only screen {
-                        @media (min-width:1500px){
-                            font-size:1.85rem;
-                            line-height:calc(1.85rem * 2);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    &.small{
-        margin:auto;
-        width:100%;
-        @media only screen {
-            @media (max-width:750px){
-                width:80%;
-            }
-            @media (max-width:350px){
-                width:95%;
-            }
-        }
-        & > a{
-            flex-flow:column;
-            & > figure{
-                height:20rem;
-                width:100%;
-                @media only screen {
-                    @media (min-width:1500px){
-                        height:30rem;
-                    }
-                }
-            }
-            & > figcaption{
-                padding-top:2rem;
-                row-gap:1rem;
-                & > ul{
-                    justify-content:center;
-                    gap:1rem;
-                    grid-template:.5rem;
-                    & > li{
-                        font-size:2.8rem;
-                        height:3rem;
-                        width:3rem;
-                        @media only screen {
-                            @media (max-width:950px){
-                                font-size:2.2rem;
-                                height:2.75rem;
-                                width:2.75rem;
-                            }
-                        }
-                    }
-                }
-                & > h3{
-                    font-size:2.8rem;
-                    padding:0 1rem;
-                    @media only screen {
-                        @media (min-width:1500px){
-                            font-size:3.2rem;
-                        }
-                        @media (max-width:950px){
+                        @media (max-width:250px){
                             font-size:2.2rem;
                         }
                     }
                 }
-                & > p {
-                    font-size:1.75rem;
-                    line-height:calc(1.75rem * 2);
-                    padding:.85rem;
+                & > p{
+                    font-size:1.7rem;
+                    line-height:calc(1.7rem * 2);
+                    padding:.85rem 1.15rem;
+                    width:100%;
                     @media only screen {
-                        @media (min-width:1500px){
-                            font-size:1.95rem;
-                            line-height:calc(1.95rem * 2);
-                        }
-                        @media (max-width:950px){
-                            font-size:1.65rem;
-                            line-height:calc(1.65rem * 2);
+                        @media (max-width:380px){
+                            font-size:1.55rem;
+                            line-height:calc(1.55rem * 2);
                         }
                     }
+                }
+                & > ul{
+                    flex-flow:row wrap;
+                    gap:.85rem;
+                    width:100%;
                 }
             }
         }
     }
     &:focus,
     &:hover{
-        background-color:#fff;
+        & > a{
+            & > figcaption{
+                opacity:1;
+                visibility:visible;
+            }
+        }
     }
 `
 export const ProjectsWrapper = styled.section`
@@ -242,38 +120,16 @@ export const ProjectsWrapper = styled.section`
             }
         }
     }
-    & > div:first-of-type{
-        align-items:start;
+    & > ul{
+        align-items:center;
         display:flex;
-        flex-flow:column;
+        flex-flow:row wrap;
+        gap:.25rem;
         justify-content:center;
-        & > .bottom,
-        & > .top{
-            display:grid;
-            gap:.5rem;
-            padding:.5rem;
-        }
-        & > .bottom{
-            grid-template-columns:repeat(3,1fr);
-            width:100%;
-            @media only screen {
-                @media (max-width:750px){
-                    display:flex;
-                    flex-flow:column;
-                }
-            }
-        }
-        & > .top{
-            grid-template-columns:repeat(2,1fr);
-            @media only screen {
-                @media (max-width:670px){
-                    display:flex;
-                    flex-flow:column;
-                }
-            }
-        }
+        padding: 0.5rem;
+        width:100%;
     }
-    & > div:last-of-type{
+    & > div{
         align-items:center;
         display:flex;
         justify-content:center;
@@ -299,6 +155,23 @@ export const ProjectsWrapper = styled.section`
                     padding:1.5rem 3.1rem;
                 }
             }
+        }
+    }
+`
+export const StackItemWrapper = styled.li`
+    align-items:center;
+    color:#666;
+    display:flex;
+    font-size:2.5rem;
+    height:3rem;
+    justify-content:center;
+    user-select:none;
+    width:3rem;
+    @media only screen {
+        @media (max-width:250px){
+            font-size:2rem;
+            height:2.5rem;
+            width:2.5rem;
         }
     }
 `

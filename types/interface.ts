@@ -46,7 +46,6 @@ export interface IntOptionsHeroHome {
 export interface IntProjectHomeCard {
     content:string;
     image:string;
-    isBig:boolean;
     link:string;
     stack:any[];
     title:string;
@@ -56,6 +55,10 @@ export interface IntSlideHomePage {
     content:string;
     image:string;
     link:string;
+    title:string;
+}
+export interface IntStackItemHome {
+    icon:ReactElement;
     title:string;
 }
 export interface IntSubmenu {
