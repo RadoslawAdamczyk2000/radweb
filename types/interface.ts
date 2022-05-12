@@ -1,10 +1,14 @@
-import { MouseEventHandler, ReactElement } from "react";
+import React, { MouseEventHandler, ReactElement } from "react";
 export interface IntBlogCard {
     date:number|string;
     image:string;
     link:string;
     tags:any[];
     title:string;
+}
+export interface IntContactItemFooter {
+    icon:ReactElement;
+    link:string;
 }
 export interface IntLayout {
     children:any;
@@ -30,6 +34,14 @@ export interface IntNavigationOptions {
     isLight:boolean;
     menuHandle:MouseEventHandler;
     themeHandle:MouseEventHandler;
+}
+export interface IntNewsletterField {
+    id:string;
+    min:number;
+    name:string;
+    pattern:string;
+    title:string;
+    type:string;
 }
 export interface IntOfferCardHome {
     content:string;
@@ -62,6 +74,11 @@ export interface IntSlideHomePage {
     image:string;
     link:string;
     title:string;
+}
+export interface IntSocial {
+    icon:ReactElement;
+    link:string;
+    name:string;
 }
 export interface IntStackItemHome {
     icon:ReactElement;
