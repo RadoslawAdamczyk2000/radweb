@@ -1,8 +1,21 @@
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import Card from "./Card";
 import { BlogWrapper } from "./styles";
 
 const Blog = () => {
+    const cards = document.getElementById('cards');
+   
+    const scrolling = () => {
+        cards.addEventListener('scroll', () => {
+            console.log(cards.scrollY);
+            console.log(cards.scrollX);
+        })
+    }
+
+    useEffect(() => {
+        scrolling();
+    },[])
     return(
         <BlogWrapper>
             <article>
@@ -13,7 +26,7 @@ const Blog = () => {
                     </a>
                 </Link>
             </article>
-            <ul>
+            <ul id='cards'>
                 <Card
                     date={'05-10-2022'}
                     image='https://cdn.pixabay.com/photo/2020/02/25/09/57/road-4878453_960_720.jpg'

@@ -33,11 +33,13 @@ export const BlogWrapper = styled.section`
         flex-flow:row nowrap;
         gap:1.5rem;
         justify-content:flex-start;
+        overflow:scroll;
         padding:3rem 2rem;
     }
 `
 export const CardWrapper = styled.li`
-    max-width:99.9%;
+    flex-shrink:0;
+    /* max-width:99.9%; */
     width:30rem;
     & > a{
         height:100%;

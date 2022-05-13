@@ -14,18 +14,13 @@ const Page:NextPage = () => {
       <Hero/>
       <main>
         <About/>
-        {/* <Blog/> */}
+        <Blog/>
         <Movie/>
         <Offer/>
         <Projects/>
         <Steps/>
         <Reviews/>
       </main>
-      <ul>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-      </ul>
     </Layout>
   )
 }
