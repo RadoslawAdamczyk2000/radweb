@@ -1,28 +1,24 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Card from "./Card";
+import {motion} from 'framer-motion';
 import { BlogWrapper } from "./styles";
 
 const Blog = () => {
-    const cards = document.getElementById('cards');
-   
-    const scrolling = () => {
-        cards.addEventListener('scroll', () => {
-            console.log(cards.scrollY);
-            console.log(cards.scrollX);
-        })
-    }
-
-    useEffect(() => {
-        scrolling();
-    },[])
+ 
     return(
         <BlogWrapper>
             <article>
                 <h2>Blog</h2>
+                <p>
+                    Jestem młodym twórcą oraz pozycjonerem stron oraz aplikacji internetowych o sporym wachlarzu technologicznym, dlatego też znajdę odpowiednie rozwiązenie dla Twoich wymagań oraz problemów. 
+                    <br/>
+                    <br/>
+                    Doskonale wiem jak powinna działać oraz wyglądać nowoczesna strona internetowa oraz co powinna zawierać aby była przyjazna przeglądarkom. Jednak to jest jedynie namiastka tego co oferuję, więc jeśli zainteresowała Ciebie moja osoba zapraszam do sprawdzenia wszystkich ofert.
+                </p>
                 <Link href='/blog'>
                     <a>
-                        Sprawdź wszystkie artykuły
+                        Sprawdź artykuły
                     </a>
                 </Link>
             </article>

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 export const BlogWrapper = styled.section`
-    background: #ddd;
     border-radius:2rem;
     flex-flow:column;
     justify-content:start;
@@ -13,34 +12,89 @@ export const BlogWrapper = styled.section`
         display:flex;
     }
     & > article{
-        /* background-color:gray; */
+        align-items:center;
         flex-flow:column;
-        padding:2rem 3rem;
+        padding:2rem 8rem;
         row-gap:1rem;
+        @media only screen{
+            @media (max-width:900px){
+                padding:2rem 2rem;
+            }
+        }
         & > h2{
-            font-size:5.5rem;
-            font-weight:500;
+            font-size:4.5rem;
+            @media only screen{
+                @media (min-width:1500px){
+                    font-size:6.5rem;
+                }
+                @media (max-width:900px){
+                    font-size:4rem;
+                }
+            }
+        }
+        & > p{
+            padding:1rem;
+            line-height:calc(1.6rem * 2);
+            text-align:center;
+            @media only screen{
+                @media (min-width:1500px){
+                    font-size:2.15rem;
+                    line-height:calc(2.15rem * 1.5);
+                }
+                @media (max-width:900px){
+                    font-size:1.55rem;
+                }
+            }
         }
         & > a{
-            background-color:pink;
-            border-radius:1.5rem;
-            font-size:1.8rem;
-            font-weight:700;
-            padding:1rem 2rem;
+            background-color:black;
+            border-radius:2.5rem;
+            color:white;
+            margin:.75rem 0;
+            padding:1.25rem 2rem;
+            transition:.2s linear background-color, .2s linear color, .2s linear transform;
+            &:focus,
+            &:hover{
+                background-color:red;
+                color:white;
+                transform:scaleX(.95);
+            }
+            @media only screen{
+                @media (min-width:1500px){
+                    border-radius:3.5rem;
+                    font-size:2.15rem;
+                    font-weight:700;
+                    padding:1.5rem 3.1rem;
+                }
+            }
         }
     }
+   
     & > ul{
+        display:flex;
         flex-flow:row nowrap;
         gap:1.5rem;
         justify-content:flex-start;
-        overflow:scroll;
         padding:3rem 2rem;
+        width:100%;
+        @media only screen {
+            @media (min-width: 850px) {
+                justify-content:center;
+                flex-flow:row wrap;
+                overflow-x:scroll;
+            }
+        }
     }
 `
 export const CardWrapper = styled.li`
     flex-shrink:0;
     /* max-width:99.9%; */
     width:30rem;
+    @media only screen {
+        @media (max-width: 849px) {
+            width:20rem;
+        }
+    }
     & > a{
         height:100%;
         &,
