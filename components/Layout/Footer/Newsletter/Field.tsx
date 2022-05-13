@@ -1,17 +1,29 @@
 import { IntNewsletterField } from "../../../../types/interface";
+import { FieldWrapper } from "./styles";
 const Field = ({id,min,name,pattern,title,type}:IntNewsletterField) => {
     return(
-        <div>
-            <input 
-                id={id}
-                type={type}
-                minLength={min}
-                name={name}
-                pattern={pattern}
-                placeholder={title}
-            />
+        <FieldWrapper>
+            {
+                pattern ?
+                <input 
+                    id={id}
+                    type={type}
+                    minLength={min}
+                    name={name}
+                    pattern={pattern}
+                    placeholder={title}
+                /> :
+                <input 
+                    id={id}
+                    type={type}
+                    minLength={min}
+                    name={name}
+                    placeholder={title}
+                />
+            }
+            
             <span/>
-        </div>
+        </FieldWrapper>
     )
 }
 export default Field;

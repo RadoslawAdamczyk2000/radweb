@@ -8,12 +8,12 @@ const Footer = () => {
     return(
         <FooterWrapper>
             <div>
-                <Info/>
-                <Map/>
-            </div>
-            <div>
                 <Menu/>
                 <Newsletter/>
+                <Info/>
+            </div>
+            <div>
+                <Map/>
             </div>
             <Author/>
         </FooterWrapper>

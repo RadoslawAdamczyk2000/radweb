@@ -2,14 +2,14 @@ import styled from 'styled-components';
 export const MapWrapper = styled.div`
     align-items:center;
     aspect-ratio:16/9;
-    background:lime;
     display:flex;
     justify-content:center;
-    max-width:95%;
-    width:60rem;
+    max-height:40rem;
+    width:100%;
     @media only screen {
         @media  (min-width:1500px){
-            width:70rem;
+            max-height:60rem;
+            /* width:70rem; */
         }
     }
     & > iframe{

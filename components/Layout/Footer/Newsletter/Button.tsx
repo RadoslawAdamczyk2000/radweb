@@ -1,8 +1,9 @@
+import { ButtonWrapper } from "./styles";
 const Button = () => {
     return(
-        <button>
+        <ButtonWrapper>
             Zapisz się
-        </button>
+        </ButtonWrapper>
     )
 }
 export default Button;

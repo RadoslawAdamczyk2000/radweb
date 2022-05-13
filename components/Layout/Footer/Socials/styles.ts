@@ -46,6 +46,13 @@ export const SocialsWrapper = styled.ul`
     display:flex;
     flex-flow:row wrap;
     gap:1rem;
-    justify-content:flex-start;
+    justify-content:flex-end;
     padding:1rem 2.25rem;
+    @media only screen {
+        @media (max-width:950px){
+            justify-content:center;
+            max-width:95%;
+            width:50rem;
+        }
+    }
 `

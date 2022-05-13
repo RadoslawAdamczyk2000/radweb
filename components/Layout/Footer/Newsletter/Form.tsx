@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Field from "./Field"
 
 const Form = () => {
@@ -19,6 +20,7 @@ const Form = () => {
                 title='E-mail'
                 type='email'
             />
+            <Button/>
         </form>
     )
 }

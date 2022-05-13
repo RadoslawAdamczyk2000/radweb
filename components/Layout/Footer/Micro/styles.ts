@@ -4,8 +4,13 @@ export const ContactWrapper = styled.address`
     display:flex;
     flex-flow:row wrap;
     gap:1rem;
-    justify-content:flex-start;
+    justify-content:flex-end;
     padding:1rem 2.25rem;
+    @media only screen {
+        @media (max-width:950px){
+            justify-content:center;
+        }
+    }
 `
 export const ContactItemWrapper = styled.li`
     height:4.5rem;
@@ -30,12 +35,22 @@ export const ContactItemWrapper = styled.li`
 export const MicroWrapper = styled.div`
     & > article{
         padding:.25rem;
+        text-align:end;
         & > h4{
             font-size:2.2rem;
         }
         & > p{
             font-size:1.75rem;
             line-height:calc(1.75rem * 2);
+        }
+    }
+    @media only screen {
+        @media (max-width:950px){
+            max-width:95%;
+            width:50rem;
+            & > article{
+                text-align:center;
+            }
         }
     }
 `

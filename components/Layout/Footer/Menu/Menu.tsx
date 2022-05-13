@@ -1,18 +1,21 @@
 import Link from "next/link";
 import { menu } from "../../../../data/menu";
+import { MenuWrapper } from "./styles";
 const Menu = () => {
     return(
-        <div>
+        <MenuWrapper>
             {menu.map(({path,title},key) => 
                 <li key={key}>
                     <Link href={path}>
                         <a>
-                            {title}
+                            <p>
+                                {title}
+                            </p>
                         </a>
                     </Link>
                 </li>
             )}
-        </div>
+        </MenuWrapper>
     )
 }
 export default Menu;
