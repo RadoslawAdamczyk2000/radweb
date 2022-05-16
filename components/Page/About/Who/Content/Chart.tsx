@@ -25,8 +25,6 @@ const Chart = () => {
                     top:20,
                 }}
                 motionConfig='wobbly'
-                motionDamping={15}
-                motionStiffness={90}
                 padAngle={0.5}
                 sortByValue={false}
                 theme={{
