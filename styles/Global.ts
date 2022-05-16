@@ -9,6 +9,7 @@ export const Global = createGlobalStyle`
         box-sizing:border-box;
         margin:0;
         padding:0;
+        scroll-behavior:smooth;
     }
     ::after,
     ::before{
@@ -49,6 +50,9 @@ export const Global = createGlobalStyle`
         width:85%;
         & > section{
             margin:8rem auto;
+        }
+        &.densely > section {
+            margin:1rem auto;
         }
         @media only screen {
             @media (max-width:1500px){

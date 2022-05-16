@@ -1,4 +1,9 @@
 import React, { MouseEventHandler, ReactElement } from "react";
+export interface IntAboutMeText {
+    content:string;
+    heading?:string;
+    path?:string;
+}
 export interface IntBlogCard {
     date:number|string;
     image:string;
@@ -47,6 +52,10 @@ export interface IntMenuItem {
     path:string;
     title:string;
 }
+export interface IntMovieAbout {
+    movie:string;
+    movieTitle:string;
+}
 export interface IntNavigation {
     isArticle?:boolean;
 }
@@ -75,6 +84,10 @@ export interface IntOptionsHeroHome {
     handleNext:MouseEventHandler;
     handlePrev:MouseEventHandler;
     slide:number;
+}
+export interface IntPictureAbout {
+    image:string;
+    title:string;
 }
 export interface IntProjectHomeCard {
     content:string;
