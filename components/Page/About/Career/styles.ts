@@ -44,6 +44,7 @@ export const CardWrapper = styled.li`
     & > .company{
         font-size:2.4rem;
         font-weight:600;
+        text-align:center;
         transition:.2s linear color;
     }
     & > .position{

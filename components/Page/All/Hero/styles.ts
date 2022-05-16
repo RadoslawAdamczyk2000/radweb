@@ -54,6 +54,8 @@ export const HeroWithImageWrapper = styled.header`
             }
             @media (max-width:500px){
                 font-weight:400;
+                text-align:end;
+                text-indent:0;
             }
             @media (max-width:400px){
                 font-size:1.65rem;
