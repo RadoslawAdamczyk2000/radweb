@@ -6,9 +6,30 @@ export interface IntBlogCard {
     tags:any[];
     title:string;
 }
+export interface IntCareerCard {
+    company:string;
+    description:string;
+    end:string;
+    index:number;
+    job:string;
+    start:string;
+}
+export interface IntCertificateCard{
+    content:string;
+    image:string;
+    path:string;
+    title:string;
+    source:string;
+}
 export interface IntContactItemFooter {
     icon:ReactElement;
     link:string;
+}
+export interface IntHeroPage {
+    content:string;
+    image:string;
+    isImage:boolean;
+    title:string;
 }
 export interface IntLayout {
     children:any;

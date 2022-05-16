@@ -50,6 +50,11 @@ export const Global = createGlobalStyle`
         & > section{
             margin:8rem auto;
         }
+        @media only screen {
+            @media (max-width:1500px){
+                width:90%;
+            }
+        }
     }
     button,
     input,

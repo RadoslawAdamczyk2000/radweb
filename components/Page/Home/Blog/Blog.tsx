@@ -1,11 +1,7 @@
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 import Card from "./Card";
-import {motion} from 'framer-motion';
 import { BlogWrapper } from "./styles";
-
 const Blog = () => {
- 
     return(
         <BlogWrapper>
             <article>
