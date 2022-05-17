@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const HeroWrapper = styled.header`
     display:grid;
-    grid-template-columns:1.5fr 1.7fr;
+    grid-template-columns:1.5fr 1.2fr;
     min-height:50rem;
     padding:1rem 0 1rem 3rem;
     @media only screen {
@@ -34,7 +34,7 @@ export const HeroWrapper = styled.header`
         }
         & > section{
             & > h1{
-                font-size:4.5rem;
+                font-size:4.25rem;
                 font-weight:500;
                 @media only screen{
                     @media  (min-width:1450px){
@@ -50,6 +50,7 @@ export const HeroWrapper = styled.header`
                 color:#555;
                 font-size:1.75rem;
                 line-height:calc(1.75rem * 2.2);
+                padding:0 .5rem;
                 @media only screen {
                     @media  (min-width:1450px){
                         font-size:2.1rem;
@@ -62,7 +63,6 @@ export const HeroWrapper = styled.header`
                     @media  (max-width:360px){
                         font-size:1.65rem;
                         /* width:90%; */
-                        padding:0 .5rem;
                         line-height:calc(1.65rem * 2);
                     }
                 }

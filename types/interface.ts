@@ -96,12 +96,14 @@ export interface IntPictureAbout {
     image:string;
     title:string;
 }
-export interface IntProjectHomeCard {
+export interface IntProjectCard {
     content:string;
-    image:string;
     link:string;
     stack:any[];
     title:string;
+}
+export interface IntProjectHomeCard extends IntProjectCard {
+    image:string;
 }
 export interface IntReview {
     author:string;
@@ -139,6 +141,10 @@ export interface IntSubmenu {
     handle:MouseEventHandler;
     path:string;
     submenu:ReactElement[]|any[];
+    title:string;
+}
+export interface IntTagStack {
+    icon:ReactElement;
     title:string;
 }
 export interface IntThemeButton {

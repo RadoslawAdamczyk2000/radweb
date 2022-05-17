@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { menu } from "../../../data/menu";
 import MenuItem from "./MenuItem";
 import { MenuWrapper } from "./styles";
@@ -22,7 +21,7 @@ const Menu = () => {
                                 isMain={true}
                                 title={title}
                                 key={key}           
-                                path='/'
+                                path={path}
                                 handle={() => console.log(title)}
                             />
                         }
