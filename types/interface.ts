@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactElement } from "react";
+import React, { FormEventHandler, MouseEventHandler, ReactElement } from "react";
 export interface IntAboutMeText {
     content:string;
     heading?:string;
@@ -10,6 +10,9 @@ export interface IntBlogCard {
     link:string;
     tags:any[];
     title:string;
+}
+export interface IntBlogCardPage extends IntBlogCard {
+    content:string;
 }
 export interface IntCareerCard {
     company:string;
@@ -29,6 +32,10 @@ export interface IntCertificateCard{
 export interface IntContactItemFooter {
     icon:ReactElement;
     link:string;
+}
+export interface IntHeroBlog extends IntSearch {
+    content:string;
+    image:string;
 }
 export interface IntHeroPage {
     content:string;
@@ -101,6 +108,11 @@ export interface IntReview {
     comment:string;
     image:string;
     rate:number;
+}
+export interface IntSearch {
+    handle:FormEventHandler;
+    placeholder:string;
+    title:string;
 }
 export interface IntSlideHomePage {
     button:string;
