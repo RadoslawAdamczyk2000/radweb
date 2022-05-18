@@ -71,3 +71,73 @@ export const stack = {
         title:'SEO - Search Engine Optimization'
     },
 }   
+export const stackArr = [
+    {
+        icon:stack.html.icon,
+        title:stack.html.title
+    },
+    {
+        icon:stack.css.icon,
+        title:stack.css.title
+    },
+    {
+        icon:stack.bootstrap.icon,
+        title:stack.bootstrap.title
+    },
+    // tailwind:{
+    //     icon:,
+    //     title:'Tailwind'
+    // },
+    {
+        icon:stack.scss.icon,
+        title:stack.scss.title
+    },
+    {
+        icon:stack.styled.icon,
+        title:stack.styled.title
+    },
+    {
+        icon:stack.javascript.icon,
+        title:stack.javascript.title
+    },
+    {
+        icon:stack.typescript.icon,
+        title:stack.typescript.title
+    },
+    // angular:{
+    //     icon:,
+    //     title:'Angular'
+    // },
+    {
+        icon:stack.react.icon,
+        title:stack.react.title
+    },
+    // vue:{
+    //     icon:,
+    //     title:'Vue'
+    // },
+    {
+        icon:stack.gatsby.icon,
+        title:stack.gatsby.title
+    },
+    {
+        icon:stack.next.icon,
+        title:stack.next.title
+    },
+    //{
+    //     icon:,
+    //     title:'RemixJS'
+    // },
+    //{
+    //     icon:,
+    //     title:'PHP'
+    // },
+    //{
+    //     icon:,
+    //     title:'MySQL'
+    // },
+    {
+        icon:stack.seo.icon,
+        title:stack.seo.title
+    },   
+]

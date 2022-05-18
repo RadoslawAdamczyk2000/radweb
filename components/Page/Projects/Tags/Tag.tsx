@@ -1,11 +1,29 @@
+import { useState } from "react";
 import { IntTagStack } from "../../../../types/interface";
-const Tag = ({icon,title}:IntTagStack) => {
+import { TagWrapper } from "./styles";
+const Tag = ({icon,handle,title}:IntTagStack) => {
+    const [active,setActive] = useState(false);
+    console.log(handle)
+    const handleClick = () => {
+        setActive(!active);
+        {
+            !active ?
+            (
+                handle.push(title)
+            ):
+            (
+                handle.filter((e:any) => e.title)
+            )
+        }
+    }
     return(
-        <li title={title}>
-            <span title={title}>
-                {icon}
-            </span>
-        </li>
+        <TagWrapper 
+            active={active} 
+            onClick={handleClick}
+            title={title} 
+        >
+            {icon}
+        </TagWrapper>
     )
 }
 export default Tag;

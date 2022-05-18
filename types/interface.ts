@@ -33,15 +33,18 @@ export interface IntContactItemFooter {
     icon:ReactElement;
     link:string;
 }
-export interface IntHeroBlog extends IntSearch {
+export interface IntFaqCard {
     content:string;
-    image:string;
-}
-export interface IntHeroPage {
-    content:string;
-    image:string;
-    isImage:boolean;
     title:string;
+}
+
+export interface IntHeroPage extends IntSearch {
+    content:string;
+    image:string;
+    isVertical?:boolean;
+    title:string;
+    withImage?:boolean;
+    withSearch?:boolean;
 }
 export interface IntLayout {
     children:any;
@@ -112,9 +115,9 @@ export interface IntReview {
     rate:number;
 }
 export interface IntSearch {
-    handle:FormEventHandler;
-    placeholder:string;
-    title:string;
+    handle?:FormEventHandler;
+    placeholder?:string;
+    title?:string;
 }
 export interface IntSlideHomePage {
     button:string;
@@ -145,6 +148,7 @@ export interface IntSubmenu {
 }
 export interface IntTagStack {
     icon:ReactElement;
+    handle:any;
     title:string;
 }
 export interface IntThemeButton {

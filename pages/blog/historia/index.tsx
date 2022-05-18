@@ -1,8 +1,8 @@
 import { NextPage } from "next";
 import { useState } from "react";
+import Hero from "../../../components/All/Hero/Hero";
 import Card from "../../../components/Page/Blog/Cards/Card";
 import { Cards } from "../../../components/Page/Blog/Cards/styles";
-import Hero from "../../../components/Page/Blog/Hero/Hero";
 import Layout from "../../../schemas/Layout";
 const Page:NextPage = () => {
     const [search,setSearch] = useState('');
@@ -14,8 +14,8 @@ const Page:NextPage = () => {
             image='https://images.unsplash.com/photo-1652648927946-6385c35c4a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
             placeholder='Szukaj...'
             title="Blog o historii"
+            withSearch={true}
         />        
-        <p>{search}</p>
         <main>
           <Cards>
             <Card
