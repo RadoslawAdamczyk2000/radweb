@@ -1,6 +1,7 @@
 import { RiSearch2Line } from "react-icons/ri"
+import { IntSearch } from "../../../types/interface";
 import { SearchWrapper } from "./styles";
-const Search = ({handle,title,placeholder}) => {
+const Search = ({handle,title,placeholder}:IntSearch) => {
     return(
         <SearchWrapper>
             <div>   
