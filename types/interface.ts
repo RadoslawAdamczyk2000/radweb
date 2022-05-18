@@ -83,6 +83,13 @@ export interface IntNewsletterField {
     title:string;
     type:string;
 }
+export interface IntOfferCard {
+    button?:string;
+    content:string;
+    isMain:boolean;
+    link?:string;
+    title:string;
+}
 export interface IntOfferCardHome {
     content:string;
     id:number;

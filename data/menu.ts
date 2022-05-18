@@ -62,7 +62,7 @@ export const menu = [
         submenu:[
             {
                 title:'Strony internetowe',
-                path:'/oferty/strony-internetowe',
+                path:'/oferty/tworzenie-stron-internetowych',
             },
             {
                 title:'Pozycjonowanie',
