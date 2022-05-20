@@ -77,6 +77,10 @@ export const menu = [
                 path:'/oferty/analityka-stron-internetowych',
             },
             {
+                title:'Lokalizacje',
+                path:'/oferty/lokalizacje',
+            },
+            {
                 title:'Wszyskie',
                 path:'/oferty/',
             },

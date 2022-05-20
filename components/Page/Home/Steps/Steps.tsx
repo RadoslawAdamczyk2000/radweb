@@ -4,7 +4,7 @@ import { StepsWrapper } from "./styles";
 
 const Steps = () => {
     return(
-        <StepsWrapper>
+        <StepsWrapper id='etapy-realizacji'>
             <article>
                 <h2>Proces realizacji zamówień</h2>
             </article>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Cards = styled.ul`
-    align-items:center;
+    align-items:start;
     display:flex;
     flex-flow:row wrap;
     gap:1rem;
@@ -10,8 +10,6 @@ export const Cards = styled.ul`
 
 export const CardWrapper = styled.li`
     align-items:flex-start;
-    border:.12rem solid red;
-    border-radius:.85rem;
     display:flex;
     flex-flow:column;
     justify-content:start;
