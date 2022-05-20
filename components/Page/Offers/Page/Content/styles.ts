@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export const ButtonWrapper = styled.li`
     border-radius:1.75rem;
+    cursor:pointer;
     font-size:1.8rem;
     padding:1rem 1.5rem;
     text-align:center;
