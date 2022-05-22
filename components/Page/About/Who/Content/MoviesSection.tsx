@@ -16,7 +16,7 @@ const MoviesSection = ({content,heading,movies,path}:i) => {
             />
             </div>
             <ul>
-                {movies.map(({movie,movieTitle}:IntMovieAbout,key:number) => 
+                {movies.map(({url:movie,title:movieTitle}:{url:string,title:string},key:number) => 
                     <Movie
                         key={key}
                         movie={movie}

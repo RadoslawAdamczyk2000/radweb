@@ -1,8 +1,8 @@
 import { ResponsivePie } from "@nivo/pie";
-import { data } from "../../../../../data/skills";
+import { aboutMe } from "../../../../../content/about-me";
 import { ChartWrapper } from "./styles";
-
 const Chart = () => {
+    const {data} = aboutMe.home.page.programming;
     return(
         <ChartWrapper>
             

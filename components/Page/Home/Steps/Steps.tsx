@@ -1,15 +1,15 @@
-import { steps } from "../../../../data/steps";
+import { home } from "../../../../content/home";
 import Step from "./Step";
 import { StepsWrapper } from "./styles";
-
 const Steps = () => {
+    const {title,cards} = home.page.steps;
     return(
         <StepsWrapper id='etapy-realizacji'>
             <article>
-                <h2>Proces realizacji zamówień</h2>
+                <h2>{title}</h2>
             </article>
             <ul>
-                {steps.map(({content,index,title},key) =>
+                {cards.map(({content,index,title},key) =>
                     <Step
                         content={content}
                         index={index}

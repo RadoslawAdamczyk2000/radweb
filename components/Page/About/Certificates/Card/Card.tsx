@@ -5,18 +5,16 @@ import { CardWrapper } from "./styles"
 const Card = ({content,image,path,title,source}:IntCertificateCard) => {
     return(
         <CardWrapper>
-            <div>
-                <figure>
-                    <Image
-                        alt={`${title} - ${source}`}
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='center'
-                        src={image}
-                        title={`${title} - ${source}`}
-                    />
-                </figure>
-            </div>
+            <figure>
+                <Image
+                    alt={`${title} - ${source}`}
+                    layout='fill'
+                    objectFit='cover'
+                    objectPosition='center'
+                    src={image}
+                    title={`${title} - ${source}`}
+                />
+            </figure>
             <div>
                 <h3>{title}</h3>
                 <Link href={path}>

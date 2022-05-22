@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
+import { home } from "../../../../content/home";
 import { AboutWrapper } from "./styles";
 const About = () => {
+    const {button,content,image,title} = home.page.about;
     return(
         <AboutWrapper>
             <figure>
@@ -10,17 +12,17 @@ const About = () => {
                     layout='fill'
                     objectFit='cover'
                     objectPosition='center'
-                    src='/assets/images/tower.webp'
+                    src={image}
                     title='Radosław Adamczyk - RadWEB'
                     quality={95}
                 />
             </figure>
             <article>
-                <h2>Kim jestem?</h2>
-                <p>Nazywam się Radosław Adamczyk i urodziłem się 9 października 2000 roku. Jestem absolwentem KPALO w Śremie o profilu matematyczno-fizyczno-informatyczno-historycznym, który w głównej mierze odzwierciedla moje zainteresowania. Od 2016 roku wskoczyłem do świata tworzenia stron internetowych, i od tamtego momentu codziennie uczę się nowości ze świata webu.</p>
-                <Link href='/o-mnie'>
+                <h2>{title}</h2>
+                <p>{content}</p>
+                <Link href={button.path}>
                     <a>
-                        Dowiedz się więcej
+                        {button.title}
                     </a>
                 </Link>
             </article>

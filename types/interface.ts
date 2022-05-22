@@ -79,7 +79,7 @@ export interface IntHeroPage extends IntSearch {
     withImage?:boolean;
     withSearch?:boolean;
 }
-export interface IntLayout {
+export interface IntLayout extends IntSeo {
     children:any;
 }
 export interface IntMenuButton {
@@ -160,6 +160,14 @@ export interface IntSearch {
     handle?:FormEventHandler;
     placeholder?:string;
     title?:string;
+}
+export interface IntSeo{
+    canonical?:string;
+    description:string;
+    image:string;
+    robots?:string;
+    title:string;
+    typePage?:string;
 }
 export interface IntSlideHomePage {
     button:string;

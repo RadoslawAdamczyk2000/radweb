@@ -1,20 +1,17 @@
 import Link from "next/link";
+import { home } from "../../../../content/home";
 import Card from "./Card";
 import { BlogWrapper } from "./styles";
 const Blog = () => {
+    const {button,content,title} = home.page.blog;
     return(
         <BlogWrapper>
             <article>
-                <h2>Blog</h2>
-                <p>
-                    Jestem młodym twórcą oraz pozycjonerem stron oraz aplikacji internetowych o sporym wachlarzu technologicznym, dlatego też znajdę odpowiednie rozwiązenie dla Twoich wymagań oraz problemów. 
-                    <br/>
-                    <br/>
-                    Doskonale wiem jak powinna działać oraz wyglądać nowoczesna strona internetowa oraz co powinna zawierać aby była przyjazna przeglądarkom. Jednak to jest jedynie namiastka tego co oferuję, więc jeśli zainteresowała Ciebie moja osoba zapraszam do sprawdzenia wszystkich ofert.
-                </p>
-                <Link href='/blog'>
+                <h2>{title}</h2>
+                <p>{content}</p>
+                <Link href={button.path}>
                     <a>
-                        Sprawdź artykuły
+                        {button.title}
                     </a>
                 </Link>
             </article>

@@ -1,16 +1,22 @@
 import { NextPage } from "next";
 import Hero from "../../components/All/Hero/Hero";
 import Cards from "../../components/Page/About/Certificates/Card/Cards";
+import { aboutMe } from "../../content/about-me";
 import Layout from "../../schemas/Layout";
 const Page:NextPage = () => {
+    const {seo,page} = aboutMe.courses;
     return(
-        <Layout>
+        <Layout
+            description={seo.description}
+            image={seo.image}
+            title={seo.title}
+        >
             <Hero
-                content="Jednym z dowodów na rozwój jest nauka poprzez kursy oraz zdobywanie branżowych certyfikatów. W branży IT tematycznych kursów - często bezpłatnych - nie brakuje.Jednym z dowodów na rozwój jest nauka poprzez kursy oraz zdobywanie branżowych certyfikatów. W branży IT tematycznych kursów - często bezpłatnych - nie brakuje.Jednym z dowodów na rozwój jest nauka poprzez kursy oraz zdobywanie branżowych certyfikatów. W branży IT tematycznych kursów - często bezpłatnych - nie brakuje."
-                image="https://images.unsplash.com/photo-1627556704283-452301a45fd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                content={page.hero.content}
+                image={page.hero.image}
                 withImage={true}
                 isVertical={true}
-                title="Certyfikaty i kursy"
+                title={page.hero.title}
             />
             <main>
                 <Cards/>

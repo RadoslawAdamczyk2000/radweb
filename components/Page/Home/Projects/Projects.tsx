@@ -1,15 +1,16 @@
 import Link from "next/link";
+import { home } from "../../../../content/home";
 import { stack } from "../../../../data/stack";
 import Card from "./Card";
 import { ProjectsWrapper } from "./styles";
 
 const Projects = () => {
+    const {button,content,title} = home.page.projects;
     return(
         <ProjectsWrapper>
             <article>
-                <h2>Projekty</h2>
-                <p>Doskonale wiem jak powinna działać oraz wyglądać nowoczesna strona internetowa oraz co powinna zawierać aby była przyjazna przeglądarkom. Jednak to jest jedynie namiastka tego co oferuję, więc jeśli zainteresowała Ciebie moja osoba zapraszam do sprawdzenia wszystkich ofert.</p>
-                
+                <h2>{title}</h2>
+                <p>{content}</p>
             </article>
             <ul>
                 <Card
@@ -56,9 +57,9 @@ const Projects = () => {
                 />
             </ul>
             <div>
-                <Link href='/'>
+                <Link href={button.path}>
                     <a>
-                        Zobacz wszystkie
+                        {button.title}
                     </a>
                 </Link>
             </div>
