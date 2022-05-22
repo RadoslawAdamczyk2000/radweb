@@ -93,18 +93,18 @@ export const menu = [
         path:'/faq',
         submenu:[]
     },
-    {
-        isExpand:false,
-        title:'Kursy',
-        path:'/',
-        submenu:[]
-    },
-    {
-        isExpand:false,
-        title:'Sklep',
-        path:'/',
-        submenu:[]
-    },
+    // {
+    //     isExpand:false,
+    //     title:'Kursy',
+    //     path:'/',
+    //     submenu:[]
+    // },
+    // {
+    //     isExpand:false,
+    //     title:'Sklep',
+    //     path:'/',
+    //     submenu:[]
+    // },
     {
         isExpand:false,
         title:'Kontakt',

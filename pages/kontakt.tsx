@@ -1,10 +1,7 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import Hero from "../components/All/Hero/Hero";
-import Search from "../components/All/Search/Search";
-import Card from "../components/Page/Faq/Cards/Card";
-import { Cards } from "../components/Page/Faq/Cards/styles";
-import { faq } from "../data/faq";
+import Form from "../components/Page/Contact/Field/Form";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
   const [search,setSearch] = useState('');
@@ -18,6 +15,7 @@ const Page:NextPage = () => {
         title="Kontakt ze specjalistą"
       />
       <main>
+        <Form/>
       </main>
     </Layout>
   )

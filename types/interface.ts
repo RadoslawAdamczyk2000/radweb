@@ -4,6 +4,11 @@ export interface IntAboutMeText {
     heading?:string;
     path?:string;
 }
+export interface IntAlert {
+    answerCorrect:string;
+    answerError:string;
+    isCorrect:boolean;
+}
 export interface IntBlogCard {
     date:number|string;
     image:string;
@@ -37,6 +42,17 @@ export interface IntCityCard {
     city:string;
     link:string;
 }
+export interface IntContactField extends IntField{
+    handle:FormEventHandler;
+    id:string;
+    placeholder:string;
+}
+export interface IntContactMessageField {
+    handle:FormEventHandler;
+    id:string;
+    placeholder:string;
+    title:string;
+}
 export interface IntContactItemFooter {
     icon:ReactElement;
     link:string;
@@ -44,6 +60,11 @@ export interface IntContactItemFooter {
 export interface IntFaqCard {
     content:string;
     title:string;
+}
+export interface IntField {
+    pattern?:string;
+    title:string;
+    type?:string;
 }
 export interface IntHeroLocation {
     city:string;
@@ -87,13 +108,10 @@ export interface IntNavigationOptions {
     menuHandle:MouseEventHandler;
     themeHandle:MouseEventHandler;
 }
-export interface IntNewsletterField {
+export interface IntNewsletterField extends IntField {
     id:string;
     min:number;
     name:string;
-    pattern:string;
-    title:string;
-    type:string;
 }
 export interface IntOfferCard {
     button?:string;
