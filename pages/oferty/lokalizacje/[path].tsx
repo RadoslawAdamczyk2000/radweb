@@ -6,9 +6,8 @@ import Www from "../../../components/Page/Offers/Page/Content/Www";
 import Hero from "../../../components/Page/Offers/Page/Hero/Hero";
 import { offers } from "../../../content/offers";
 import Layout from "../../../schemas/Layout";
-const Page = (props:object) => {
+const Page = () => {
     const router = useRouter();
-    console.log(props)
     const {path:link} = router.query;
     const getProps = offers.locations.cards.filter((item:any) => item.path.includes(link));
     console.log(getProps); 
@@ -65,16 +64,3 @@ const Page = (props:object) => {
     )
 }
 export default Page;
-export async function getStaticPaths() {
-    return {
-        paths: [],
-        fallback: true
-    };
-}
-export async function getStaticProps(context:object) {
-    console.log('ssr get static props console log')
-    console.log(context)
-    return {
-      props: {}, 
-    }
-  }
