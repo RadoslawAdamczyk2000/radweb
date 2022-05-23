@@ -3,18 +3,25 @@ import { useState } from "react";
 import Hero from "../../../components/All/Hero/Hero";
 import Card from "../../../components/Page/Blog/Cards/Card";
 import { Cards } from "../../../components/Page/Blog/Cards/styles";
+import { blog } from "../../../content/blog";
 import Layout from "../../../schemas/Layout";
 const Page:NextPage = () => {
     const [search,setSearch] = useState('');
+    const {seo,hero} = blog.history;
+
   return(
-    <Layout>
+    <Layout
+      description={seo.description}
+      image={seo.image}
+      title={seo.title}
+    >
         <Hero
-            content="Każda osoba, która mnie zna, będzie irytować to że większość spraw sprowadzam do historii. Faktycznie tak jest, bo wiem że większość sytuacji miała już miejsce w przeszłości - przez co wiem jakich błędów nie powtarzać. Pasjonuję się również wszystkim co jest związane ze stronami internetowymi - począwszy od procesu tworzenia po zadbanie o widoczność w sieci. Ponadto posiadam nieukrytą satysfakcję podczas podróży po Polsce, a w szczególności po wielkopolsce, bo uwielbiam podróżować po terenach Rzeczypospolitej. O tym wszystkim będzie traktował blog: o programowaniu, historii oraz podróżach, co nie oznacza że zamierzam ograniczać się jedynie do tych tematów."
+            content={hero.content}
             handle={(e:any) => setSearch(e.target.value)}
-            image='https://images.unsplash.com/photo-1652648927946-6385c35c4a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            image={hero.image}
             placeholder='Szukaj...'
-            title="Blog o historii"
             withSearch={true}
+            title={hero.title}
         />        
         <main>
           <Cards>

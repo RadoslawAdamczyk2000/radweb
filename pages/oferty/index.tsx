@@ -7,9 +7,13 @@ import { offers } from "../../content/offers";
 import Layout from "../../schemas/Layout";
 const Page:NextPage = () => {
   const [search,setSearch] = useState('');
-  const {cards,hero} = offers.home;
+  const {cards,hero,seo} = offers.home;
   return(
-    <Layout>
+    <Layout
+      description={seo.description}
+      image={seo.image}
+      title={seo.title}
+    >
       <Hero
         isVertical={false}
         withImage={true}

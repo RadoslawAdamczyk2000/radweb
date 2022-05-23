@@ -1,5 +1,16 @@
-export const faq = [
-      {
+export const faq = {
+    seo:{
+        title:'Pytania i odpowiedzi - poznaj mnie, strony www, SEO - RadWEB',
+        description:'Chcesz się dowiedzieć więcej na mój temat? Chcesz zadać swoje unikalne pytanie? Tutaj jest przestrzeń, gdzie odpowiadam na najpopularniejsze pytania.',
+        image:'https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
+    },
+    hero:{
+        title:'FAQ - pytania i odpowiedzi',
+        content:'Chcesz się dowiedzieć więcej na temat mojej osoby oraz tego co robię? Otrzymasz tutaj odpowiedź na to z jakich obecnie narzędzi korzystam w pracy, czy też jaką mam swoją ulubioną epokę historyczną. Również Ty możesz zadać pytanie, na które udzielę odpowiedzi w wiadomości prywatnej lub na tej stronie.',
+        image:'https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
+    },
+    cards:[
+        {
             title:'Ulubiony film/serial',
             content:`Z racji natłoku zajęć nie mam czasu na oglądanie filmów, czy też seriali. Jednak w mojej topce seriali są: Ranczo, Wikingowie oraz Ojciec Mateusz. Na YouTubie też mam kilku ulubionych twórców : Historia bez Cenzury, Hello Roman oraz Królowie Żyta (akcja tego serialu dzieje się 50km ode mnie). Co do filmów, to uwielbiam wszystkie produkcje Marvel Cinematic Universe. Są też filmy, które wywarły na mnie ogromny wpływ, jak chociażby Skazani na Shawshank, Biegnij chłopcze biegnij i  Forest Gump.`
         },
@@ -24,4 +35,5 @@ export const faq = [
             title:'Jaka jest moja ulubiona epoka historyczna?',
             content:`Nie posiadam jakiejś szczególnie ulubionej epoki historycznej. Dla mnie historia to nauka o życiu, gdzie poznaję ciekawe osobowości historyczne, dowiaduję się co przynieśli a co zabrali ludzkości, i właśnie na ich błędach się uczę. Obecnie sympatyzuję z historią lokalną - wielkopolski, wikingów, renesansowych włoch oraz miasta dwóch światów zwanego kiedyś Konstantynopolem, a dziś Stambułem.`
         },
-]
+    ]
+}

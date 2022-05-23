@@ -6,25 +6,26 @@ import { Cards } from "../../components/Page/Blog/Cards/styles";
 import Card from "../../components/Page/Projects/Cards/Card";
 import { Tags } from "../../components/Page/Projects/Tags/styles";
 import Tag from "../../components/Page/Projects/Tags/Tag";
+import { projects } from "../../content/projects";
 import { stack, stackArr } from "../../data/stack";
 import Layout from "../../schemas/Layout";
 const Page:NextPage = () => {
     const [search,setSearch] = useState('');
     const tags:null|string[] = [];
-    useEffect(() => {
-        console.log(tags);
-    })
-  return(
-    <Layout>
+    const {seo,hero} = projects.home;
+    return(
+    <Layout
+        description={seo.description}
+        image={seo.image}
+        title={seo.title}
+    >
         <Hero
-            content="W świecie technologi internetowych zestaw i rozwój narzędzi jest nieustanny. Dlatego, żeby być ciągle na bieżąco trzeba się ich uczyć, a najlepszym sposobem na naukę jest praktyka. Dla mnie najlepszym sposobem nauki jest pisanie stron internetowych oraz aplikacji webowych. Do tworzenia wcześniej wspomnianych stron i aplikacji korzystam z technologii front-endowych takich jak Vanila JavaScript, GatsbyJS, NextJS, React, Vue oraz Angular. Ponadto mam doświadczenie pracy z technologiami backendowymi, czyli z PHP, a także MySQL, które wykorzystywałem podczas zadań na Wordpressie, Joomli oraz Shopperze."
-            withSearch={true}
-            isVertical={false}
-            withImage={false}
-            handle={(e:any) => setSearch(e.target.value)}
-            image='https://images.unsplash.com/photo-1634089729539-d229d916cda9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337&q=80'
-            placeholder='Szukaj...'
-            title="Projekty i realizacje komercyjne"
+             content={hero.content}
+             handle={(e:any) => setSearch(e.target.value)}
+             image={hero.image}
+             withSearch={true}
+             placeholder='Szukaj...'
+             title={hero.title}
         />        
         <main>
             <Tags>

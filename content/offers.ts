@@ -2,7 +2,7 @@ export const offers = {
     home:{
         seo:{
             title:'Oferta tworzenia, SEO i optymalizacja stron www - RadWEB',
-            descritpion:'Znajdziesz u mnie szeroką gamę ofert związaną ze stronami internetowymi z najwyższym poziomem jakości realizacji. Zapraszam!',
+            description:'Znajdziesz u mnie szeroką gamę ofert związaną ze stronami internetowymi z najwyższym poziomem jakości realizacji. Zapraszam!',
             image:'https://images.unsplash.com/photo-1598870784088-35e7058da12c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171'
         },
         hero:{
@@ -41,7 +41,7 @@ export const offers = {
     www:{
         seo:{
             title:'Oferta tworzenia stron internetowych, Śrem, Poznań - RadWEB',
-            content:'Oferuję tworzenie stron internetowych spersonalizowanych do potrzeb klienta. Chcesz się dowiedzieć więcej? Zapraszam!',
+            description:'Oferuję tworzenie stron internetowych spersonalizowanych do potrzeb klienta. Chcesz się dowiedzieć więcej? Zapraszam!',
             image:'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170'
         },
         head:{
@@ -83,7 +83,7 @@ export const offers = {
     seo:{
         seo:{
             title:'Pozycjonowanie blogów, stron, sklepów internetowych - RadWEB',
-            description:'',
+            description:'Jeśli szukasz oferty wypozycjonowaniania swojej stony internetowej z użyciem najlepszych technik SEO, to lepiej nie mogłeś trafić. Zapraszam ',
             image:'https://images.unsplash.com/photo-1560285843-9d9d94edff8a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170'
         },
         hero:{

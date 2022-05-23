@@ -9,7 +9,11 @@ const Page:NextPage = () => {
   const [search,setSearch] = useState('');
   const {cards,hero,seo:pos} = offers.seo;
   return(
-    <Layout>
+    <Layout
+      description={pos.description}
+      image={pos.image}
+      title={pos.title}
+    >
       <Hero
         withImage={true}
         isVertical={false}

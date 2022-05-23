@@ -18,7 +18,11 @@ const Page = (props:object) => {
         loc:getProps[0]?.city.loc,
     }
     return(
-        <Layout>
+        <Layout
+            description={`Szukasz kompleksowej produkcji strony internetowej w ${city.loc} wraz z ofertą pozycjonowania, analizy i optymalizacji? Jeśli tak, to zapraszam do owocnej współpracy.`}
+            title={`${city.city} - strony internetowe, seo, analityka - RadWEB`}
+            image='https://images.unsplash.com/photo-1449824913935-59a10b8d2000?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170'
+        >
             {
                 city.city ?
                 <>
