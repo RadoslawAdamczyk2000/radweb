@@ -1,8 +1,9 @@
 import Image from "next/image"
+import { PictureWrapper } from "./styles";
 
-const Picture = ({image,title}) => {
+const Picture = ({image,title}:{image:string;title:string}) => {
     return(
-        <figure>
+        <PictureWrapper>
             <Image
                 alt={title}
                 layout='fill'
@@ -13,7 +14,7 @@ const Picture = ({image,title}) => {
                 title={title}
                 quality={65}
             />
-        </figure>
+        </PictureWrapper>
     )
 }
 export default Picture;

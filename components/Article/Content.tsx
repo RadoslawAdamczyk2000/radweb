@@ -1,9 +1,15 @@
-const Content = ({children,title}) => {
+import { ReactChild} from "react";
+import { ContentWrapper } from "./styles";
+interface i {
+    children:ReactChild,
+    title?:string;
+}
+const Content = ({children,title}:i) => {
     return(
-        <section>
+        <ContentWrapper>
             <h2>{title}</h2>
             <p>{children}</p>
-        </section>
+        </ContentWrapper>
     )
 }
 export default Content;
