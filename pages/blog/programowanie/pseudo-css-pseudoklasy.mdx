@@ -1,0 +1,22 @@
+import Layout from '../../../schemas/Layout';
+import Hero from '../../../components/Article/Hero.tsx';
+import {stack} from '../../../data/stack';
+export const meta = {
+    title:'Dobra strona internetowa, jak wygląda dobra strona - RadWEB',
+    description:'W internecie jest sporo stron internetowych, lecz większość nie jest dobra, a też jest sporo wręcz niepoprawnych. Dowiesz się jak powinna wyglądać dobra strona. Zapraszam.',
+    image:'https://cdn.pixabay.com/photo/2015/09/05/21/51/reading-925589_960_720.jpg'
+}
+
+<Hero
+    date='25-04-2022'
+    image={meta.image}
+    movie='https://www.youtube.com/embed/5X-eQqzQX5E'
+    path='/blog/programowanie'
+    stack={[stack.html,stack.css,stack.next]}
+    title='Cechy dobrej strony internetowej'
+>
+W swoim życiu każdy z nas widział setki, jak nie tysiące stron internetowych. Jedne nam przypadły do gustu, inne niekoniecznie. Od czego to zależy? Najważniejszymi czynnikami są prędkość załadowania strony, kolory oraz typografia - to wszystko wpływa w sposób istotny na jakość strony w aspekcie front-end developerskim oraz jakości pozycjonowania. Ta Święta Trójca internetowa, jest swoistym kluczem do odniesienia sukcesu w tej przestrzeni.
+</Hero>
+
+
+export default {{children}} => <Layout title={meta.title} description={meta.description} image={meta.image}>{children}</Layout>
