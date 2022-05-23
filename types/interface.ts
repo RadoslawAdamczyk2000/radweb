@@ -66,6 +66,14 @@ export interface IntField {
     title:string;
     type?:string;
 }
+export interface IntHeroArticle {
+    children:ReactChild;
+    date:string|number;
+    image:string;
+    path:string;
+    stack?:any[];
+    title:string;
+}
 export interface IntHeroLocation {
     city:string;
     dat:string;

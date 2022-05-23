@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link"
 import {TiArrowBack} from "react-icons/ti";
-const Hero = ({children,date,image,movie,path,stack,title}) => {
+import { IntHeroArticle } from "../../types/interface";
+import { HeroWrapper } from "./styles";
+const Hero = ({children,date,image,path,stack,title}:IntHeroArticle) => {
     return(
-        <header>
+        <HeroWrapper>
             <div className="return">
                 <Link href={path}>
                     <a>
@@ -45,18 +47,7 @@ const Hero = ({children,date,image,movie,path,stack,title}) => {
                     quality={85}
                 />
             </figure>
-
-            {
-                movie &&
-                <figure className="movie">
-                    <iframe 
-                        src={movie}
-                        title={title}
-                        allowFullScreen
-                    />
-                </figure>
-            }
-        </header>
+        </HeroWrapper>
     )
 }
 export default Hero;
