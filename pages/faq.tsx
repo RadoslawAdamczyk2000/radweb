@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import Hero from "../components/All/Hero/Hero";
+import Result from "../components/All/Search/Result";
 import Search from "../components/All/Search/Search";
 import Card from "../components/Page/Faq/Cards/Card";
 import { Cards } from "../components/Page/Faq/Cards/styles";
@@ -35,6 +36,7 @@ const Page:NextPage = () => {
             placeholder='Szukaj'
             title='FaqSearcher'
           />
+          {search && <Result search={search}/>}
           <Cards>
             {
               searching(cards).map(({content,title}:{content:string,title:string},key:number) =>

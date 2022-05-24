@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 export const CardWrapper = styled.li`
-    background:pink;
     display:flex;
     height:30rem;
     overflow:hidden;
