@@ -4,22 +4,12 @@ export const FooterWrapper = styled.footer`
     padding:1rem 0;
     & > div{
         &:first-of-type{
-            display:grid;
-            grid-template-columns:1fr 3fr 2fr;
-            padding:1rem .85rem;
+            display:flex;
+            flex-flow:column;
+            justify-content:center;
+            padding:0 .5rem;
             & > * {
-                margin:0 auto;
-            }
-            @media only screen {
-                @media (max-width:950px){
-                    align-items:center;
-                    display:flex;
-                    flex-flow:column-reverse;
-                    justify-content:center;
-                    & > * {
-                        width:100%;
-                    }
-                }
+                width:100%;
             }
         }
         &:nth-of-type(2){

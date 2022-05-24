@@ -4,13 +4,8 @@ export const ContactWrapper = styled.address`
     display:flex;
     flex-flow:row wrap;
     gap:1rem;
-    justify-content:flex-end;
+    justify-content:center;
     padding:1rem 2.25rem;
-    @media only screen {
-        @media (max-width:950px){
-            justify-content:center;
-        }
-    }
 `
 export const ContactItemWrapper = styled.li`
     height:4.5rem;
@@ -35,7 +30,7 @@ export const ContactItemWrapper = styled.li`
 export const MicroWrapper = styled.div`
     & > article{
         padding:.25rem;
-        text-align:end;
+        text-align:center;
         & > h4{
             font-size:2.2rem;
         }

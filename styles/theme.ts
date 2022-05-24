@@ -42,3 +42,25 @@ export const lightTheme:DefaultTheme = {
         search:'brightness(95%)'
     }
 }   
+
+export const theme = {
+    colors:{
+        background:'',
+        color:'',
+        link:'',
+        headings:{
+            title:'',
+            subtitle:''
+        },
+        special:'',
+        button:{
+            disabled:'',
+            normal:'',
+            hover:''
+        },
+        navigation:{
+            background:'',
+            color:''
+        }
+    }
+}
