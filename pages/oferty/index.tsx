@@ -1,12 +1,10 @@
 import { NextPage } from "next";
-import { useState } from "react";
 import Hero from "../../components/All/Hero/Hero";
 import Card from "../../components/Page/Offers/Cards/Card";
 import { Cards } from "../../components/Page/Offers/Cards/styles";
 import { offers } from "../../content/offers";
 import Layout from "../../schemas/Layout";
 const Page:NextPage = () => {
-  const [search,setSearch] = useState('');
   const {cards,hero,seo} = offers.home;
   return(
     <Layout

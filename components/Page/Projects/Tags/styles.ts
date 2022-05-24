@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 interface tag {
     active:boolean;
 }
@@ -12,7 +12,6 @@ export const Tags = styled.ul`
 `
 export const TagWrapper = styled.li<tag>`
     align-items:center;
-    border:${({active}) => active && '.25rem solid red'};
     border-radius:.65rem;
     cursor:pointer;
     display:flex;
@@ -22,9 +21,15 @@ export const TagWrapper = styled.li<tag>`
     transition:.15s linear border;
     width:4.25rem;
     & > *{
-        color:${({active}) => active && 'red'};
+        color:${({theme}) => theme.colors.tertiary};
         transition:.15s linear color, .15s linear transform;
     }
+    ${(({active}) => active && css`
+        border:.35rem solid ${({theme}) => theme.colors.secondary};
+        & > * {
+            color:${({theme}) => theme.colors.secondary};
+        }
+    `)}
     &:focus,
     &:hover{
         & > * {

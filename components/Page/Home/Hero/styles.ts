@@ -130,27 +130,29 @@ export const SlideWrapper = styled(motion.div)`
             width:100%;
         }
         & > h1 {
+            color:${({theme}) => theme.colors.headings.title};
             font-weight:700;
             padding:.25rem 0;
         }
         & > p {
+            color:${({theme}) => theme.colors.headings.subtitle};
             font-size:1.7rem;
+            font-weight:600;
             line-height:calc(1.7rem * 2);
             padding:.55rem;
             text-align:start;
         }
         & > a {
-            background-color:#B0A5DB;
+            background-color:${({theme}) => theme.colors.primary};
             border-radius:2.5rem;
-            color:#000;
+            color:${({theme}) => theme.colors.background};
             font-size:1.8rem;
             margin:1rem auto;
             padding:1.15rem 2.25rem;
-            transition:.2s linear background-color, .2s linear color, .2s linear transform;
+            transition:.2s linear background-color,.2s linear transform;
             &:focus,
             &:hover{
-                background-color:#6c63ff;
-                color:#fff;
+                background-color:${({theme}) => theme.colors.secondary};
                 transform:scaleX(.98);
             }
         }
@@ -160,7 +162,7 @@ export const SlideWrapper = styled(motion.div)`
         position:relative;
         & > div{
             border-radius:2.5rem;
-            background-color:#ADA9BB;
+            background-color:${({theme}) => theme.colors.tertiary};
             height:35rem;
             position:relative;
             width:55rem;

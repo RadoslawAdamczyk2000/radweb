@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 export const ResultWrapper = styled.div`
     align-items:center;
-    background:orange;
     display:flex;
     justify-content:center;
     padding:1rem 2.5rem;
     p{
+        color:${({theme}) => theme.colors.primary};
         cursor:default;
         font-size:2.4rem;
         font-weight:800;
@@ -30,7 +30,7 @@ export const SearchWrapper = styled.div`
         }
     }
     & > div{
-        background:pink;
+        background:${({theme}) => theme.colors.color};
         height:4.5rem;
         @media only screen {
             @media  (min-width:1450px){
@@ -47,7 +47,7 @@ export const SearchWrapper = styled.div`
                 }
             }
             & > input{
-                color:#666;
+                color:${({theme}) => theme.colors.background};
                 cursor:text;
                 color:white;
                 font-size:1.65rem;
@@ -73,7 +73,7 @@ export const SearchWrapper = styled.div`
         }
         &:last-of-type{
             border-radius:0 .5rem .5rem 0;
-            color:yellow;
+            color:${({theme}) => theme.colors.tertiary};
             width:4.5rem;
             @media only screen {
                 @media  (min-width:1450px){
@@ -110,9 +110,9 @@ export const SearchWrapper = styled.div`
     &:focus,
     &:hover{
         & > div{
-            color:#000;
+            color:${({theme}) => theme.colors.quatenary};
             & >input{
-                color:#000;
+                color:${({theme}) => theme.colors.quatenary};
             }
         }
     }

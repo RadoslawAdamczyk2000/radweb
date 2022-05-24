@@ -15,8 +15,10 @@ export const StepWrapper = styled.li`
         &:first-of-type{
             flex-basis:50rem;
             & > p {
+                color:${({theme}) => theme.colors.secondary};
                 font-size:8rem;
                 font-weight:900;
+                opacity:.25;
                 user-select:none;
                 &:first-letter{
                     font-size:6rem;
@@ -30,6 +32,7 @@ export const StepWrapper = styled.li`
             text-align:center;
             row-gap:2rem;
             & > h3{
+                color:${({theme}) => theme.colors.primary};
                 font-size:3rem;
             }
             & > p{
@@ -128,6 +131,7 @@ export const StepsWrapper = styled.section`
     & > article{
         padding:4rem 2rem;
         & > h2{
+            color:${({theme}) => theme.colors.headings.title};
             font-size:4.5rem;
             text-align:center;
             @media only screen{

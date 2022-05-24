@@ -28,7 +28,6 @@ const Page:NextPage = () => {
       item.excerpt.toLowerCase().includes(search.toLowerCase())
     )
   }
-
   return(
     <Layout
       description={seo.description}

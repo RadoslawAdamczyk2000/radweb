@@ -10,14 +10,14 @@ export const CardWrapper = styled.li`
     & > a{
         & > h2{
             font-size:2rem;
-            font-weight:500;
+            font-weight:600;
             padding:.25rem 1.75rem;
             position:relative;
             transition:.2s linear color, .2s linear transform;
             &::before{
-                background-color:red;
-                bottom:0;
-                height:.25rem;
+                background-color:${({theme}) => theme.colors.secondary};
+                bottom:-.25rem;
+                height:.4rem;
                 left:0;
                 transition:.2s linear width;
                 width:0%;
@@ -28,7 +28,7 @@ export const CardWrapper = styled.li`
     &:hover{
         & > a{
             & > h2{
-                color:red;
+                color:${({theme}) => theme.colors.secondary};
                 transform:scaleX(.95);
                 &::before{
                     width:100%;

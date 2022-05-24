@@ -10,17 +10,17 @@ export const ButtonWrapper = styled.li`
         transform:scaleX(.95);    
     }
     &.primary{
-        background-color:red;
-        color:white;
+        background-color:${({theme}) => theme.colors.primary};
+        color:${({theme}) => theme.colors.background};
         transition:.2s linear background-color, .2s linear transform;
         &:focus,
         &:hover{
-            background-color:purple;
+            background-color:${({theme}) => theme.colors.secondary};
         }    
     }
     &.secondary{
-        border:.25rem solid red;
-        color:red;
+        border:.25rem solid ${({theme}) => theme.colors.primary};
+        color:${({theme}) => theme.colors.primary};
         transition: .2s linear transform;
         
     }
@@ -57,6 +57,7 @@ export const Section = styled.section`
     max-width:90%;
     width:78rem;
     h2{
+        color:${({theme}) => theme.colors.secondary};
         font-size:3.5rem;
         padding:.5rem .85rem;
         @media only screen{

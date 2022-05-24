@@ -50,6 +50,7 @@ export const CardWrapper = styled.li`
                 text-align:end;
             }
             & > .title{
+                color:${({theme}) => theme.colors.headings.subtitle};
                 font-size:2rem;
                 text-align:center;
                 transition:.2s linear color;
@@ -60,6 +61,7 @@ export const CardWrapper = styled.li`
                 }
             }
             & > .content{
+                color:${({theme}) => theme.colors.color};
                 font-size:1.65rem;
                 line-height:calc(1.65rem * 2);
                 padding:.25rem;
@@ -78,7 +80,7 @@ export const CardWrapper = styled.li`
                 justify-content:center;
                 padding:.15rem .25rem;
                 & > .tag{
-                    background-color:gray;
+                    background-color:${({theme}) => theme.colors.color};
                     color:white;
                     border-radius:1.5rem;
                     padding:.25rem 1.75rem;
@@ -96,10 +98,10 @@ export const CardWrapper = styled.li`
             }
             & > figcaption{
                 & > .title{
-                    color:red;
+                    color:${({theme}) => theme.colors.primary};
                 }
                 & > .tags > .tag{
-                    background-color:red;
+                    background-color:${({theme}) => theme.colors.secondary};
                 }
             }
         }

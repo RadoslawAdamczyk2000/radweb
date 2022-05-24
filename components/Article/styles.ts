@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 export const CodeWrapper = styled.pre`
-    background:black;
+    background-color:${({theme}) => theme.colors.headings.subtitle};
     border-radius:1rem;
     margin:1rem auto;
     max-width:95%;
     padding:2rem 1.5rem;
     width:85rem;
+    &::selection{
+        background-color:lime !important;
+        color:black !important;
+    }
     & > pre{
         color:lime;
         white-space:pre-wrap;
         word-break:break-all;
         word-wrap:break-word;
         width:100%;
+        &::selection{
+            background-color:lime !important;
+            color:black !important;
+        }
     }
 `
 export const ContentWrapper = styled.section`
@@ -23,14 +31,19 @@ export const ContentWrapper = styled.section`
         padding:.85rem;
     }
     p{
-        color:#555;
+        color:${({theme}) => theme.colors.color};
         font-size:1.9rem;
         line-height:calc(1.9rem * 2);
         padding:.75rem;
         text-align:justify;
+        b,
+        strong{
+            color:${({theme}) => theme.colors.secondary};
+        }
     }
     a{
         color:red;
+        font-weight:600;
         text-decoration:underline;
         transition:.2s linear color;
         &:hover{
@@ -83,7 +96,7 @@ export const FooterWrapper = styled.div`
             border-radius:1.5rem;
             max-width:98%;
             padding:2rem .5rem;
-            transition:.2s linear box-shadow, .2s linear transform;
+            transition:.2s linear box-shadow, .2s linear color, .2s linear transform;
             width:35rem;
             & > a{
                 align-items:center;
@@ -97,7 +110,8 @@ export const FooterWrapper = styled.div`
             }
             &:focus,
             &:hover{
-                box-shadow:0 0 1.5rem hsla(0,100%,0%,.35);
+                box-shadow:0 0 1.5rem ${({theme}) => theme.colors.tertiary};
+                color:${({theme}) => theme.colors.secondary};
                 transform:scale(1.05);
             }
         }
@@ -143,7 +157,7 @@ export const HeroWrapper = styled.header`
                 position:relative;
                 transition:.2s linear color;
                 &::before{
-                    background:red;
+                    background:${({theme}) => theme.colors.secondary};
                     bottom:0;
                     height:.5rem;
                     right:0;
@@ -154,7 +168,7 @@ export const HeroWrapper = styled.header`
             &:focus,
             &:hover{
                 & > * {
-                    color:red;
+                    color:${({theme}) => theme.colors.secondary};
                 }
                 & > span{
                     transform:scale(1.15);
@@ -217,6 +231,10 @@ export const HeroWrapper = styled.header`
             line-height:calc(2.2rem * 2);
             text-align:justify;
             text-indent:2rem;
+            b,
+            strong{
+                color:${({theme}) => theme.colors.secondary};
+            }
             @media only screen {
                 @media (max-width:650px){
                     padding:0 1.85rem;

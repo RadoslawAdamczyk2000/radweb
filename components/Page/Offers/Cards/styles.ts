@@ -24,7 +24,7 @@ export const CardWrapper = styled.li`
     }
     & > h2,
     & > h3{
-        color:red;
+        color:${({theme}) => theme.colors.primary};
         font-size:2.4rem;
         text-align:center;
         width:100%;
@@ -35,7 +35,7 @@ export const CardWrapper = styled.li`
         }
     }
     & > p {
-        color:#111;
+        color:${({theme}) => theme.colors.headings.subtitle};
         font-size:1.65rem;
         line-height:calc(1.65rem * 1.8);
         text-align:justify;
@@ -48,16 +48,15 @@ export const CardWrapper = styled.li`
         }
     }
     & > a{
-        background-color:black;
-        border-radius:1.25rem;
-        color:white;
+        background-color:${({theme}) => theme.colors.headings.title};
+        border-radius:2.25rem;
+        color:${({theme}) => theme.colors.background};
         margin:auto;
-        padding:.5rem 2rem;
-        transition:.2s linear background-color, .2s linear color, .2s linear transform;
+        padding:.85rem 2.5rem;
+        transition:.2s linear background-color,.2s linear transform;
         &:focus,
         &:hover{
-            background-color:red;
-            color:white;
+            background-color:${({theme}) => theme.colors.secondary};
             transform:scaleX(.95);
         }
         @media only screen{

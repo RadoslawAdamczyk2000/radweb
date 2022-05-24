@@ -62,17 +62,17 @@ export const ButtonWrapper = styled.div`
     display:flex;
     justify-content:center;
     & > button{
-        border:.2rem solid red;
+        border:.2rem solid ${({theme}) => theme.colors.primary};
         border-radius:3rem;
-        color:red;
+        color:${({theme}) => theme.colors.primary};
         cursor:pointer;
         font-size:2.1rem;
         padding:1.25rem 3.5rem;
         transition:.2s linear background-color,.2s linear color,.2s linear transform;
         &:focus,
         &:hover{
-            background-color:red;
-            color:white;
+            background-color:${({theme}) => theme.colors.primary};
+            color:${({theme}) => theme.colors.background};
             transform:scaleX(.95);
         }
     }

@@ -24,6 +24,7 @@ export const AboutWrapper = styled.section`
         width:60rem;
         padding:4rem 2rem;
         & > h2{
+            color:${({theme}) => theme.colors.headings.subtitle};
             font-size:4.5rem;
             @media only screen{
                 @media (min-width:1500px){
@@ -35,6 +36,7 @@ export const AboutWrapper = styled.section`
             }
         }
         & > p{
+            color:${({theme}) => theme.colors.color};
             padding:1rem;
             margin:1rem 0 2rem;
             font-size:1.8rem;
@@ -50,20 +52,19 @@ export const AboutWrapper = styled.section`
             }
         }
         & > a{
-            background-color:black;
+            background-color:${({theme}) => theme.colors.headings.title};
             border-radius:2.5rem;
-            color:white;
+            color:${({theme}) => theme.colors.background};
             margin:.75rem auto;
             padding:1.25rem 2rem;
             text-align:center;
-            transition:.2s linear background-color, .2s linear color, .2s linear transform;
+            transition:.2s linear background-color, .2s linear transform;
             word-wrap:break-word;
             word-break:break-all;
             &:focus,
             &:hover{
-                background-color:red;
-                color:white;
-                transform:scaleX(.95);
+                background-color:${({theme}) => theme.colors.secondary};
+                transform:scaleX(.8);
             }
             @media only screen{
                 @media (min-width:1500px){

@@ -3,6 +3,7 @@ interface iMenuButton{
     active:boolean;
 }
 export const BrandWrapper = styled.div`
+    color:${({theme}) => theme.colors.quatenary};
     font-size:2.25rem;
     font-weight:900;
     padding:.25rem .75rem;
@@ -53,7 +54,7 @@ export const MenuButtonWrapper = styled(Button)<iMenuButton>`
             position:relative;
             row-gap:1rem;
             & > span{
-                background:hsla(0,100%,0%,.55);
+                background:${({theme}) => theme.colors.background};
                 border-radius:2rem;
                 height:.3rem;
                 transition:.2s linear background-color,.2s linear transform;
@@ -62,7 +63,7 @@ export const MenuButtonWrapper = styled(Button)<iMenuButton>`
             &focus,
             &:hover{
                 & > span{
-                    background-color:hsla(0,100%,0%,1);
+                    background-color:${({theme}) => theme.colors.tertiary};
                 }
             }
             ${({active}) => active && css`
@@ -96,12 +97,14 @@ export const MenuItemExpandWrapper = styled.div`
         justify-content:center;
     }
     & > a{
+        color:${({theme}) => theme.colors.background};
         font-size:1.65rem;
         font-weight:700;
         padding:0 1rem;
         position:relative;
+        transition:.2s linear color;
         &::before{
-            background:green;
+            background-color:${({theme}) => theme.colors.quatenary};
             border-radius:2rem;
             bottom:0;
             height:.25rem;
@@ -114,6 +117,7 @@ export const MenuItemExpandWrapper = styled.div`
         }
         &:focus,
         &:hover{
+            color:${({theme}) => theme.colors.quatenary};
             &::before{
                 width:100%;
             }
@@ -126,14 +130,15 @@ export const MenuItemExpandWrapper = styled.div`
         border-radius:.75rem;
         cursor:pointer;
         font-size:3rem;
-        transition:.2s linear background-color;
+        transition:.2s linear background-color, .2s linear color;
         width:3rem;
         & > * {
             transition:.2s linear transform;
         }
         &:focus,
         &:hover{
-            background-color:orange;
+            background-color:${({theme}) => theme.colors.background};
+            color:${({theme}) => theme.colors.color};
             & > * {
                 transform:translateY(.25rem) scale(1.15);
             }
@@ -168,10 +173,12 @@ export const MenuItemExpandWrapper = styled.div`
 export const MenuItemMainWrapper = styled(MenuItem)`
     height:3rem;
     & > a{
+        color:${({theme}) => theme.colors.background};
         font-size:1.65rem;
         font-weight:700;
+        transition:.2s linear color;
         &::before{
-            background:green;
+            background:${({theme}) => theme.colors.quatenary};
             border-radius:2rem;
             bottom:0;
             height:.25rem;
@@ -184,6 +191,7 @@ export const MenuItemMainWrapper = styled(MenuItem)`
         }
         &:focus,
         &:hover{
+            color:${({theme}) => theme.colors.quatenary};
             &::before{
                 width:100%;
             }
@@ -207,16 +215,17 @@ export const MenuItemMainWrapper = styled(MenuItem)`
 export const MenuItemSubmenuWrapper = styled(MenuItem)`
     min-width:15rem;
     & > a{
-        background-color:#ddd;
+        background-color:${({theme}) => theme.colors.color};
         border-radius:.65rem;
         font-size:1.55rem;
         justify-content:start;
         font-weight:500;
         text-align:start;
-        transition:.2s linear background-color;
+        transition:.2s linear background-color, .2s linear color;
         &:focus,
         &:hover{
-            background-color:#eee;
+            background-color:${({theme}) => theme.colors.background};
+            color:${({theme}) => theme.colors.color};
         }
     }
     @media only screen {
@@ -269,7 +278,8 @@ export const NavigationWrapper = styled.nav`
             @media (min-width:900px){
                 align-items:center;
                 display:flex;
-                background:#eee;
+                background-color:${({theme}) => theme.colors.headings.subtitle};
+                color:${({theme}) => theme.colors.background};
                 height:5.75rem;
                 padding:0 2rem;
                 user-select:none;
@@ -289,7 +299,8 @@ export const NavigationWrapper = styled.nav`
     &.mobile{
         display:none;
         @media only screen and (max-width:899px){
-            background:#eee;
+            background-color:${({theme}) => theme.colors.headings.subtitle};
+            color:${({theme}) => theme.colors.background};
             display:flex;
             flex-flow:column;
             height:auto;
@@ -315,7 +326,7 @@ export const SubmenuWrapper = styled.li`
         @media (min-width:690px){
             & > ul{
                 align-items:start;
-                background-color:#ddd;
+                background-color:${({theme}) => theme.colors.color};
                 border-radius:.65rem;
                 box-shadow:0 1rem 2rem .25rem hsla(0,100%,0%,.25);
                 display:flex;

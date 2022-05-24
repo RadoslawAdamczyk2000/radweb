@@ -8,8 +8,10 @@ export const ContactWrapper = styled.address`
     padding:1rem 2.25rem;
 `
 export const ContactItemWrapper = styled.li`
+    color:${({theme}) => theme.colors.background};
     height:4.5rem;
-    transition:.2s linear background-color, .2s linear transform;
+    opacity:.65;
+    transition:.2s linear color, .2s linear opacity, .2s linear transform;
     width:4.5rem;
     &,
     & > a{
@@ -24,11 +26,14 @@ export const ContactItemWrapper = styled.li`
     }
     &:focus,
     &:hover{
+        color:${({theme}) => theme.colors.quatenary};
+        opacity:1;
         transform:scale(.95);
     }
 `
 export const MicroWrapper = styled.div`
     & > article{
+        color:${({theme}) => theme.colors.background};
         padding:.25rem;
         text-align:center;
         & > h4{

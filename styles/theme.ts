@@ -1,66 +1,15 @@
-import { DefaultTheme } from "styled-components"
-// light special: #6363ff
-export const darkTheme:DefaultTheme = {
+import { DefaultTheme } from "styled-components";
+export const theme:DefaultTheme = {
     colors:{
-        background:'#1f2028',
-        color:'#ffffff',
-        primary:'#a9adc1',
-        secondary:'#2e3039',
-        tertiary:'#ffd644'
-    },
-    fonts:{
-        family:{
-            primary:"'Montserrat', sans-serif"
-        }
-    },
-    shadows:{
-        button:'0 0 2rem hsla(0,100%,100%,.35)',
-        navigation:'0 .25rem 1rem hsla(0,100%,100%,.05)',
-    },
-    filter:{
-        search:'brightness(125%)'
-    }
-}
-export const lightTheme:DefaultTheme = {
-    colors:{
-        background:'#fff',
-        color:'#000',
-        primary:'#818890',
-        secondary:'#f7f7f7',
-        tertiary:'#4361ee'
-    },
-    fonts:{
-        family:{
-            primary:"'Fira Sans', sans-serif"
-        },
-    },
-    shadows:{
-        button:'0 0 2rem hsla(0,100%,0%,.35)',
-        navigation:'0 .25rem 1rem hsla(0,100%,0%,.05)',
-    },
-    filter:{
-        search:'brightness(95%)'
-    }
-}   
-
-export const theme = {
-    colors:{
-        background:'',
-        color:'',
-        link:'',
+        background:'#FAFAFA',
+        color:'#5E5E5E',
         headings:{
-            title:'',
-            subtitle:''
+            title:'#000000',
+            subtitle:'#3F3E45'
         },
-        special:'',
-        button:{
-            disabled:'',
-            normal:'',
-            hover:''
-        },
-        navigation:{
-            background:'',
-            color:''
-        }
+        primary:'#7750FF',
+        secondary:'#5528F4',
+        tertiary:'#b8ace2',
+        quatenary:'#f9f871'
     }
 }

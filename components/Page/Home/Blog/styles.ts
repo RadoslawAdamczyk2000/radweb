@@ -22,6 +22,7 @@ export const BlogWrapper = styled.section`
             }
         }
         & > h2{
+            color:${({theme}) => theme.colors.headings.title};
             font-size:4.5rem;
             @media only screen{
                 @media (min-width:1500px){
@@ -47,16 +48,15 @@ export const BlogWrapper = styled.section`
             }
         }
         & > a{
-            background-color:black;
+            background-color:${({theme}) => theme.colors.headings.title};
             border-radius:2.5rem;
-            color:white;
+            color:${({theme}) => theme.colors.background};
             margin:.75rem 0;
             padding:1.25rem 2rem;
-            transition:.2s linear background-color, .2s linear color, .2s linear transform;
+            transition:.2s linear background-color,.2s linear transform;
             &:focus,
             &:hover{
-                background-color:red;
-                color:white;
+                background-color:${({theme}) => theme.colors.secondary};
                 transform:scaleX(.95);
             }
             @media only screen{

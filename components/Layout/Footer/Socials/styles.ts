@@ -15,9 +15,11 @@ export const SocialWrapper = styled.li`
         width:100%;
     }
     & > a{
+        color:${({theme}) => theme.colors.background};
         position:relative;
+        transition:.2s linear color;
         &::before{
-            background:black;
+            background:${({theme}) => theme.colors.quatenary};
             bottom:0;
             height:.4rem;
             left:0;
@@ -32,6 +34,7 @@ export const SocialWrapper = styled.li`
     &:focus,
     &:hover {
         & > a{
+            color:${({theme}) => theme.colors.quatenary};
             &::before{
                 width:100%;
             }

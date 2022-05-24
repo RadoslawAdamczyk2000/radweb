@@ -76,28 +76,14 @@ export const CardWrapper = styled.li`
                     width:100%;
                 }
                 & > span{
-                    font-size:2rem;
-                    font-weight:900;
-                    text-align:start;
-                    text-indent:2rem;
-                    @media only screen {
-                        @media (min-width:1500px){
-                            font-size:2.65rem;
-                        }
-                    }
-                    &::first-letter{
-                        font-size:1.8rem;
-                        @media only screen {
-                            @media (min-width:1500px){
-                                font-size:2rem;
-                            }
-                        }
-                    }
+                    display:none;
                 }
                 & > h3{
+                    color:${({theme}) => theme.colors.secondary};
                     font-size:1.95rem;
                     padding:1rem 2rem;
                     text-align:end;
+                    transition:.2s linear color;
                     @media only screen {
                         @media (min-width:1500px){
                             font-size:2.65rem;
@@ -131,6 +117,9 @@ export const CardWrapper = styled.li`
         & > a{
             & > figcaption{
                 background-color:hsla(0,100%,100%,.85);
+                h3{
+                    color:${({theme}) => theme.colors.headings.title};
+                }
             }
         }
     }
@@ -182,6 +171,7 @@ export const OfferWrapper = styled.section`
             }
         }
         & > h2{
+            color:${({theme}) => theme.colors.headings.title};
             font-size:4.5rem;
             @media only screen{
                 @media (min-width:1500px){
@@ -193,6 +183,7 @@ export const OfferWrapper = styled.section`
             }
         }
         & > p{
+            color:${({theme}) => theme.colors.color};
             padding:1rem;
             line-height:calc(1.6rem * 2);
             @media only screen{
@@ -206,16 +197,15 @@ export const OfferWrapper = styled.section`
             }
         }
         & > a{
-            background-color:black;
+            background-color:${({theme}) => theme.colors.headings.title};
             border-radius:2.5rem;
-            color:white;
+            color:${({theme}) => theme.colors.background};
             margin:.75rem auto;
             padding:1.25rem 2rem;
-            transition:.2s linear background-color, .2s linear color, .2s linear transform;
+            transition:.2s linear background-color,.2s linear transform;
             &:focus,
             &:hover{
-                background-color:red;
-                color:white;
+                background-color:${({theme}) => theme.colors.secondary};
                 transform:scaleX(.95);
             }
             @media only screen{

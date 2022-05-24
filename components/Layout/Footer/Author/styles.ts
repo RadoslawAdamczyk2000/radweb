@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 export const AuthorWrapper = styled.div`
+    color:${({theme}) => theme.colors.background};
     margin:1.8rem 0 0;
     &,
     & > p{

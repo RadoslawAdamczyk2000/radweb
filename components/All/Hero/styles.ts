@@ -33,8 +33,8 @@ const Hero = styled.header<vertical>`
             width:100%;
         }
         & > h1{
-            color:#000;
-            font-size:3.25rem;
+            color:${({theme}) => theme.colors.headings.title};
+            font-size:3.65rem;
             font-weight:600;
             @media only screen {
                 @media (min-width:1450px){
@@ -46,8 +46,9 @@ const Hero = styled.header<vertical>`
             }
         }
         & > p {
-            color:#444;
+            color:${({theme}) => theme.colors.headings.subtitle};
             font-size:1.8rem;
+            font-weight:600;
             line-height:calc(1.8rem * 2);
             text-align:end;
             @media only screen {

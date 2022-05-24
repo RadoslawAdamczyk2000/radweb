@@ -55,6 +55,7 @@ export const CardWrapper = styled.li`
                     justify-content:center;
                 }
                 & > h3 {
+                    color:${({theme}) => theme.colors.secondary};
                     font-size:2.5rem;
                     @media only screen {
                         @media (max-width:250px){
@@ -96,6 +97,7 @@ export const ProjectsWrapper = styled.section`
     & > article{
         padding:4rem 2rem;
         & > h2{
+            color:${({theme}) => theme.colors.headings.title};
             font-size:4.5rem;
             @media only screen{
                 @media (min-width:1500px){
@@ -107,6 +109,7 @@ export const ProjectsWrapper = styled.section`
             }
         }
         & > p{
+            color:${({theme}) => theme.colors.color};
             padding:1rem;
             line-height:calc(1.6rem * 2);
             @media only screen{
@@ -135,18 +138,17 @@ export const ProjectsWrapper = styled.section`
         justify-content:center;
         padding:1rem 0;
         & > a{
-            background-color:black;
-            border-radius:5%;
-            color:white;
-            font-size:3rem;
+            background-color:${({theme}) => theme.colors.headings.title};
+            border-radius:5rem;
+            color:${({theme}) => theme.colors.background};
+            font-size:2.4rem;
             margin:.75rem auto;
             padding:1.25rem 2rem;
             text-align:center;
-            transition:.2s linear background-color, .2s linear color, .2s linear transform;
+            transition:.2s linear background-color,.2s linear transform;
             &:focus,
             &:hover{
-                background-color:red;
-                color:white;
+                background-color:${({theme}) => theme.colors.secondary};
                 transform:scaleX(.95);
             }
             @media only screen{
@@ -167,7 +169,7 @@ export const ProjectsWrapper = styled.section`
 `
 export const StackItemWrapper = styled.li`
     align-items:center;
-    color:#666;
+    color:${({theme}) => theme.colors.tertiary};
     display:flex;
     font-size:2.5rem;
     height:3rem;

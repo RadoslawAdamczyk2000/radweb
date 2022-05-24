@@ -9,7 +9,6 @@ export const Cards = styled.ul`
 `
 export const CardWrapper = styled.li`
     align-items:center;
-    border:.12rem solid red;
     border-radius:.85rem;
     cursor:pointer;
     display:flex;
@@ -25,14 +24,15 @@ export const CardWrapper = styled.li`
         width:100%;
     }
     & > h2{
-        color:red;
+        color:${({theme}) => theme.colors.primary};
         font-size:2.75rem;
     }
     & > p{
+        color:${({theme}) => theme.colors.headings.subtitle};
         font-size:1.65rem;
         line-height:calc(1.65rem * 1.8);
     }
     &:hover{
-        box-shadow:0 0 .5rem red;
+        box-shadow:0 0 1.5rem ${({theme}) => theme.colors.tertiary};
     }
 `

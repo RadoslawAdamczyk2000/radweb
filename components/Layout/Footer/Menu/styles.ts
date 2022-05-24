@@ -8,6 +8,7 @@ export const MenuWrapper = styled.menu`
     & > li{
         & > a{
             align-items:center;
+            color:${({theme}) => theme.colors.background};
             display:flex;
             font-size:2rem;
             justify-content:center;
@@ -17,12 +18,12 @@ export const MenuWrapper = styled.menu`
             z-index:0;
             &::after,
             &::before{
-                background:aqua;
+                background:${({theme}) => theme.colors.color};
                 height:100%;
                 transform:skewX(-25deg);
             }
             &::after{
-                background:orange;
+                background:${({theme}) => theme.colors.quatenary};
                 transition:.2s linear width;
                 width:0%;
                 z-index:-1;
@@ -35,7 +36,7 @@ export const MenuWrapper = styled.menu`
         &:focus,
         &:hover{
             & > a{
-                color:white;
+                color:${({theme}) => theme.colors.color};
                 &::after{
                     width:100%;
                 }
