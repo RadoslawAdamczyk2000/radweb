@@ -146,8 +146,9 @@ export interface IntPictureAbout {
 }
 export interface IntProjectCard {
     content:string;
+    image:string;
     link:string;
-    stack:any[];
+    stack:object[];
     title:string;
 }
 export interface IntProjectHomeCard extends IntProjectCard {

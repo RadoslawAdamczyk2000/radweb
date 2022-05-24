@@ -1,18 +1,34 @@
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Hero from "../../components/All/Hero/Hero";
+import Result from "../../components/All/Search/Result";
 import { Cards } from "../../components/Page/Blog/Cards/styles";
-// import Hero from "../../components/Page/Blog/Hero/Hero";
-import Card from "../../components/Page/Projects/Cards/Card";
+import Card from "../../components/Page/Home/Projects/Card";
 import { Tags } from "../../components/Page/Projects/Tags/styles";
 import Tag from "../../components/Page/Projects/Tags/Tag";
 import { projects } from "../../content/projects";
-import { stack, stackArr } from "../../data/stack";
+import { posts } from "../../data/posts";
+import {  stackArr } from "../../data/stack";
 import Layout from "../../schemas/Layout";
+interface i {
+    title:string;
+    image:string;
+    path:string;
+    excerpt:string;
+    stack:object[];
+}
 const Page:NextPage = () => {
     const [search,setSearch] = useState('');
     const tags:null|string[] = [];
     const {seo,hero} = projects.home;
+    const {projects:works} = posts;
+    const searching = (data:any) => {
+        return data.filter(
+        (item:any) =>
+          item.title.toLowerCase().includes(search.toLowerCase()) ||
+          item.excerpt.toLowerCase().includes(search.toLowerCase())
+        )
+      }
     return(
     <Layout
         description={seo.description}
@@ -28,6 +44,7 @@ const Page:NextPage = () => {
              title={hero.title}
         />        
         <main>
+            {search && <Result search={search}/>}
             <Tags>
                 {stackArr.map(({icon,title},key) =>
                     <Tag
@@ -39,12 +56,16 @@ const Page:NextPage = () => {
                 )}
             </Tags>
             <Cards>
-                <Card
-                    content="Każdy postawia swój pierwszy krok na rynku. Moim pierwszym krokiem była strona zrealizowana dla Borókowego Gaju - gospodarstwa, które należy do ojca mojego kolegi. Niedługo minie rok od zrealizowania tej strony. Dziś napewno napisałbym lepiej tą stronę, jednak z perspektywy pozycjonera statystyki są idealne."
-                    link="/"
-                    stack={[stack.html,stack.css,stack.bootstrap,stack.javascript]}
-                    title="Borówkowy Gaj"
-                />
+                {searching(works).slice(0).reverse().map(({title,path,image,excerpt,stack}:i,key:number) =>
+                    <Card
+                        content={excerpt}
+                        image={image}
+                        link={path}
+                        key={key}
+                        stack={stack}
+                        title={title}
+                    />
+                )}
             </Cards>
         </main>
     </Layout>

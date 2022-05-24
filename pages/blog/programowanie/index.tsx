@@ -67,7 +67,6 @@ const Page:NextPage = () => {
                 tags={tags}
                 title={title}
               />
-
             )}
           </Cards>
         </main>

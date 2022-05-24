@@ -72,14 +72,14 @@ export const BlogWrapper = styled.section`
    
     & > ul{
         display:flex;
-        flex-flow:row nowrap;
+        flex-flow:row wrap;
+        justify-content:center;
         gap:1.5rem;
-        justify-content:flex-start;
         padding:3rem 2rem;
         width:100%;
         @media only screen {
-            @media (min-width: 850px) {
-                justify-content:center;
+            @media (max-width: 850px) {
+                justify-content:flex-start;
                 flex-flow:row wrap;
                 overflow-x:scroll;
             }

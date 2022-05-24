@@ -335,5 +335,6 @@ export const SubmenuWrapper = styled.li`
 
 `
 export const ThemeButtonWrapper = styled(Button)`
+    display:none;
     font-size:2rem;
 `

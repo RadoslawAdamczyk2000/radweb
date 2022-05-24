@@ -1,3 +1,5 @@
+import { stack } from "./stack";
+
 export const posts = {
     articles:[
         {
@@ -55,5 +57,14 @@ export const posts = {
         //     date:'',
         //     excerpt:'',
         // },
+    ],
+    projects:[
+        {
+            title:'Borówkowy Gaj',
+            image:'https://github.com/RadoslawAdamczyk2000/rad-web-content/blob/main/projekty/zdjecia/borowkowy-gaj.png?raw=true',
+            stack:[stack.html,stack.css,stack.bootstrap,stack.javascript],
+            path:'/projekty/borowkowy-gaj',
+            excerpt:'Każdy postawia swój pierwszy krok na rynku. Moim pierwszym krokiem była strona zrealizowana dla Borókowego Gaju - gospodarstwa, które należy do ojca mojego kolegi. Niedługo minie rok od zrealizowania tej strony. Dziś napewno napisałbym lepiej tą stronę, jednak z perspektywy pozycjonera statystyki są idealne.'
+        }
     ]
 }
