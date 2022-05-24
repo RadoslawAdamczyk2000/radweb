@@ -1,4 +1,17 @@
 import styled from 'styled-components';
+export const ResultWrapper = styled.div`
+    align-items:center;
+    background:orange;
+    display:flex;
+    justify-content:center;
+    padding:1rem 2.5rem;
+    p{
+        cursor:default;
+        font-size:2.4rem;
+        font-weight:800;
+        user-select:none;
+    }
+`
 export const SearchWrapper = styled.div`
     align-items:center;
     border-radius:.5rem;

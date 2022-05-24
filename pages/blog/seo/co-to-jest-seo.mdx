@@ -1,0 +1,93 @@
+import Layout from '../../../schemas/Layout';
+import Hero from '../../../components/Article/Hero.tsx';
+import Content from '../../../components/Article/Content.tsx';
+import Code from '../../../components/Article/Code.tsx';
+import Footer from '../../../components/Article/Footer.tsx';
+import Movie from '../../../components/Article/Movie.tsx';
+import Picture from '../../../components/Article/Picture.tsx';
+import {stack} from '../../../data/stack';
+export const meta = {
+    title:'Co to jest SEO, co to jest pozycjonowanie? - RadWEB',
+    description:'SEO, zwane inaczej pozycjonowaniem to szereg działań mających na celu podniesienia widoczności Twojej strony, co jednocześnie zwiększy ilość klientów. Chcesz się dowiedzieć więcej? Zapraszam do lektury.',
+    image:'https://images.unsplash.com/photo-1562577309-2592ab84b1bc?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074'
+};
+
+<Hero
+    date='01-05-2022'
+    image={meta.image}
+    path='/blog/seo'
+    title='Co to jest SEO?'
+>
+SEO to skrót od **Search Engine Optimization**, który dosłownie tłumaczy się na **optymalizowanie pod silniki wyszukiwarek**. Natomiast działania optymalizacyjne stron internetowych, blogów oraz sklepów w wyszukiwarkach są nazywane pozycjonowaniem lub pracami SEO. Na świecie jest wiele wyszukiwarek internetowych, jednak jest kilka, które się faktycznie liczą: **Google**, **Bing**, **Yandex**, **Yahoo**, **Baidu**, **Duck Duck Go**. Zarówno na świecie, jak i na naszym rodzimym polskim podwórku, największą popularnością może się pochwalić Google.
+</Hero>
+<Content title='Przeglądarka internetowa vs wyszukiwarka internetowa.'>
+Sporo internautów myli zasadniczą różnicę między **przeglądarką internetową** a **wyszukiwarką internetową**. Łatwe rozróżnienie dają same nazwy powyższych terminów, a mianowicie przeglądarka internetowa to aplikacja na komputery oraz smartfony, która umożliwia przeglądanie zawartości w internecie, czyli otwieranie stron internetowych i aplikacji webowych. Z kolei wyszukiwarka internetowa służy do wyszukiwania interesujących nas treści. Na początku komercyjnego internetu wyszukiwanie odbywało się poprzez interesującej nas frazy w pole tekstowe. Dziś jest to o wiele bardziej technicznie zaawansowane, ponieważ w poszukiwaniu możemy użyć m.in. apartu naszego smartfonu lub głosu do co raz popularniejszego wyszukiwania głosowego.
+</Content>
+<Content title='Tworzysz stronę, na co zwrócić uwagę?'>
+Jeśli tworzysz własną stronę internetową, lub zamówiłeś dla siebie stronę internetową warto zwrócić już na początku samego procesu **developmentu (*tworzenia*)**. Warto zwrócić na **sekcje tytułowe stron**. 
+Tag title jest najważniejszy spośród wszystkich komponentów SEO, ponieważ to na niego kładzie największy nacisk Google. Jest kilka technik mówiących o tym z ilu znaków powwinien składaś się tytuł. Prywatnie przyjąłem zasadę, że **tagi title** powinny mieć **między 50 a 65** znaków. Ilość znaków jest bardzo istotna ponieważ po najechaniu kursorem na kartę w przeglądarce pojawi się dymek, który pokazuje rzeczony tytuł strony, gdzie maksymalnie widnieje 65 znaków.  Równie istotna jest budowa samych tytułów, poniżej zaprezentuję wzorzec:
+
+***Tytuł artykułu - kategoria - lokalizacja | nazwa marki***.
+
+Z tym wzorcem najeczęściej można się spotkać przy stronach budowanych na niezwykle popularnym wordpressie. Wartym wspomnienia jest to, iż tytuł nie może być **skopiowany** z innych stron internetowych, oraz **nie powinien być spamerski**. Specjaliści SEO mają za zadanie aby title był unikalny, a także był przyjazny zarówno dla robotów jak i użytkowników.
+
+Kolejnym elementem jest meta opis strony, zwanym również **meta description**. Tutaj może nasza fantazja bardziej poszaleć ,dlatego że mamy większy limit znaków w porównaniu do tytułu, ponieważ owy limit to 160 znaków. Tutaj ponownie, kategorycznie zabrania się kopiowania i stosowania spamu. Sam segment z opisem nie jest brany pod uwagę przez roboty indeksujące, ponieważ w przeszłości ten fragment stron internetowych był nadużywany przez pozycjonerów stosujących techniki spamerskie. Dziś tag description jest skierowany iwyłącznie do użytkowników, dlatego powinniśmy je tworzyć z myślą o internautach. W tworzeniu opisów warto pamiętać o zawarciu **CTA (*Call To Action*)**, czyli wezwanie do działania, które może brzmieć na kilka sposobów:
+- "Zapraszam do lektury!"
+- "Kup już teraz!"
+- "Zapoznaj się z ofertą!"
+</Content>
+<Picture 
+    title='Co to jest SEO? - sukces - zdjęcie' 
+    image='https://cdn.pixabay.com/photo/2015/04/20/17/39/man-731900_960_720.jpg'
+></Picture>
+<Content title=''>
+Wartymi wspomnienia również są tagi **Open Graph**, które są tagami do portali społecznościowych oraz dedykowane dla portalu Twitter. Zasadniczo treści do nich przekazywane są bardzo podobne do tych tradycyjnych tagów. Jedynymi rozszerzeniami są np. tag użytkownika Twittera, zdjęcie które ma reprezentować stronę w social mediach  oraz typ strony (*m.in 'website' wskazujące na stronę oraz 'article' podpowiadające że jest to artykuł*). Ostatnim tagiem ważnym jak Amen w pacierzu jest **meta viewport** informujący roboty indeksujące, że strona jest przystosowana do urządzeń mobilnych oraz komputerów, jednym słowem responsywna, co jest najbardziej priorytetową [dobrą cechą stron](/blog/cechy-dobrej-strony-internetowej). Poniżej zaprezentowałem wzorzec sekcji head.
+</Content>
+<Code>
+    ```
+        <html lang="pl">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta property=”og:url” content=”kanoniczny adres url” />  
+                <meta property=”og:title” content=”Tytuł strony” />
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <meta property=”og:image” content=”zdjęcie reprezentujące stronę” />
+                <meta property=”og:locale” content=”pl_PL” />
+                <meta property=”og:description” content="opis” />
+                <meta property=”og:type” content=”article” />
+                <meta name='robots' content='index,follow' />
+                <meta name='twitter:title' content=”Tytuł strony”/>
+                <meta name='twitter:description' content="opis”/>
+                <meta name='twitter:image' content=”zdjęcie reprezentujące stronę”/>
+                <link rel='canonical' href='kanoniczny adres url'>
+                <title>Tytuł strony</title>
+                <meta name=”description” content="opis” />
+            </head>
+        </html>
+    ```
+</Code>
+<Content title='Narzędzia do analizy wzrostu.'>
+Najlepszymi narzędziami do analizy wzrostu widoczności naszej strony są narzędzia Google:
+    - **Google Search Console** umożliwia sprawdzić ilość wyświetleń, kliknięć oraz pozycję naszej strony ogólnie jak i frazy nas interesujące w zakładce *skuteczność* oraz zaindeksować stronę w Google w *sprawdzenie adresu URL*.
+    - **Google Analytics** pozwala zdobyć dokładniejsze dane niż w Google Search Console, w postaci prezentacji statystk pokazujących ile osób jest na naszej stronie w czasie rzeczywistym w zakładce *raporty -> czas rzeczywisty*, w *podsumowaniu raportów* możemy dowiedzieć się z jakich krajów pochodzą oraz jakiej płci są użytkonicy.
+    - **Google Ads** podpowiada jakie słowa kluczowe są najlepsze będą dla naszej strony, oraz jaka duża jest na nie konkurencja, w tym miejscu można wykupić pakiet reklam, które przyspieszą zdobywanie imponujących wyników w Google.
+    - **Google Trends** działa synomimicznie do Google Ads , jednak dowiemy się tutaj w jakich województwach, czy nawet dokładniej w miastach, gdzie podane przez nas słowo kluczowe (*keyword*) jest najcześciej wyszukiwane, oraz z jakiego przedziału wiekowego. Podpowie również jakie są podobne tematy i zapytania do podanego przez nas tematu.
+</Content>
+<Content>
+To co dziś zaprezezentowałem to jedynie garść wiedzy o SEO i całej dziedziny pozycjonowania, marketingu internetowego, który z miesiąca na miesiąc podlega ewolucji. Z tego to powodu to nie jest pierwszy i ostatni artykuł o tej dziedzinie webu, lecz jest to początek niezwykłej przygody.
+</Content>
+<Footer
+    recent={[
+        {
+            title:'Czarny orzeł - Leszek Czarny',
+            path:'#'
+        },
+        {
+            title:'Czym jest HTML? - historia czy teraźniejszość?',
+            path:'#'
+        },
+    ]}
+></Footer>
+
+export default ({children}) => <Layout title={meta.title} description={meta.description} image={meta.image}>{children}</Layout>
