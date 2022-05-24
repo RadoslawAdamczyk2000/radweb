@@ -15,7 +15,7 @@ interface i {
     image:string;
     path:string;
     excerpt:string;
-    stack:object[];
+    stack:any[];
 }
 const Page:NextPage = () => {
     const [search,setSearch] = useState('');

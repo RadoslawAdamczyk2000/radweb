@@ -9,6 +9,13 @@ import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
   const [search,setSearch] = useState('');
   const {seo,hero,cards} = faq;
+  const searching = (data:any) => {
+    return data.filter(
+    (item:any) =>
+      item.content.toLowerCase().includes(search.toLowerCase()) ||
+      item.title.toLowerCase().includes(search.toLowerCase()) 
+    )
+  }
   return(
     <Layout
       description={seo.description}
@@ -30,7 +37,7 @@ const Page:NextPage = () => {
           />
           <Cards>
             {
-              cards.map(({content,title},key) =>
+              searching(cards).map(({content,title}:{content:string,title:string},key:number) =>
                 <Card
                   content={content}
                   key={key}
