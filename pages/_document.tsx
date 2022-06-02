@@ -1,5 +1,5 @@
 import Document, {Html,Head,Main,NextScript,DocumentContext,} from "next/document";
-import ld from '../lib/ld.json';
+import ld from '../lib/google/ld.json';
 import { ServerStyleSheet } from "styled-components";
   class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
