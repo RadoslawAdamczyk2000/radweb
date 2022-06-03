@@ -21,6 +21,7 @@ export const Global = createGlobalStyle`
         text-decoration:none;
     }
     body{
+        background-color:${({theme}) => theme.colors.primary};
         font-size:1.6rem;
         font-weight:400;
         transition:.35s linear background-color,.35s linear color;
