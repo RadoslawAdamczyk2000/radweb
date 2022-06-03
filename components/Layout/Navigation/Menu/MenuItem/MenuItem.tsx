@@ -1,25 +1,26 @@
 import Link from "next/link"
 import {FaAngleDown} from 'react-icons/fa';
 import { IntMenuItem } from "./interface";
+import { MenuItemExpand } from "./styles";
 const MenuItem = ({handle,isExpand=false,isMain=false,path,title}:IntMenuItem) => {
     return(
         <>
             {
                 isExpand &&
-                <div>
+                <MenuItemExpand>
                     <Link href={path}>
                         <a>
                             {title}
                         </a>
                     </Link>
-                    <span onClick={handle}>
+                    <div onClick={handle}>
                         <FaAngleDown/>
-                    </span>
-                </div> 
+                    </div>
+                </MenuItemExpand> 
             }
             {
                 isMain &&
-                <li>
+                <li className="main">
                     <div>
                         <Link href={path}>
                             <a>

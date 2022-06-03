@@ -1,10 +1,10 @@
 import { menu } from "../../../../../data/menu"
 import MenuItem from "../MenuItem/MenuItem";
 import Submenu from "../Submenu/Submenu";
+import { MenuWrapper } from "./styles";
 const Menu = () => {
-    console.log(menu);
     return(
-        <menu>
+        <MenuWrapper>
             {menu.map(({isExpand,path,submenu,title}) =>
                 <>
                     {
@@ -24,7 +24,7 @@ const Menu = () => {
                     }
                 </>
             )}
-        </menu>
+        </MenuWrapper>
     )
 }
 export default Menu;
