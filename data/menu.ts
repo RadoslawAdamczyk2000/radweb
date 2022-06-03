@@ -53,7 +53,16 @@ export const menu = [
         isExpand:false,
         title:'Projekty',
         path:'/projekty',
-        submenu:[]
+        submenu:[
+            {
+                title:'Komercyjne',
+                path:'/projekty/realizacje-komercyjne',
+            },
+            {
+                title:'Prywatne',
+                path:'/projekty/realizacje-prywatne',
+            },
+        ]
     },
     {
         isExpand:true,
