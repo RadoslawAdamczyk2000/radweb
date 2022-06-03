@@ -21,7 +21,9 @@ export const Global = createGlobalStyle`
         text-decoration:none;
     }
     body{
-        background-color:${({theme}) => theme.colors.primary};
+        background-color:${({theme}) => theme.colors.background};
+        color:${({theme}) => theme.colors.color};
+        font-family:${({theme}) => theme.fonts.family.regular};
         font-size:1.6rem;
         font-weight:400;
         transition:.35s linear background-color,.35s linear color;
@@ -43,5 +45,14 @@ export const Global = createGlobalStyle`
     ol,
     ul{
         list-style:none;
+    }
+
+    h1,
+    h2,
+    h3{
+        &.heading{
+            font-family:${({theme}) => theme.fonts.family.regular};
+            font-size:3rem;
+        }
     }
 `
