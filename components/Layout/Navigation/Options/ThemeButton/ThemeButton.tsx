@@ -5,7 +5,7 @@ import { ThemeButtonWrapper } from "./styles";
 const ThemeButton = () => {
     const {handle,value} = useContext(Context);
     return(
-        <ThemeButtonWrapper onClick={handle}>
+        <ThemeButtonWrapper className='themeButton' onClick={handle}>
             {
                 value ? 
                 <RiMoonFoggyLine/> :

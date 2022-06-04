@@ -7,7 +7,7 @@ const MenuItem = ({handle,handleExpand,isExpand=false,isMain=false,isSubmenu,pat
         <>
             {
                 isExpand &&
-                <MenuItemExpand>
+                <MenuItemExpand className="expand">
                     <Link href={path}>
                         <a onClick={handle}>
                             {title}
@@ -20,7 +20,7 @@ const MenuItem = ({handle,handleExpand,isExpand=false,isMain=false,isSubmenu,pat
             }
             {
                 isMain &&
-                <MenuItemMain>
+                <MenuItemMain className="main">
                     <div>
                         <Link href={path}>
                             <a onClick={handle}>
@@ -32,7 +32,7 @@ const MenuItem = ({handle,handleExpand,isExpand=false,isMain=false,isSubmenu,pat
             }
             {
                 isSubmenu &&
-                <MenuItemSubmenu>
+                <MenuItemSubmenu className="submenu">
                     <div>
                         <Link href={path}>
                             <a onClick={handle}>

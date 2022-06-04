@@ -24,7 +24,7 @@ export const MenuItemExpand =  styled.div`
         font-weight:700;
         height:3.45rem;
         overflow:hidden;
-        padding:0 1.5rem;
+        padding:0 .85rem;
         position:relative;
         z-index:0;
         &::before{

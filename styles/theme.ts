@@ -27,8 +27,8 @@ export const lightTheme:DefaultTheme = {
         background:'#fdfdfd',
         color:'#0a0a0a',
         gray:'#3d3d3d',
-        primary:'#00C2B2',
-        secondary:'#740CAC',
+        primary:'#740CAC',
+        secondary:'#00C2B2',
         tertiary:'#DA00A9',
         quatenary:'#FF3569',
         code:{

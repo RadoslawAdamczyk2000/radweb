@@ -1,13 +1,14 @@
 import Link from "next/link"
+import { BrandWrapper } from "./styles";
 const Brand = () => {
     return(
-        <div>
+        <BrandWrapper className="brand">
             <Link href='/'>
                 <a>
                     RadWEB
                 </a>
             </Link>
-        </div>
+        </BrandWrapper>
     )
 }
 export default Brand;

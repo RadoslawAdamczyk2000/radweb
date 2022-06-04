@@ -12,7 +12,8 @@ declare module 'styled-components' {
             code:{
                 background:string;
                 color:string;
-            }
+            },
+            navShadow:string;
         },
         fonts:{
             family:{
