@@ -5,20 +5,22 @@ import { MenuWrapper } from "./styles";
 const Menu = () => {
     return(
         <MenuWrapper>
-            {menu.map(({isExpand,path,submenu,title}) =>
+            {menu.map(({isExpand,path,submenu,title},key:number) =>
                 <>
                     {
                         isExpand ?
                         <Submenu
-                            handle={() => console.log(title)}
-                            path={path}
+                            handle={() => alert(title)}
+                            key={key}
+                            path='/'
                             submenu={submenu}
                             title={title}
                         /> :
                         <MenuItem
                             isMain={true}
-                            handle={() => console.log(title)}
-                            path={path}
+                            handle={() => alert(title)}
+                            key={key}
+                            path='/'
                             title={title}
                         />
                     }

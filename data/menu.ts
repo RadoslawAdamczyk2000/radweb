@@ -50,7 +50,7 @@ export const menu = [
         value:'blog'
     },
     {
-        isExpand:false,
+        isExpand:true,
         title:'Projekty',
         path:'/projekty',
         submenu:[
@@ -61,6 +61,10 @@ export const menu = [
             {
                 title:'Prywatne',
                 path:'/projekty/realizacje-prywatne',
+            },
+            {
+                title:'Wszystkie',
+                path:'/projekty',
             },
         ]
     },

@@ -1,34 +1,46 @@
 import Link from "next/link"
 import {FaAngleDown} from 'react-icons/fa';
 import { IntMenuItem } from "./interface";
-import { MenuItemExpand } from "./styles";
-const MenuItem = ({handle,isExpand=false,isMain=false,path,title}:IntMenuItem) => {
+import { MenuItemExpand, MenuItemMain, MenuItemSubmenu } from "./styles";
+const MenuItem = ({handle,handleExpand,isExpand=false,isMain=false,isSubmenu,path,title}:IntMenuItem) => {
     return(
         <>
             {
                 isExpand &&
                 <MenuItemExpand>
                     <Link href={path}>
-                        <a>
+                        <a onClick={handle}>
                             {title}
                         </a>
                     </Link>
-                    <div onClick={handle}>
+                    <div onClick={handleExpand}>
                         <FaAngleDown/>
                     </div>
                 </MenuItemExpand> 
             }
             {
                 isMain &&
-                <li className="main">
+                <MenuItemMain>
                     <div>
                         <Link href={path}>
-                            <a>
+                            <a onClick={handle}>
                                 {title}
                             </a>
                         </Link>
                     </div> 
-                </li>
+                </MenuItemMain>
+            }
+            {
+                isSubmenu &&
+                <MenuItemSubmenu>
+                    <div>
+                        <Link href={path}>
+                            <a onClick={handle}>
+                                {title}
+                            </a>
+                        </Link>
+                    </div> 
+                </MenuItemSubmenu>
             }
         </>
     )

@@ -6,6 +6,9 @@ export const NavigationWrapper = styled.nav<intNavigation>`
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-around;
+    top:0;
+    left:0;
+    z-index:999;
     & > div{
         &:first-of-type{
             background:red;
@@ -26,7 +29,8 @@ export const NavigationWrapper = styled.nav<intNavigation>`
 
     ${({isHome}) => isHome && css`
         align-items:center;
-        background:green;
+        background:yellow;
+        height:5.5rem;
         position:fixed;
         width:100%;
     `}

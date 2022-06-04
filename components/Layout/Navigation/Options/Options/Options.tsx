@@ -1,9 +1,10 @@
 import ThemeButton from "../ThemeButton/ThemeButton"
+import { OptionsWrapper } from "./styles";
 const Options = () => {
     return(
-        <div>
+        <OptionsWrapper>
             <ThemeButton/>
-        </div>
+        </OptionsWrapper>
     )
 }
 export default Options;

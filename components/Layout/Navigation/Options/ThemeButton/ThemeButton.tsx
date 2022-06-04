@@ -1,16 +1,17 @@
 import { useContext } from "react";
 import { RiMoonFoggyLine, RiSunLine } from "react-icons/ri";
 import { Context } from "../../../../../context/ThemeContext";
+import { ThemeButtonWrapper } from "./styles";
 const ThemeButton = () => {
     const {handle,value} = useContext(Context);
     return(
-        <div className="button" onClick={handle}>
+        <ThemeButtonWrapper onClick={handle}>
             {
                 value ? 
                 <RiMoonFoggyLine/> :
                 <RiSunLine/>
             }
-        </div>
+        </ThemeButtonWrapper>
     )
 }
 export default ThemeButton;

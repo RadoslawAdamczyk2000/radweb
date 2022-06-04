@@ -5,6 +5,6 @@ export const MenuWrapper = styled.menu`
     display:flex;
     flex-flow:row nowrap;
     justify-content:flex-end;
-    gap:0 1.75rem;
-    padding:0 2rem;
+    gap:0 .85rem;
+    padding:0 1rem;
 `
