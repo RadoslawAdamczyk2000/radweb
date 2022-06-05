@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { Context, Provider } from "../../../../context/MenuContext"
 import Brand from "../Brand/Brand"
 import Menu from "../Menu/Menu/Menu"
 import Options from "../Options/Options/Options"
@@ -7,10 +8,12 @@ import { NavigationWrapper } from "./styles"
 
 const Navigation = ({isHome}:IntNavigation) => {
     const [isScrolled,setScrolled] = useState(false);
+    const { isActive } = useContext(Context);
+    console.log(isActive);
     useEffect(() => {
         if(typeof window !== undefined){
             window.addEventListener('scroll',() => {
-                if(window.scrollY > 520){
+                if(window.scrollY > 150){
                     setScrolled(true);
                     
                 }else{
@@ -18,14 +21,25 @@ const Navigation = ({isHome}:IntNavigation) => {
                 }
             })
         }
-        console.log(isScrolled);
     },[isScrolled])
     return(
-        <NavigationWrapper isHome={isHome} isScroll={isScrolled}>
-            <Brand/>
-            <Menu/>
-            <Options/>
-        </NavigationWrapper>
+        <Provider>
+            <NavigationWrapper 
+                isHome={isHome} 
+                isScroll={isScrolled}
+                style={{
+                    backgroundColor:'green'
+                }}
+            >
+                <Brand/>
+                {
+                    isActive &&
+                    <Menu/>
+                }
+                <Menu/>
+                <Options/>
+            </NavigationWrapper>
+        </Provider>
     )
 }
 export default Navigation;

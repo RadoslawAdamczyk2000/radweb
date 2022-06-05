@@ -27,6 +27,12 @@ export const MenuItemExpand =  styled.div`
         padding:0 .85rem;
         position:relative;
         z-index:0;
+        @media only screen{
+            @media (max-width:650px){
+                font-size:1.55rem;
+                font-weight:600;
+            }
+        }
         &::before{
             background-color:${({theme}) => theme.colors.tertiary};
             height:100%;
@@ -65,6 +71,12 @@ export const MenuItemMain = styled(MenuItem)`
             padding:0 .85rem;
             position:relative;
             z-index:0;
+            @media only screen{
+                @media (max-width:650px){
+                    font-size:1.55rem;
+                    font-weight:600;
+                }
+            }
             &::before{
                 background-color:${({theme}) => theme.colors.tertiary};
                 height:100%;

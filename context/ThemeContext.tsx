@@ -8,14 +8,6 @@ export const Context = createContext({
 });
 export const Provider = ({children}:{children:ReactElement}) => {
     const [isDarkMode,setDarkMode] = useState(false);
-    useEffect(() => {
-        const typeTheme = () => {
-            isDarkMode ?
-            console.log('dark') :
-            console.log('light')
-        }
-        typeTheme();
-    },[isDarkMode]);
     return(
         <Context.Provider value={{
             value:isDarkMode,

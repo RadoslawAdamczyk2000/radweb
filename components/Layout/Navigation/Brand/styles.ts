@@ -14,4 +14,13 @@ export const BrandWrapper = styled.div`
             color:${({theme}) => theme.colors.primary};
         }
     }
+    @media only screen {
+        @media (max-width:210px){
+            margin:0 auto;
+            width:100%;
+            & > * {
+                transform:scale(.85);
+            }
+        }
+    }
 `
