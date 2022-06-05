@@ -35,6 +35,10 @@ export const NavigationWrapper = styled.nav<intNavigation>`
         .brand{
             & > a{
                 color:#fff;
+                &:focus,
+                &:hover{
+                    color:${({theme}) => theme.colors.primary};
+                }
             }
         }
         & > menu{
@@ -51,7 +55,7 @@ export const NavigationWrapper = styled.nav<intNavigation>`
                 color:${({theme}) => theme.colors.color};
                 &:focus,
                 &:hover{
-                    color:${({theme}) => theme.colors.secondary};
+                    color:${({theme}) => theme.colors.primary};
                 }
             }
         }
@@ -64,6 +68,17 @@ export const NavigationWrapper = styled.nav<intNavigation>`
     ` }
     ${({isScroll}) => isScroll && css`
         box-shadow:${({theme}) => theme.colors.navShadow};
+        menu {
+            .expand,
+            .main{
+                a{
+                    &:focus,
+                    &:hover{
+                        color:#fff;
+                    }
+                }
+            }
+        }
     `}
 
 
@@ -71,6 +86,7 @@ export const NavigationWrapper = styled.nav<intNavigation>`
         align-items:center;
         background-color:${({theme}) => theme.colors.background};
         position:sticky;
+       
     `}
 
 

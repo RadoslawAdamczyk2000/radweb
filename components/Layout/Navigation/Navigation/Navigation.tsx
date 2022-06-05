@@ -7,18 +7,17 @@ import { NavigationWrapper } from "./styles"
 
 const Navigation = ({isHome}:IntNavigation) => {
     const [isScrolled,setScrolled] = useState(false);
-    const handleScroll = () => {
-        window && window.addEventListener('scroll',() => {
-            if(window.scrollY > 400){
-                setScrolled(true);
-                
-            }else{
-                setScrolled(false);
-            }
-        })
-    }
-    handleScroll();
     useEffect(() => {
+        if(typeof window !== undefined){
+            window.addEventListener('scroll',() => {
+                if(window.scrollY > 520){
+                    setScrolled(true);
+                    
+                }else{
+                    setScrolled(false);
+                }
+            })
+        }
         console.log(isScrolled);
     },[isScrolled])
     return(

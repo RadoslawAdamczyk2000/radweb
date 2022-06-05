@@ -18,7 +18,8 @@ export const darkTheme:DefaultTheme = {
         code:{
             background:'#333333',
             color:'#1DC6A4'
-        }
+        },
+        navShadow:'0 .25rem .5rem 	hsl(0, 0%, 99%,.18)'
     },
     fonts:{...fonts}
 }
@@ -27,14 +28,15 @@ export const lightTheme:DefaultTheme = {
         background:'#fdfdfd',
         color:'#0a0a0a',
         gray:'#3d3d3d',
-        primary:'#740CAC',
-        secondary:'#00C2B2',
+        primary:'#00C2B2',
+        secondary:'#740CAC',
         tertiary:'#DA00A9',
         quatenary:'#FF3569',
         code:{
             background:'#00291D',
             color:'#F9F871'
-        }
+        },
+        navShadow:'0 .25rem .5rem 	hsl(0, 0%, 13%,.18)'
     },
     fonts:{...fonts}
 }

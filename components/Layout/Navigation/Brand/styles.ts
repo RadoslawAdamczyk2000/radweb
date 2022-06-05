@@ -11,7 +11,7 @@ export const BrandWrapper = styled.div`
         transition:.15s linear color;
         &:focus,
         &:hover{
-            color:${({theme}) => theme.colors.secondary};
+            color:${({theme}) => theme.colors.primary};
         }
     }
 `

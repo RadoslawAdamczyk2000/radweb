@@ -28,7 +28,7 @@ export const MenuItemExpand =  styled.div`
         position:relative;
         z-index:0;
         &::before{
-            background:orange;
+            background-color:${({theme}) => theme.colors.tertiary};
             height:100%;
             left:-125%;
             width:115%;
@@ -44,10 +44,15 @@ export const MenuItemExpand =  styled.div`
         }
     }
     & > div{
+        color:inherit;
         cursor:pointer;
         font-size:2.5rem;
         height:3.45rem;
         width:3.45rem;
+        &:focus,
+        &:hover{
+            color:${({theme}) => theme.colors.tertiary};
+        }
     }
 `
 export const MenuItemMain = styled(MenuItem)`
@@ -61,7 +66,7 @@ export const MenuItemMain = styled(MenuItem)`
             position:relative;
             z-index:0;
             &::before{
-                background:orange;
+                background-color:${({theme}) => theme.colors.tertiary};
                 height:100%;
                 left:-125%;
                 width:115%;
