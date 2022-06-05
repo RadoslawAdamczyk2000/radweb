@@ -8,18 +8,9 @@ const Page:NextPage = () => {
     >
       <>
         <Hero/>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
+        <main>
+          
+        </main>
         <li>1</li>
         <li>1</li>
         <li>1</li>
