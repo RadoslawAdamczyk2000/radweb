@@ -14,6 +14,11 @@ export const MenuItemExpand =  styled.div`
     display:flex;
     flex-flow:row nowrap;
     justify-content:center;
+    @media only screen {
+        @media (max-width:900px){
+            justify-content:start;
+        }
+    }
     & > * {
         align-items:center;
         display:flex;

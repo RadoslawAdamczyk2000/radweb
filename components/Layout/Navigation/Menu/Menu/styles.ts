@@ -9,6 +9,7 @@ export const MenuWrapper = styled.menu`
     transition:.15s linear color,.15s linear height;
     @media only screen {
         @media (max-width:900px){
+            align-items:start;
             gap:0 .35rem;
             padding:0 .25rem;
         }

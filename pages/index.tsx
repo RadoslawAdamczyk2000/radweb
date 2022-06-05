@@ -7,7 +7,7 @@ const Page:NextPage = () => {
       isHome={true}
     >
       <>
-        {/* <Hero/> */}
+        <Hero/>
         <li>1</li>
         <li>1</li>
         <li>1</li>

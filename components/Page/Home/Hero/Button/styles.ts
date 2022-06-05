@@ -35,6 +35,29 @@ export const ButtonWrapper = styled.div`
             }
         }
     }
-
+    @media only screen{
+        @media (max-width:530px){
+            font-size:3rem;
+            height:4.5rem;
+            width:4.5rem;
+            &.left{
+                left:1rem;
+            }
+            &.right{
+                right:1rem;
+            }
+        }
+        @media (max-width:450px){
+            font-size:3rem;
+            height:3.5rem;
+            width:3.5rem;
+            &.left{
+                left:.35rem;
+            }
+            &.right{
+                right:.35rem;
+            }
+        }
+    }
 
 `

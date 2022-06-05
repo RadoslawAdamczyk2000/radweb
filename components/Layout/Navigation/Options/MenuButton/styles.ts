@@ -16,7 +16,7 @@ export const MenuButtonWrapper = styled.div<intMenuButton>`
         position:relative;
         width:3.85rem;
         & > span{
-            background-color:#fff;
+            background-color:${({theme}) => theme.colors.color};
             height:.3rem;
             transition:.2s linear transform,.2s linear width;
             width:95%;

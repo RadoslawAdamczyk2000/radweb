@@ -26,9 +26,6 @@ const Navigation = ({isHome}:IntNavigation) => {
             <NavigationWrapper 
                 isHome={isHome} 
                 isScroll={isScrolled}
-                style={{
-                    backgroundColor:'green'
-                }}
             >
                 <Brand/>
                 <Menu/>

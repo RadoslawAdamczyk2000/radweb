@@ -29,6 +29,7 @@ export const NavigationWrapper = styled.nav<intNavigation>`
 
     @media only screen {
         @media (max-width:970px){
+            height:4rem;
             & > div{
                 &:first-of-type{
                     flex-basis:12rem;
@@ -45,9 +46,23 @@ export const NavigationWrapper = styled.nav<intNavigation>`
             }
         }
         @media (max-width:900px){
+            background-color:${({theme}) => theme.colors.background};
             height:auto;
             flex-flow:row wrap;
             justify-content:space-between;
+            position:sticky;
+            .brand{
+                & > a{
+                    color:${({theme}) => theme.colors.color};
+                    &:focus,
+                    &:hover{
+                        color:${({theme}) => theme.colors.primary};
+                    }
+                }
+            }
+            .themeButton{
+                color:${({theme}) => theme.colors.color};
+            }
             & > div{
                 &:first-of-type{
                     justify-content:flex-start;
@@ -111,6 +126,27 @@ export const NavigationWrapper = styled.nav<intNavigation>`
         .themeButton{
             color:${({theme}) => theme.colors.color};
         }
+        @media only screen {
+            @media (max-width:900px){
+                color:${({theme}) => theme.colors.background};
+                & > *{
+                    color:${({theme}) => theme.colors.background};
+
+                }
+                .brand{
+                    & > a{
+                        color:${({theme}) => theme.colors.color};
+                        &:focus,
+                        &:hover{
+                            color:${({theme}) => theme.colors.primary};
+                        }
+                    }
+                }
+                .themeButton{
+                    color:${({theme}) => theme.colors.color};
+                }
+            }
+        }
     ` }
     ${({isScroll}) => isScroll && css`
         box-shadow:${({theme}) => theme.colors.navShadow};
@@ -122,6 +158,48 @@ export const NavigationWrapper = styled.nav<intNavigation>`
                     &:hover{
                         color:#fff;
                     }
+                }
+            }
+        }
+        @media only screen {
+            @media (max-width:900px){
+                color:${({theme}) => theme.colors.background};
+                & > *{
+                    color:${({theme}) => theme.colors.background};
+                }
+                .brand{
+                    & > a{
+                        color:${({theme}) => theme.colors.color};
+                        &:focus,
+                        &:hover{
+                            color:${({theme}) => theme.colors.primary};
+                        }
+                    }
+                }
+                .themeButton{
+                    color:${({theme}) => theme.colors.color};
+                }
+            }
+        }
+    `}
+    ${({isScroll}) => !isScroll && css`
+        @media only screen {
+            @media (max-width:900px){
+                color:${({theme}) => theme.colors.background};
+                & > *{
+                    color:${({theme}) => theme.colors.background};
+                }
+                .brand{
+                    & > a{
+                        color:${({theme}) => theme.colors.color};
+                        &:focus,
+                        &:hover{
+                            color:${({theme}) => theme.colors.primary};
+                        }
+                    }
+                }
+                .themeButton{
+                    color:${({theme}) => theme.colors.color};
                 }
             }
         }
