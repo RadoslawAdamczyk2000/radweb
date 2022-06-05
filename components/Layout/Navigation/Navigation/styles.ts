@@ -186,8 +186,8 @@ export const NavigationWrapper = styled.nav<intNavigation>`
         @media only screen {
             @media (max-width:900px){
                 color:${({theme}) => theme.colors.background};
-                & > *{
-                    color:${({theme}) => theme.colors.background};
+                menu{
+                    color:${({theme}) => theme.colors.color};
                 }
                 .brand{
                     & > a{
