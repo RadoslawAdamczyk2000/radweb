@@ -1,6 +1,7 @@
-const MenuButton = () => {
+import { IntMenuButton } from "./interface";
+const MenuButton = ({handle,isActive}:IntMenuButton) => {
     return(
-        <div>
+        <div isActive={isActive} onClick={handle}>
             ||
         </div>
     )
