@@ -6,7 +6,7 @@ export const MenuWrapper = styled.menu`
     justify-content:flex-end;
     gap:0 .85rem;
     padding:0 1rem;
-    transition:.15s linear color;
+    transition:.15s linear color,.15s linear height;
     @media only screen {
         @media (max-width:900px){
             gap:0 .35rem;
@@ -20,7 +20,6 @@ export const MenuWrapper = styled.menu`
         }
         @media (max-width:625px) and (orientation:landscape){
             justify-content:start;
-            background:pink;
             gap:0;
             flex-flow:column;
             max-height:75vh wrap;

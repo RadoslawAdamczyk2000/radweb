@@ -8,8 +8,7 @@ import { NavigationWrapper } from "./styles"
 
 const Navigation = ({isHome}:IntNavigation) => {
     const [isScrolled,setScrolled] = useState(false);
-    const { isActive } = useContext(Context);
-    console.log(isActive);
+    
     useEffect(() => {
         if(typeof window !== undefined){
             window.addEventListener('scroll',() => {
@@ -32,10 +31,6 @@ const Navigation = ({isHome}:IntNavigation) => {
                 }}
             >
                 <Brand/>
-                {
-                    isActive &&
-                    <Menu/>
-                }
                 <Menu/>
                 <Options/>
             </NavigationWrapper>
