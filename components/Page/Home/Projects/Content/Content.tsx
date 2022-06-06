@@ -1,10 +1,11 @@
 import Image from "next/image"
 import SectionButton from "../../../../All/Button/SectionButton/SectionButton"
 import { IntContent } from "./interface";
+import { ContentWrapper } from "./styles";
 
 const Content = ({button,content,image,path,title}:IntContent) => {
     return(
-        <div>
+        <ContentWrapper>
             <figure>
                 <Image
                     alt={title}
@@ -26,7 +27,7 @@ const Content = ({button,content,image,path,title}:IntContent) => {
                     />
                 </section>
             </div>
-        </div>
+        </ContentWrapper>
     )
 }
 export default Content;

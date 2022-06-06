@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 export const CardWrapper = styled.li`
-    background:red;
-    height:28rem;
+    background-color:${({theme}) => theme.colors.gray};
+    flex-shrink:0;
+    height:28rem;   
     max-height:auto;
     max-width:95%;
     width:53rem;
@@ -9,10 +10,13 @@ export const CardWrapper = styled.li`
         @media (max-width:400px) {
             height:40rem;
         }
-        @media (max-width:220px) {
-            height:45rem;
+        @media (max-width:260px) {
+            height:50rem;
         }
-    }
+        @media (max-width:220px) {
+            height:65rem;
+        }
+    }   
     & > a{
         align-items:center;
         display:flex;
@@ -48,6 +52,12 @@ export const CardWrapper = styled.li`
             top:0;
             transition:.2s linear opacity,.2s linear visibility;
             visibility:hidden;
+            @media only screen {
+                @media (max-width:750px) {
+                    opacity:95;
+                    visibility:visible;
+                }
+            }
             & > * {
                 width:100%;
             }

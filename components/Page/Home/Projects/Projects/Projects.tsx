@@ -3,6 +3,7 @@ import { stack } from "../../../../../data/stack"
 import SectionButton from "../../../../All/Button/SectionButton/SectionButton"
 import Card from "../../../../All/Projects/Card/Card"
 import Content from "../Content/Content"
+import { CardsWrapper } from "./styles"
 
 const Projects = () => {
     return(
@@ -14,7 +15,7 @@ const Projects = () => {
                 path="#"
                 title="Projekty"
             />
-            <ul>
+            <CardsWrapper>
                 <Card
                     excerpt="Każdy postawia swój pierwszy krok na rynku. Moim pierwszym krokiem była strona zrealizowana dla Borókowego Gaju - gospodarstwa, które należy do ojca mojego kolegi. Niedługo minie rok od zrealizowania tej strony. Dziś napewno napisałbym lepiej tą stronę, jednak z perspektywy pozycjonera statystyki są idealne."
                     image="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
@@ -43,7 +44,7 @@ const Projects = () => {
                     stack={[stack.html.icon,stack.css.icon,stack.next.icon]}
                     title="Borówkowy Gaj"
                 />
-            </ul>
+            </CardsWrapper>
         </section>
     )
 }
