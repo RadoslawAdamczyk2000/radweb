@@ -116,6 +116,7 @@ export const MovieWrapper = styled.div`
                         font-size:2.2rem;
                         font-weight:700;
                         padding:1rem 2rem;
+                        text-align:center;
                         transition:.15s linear transform;
                         &:focus,
                         &:hover{

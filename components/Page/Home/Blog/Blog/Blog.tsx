@@ -1,14 +1,15 @@
 import Link from "next/link"
-import Card from "../Card/Card";
-import { CardsWrapper } from "./styles";
+import Card from "../../../../All/Blog/Card/Card";
+import SectionButton from "../../../../All/Button/SectionButton/SectionButton";
+import { CardsWrapper, HeadingWrapper } from "./styles";
 
 const Blog = () => {
     return(
         <section>
-            <div>
+            <HeadingWrapper>
                 <h2>Blog</h2>
                 <h2>Nowości i artykuły</h2>
-            </div>  
+            </HeadingWrapper>  
             <CardsWrapper>
                 <Card
                     authorPath='#'
@@ -77,13 +78,10 @@ const Blog = () => {
                     title="Czym jest HTML? - historia czy teraźniejszość?"
                 />
             </CardsWrapper>
-            <div>
-                <Link href='/blog'>
-                    <a>
-                        Sprawdź wszystkie
-                    </a>
-                </Link>
-            </div>
+            <SectionButton
+                path="#"
+                title="Sprawdź wszystkie"
+            />
         </section>
     )
 }

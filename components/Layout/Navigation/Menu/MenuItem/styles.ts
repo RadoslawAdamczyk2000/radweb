@@ -103,8 +103,9 @@ export const MenuItemMain = styled(MenuItem)`
 export const MenuItemSubmenu = styled(MenuItem)`
     & > div{
         & > a{
-            background-color:${({theme}) => theme.colors.primary};
+            background-color:${({theme}) => theme.colors.secondary};
             border-radius:.45rem;
+            color:#fff;
             padding:0 .5rem;
             transition:.12s linear filter;
             &:focus,

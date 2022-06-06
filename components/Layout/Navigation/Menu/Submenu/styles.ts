@@ -9,7 +9,7 @@ export const SubmenuWrapper = styled.li`
     }
     & > ul{
         align-items:start;
-        background-color:${({theme}) => theme.colors.primary};
+        background-color:${({theme}) => theme.colors.secondary};
         border-radius:0 .75rem .75rem .75rem;
         color:black;
         display:flex;

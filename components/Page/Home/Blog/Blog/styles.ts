@@ -37,3 +37,45 @@ export const CardsWrapper = styled.ul`
         }
     }
 `
+export const HeadingWrapper = styled.div`
+    align-items:center;
+    display:flex;
+    flex-flow:column;
+    font-family:${({theme}) => theme.fonts.family.heading};
+    justify-content:center;
+    padding:2rem 4rem;
+    row-gap:1rem;
+    & > h2{
+        text-align:center;
+        &:first-of-type{
+            color:${({theme}) => theme.colors.tertiary};
+            font-size:7rem;
+            letter-spacing:1rem;
+        }
+        &:last-of-type{
+            color:${({theme}) => theme.colors.gray};
+            font-size:4rem;
+            letter-spacing:.5rem;
+        }
+        @media only screen {
+            @media (max-width:400px){
+                &:first-of-type{
+                    font-size:5rem;
+                }
+                &:last-of-type{
+                    font-size:2.2rem;
+                }       
+            }
+            @media (max-width:250px){
+                &:first-of-type{
+                    font-size:3.5rem;
+                    letter-spacing:.5rem;
+                }
+                &:last-of-type{
+                    font-size:2.2rem;
+                    letter-spacing:.25rem;
+                }       
+            }
+        }
+    }
+`
