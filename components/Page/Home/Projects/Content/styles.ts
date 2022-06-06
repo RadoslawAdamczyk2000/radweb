@@ -12,6 +12,9 @@ export const ContentWrapper = styled.div`
             min-height:60rem;
             height:auto;
         }
+        @media (max-width:250px){
+            min-height:70rem;
+        }
         @media (max-width:230px){
             min-height:80rem;
         }
