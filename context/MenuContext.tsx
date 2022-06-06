@@ -16,7 +16,11 @@ export const Provider = ({children}:IntMenuContext) => {
         }
     }
     useEffect(() => {
-        
+        if(typeof window !== undefined){
+            if(window.innerWidth > 900){
+                setActive(true);
+            }
+        }
     },[])
 
     // console.log(screenWidth);

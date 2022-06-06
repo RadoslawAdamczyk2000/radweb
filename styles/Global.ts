@@ -46,13 +46,4 @@ export const Global = createGlobalStyle`
     ul{
         list-style:none;
     }
-
-    h1,
-    h2,
-    h3{
-        &.heading{
-            font-family:${({theme}) => theme.fonts.family.regular};
-            font-size:3rem;
-        }
-    }
 `
