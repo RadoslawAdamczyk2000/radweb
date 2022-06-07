@@ -20,5 +20,6 @@ export const PartnersWrapper = styled.div`
     & > ul {
         flex-flow:row wrap;
         gap:1.95rem;
+        padding:0 3rem;
     }
 `

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const PartnerWrapper = styled.li`
-    
+    margin:auto;
     & > a{
         font-size:2rem;
         color:${({theme}) => theme.colors.background};
