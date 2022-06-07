@@ -1,4 +1,4 @@
-import ThemeButton from "../components/All/ThemeButton";
+import Footer from "../components/Layout/Footer/Footer/Footer";
 import Navigation from "../components/Layout/Navigation/Navigation/Navigation";
 import { Provider } from "../context/ThemeContext";
 import { Global } from "../styles/Global";
@@ -12,6 +12,7 @@ const Layout = ({children,isHome=false}:IntLayout) => {
                 <>
                     {children}
                 </>
+                <Footer/>
             </>
         </Provider>
     )   
