@@ -20,10 +20,25 @@ export const ContentWrapper = styled.div`
         }
     }
     & > figure{
-        min-height:50rem;
+        min-height:55rem;
         position:relative;
         width:100%;
         z-index:-1;
+        @media only screen {
+            @media (min-width:1450px){
+                min-height:75rem;
+            }
+            @media (max-width:650px){
+                min-height:60rem;
+                height:auto;
+            }
+            @media (max-width:250px){
+                min-height:70rem;
+            }
+            @media (max-width:230px){
+                min-height:80rem;
+            }
+        }
     }
     & > div {
         background-color:hsl(55, 77%, 20%,.85);
