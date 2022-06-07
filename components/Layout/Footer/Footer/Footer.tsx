@@ -4,6 +4,8 @@ const Footer = () => {
     return(
         <footer>
             <Menu/>
+            <span/>
+            
         </footer>
     )
 }
