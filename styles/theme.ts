@@ -10,6 +10,10 @@ export const darkTheme:DefaultTheme = {
     colors:{
         background:'#212121',
         color:'#f5f5f5',
+        offer:{
+            color:'hsl(0, 0%, 13% ,.7)',
+            hover:'hsl(0, 0%, 13% ,.5)',
+        },
         gray:'#d6d6d6',
         primary:'#c3dcf1',
         secondary:'#d63c75',
@@ -27,6 +31,10 @@ export const lightTheme:DefaultTheme = {
     colors:{
         background:'#fdfdfd',
         color:'#0a0a0a',
+        offer:{
+            color:'hsl(0, 0%, 99%,.7)',
+            hover:'hsl(0, 0%, 99%,1)',
+        },
         gray:'#3d3d3d',
         primary:'#00C2B2',
         secondary:'#009EFA',

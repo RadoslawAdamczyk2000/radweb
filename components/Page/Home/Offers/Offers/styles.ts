@@ -7,11 +7,9 @@ export const OffersWrapper = styled.div`
     grid-column-gap:1rem;
     padding:5rem .85rem;
     & > div{
-        background:red;
         position:relative;
         &:last-of-type{
             align-items:center;
-            background:green;
             display:flex;
             flex-flow:column;
             justify-content:start;

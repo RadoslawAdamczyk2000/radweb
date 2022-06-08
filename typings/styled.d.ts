@@ -4,6 +4,10 @@ declare module 'styled-components' {
         colors:{
             background:string;
             color:string;
+            offer:{
+                color:string;
+                hover:string;
+            }
             gray:string;
             primary:string;
             secondary:string;
