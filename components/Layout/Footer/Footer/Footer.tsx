@@ -1,3 +1,4 @@
+import Contact from "../Contact/Contact/Contact";
 import Menu from "../Menu/Menu/Menu";
 
 const Footer = () => {
@@ -5,7 +6,7 @@ const Footer = () => {
         <footer>
             <Menu/>
             <span/>
-            
+            <Contact/>
         </footer>
     )
 }
