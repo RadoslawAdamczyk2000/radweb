@@ -1,12 +1,13 @@
 import Info from "../Info/Info";
 import Socials from "../Socials/Socials";
+import { ContactWrapper } from "./styles";
 
 const Contact = () => {
     return(
-        <div>
+        <ContactWrapper>
             <Info/>
             <Socials/>
-        </div>  
+        </ContactWrapper>  
     )
 }
 export default Contact;

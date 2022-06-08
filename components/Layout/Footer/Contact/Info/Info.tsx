@@ -1,8 +1,10 @@
+import { InfoWrapper } from "./styles";
+
 const Info = () => {
     return(
-        <div>
+        <InfoWrapper>
             <h4>RadWEB <br/> Radosław Adamczyk</h4>
-        </div>
+        </InfoWrapper>
     )
 }
 export default Info;

@@ -1,8 +1,9 @@
 import { socials } from "../../../../../data/socials"
 import Social from "../Social/Social"
+import { SocialsWrapper } from "./styles";
 const Socials = () => {
     return(
-        <ul>
+        <SocialsWrapper>
             {socials.map(({icon,path,title},key:number ) =>
                 <Social
                     icon={icon}
@@ -11,7 +12,7 @@ const Socials = () => {
                     title={title}
                 />
             )}
-        </ul>
+        </SocialsWrapper>
     )
 }
 export default Socials;

@@ -1,14 +1,17 @@
 import Link from "next/link"
 import { IntSocial } from "./interface";
+import { SocialWrapper } from "./styles";
 const Social = ({icon,path,title}:IntSocial) => {
     return(
-        <li title={title}>
+        <SocialWrapper title={title}>
             <Link href={path}>
                 <a title={title}>
-                    {icon}
+                    <p>
+                        {icon}
+                    </p>
                 </a>
             </Link>
-        </li>
+        </SocialWrapper>
     )
 }
 export default Social;

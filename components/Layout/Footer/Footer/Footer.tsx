@@ -1,13 +1,16 @@
 import Contact from "../Contact/Contact/Contact";
+import Credits from "../Credits/Credits/Credits";
 import Menu from "../Menu/Menu/Menu";
+import { FooterWrapper } from "./styles";
 
 const Footer = () => {
     return(
-        <footer>
+        <FooterWrapper>
             <Menu/>
             <span/>
             <Contact/>
-        </footer>
+            <Credits/>
+        </FooterWrapper>
     )
 }
 export default Footer;
