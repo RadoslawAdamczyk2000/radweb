@@ -17,4 +17,19 @@ export const OffersWrapper = styled.div`
             row-gap:.5rem;
         }
     }
+    @media only screen {
+        @media (max-width:1090px){
+            grid-template-columns:1.25fr 2fr;
+        }
+        @media (max-width:800px){
+            align-items:center;
+            display:flex;
+            flex-flow:column;
+            row-gap:1rem;
+            text-align:center;
+            & > * {
+                width:100%;
+            }
+        }
+    }
 `

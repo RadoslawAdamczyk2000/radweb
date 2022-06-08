@@ -9,6 +9,11 @@ export const ContentWrapper = styled.section`
     row-gap:.45rem;
     top:10rem;
     width:85%;
+    @media only screen {
+        @media (max-width:950px){
+            width:95%;
+        }
+    }
     & > * {
         width:100%;
     }
