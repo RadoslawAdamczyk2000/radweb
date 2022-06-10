@@ -3,7 +3,6 @@ import MenuItem from "../MenuItem/MenuItem";
 import MenuSection from "../MenuSection/MenuSection";
 import { MenuWrapper } from "./styles";
 const Menu = () => {
-    console.log(menu);
     return(
         <MenuWrapper>
             <div>
