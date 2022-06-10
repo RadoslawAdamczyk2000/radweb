@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const LangBoxWrapper = styled.div`
-    background-color:${({theme}) => theme.colors.primary};
+    background-color:${({theme}) => theme.colors.secondary};
     height:100vh;
     left:0;
     position:fixed;
@@ -16,7 +16,7 @@ export const LangBoxWrapper = styled.div`
             padding:0 2rem;
             & > .button{
                 align-items:center;
-                color:${({theme}) => theme.colors.color};
+                color:${({theme}) => theme.colors.background};
                 cursor:pointer;
                 display:flex;
                 font-size:6rem;
