@@ -19,7 +19,7 @@ const Content = ({button,content,image,path,title}:IntContent) => {
             </figure>
             <div>
                 <section>
-                    <h1>Projekty</h1>
+                    <h2>Projekty</h2>
                     <p dangerouslySetInnerHTML={{__html:content}} />
                     <SectionButton
                         title={button}

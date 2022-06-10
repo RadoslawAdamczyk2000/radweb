@@ -22,7 +22,7 @@ const Card = ({excerpt,image,path,stack,title}:IntCard) => {
                         </div>
                     </figure>
                     <figcaption>
-                        <h1 className='title'>{title}</h1>
+                        <h3 className='title'>{title}</h3>
                         <ul className='stacks'>
                             {stack.map((item:ReactElement,key:number) => 
                                 <li className='stack' key={key}>{item}</li>

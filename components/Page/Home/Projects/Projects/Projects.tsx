@@ -1,10 +1,7 @@
-import Image from "next/image"
 import { stack } from "../../../../../data/stack"
-import SectionButton from "../../../../All/Button/SectionButton/SectionButton"
 import Card from "../../../../All/Projects/Card/Card"
 import Content from "../Content/Content"
 import { CardsWrapper } from "./styles"
-
 const Projects = () => {
     return(
         <section>

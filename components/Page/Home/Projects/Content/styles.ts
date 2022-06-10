@@ -74,7 +74,7 @@ export const ContentWrapper = styled.div`
                     padding:0 .5rem;
                 }
             }
-            & > h1{
+            & > h2{
                 color:#fff;
                 font-family:${({theme}) => theme.fonts.family.heading};
                 font-size:5rem;
