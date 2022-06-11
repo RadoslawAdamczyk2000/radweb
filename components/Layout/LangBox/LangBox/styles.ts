@@ -42,6 +42,18 @@ export const LangBoxWrapper = styled.div`
                 row-gap:2rem;
                 width:95%;
             }
+            @media only screen {
+                @media (max-width:750px) and (orientation:landscape){
+                    overflow:scroll;
+                    &,
+                    & > ul{
+                        justify-content:flex-start;
+                    }
+                    & > ul  > li:last-of-type{
+                        margin-bottom:5rem;
+                    }
+                }
+            }
         }
     }
 `
