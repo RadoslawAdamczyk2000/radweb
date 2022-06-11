@@ -10,7 +10,6 @@ import Steps from "../components/Page/Home/Steps/Steps/Steps";
 import Testimonials from "../components/Page/Home/Testimonials/Testimonials";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
-  
   return(
     <Layout
       isHome={true}
