@@ -10,7 +10,7 @@ export const LangItemWrapper = styled.li`
         font-size:2.85rem;
         font-weight:700;
         justify-content:center;
-        padding:1rem 3.5rem;
+        padding:.85rem 3.5rem;
         transition:.2s linear box-shadow,.2s linear filter,.2s linear transform;
         &:focus,
         &:hover{

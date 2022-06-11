@@ -5,8 +5,7 @@ import MenuItem from "../MenuItem/MenuItem";
 import Submenu from "../Submenu/Submenu";
 import { MenuWrapper } from "./styles";
 const Menu = () => {
-    const { isActive } = useContext(Context);
-    console.log(isActive);
+    const { isActive,handle } = useContext(Context);
     return(
         <>
             {
@@ -17,17 +16,17 @@ const Menu = () => {
                             {
                                 isExpand ?
                                 <Submenu
-                                    handle={() => alert(title)}
+                                    handle={() => handle()}
                                     key={key}
-                                    path='/'
+                                    path={path}
                                     submenu={submenu}
                                     title={title}
                                 /> :
                                 <MenuItem
                                     isMain={true}
-                                    handle={() => alert(title)}
+                                    handle={() => handle()}
                                     key={key}
-                                    path='/'
+                                    path={path}
                                     title={title}
                                 />
                             }

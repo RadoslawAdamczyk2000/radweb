@@ -6,6 +6,7 @@ import { Provider as Lang, Context as LangContext } from "../context/LangContext
 import { Provider as Theme } from "../context/ThemeContext";
 import { Global } from "../styles/Global";
 import { IntLayout } from "../typings/interface";
+
 const Layout = ({children,isHome=false}:IntLayout) => {
     const {isOpen} = useContext(LangContext);
     return(

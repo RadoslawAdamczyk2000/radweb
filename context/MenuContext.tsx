@@ -22,9 +22,6 @@ export const Provider = ({children}:IntMenuContext) => {
             }
         }
     },[])
-
-    // console.log(screenWidth);
-
     return(
         <Context.Provider value={{
             isActive:isActive,

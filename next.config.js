@@ -14,6 +14,10 @@ module.exports = withMDX({
     "md", 
     "mdx"
   ],
+  i18n:{
+    locales:["pl","en","es","de"],
+    defaultLocale:"pl",
+  },
   reactStrictMode: true,
   images: {
     domains: [

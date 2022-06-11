@@ -1,5 +1,5 @@
+import { useRouter } from "next/router";
 import { createContext, useEffect, useState } from "react";
-
 export const Context = createContext({
     close:() => {},
     isOpen:false,
@@ -13,9 +13,6 @@ export const Provider = ({children}:any) => {
     const openHandle = () => {
         setLangMenu(true);
     }
-    useEffect(() => {
-        console.log(isLangMenu)
-    },[isLangMenu])
     return(
         <Context.Provider 
             value={{
