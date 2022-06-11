@@ -10,7 +10,7 @@ const Layout = ({children,isHome=false}:IntLayout) => {
     const {isOpen} = useContext(LangContext);
     return(
         <Theme>
-            <>
+            <Lang>
                 <Global/>
                 <Navigation isHome={isHome}/>
                 <>
@@ -18,7 +18,7 @@ const Layout = ({children,isHome=false}:IntLayout) => {
                 </>
                 <Footer/>
                 <LangBox/>
-            </>
+            </Lang>
         </Theme>
     )   
 }

@@ -1,5 +1,6 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
-export const LangBoxWrapper = styled.div`
+export const LangBoxWrapper = styled(motion.div)`
     background-color:${({theme}) => theme.colors.secondary};
     height:100vh;
     left:0;

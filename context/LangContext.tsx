@@ -6,7 +6,7 @@ export const Context = createContext({
     open:() => {},
 })
 export const Provider = ({children}:any) => {
-    const [isLangMenu,setLangMenu] = useState(true);
+    const [isLangMenu,setLangMenu] = useState(false);
     const closeHandle = () => {
         setLangMenu(false)
     }
