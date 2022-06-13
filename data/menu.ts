@@ -4,7 +4,6 @@ export const menu = {
             isExpand:false,
             title:'Start',
             path:'/',
-            submenu:[]
         },
         {
             isExpand:true,
@@ -24,7 +23,6 @@ export const menu = {
                     path:'/o-mnie/kariera',
                 },
             ],
-            value:'about'
         },
         {
             isExpand:true,
@@ -48,7 +46,6 @@ export const menu = {
                     path:'/blog',
                 },
             ],
-            value:'blog'
         },
         {
             isExpand:true,
@@ -99,19 +96,16 @@ export const menu = {
                     path:'/oferty/',
                 },
             ],
-            value:'offers'
         },
         {
             isExpand:false,
             title:'FAQ',
             path:'/faq',
-            submenu:[]
         },
         {
             isExpand:false,
             title:'Kontakt',
             path:'/kontakt',
-            submenu:[]
         }
     ],
     pt:[
@@ -119,7 +113,6 @@ export const menu = {
             isExpand:false,
             title:'Começar',
             path:'/',
-            submenu:[]
         },
         {
             isExpand:true,
@@ -139,7 +132,6 @@ export const menu = {
                     path:'/sobre-mim/carreira',
                 },
             ],
-            value:'about'
         },
         {
             isExpand:true,
@@ -163,7 +155,6 @@ export const menu = {
                     path:'/blog',
                 },
             ],
-            value:'blog'
         },
         {
             isExpand:true,
@@ -214,19 +205,16 @@ export const menu = {
                     path:'/ofertas/',
                 },
             ],
-            value:'offers'
         },
         {
             isExpand:false,
             title:'FAQ',
             path:'/faq',
-            submenu:[]
         },
         {
             isExpand:false,
             title:'Contato',
             path:'/contato',
-            submenu:[]
         }
     ],
     fr:[
@@ -234,7 +222,6 @@ export const menu = {
             isExpand:false,
             title:'Début',
             path:'/',
-            submenu:[]
         },
         {
             isExpand:true,
@@ -254,7 +241,6 @@ export const menu = {
                     path:'/a-propos-de-moi/carriere',
                 },
             ],
-            value:'about'
         },
         {
             isExpand:true,
@@ -278,7 +264,6 @@ export const menu = {
                     path:'/blog',
                 },
             ],
-            value:'blog'
         },
         {
             isExpand:true,
@@ -329,19 +314,16 @@ export const menu = {
                     path:'/des-offres',
                 },
             ],
-            value:'offers'
         },
         {
             isExpand:false,
             title:'FAQ',
             path:'/faq',
-            submenu:[]
         },
         {
             isExpand:false,
             title:'Contactez',
             path:'/contactez',
-            submenu:[]
         }
     ],
     en:[
@@ -349,7 +331,6 @@ export const menu = {
             isExpand:false,
             title:'Start',
             path:'/',
-            submenu:[]
         },
         {
             isExpand:true,
@@ -369,7 +350,6 @@ export const menu = {
                     path:'/about-me/career',
                 },
             ],
-            value:'about'
         },
         {
             isExpand:true,
@@ -393,7 +373,6 @@ export const menu = {
                     path:'/blog',
                 },
             ],
-            value:'blog'
         },
         {
             isExpand:true,
@@ -444,19 +423,16 @@ export const menu = {
                     path:'/offers/',
                 },
             ],
-            value:'offers'
         },
         {
             isExpand:false,
             title:'FAQ',
             path:'/faq',
-            submenu:[]
         },
         {
             isExpand:false,
             title:'Kontakt',
             path:'/contact',
-            submenu:[]
         }
     ],
     es:[
@@ -464,7 +440,6 @@ export const menu = {
             isExpand:false,
             title:'Comienzo',
             path:'/',
-            submenu:[]
         },
         {
             isExpand:true,
@@ -484,7 +459,6 @@ export const menu = {
                     path:'/sobre-mi/carrera-profesional',
                 },
             ],
-            value:'about'
         },
         {
             isExpand:true,
@@ -508,7 +482,6 @@ export const menu = {
                     path:'/blog',
                 },
             ],
-            value:'blog'
         },
         {
             isExpand:true,
@@ -559,19 +532,16 @@ export const menu = {
                     path:'/oferty/',
                 },
             ],
-            value:'offers'
         },
         {
             isExpand:false,
             title:'FAQ',
             path:'/faq',
-            submenu:[]
         },
         {
             isExpand:false,
             title:'Contacto',
             path:'/contacto',
-            submenu:[]
         }
     ],
     de:[
@@ -579,7 +549,6 @@ export const menu = {
             isExpand:false,
             title:'Anfang',
             path:'/',
-            submenu:[]
         },
         {
             isExpand:true,
@@ -599,7 +568,6 @@ export const menu = {
                     path:'/uber-mich/karriere',
                 },
             ],
-            value:'about'
         },
         {
             isExpand:true,
@@ -623,7 +591,6 @@ export const menu = {
                     path:'/bloggen',
                 },
             ],
-            value:'blog'
         },
         {
             isExpand:true,
@@ -674,19 +641,16 @@ export const menu = {
                     path:'/bietet-an/',
                 },
             ],
-            value:'offers'
         },
         {
             isExpand:false,
             title:'FAQ',
             path:'/faq',
-            submenu:[]
         },
         {
             isExpand:false,
             title:'Kontakt',
             path:'/kontakt',
-            submenu:[]
         }
     ]
 }
