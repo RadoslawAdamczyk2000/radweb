@@ -7,7 +7,7 @@ const Menu = () => {
         <MenuWrapper>
             <div>
                 <div>
-                    {menu.map(({isExpand,path,title} ) =>
+                    {menu.pl.map(({isExpand,path,title} ) =>
                         <>
                             {
                                 !isExpand &&
@@ -19,7 +19,7 @@ const Menu = () => {
                         </>
                     )}  
                 </div>
-                {menu.map(({isExpand,submenu,title} ) =>
+                {menu.pl.map(({isExpand,submenu,title} ) =>
                     <>
                         {
                             isExpand &&

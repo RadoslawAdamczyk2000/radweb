@@ -1,120 +1,4 @@
-export const menu = [
-    {
-        isExpand:false,
-        title:'Start',
-        path:'/',
-        submenu:[]
-    },
-    {
-        isExpand:true,
-        title:'O mnie',
-        path:'/o-mnie',
-        submenu:[
-            {
-                title:'Kim jestem?',
-                path:'/o-mnie/',
-            },
-            {
-                title:'Certyfikaty',
-                path:'/o-mnie/certyfikaty-i-kursy',
-            },
-            {
-                title:'Kariera',
-                path:'/o-mnie/kariera',
-            },
-        ],
-        value:'about'
-    },
-    {
-        isExpand:true,
-        title:'Blog',
-        path:'/blog',
-        submenu:[
-            {
-                title:'Programowanie',
-                path:'/blog/programowanie',
-            },
-            {
-                title:'SEO',
-                path:'/blog/seo',
-            },
-            {
-                title:'Historia',
-                path:'/blog/historia',
-            },
-            {
-                title:'Pozostałe',
-                path:'/blog',
-            },
-        ],
-        value:'blog'
-    },
-    {
-        isExpand:true,
-        title:'Projekty',
-        path:'/projekty',
-        submenu:[
-            {
-                title:'Komercyjne',
-                path:'/projekty/realizacje-komercyjne',
-            },
-            {
-                title:'Prywatne',
-                path:'/projekty/realizacje-prywatne',
-            },
-            {
-                title:'Wszystkie',
-                path:'/projekty',
-            },
-        ]
-    },
-    {
-        isExpand:true,
-        title:'Oferty',
-        path:'/oferty',
-        submenu:[
-            {
-                title:'Strony internetowe',
-                path:'/oferty/tworzenie-stron-internetowych',
-            },
-            {
-                title:'Pozycjonowanie',
-                path:'/oferty/pozycjonowanie-stron-internetowych',
-            },
-            {
-                title:'Optymalizacja',
-                path:'/oferty/optymalizacja-stron-internetowych',
-            },
-            {
-                title:'Analityka',
-                path:'/oferty/analityka-stron-internetowych',
-            },
-            {
-                title:'Lokalizacje',
-                path:'/oferty/lokalizacje',
-            },
-            {
-                title:'Wszyskie',
-                path:'/oferty/',
-            },
-        ],
-        value:'offers'
-    },
-    {
-        isExpand:false,
-        title:'FAQ',
-        path:'/faq',
-        submenu:[]
-    },
-    {
-        isExpand:false,
-        title:'Kontakt',
-        path:'/kontakt',
-        submenu:[]
-    }
-]
-
-export const menu2 = {
+export const menu = {
     pl:[
         {
             isExpand:false,
@@ -302,7 +186,7 @@ export const menu2 = {
         },
         {
             isExpand:true,
-            title:'Offfers',
+            title:'Offers',
             path:'/offers',
             submenu:[
                 {
@@ -348,26 +232,26 @@ export const menu2 = {
     es:[
         {
             isExpand:false,
-            title:'Start',
+            title:'Comienzo',
             path:'/',
             submenu:[]
         },
         {
             isExpand:true,
-            title:'O mnie',
-            path:'/o-mnie',
+            title:'Sobre mí',
+            path:'/sobre-mi',
             submenu:[
                 {
-                    title:'Kim jestem?',
-                    path:'/o-mnie/',
+                    title:'Quién soy',
+                    path:'/sobre-mi/',
                 },
                 {
-                    title:'Certyfikaty',
-                    path:'/o-mnie/certyfikaty-i-kursy',
+                    title:'Certificados',
+                    path:'/sobre-mi/certificados-y-cursos',
                 },
                 {
-                    title:'Kariera',
-                    path:'/o-mnie/kariera',
+                    title:'Carrera',
+                    path:'/sobre-mi/carrera-profesional',
                 },
             ],
             value:'about'
@@ -378,19 +262,19 @@ export const menu2 = {
             path:'/blog',
             submenu:[
                 {
-                    title:'Programowanie',
-                    path:'/blog/programowanie',
+                    title:'Programación',
+                    path:'/blog/programacion',
                 },
                 {
-                    title:'SEO',
-                    path:'/blog/seo',
+                    title:'Posicionamiento',
+                    path:'/blog/posicionamiento-web',
                 },
                 {
                     title:'Historia',
                     path:'/blog/historia',
                 },
                 {
-                    title:'Pozostałe',
+                    title:'El restante',
                     path:'/blog',
                 },
             ],
@@ -398,50 +282,50 @@ export const menu2 = {
         },
         {
             isExpand:true,
-            title:'Projekty',
-            path:'/projekty',
+            title:'Proyectos',
+            path:'/proyectos',
             submenu:[
                 {
-                    title:'Komercyjne',
-                    path:'/projekty/realizacje-komercyjne',
+                    title:'Comercial',
+                    path:'/proyectos/realizaciones-comerciales',
                 },
                 {
-                    title:'Prywatne',
-                    path:'/projekty/realizacje-prywatne',
+                    title:'Privado',
+                    path:'/proyectos/proyectos-privados',
                 },
                 {
-                    title:'Wszystkie',
-                    path:'/projekty',
+                    title:'Todos',
+                    path:'/proyectos',
                 },
             ]
         },
         {
             isExpand:true,
-            title:'Oferty',
-            path:'/oferty',
+            title:'Ofertas',
+            path:'/ofertas',
             submenu:[
                 {
-                    title:'Strony internetowe',
-                    path:'/oferty/tworzenie-stron-internetowych',
+                    title:'Sitios web',
+                    path:'/ofertas/creando-sitios-web',
                 },
                 {
-                    title:'Pozycjonowanie',
-                    path:'/oferty/pozycjonowanie-stron-internetowych',
+                    title:'SEO',
+                    path:'/ofertas/seo',
                 },
                 {
-                    title:'Optymalizacja',
-                    path:'/oferty/optymalizacja-stron-internetowych',
+                    title:'Mejoramiento',
+                    path:'/ofertas/optimizacion-del-sitio-web',
                 },
                 {
-                    title:'Analityka',
-                    path:'/oferty/analityka-stron-internetowych',
+                    title:'Analítica',
+                    path:'/ofertas/analisis-de-sitios-web',
                 },
                 {
-                    title:'Lokalizacje',
-                    path:'/oferty/lokalizacje',
+                    title:'Ubicaciones',
+                    path:'/ofertas/ubicaciones',
                 },
                 {
-                    title:'Wszyskie',
+                    title:'Todos',
                     path:'/oferty/',
                 },
             ],
@@ -455,109 +339,109 @@ export const menu2 = {
         },
         {
             isExpand:false,
-            title:'Kontakt',
-            path:'/kontakt',
+            title:'Contacto',
+            path:'/contacto',
             submenu:[]
         }
     ],
     de:[
         {
             isExpand:false,
-            title:'Start',
+            title:'Anfang',
             path:'/',
             submenu:[]
         },
         {
             isExpand:true,
-            title:'O mnie',
-            path:'/o-mnie',
+            title:'Über mich',
+            path:'/uber-mich',
             submenu:[
                 {
-                    title:'Kim jestem?',
-                    path:'/o-mnie/',
+                    title:'Wer bin ich?',
+                    path:'/uber-mich/',
                 },
                 {
-                    title:'Certyfikaty',
-                    path:'/o-mnie/certyfikaty-i-kursy',
+                    title:'Zertifikat',
+                    path:'/uber-mich/certifikat-und-kurse',
                 },
                 {
-                    title:'Kariera',
-                    path:'/o-mnie/kariera',
+                    title:'Karriere',
+                    path:'/uber-mich/karriere',
                 },
             ],
             value:'about'
         },
         {
             isExpand:true,
-            title:'Blog',
-            path:'/blog',
+            title:'Bloggen',
+            path:'/bloggen',
             submenu:[
                 {
-                    title:'Programowanie',
-                    path:'/blog/programowanie',
+                    title:'Programmierung',
+                    path:'/bloggen/programmierung',
                 },
                 {
                     title:'SEO',
-                    path:'/blog/seo',
+                    path:'/bloggen/seo',
                 },
                 {
-                    title:'Historia',
-                    path:'/blog/historia',
+                    title:'Geschichte',
+                    path:'/bloggen/geschichte',
                 },
                 {
-                    title:'Pozostałe',
-                    path:'/blog',
+                    title:'Der Rest',
+                    path:'/bloggen',
                 },
             ],
             value:'blog'
         },
         {
             isExpand:true,
-            title:'Projekty',
-            path:'/projekty',
+            title:'Projekte',
+            path:'/projekte',
             submenu:[
                 {
-                    title:'Komercyjne',
-                    path:'/projekty/realizacje-komercyjne',
+                    title:'Kommerziell',
+                    path:'/projekte/kommerzielle-realisierungen',
                 },
                 {
-                    title:'Prywatne',
-                    path:'/projekty/realizacje-prywatne',
+                    title:'Privatgelände',
+                    path:'/projekte/private-projekte',
                 },
                 {
-                    title:'Wszystkie',
-                    path:'/projekty',
+                    title:'Alle',
+                    path:'/projekte',
                 },
             ]
         },
         {
             isExpand:true,
-            title:'Oferty',
-            path:'/oferty',
+            title:'Bietet an',
+            path:'/bietet-an',
             submenu:[
                 {
-                    title:'Strony internetowe',
-                    path:'/oferty/tworzenie-stron-internetowych',
+                    title:'Webseiten',
+                    path:'/bietet-an/webseiten-erstellen',
                 },
                 {
-                    title:'Pozycjonowanie',
-                    path:'/oferty/pozycjonowanie-stron-internetowych',
+                    title:'SEO',
+                    path:'/bietet-an/seo',
                 },
                 {
-                    title:'Optymalizacja',
-                    path:'/oferty/optymalizacja-stron-internetowych',
+                    title:'Optimierung',
+                    path:'/bietet-an/website-optimierung',
                 },
                 {
-                    title:'Analityka',
-                    path:'/oferty/analityka-stron-internetowych',
+                    title:'Analytik',
+                    path:'/bietet-an/website-analyse',
                 },
                 {
-                    title:'Lokalizacje',
-                    path:'/oferty/lokalizacje',
+                    title:'Standorte',
+                    path:'/bietet-an/standorte',
                 },
                 {
-                    title:'Wszyskie',
-                    path:'/oferty/',
+                    title:'Alle',
+                    path:'/bietet-an/',
                 },
             ],
             value:'offers'
