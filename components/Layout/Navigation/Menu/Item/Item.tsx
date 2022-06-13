@@ -1,17 +1,18 @@
 import Link from "next/link";
 import {FiChevronDown} from "react-icons/fi";
-const Item = ({isExpand,isMain,isSubmenu,path,title}) => {
+import { IntItem } from "./interface";
+const Item = ({handle,handleExpand,isExpand,isMain,isSubmenu,path,title}:IntItem) => {
     return(
         <>
             {
                 isExpand &&
                 <div>
                     <Link href={path}>
-                        <a rel='index follow'>
+                        <a rel='index follow' onClick={handle}>
                             {title}
                         </a>
                     </Link>
-                    <div className="button">
+                    <div className="button" onClick={handleExpand}>
                         <FiChevronDown/>
                     </div>
                 </div>
@@ -20,26 +21,20 @@ const Item = ({isExpand,isMain,isSubmenu,path,title}) => {
                 isMain &&
                 <li className="main">
                     <Link href={path}>
-                        <a rel='index follow'>
+                        <a rel='index follow' onClick={handle}>
                             {title}
                         </a>
                     </Link>
-                    <div className="button">
-                        <FiChevronDown/>
-                    </div>
                 </li>
             }
             {
                 isSubmenu &&
                 <li className="submenu">
                     <Link href={path}>
-                        <a rel='index follow'>
+                        <a rel='index follow' onClick={handle}>
                             {title}
                         </a>
                     </Link>
-                    <div className="button">
-                        <FiChevronDown/>
-                    </div>
                 </li>
             }
         </>
