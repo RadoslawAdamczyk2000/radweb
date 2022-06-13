@@ -7,6 +7,7 @@ const Page:NextPage = () => {
     <Layout>
       <>
         <main>
+          asdasdasd
         </main>
       </>
     </Layout>
