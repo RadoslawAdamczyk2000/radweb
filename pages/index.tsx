@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import { menu } from "../data/menu";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
-  console.log(menu);
   return(
     <Layout>
       <>
