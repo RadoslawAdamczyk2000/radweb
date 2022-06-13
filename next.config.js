@@ -15,7 +15,7 @@ module.exports = withMDX({
     "mdx"
   ],
   i18n:{
-    locales:["pl","en","es","de"],
+    locales:["pl","en","es","de","pt","fr"],
     defaultLocale:"pl",
   },
   reactStrictMode: true,
