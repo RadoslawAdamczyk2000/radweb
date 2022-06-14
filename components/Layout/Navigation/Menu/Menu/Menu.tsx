@@ -3,15 +3,13 @@ import { menu } from "../../../../../data/menu";
 import Item from "../Item/Item";
 import Submenu from "../Submenu/Submenu";
 import { IntMenuMap } from "./interface";
-
+import {isLocaleAccepted} from '../../../../../lib/functions/isLocaleAccepted';
 const Menu = () => {
-    const {locale,locales} = useRouter();
+    const {locale} = useRouter();
     return(
         <menu>
-            <h1>{locale}</h1>
-            {(locale !== undefined) && menu[locale].map(({isExpand,path,title,submenu=[]}:IntMenuMap) => 
+            {locale && isLocaleAccepted(locale) && menu[locale].map(({isExpand,path,title,submenu=[]}:IntMenuMap) => 
                 <>
-                    {console.log(typeof locale)}
                     {
                         (isExpand && typeof submenu !== undefined) ?
                         <Submenu

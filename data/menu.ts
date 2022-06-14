@@ -1,4 +1,5 @@
-export const menu = {
+import { IntMenu } from "./interface";
+export const menu:IntMenu = {
     pl:[
         {
             isExpand:false,
