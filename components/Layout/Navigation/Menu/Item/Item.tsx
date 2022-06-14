@@ -1,41 +1,42 @@
 import Link from "next/link";
 import {FiChevronDown} from "react-icons/fi";
 import { IntItem } from "./interface";
+import { Expand, Main, Submenu } from "./styles";
 const Item = ({handle,handleExpand,isExpand,isMain,isSubmenu,path,title}:IntItem) => {
     return(
         <>
             {
                 isExpand &&
-                <div>
+                <Expand>
                     <Link href={path}>
                         <a rel='index follow' onClick={handle}>
                             {title}
                         </a>
                     </Link>
-                    <div className="button" onClick={handleExpand}>
+                    <div className="button" onClick={handleExpand} tabIndex={1}>
                         <FiChevronDown/>
                     </div>
-                </div>
+                </Expand>
             }
             {
                 isMain &&
-                <li className="main">
+                <Main>
                     <Link href={path}>
                         <a rel='index follow' onClick={handle}>
                             {title}
                         </a>
                     </Link>
-                </li>
+                </Main>
             }
             {
                 isSubmenu &&
-                <li className="submenu">
+                <Submenu>
                     <Link href={path}>
                         <a rel='index follow' onClick={handle}>
                             {title}
                         </a>
                     </Link>
-                </li>
+                </Submenu>
             }
         </>
     )

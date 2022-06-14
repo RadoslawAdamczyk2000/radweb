@@ -4,17 +4,17 @@ import Item from "../Item/Item";
 import Submenu from "../Submenu/Submenu";
 import { IntMenuMap } from "./interface";
 import {isLocaleAccepted} from '../../../../../lib/functions/isLocaleAccepted';
+import { MenuWrapper } from "./styles";
 const Menu = () => {
     const {locale} = useRouter();
     return(
-        <menu>
+        <MenuWrapper>
             {locale && isLocaleAccepted(locale) && menu[locale].map(({isExpand,path,title,submenu=[]}:IntMenuMap) => 
                 <>
                     {
                         (isExpand && typeof submenu !== undefined) ?
                         <Submenu
                             handle={() => console.log('h')}
-                            handleExpand={() => console.log('e')}
                             path={path}
                             submenu={submenu}
                             title={title}
@@ -29,7 +29,7 @@ const Menu = () => {
                     }
                 </>
             )}
-        </menu>
+        </MenuWrapper>
     )
 }
 export default Menu;

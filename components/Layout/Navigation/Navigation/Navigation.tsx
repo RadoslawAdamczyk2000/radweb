@@ -1,14 +1,15 @@
 import Brand from "../Brand/Brand";
 import Menu from "../Menu/Menu/Menu";
 import Options from "../Options/Options/Options";
+import { NavigationWrapper } from "./styles";
 
 const Navigation = () => {
     return(
-        <nav>
+        <NavigationWrapper>
             <Brand/>
             <Menu/>
             <Options/>
-        </nav>
+        </NavigationWrapper>
     )
 }
 export default Navigation;
