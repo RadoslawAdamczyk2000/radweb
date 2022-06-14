@@ -655,3 +655,29 @@ export const menu:IntMenu = {
         }
     ]
 }
+export const menuLang = [
+    {
+        path:'pl',
+        title:'Polski'
+    },
+    {
+        path:'en',
+        title:'English'
+    },
+    {
+        path:'fr',
+        title:'Français'
+    },
+    {
+        path:'de',
+        title:'Deutsch'
+    },
+    {
+        path:'es',
+        title:'Español'
+    },
+    {
+        path:'pt',
+        title:'Português'
+    }
+]
