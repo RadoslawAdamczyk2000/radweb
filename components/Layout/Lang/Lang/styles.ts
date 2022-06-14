@@ -1,5 +1,6 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
-export const LangWrapper = styled.div`
+export const LangWrapper = styled(motion.div)`
     background-color:${({theme}) => theme.colors.color};
     color:${({theme}) => theme.colors.background};
     display:grid;
