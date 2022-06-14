@@ -1,9 +1,10 @@
 import {TiWorld} from 'react-icons/ti';
+import { LangWrapper } from './styles';
 const Lang = () => {
     return(
-        <div>
+        <LangWrapper>
             <TiWorld/>
-        </div>
+        </LangWrapper>
     )
 }
 export default Lang;

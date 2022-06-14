@@ -1,11 +1,14 @@
+import { useState } from "react";
+import { MenuWrapper } from "./styles";
+
 const Menu = () => {
+    const [isOpen,setOpen] = useState(false);
     return(
-        <div>
-            |||
+        <MenuWrapper isOpen={isOpen} onClick={() => setOpen(!isOpen)}>
             <span/>
             <span/>
             <span/>
-        </div>
+        </MenuWrapper>
     )
 }
 export default Menu;

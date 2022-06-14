@@ -1,11 +1,12 @@
 import Lang from "../Lang/Lang"
 import Menu from "../Menu/Menu"
+import { OptionsWrapper } from "./styles";
 const Options = () => {
     return(
-        <div>
+        <OptionsWrapper>
             <Lang/>
             <Menu/>
-        </div>
+        </OptionsWrapper>
     )
 }
 export default Options;
