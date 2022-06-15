@@ -1,5 +1,6 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
-export const MenuWrapper = styled.menu`
+export const MenuWrapper = styled(motion.menu)`
     align-items:center;
     display:flex;
     flex-flow:row nowrap;
