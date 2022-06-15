@@ -15,12 +15,12 @@ const Menu = () => {
         <>
             {
                 isOpen &&
-                <AnimatePresence
-                    initial={{opacity:0,visibility:'hidden'}}
-                    animate={{opacity:1,visibility:'visible'}}
-                    exit={{opacity:0,visibility:'hidden'}}
-                >
-                    <MenuWrapper>
+                <AnimatePresence>
+                    <MenuWrapper
+                        initial={{opacity:0,visibility:'hidden'}}
+                        animate={{opacity:1,visibility:'visible'}}
+                        exit={{opacity:0,visibility:'hidden'}}
+                    >
                         {locale && isLocaleAccepted(locale) && menu[locale].map(({isExpand,path,title,submenu=[]}:IntMenuMap) => 
                             <>
                                 {
