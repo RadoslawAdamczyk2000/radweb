@@ -5,6 +5,7 @@ export const OptionsWrapper = styled.div`
     flex-flow:row nowrap;
     gap:0 .5rem;
     height:100%;
-    justify-content:center;
+    justify-content:flex-end;
+    padding:0 1.25rem;
     width:100%;
 `

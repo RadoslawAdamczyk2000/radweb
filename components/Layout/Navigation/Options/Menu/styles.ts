@@ -5,7 +5,7 @@ interface i {
 export const MenuWrapper = styled.div<i>`
     display:none;
     @media only screen {
-        @media (max-width:750px){
+        @media (max-width:840px){
             align-items:center;
             cursor:pointer;
             display:flex;

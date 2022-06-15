@@ -19,6 +19,12 @@ export const Main = styled(Button)`
         padding:0 .35rem;
         position:relative;
         transition:.12s linear color;
+        @media only screen {
+            @media (max-width:920px){
+                font-size:1.6rem;
+                padding:0 .25rem;
+            }
+        }
         &::before{
             background-color:${({theme}) => theme.colors.primary};
             border-radius:.5rem;

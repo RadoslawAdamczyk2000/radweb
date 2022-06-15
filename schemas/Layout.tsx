@@ -5,13 +5,15 @@ import { LangProvider } from "../context/LangContext"
 import { Global } from "../styles/Global"
 import { theme } from "../styles/theme"
 import { IntLayout } from "./interface"
-const Layout = ({children}:IntLayout) => {
+const Layout = ({children,isHome=false}:IntLayout) => {
     return(
         <ThemeProvider theme={theme}>
             <LangProvider>
                 <>
                     <Global/>
-                    <Navigation/>
+                    <Navigation
+                        isHome={isHome}
+                    />
                     <>
                         {children}
                     </>

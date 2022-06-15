@@ -3,7 +3,9 @@ import { menu } from "../data/menu";
 import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
   return(
-    <Layout>
+    <Layout
+      isHome={true}
+    >
       <>
         <main>
           asdasdasd

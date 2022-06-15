@@ -1,11 +1,11 @@
 import Brand from "../Brand/Brand";
 import Menu from "../Menu/Menu/Menu";
 import Options from "../Options/Options/Options";
+import { IntNavigation } from "./interface";
 import { NavigationWrapper } from "./styles";
-
-const Navigation = () => {
+const Navigation = ({isHome}:IntNavigation) => {
     return(
-        <NavigationWrapper>
+        <NavigationWrapper isHome={isHome}>
             <Brand/>
             <Menu/>
             <Options/>
