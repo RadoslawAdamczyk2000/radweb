@@ -11,7 +11,7 @@ export const theme:DefaultTheme = {
     fonts:{
         family:{
             code:"'PT Mono', monospace",
-            regular:"'Roboto Slab', serif"
+            regular:"'Raleway', sans-serif"
         }
     }
 }
