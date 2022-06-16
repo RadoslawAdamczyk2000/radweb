@@ -432,7 +432,7 @@ export const menu:IntMenu = {
         },
         {
             isExpand:false,
-            title:'Kontakt',
+            title:'Contact',
             path:'/contact',
         }
     ],

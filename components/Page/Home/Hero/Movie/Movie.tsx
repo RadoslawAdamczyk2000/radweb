@@ -4,12 +4,13 @@ const Movie = ({movie,title}:IntMovie) => {
     return(
         <MovieWrapper>
             <video
-                autoPlay
-                loop
+                // autoPlay
+                // loop
                 muted
-                src={movie}
-                title=''
-            />
+            >
+                <source src={movie} />
+
+            </video>
             <div>
                 <section>
                     <h1 dangerouslySetInnerHTML={{__html:title}} />
