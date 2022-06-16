@@ -13,6 +13,8 @@ export const Global = createGlobalStyle`
         position:absolute;
     }
     ::selection{
+        background-color:${({theme}) => theme.colors.tertiary};
+        color:${({theme}) => theme.colors.background};
     }
     a{
         color:inherit;
