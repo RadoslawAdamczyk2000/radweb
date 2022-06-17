@@ -90,5 +90,38 @@ export const ContentWrapper = styled.div`
                 }
             }
         }
+        @media (max-width:800px){
+            & > section{
+                & > h2{
+                    font-size:3.5rem;
+                }
+                & > p {
+                    font-size:1.75rem;
+                    line-height:1.8;
+                }
+                & > div{
+                    & > a{
+                        font-size:2.75rem;
+                    }
+                }
+            }
+        }
+        @media (max-width:500px){
+            & > section{
+                row-gap:.65rem;
+                & > h2{
+                    font-size:3rem;
+                }
+                & > p {
+                    font-size:1.6rem;
+                    line-height:1.7;
+                }
+                & > div{
+                    & > a{
+                        font-size:2.25rem;
+                    }
+                }
+            }
+        }
     }
 `
