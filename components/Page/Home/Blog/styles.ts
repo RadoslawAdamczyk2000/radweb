@@ -89,4 +89,18 @@ export const BlogWrapper = styled.div`
         grid-template-columns:repeat(2,1fr);
         padding:.85rem .25rem;
     }
+    @media only screen {
+        @media (max-width:1140px){
+            width:90%;
+        }
+        @media (max-width:680px){
+            width:99%;
+        }
+        @media (max-width:650px){
+            width:99%;
+            & > ul{
+                grid-template-columns:repeat(1,1fr);
+            }
+        }
+    }
 `

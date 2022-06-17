@@ -45,6 +45,7 @@ export const BlogCardWrapper = styled.li`
                 & > h3{
                     font-size:3rem;
                     font-weight:500;
+                    padding:.7rem 0;
                     text-align:center;
                 }
             }
@@ -107,4 +108,56 @@ export const BlogCardWrapper = styled.li`
             background-image:linear-gradient(to top left,${({theme}) => theme.colors.primary},${({theme}) => theme.colors.tertiary});
         }
     }
+
+    @media only screen {
+        @media (max-width:980px){
+            width:40rem;
+        }
+        @media (max-width:860px){
+            width:35rem;
+            & > a{
+                & > figcaption{
+                    & > .title{
+                        & > h3{
+                            font-size:2.5rem;
+                        }
+                    }
+                    & > .info{
+                        grid-template-columns:1.5fr 2fr;
+                    }
+                }
+            }
+        }
+        @media (max-width:740px){
+            width:30rem;
+        }
+        @media (max-width:680px){
+            width:95%;
+        }
+        @media (max-width:650px){
+            width:60%;
+        }
+        @media (max-width:560px){
+            width:80%;
+        }
+        @media (max-width:380px){
+            width:85%;
+            & > a{
+                & > figcaption{
+                    & > .title{
+                        & > h3{
+                            font-size:2.5rem;
+                        }
+                    }
+                    & > .info{
+                        
+                        display:flex;
+                        flex-flow:column-reverse;
+                    }
+                }
+            }
+        }
+    }
+
+
 `
