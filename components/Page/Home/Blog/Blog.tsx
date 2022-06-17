@@ -1,9 +1,10 @@
 import Link from "next/link";
 import BlogCard from "../../../All/BlogCard/BlogCard";
 import { IntBlog } from "./interface";
+import { BlogWrapper } from "./styles";
 const Blog = ({button,content,path,title}:IntBlog) => {
     return(
-        <div>
+        <BlogWrapper>
             <section>
                 <h2>{title}</h2>
                 <p dangerouslySetInnerHTML={{__html:content}}/>
@@ -11,6 +12,10 @@ const Blog = ({button,content,path,title}:IntBlog) => {
                     <Link href={path}>
                         <a>
                             {button}
+                            <span/>
+                            <span/>
+                            <span/>
+                            <span/>
                         </a>
                     </Link>
                 </div>
@@ -49,7 +54,7 @@ const Blog = ({button,content,path,title}:IntBlog) => {
                     title="Co to jest SEO?"
                 />
             </ul>
-        </div>
+        </BlogWrapper>
     )
 }
 export default Blog;

@@ -3,12 +3,10 @@ export const BlogCardWrapper = styled.li`
     align-items:center;
     display:flex;
     justify-content:center;
-    margin:2rem auto;
     max-width:95%;
     position:relative;
     width:45rem;
     &::before{
-        border-radius:1.5rem;
         background-image:linear-gradient(to top left,${({theme}) => theme.colors.primary},${({theme}) => theme.colors.secondary});
         height:101%;
         left:50%;
@@ -20,7 +18,6 @@ export const BlogCardWrapper = styled.li`
     }
     & > a {
         background-color:${({theme}) => theme.colors.background};
-        border-radius:1.5rem;
         height:100%;
         position:relative;
         padding:.3rem;
@@ -37,7 +34,6 @@ export const BlogCardWrapper = styled.li`
         }
         & > figure{
             aspect-ratio:3/3.1;
-            border-radius:1.5rem;
             overflow:hidden;
             position:relative;
         }
