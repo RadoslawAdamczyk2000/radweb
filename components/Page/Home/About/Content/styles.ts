@@ -72,7 +72,6 @@ export const ContentWrapper = styled.div`
             }
         }
     }
-
     @media only screen {
         @media (min-width:1450px){
             & > section {

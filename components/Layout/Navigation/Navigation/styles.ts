@@ -29,6 +29,9 @@ export const NavigationWrapper = styled.nav<intNavigation>`
 
 
     @media only screen{
+        @media (min-width:1450px){
+            height:5.75rem;
+        }
         @media (max-width:840px){
             background-color:${({theme}) => theme.colors.background};
             grid-template-areas:

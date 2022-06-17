@@ -7,6 +7,7 @@ export const AboutWrapper = styled.div`
     @media only screen {
         @media (min-width:1450px){
             grid-template-columns:2fr 2.5fr;
+            margin:2rem auto 4rem;
         }
     }
 `

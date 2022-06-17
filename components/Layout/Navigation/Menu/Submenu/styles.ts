@@ -17,6 +17,11 @@ export const SubmenuWrapper = styled.li`
         row-gap:.55rem;
         width:18rem;
         @media only screen {
+            @media (min-width:1450px){
+                border-radius:0 .95rem .95rem .95rem;
+                padding:.65rem .15rem .65rem 1.2rem;
+                width:24rem;
+            }
             @media (max-width:680px){
                 padding:.65rem 1.25rem;
                 position:relative;

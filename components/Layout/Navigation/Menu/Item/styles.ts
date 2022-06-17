@@ -11,6 +11,11 @@ const Button = styled.li`
 `
 export const Main = styled(Button)`
     height:3rem;
+    @media only screen {
+        @media (min-width:1450px){
+            height:3.7rem;
+        }
+    }
     & > a {
         color:${({theme}) => theme.colors.color};
         font-size:1.75rem;
@@ -20,6 +25,10 @@ export const Main = styled(Button)`
         position:relative;
         transition:.12s linear color;
         @media only screen {
+            @media (min-width:1450px){
+                font-size:2rem;
+                padding:0 .65rem;
+            }
             @media (max-width:920px){
                 font-size:1.6rem;
                 padding:0 .25rem;
@@ -58,6 +67,11 @@ export const Expand = styled(Main)`
             color:${({theme}) => theme.colors.primary};
             transform:scale(.95);
         }
+        @media (min-width:1450px){
+            height:3.7rem;
+            font-size:3.2rem;
+            width:3.7rem;
+        }
     }
 `
 export const Submenu = styled(Button)`
@@ -83,7 +97,11 @@ export const Submenu = styled(Button)`
             &::before{
                 width:100%;
             }
-
+        }
+        @media only screen {
+            @media (min-width:1450px){
+                font-size:2rem;
+            }
         }
     }
 `
