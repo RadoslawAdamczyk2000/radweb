@@ -98,6 +98,22 @@ export const BlogWrapper = styled.div`
         }
         @media (max-width:650px){
             width:99%;
+            & > section{
+                & > h2{
+                    font-size:4.5rem;
+                }
+                & > p {
+                    font-size:1.65rem;
+                    line-height:1.7;
+                }
+                & > div{
+                    & > a {
+                        font-size:2.2rem;
+                        min-height:2.5rem;
+                        padding:.55rem 1.15rem;
+                    }
+                }
+            }
             & > ul{
                 grid-template-columns:repeat(1,1fr);
             }
