@@ -1,10 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { IntProjectCard } from "./interface";
+import { ProjectCardWrapper } from "./styles";
 
 const ProjectCard = ({image,path,stack,title}:IntProjectCard) => {
     return(
-        <li>
+        <ProjectCardWrapper>
             <Link href={path}>
                 <a>
                     <div>
@@ -32,7 +33,7 @@ const ProjectCard = ({image,path,stack,title}:IntProjectCard) => {
                     </div>
                 </a>
             </Link>
-        </li>
+        </ProjectCardWrapper>
     )
 }
 export default ProjectCard;
