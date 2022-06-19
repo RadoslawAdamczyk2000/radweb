@@ -90,6 +90,16 @@ export const BlogWrapper = styled.div`
         padding:.85rem .25rem;
     }
     @media only screen {
+        @media (min-width:1450px){
+            width:90%;
+            & > section{
+                width:70%;
+            }
+            & > ul{
+                grid-template-columns:repeat(3,1fr);
+                grid-row-gap:2.5rem;
+            }
+        }
         @media (max-width:1140px){
             width:90%;
         }
