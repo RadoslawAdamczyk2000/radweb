@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import About from "../components/Page/Home/About/About/About";
 import Blog from "../components/Page/Home/Blog/Blog";
 import Hero from "../components/Page/Home/Hero/Hero/Hero";
+import Offers from "../components/Page/Home/Offers/Offers/Offers";
 import Projects from "../components/Page/Home/Projects/Projects/Projects";
 import { home } from "../content/home";
 import { isLocaleAccepted } from "../lib/functions/isLocaleAccepted";
@@ -32,6 +33,14 @@ const Page:NextPage = () => {
             locale="pl"
             path="#"
             title="Projekty"
+          />
+          <Offers
+            button="Wszystkie"
+            card="więcej"
+            content="Istnieje wiele sposobów nawiązania ze mną efektywnej współpracy. Co oferuję? Znajdziesz u mnie głównie możliwość napisania strony internetowej typu blog, czy też portfolio. Ponadto istnieje opcja nawiązania komercyjnej współpracy przy pozycjonowaniu oraz optymalizacji, czyli wprowadzaniu zmian na istniejących już stronach."
+            locale="pl"
+            path="#"
+            title="Oferty"
           />
           <About
             button={locale && isLocaleAccepted(locale) ? home[locale].about.button : ''}
