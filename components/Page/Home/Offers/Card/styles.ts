@@ -12,7 +12,7 @@ export const CardWrapper = styled.li`
         width:100%;
     }
     & > h3{
-        color:${({theme}) => theme.colors.secondary};
+        color:${({theme}) => theme.colors.tertiary};
         font-size:3rem;
         word-wrap:break-word;
         font-weight:500;
@@ -26,7 +26,7 @@ export const CardWrapper = styled.li`
         padding:.85rem .75rem;
         & > a{
             align-items:center;
-            color:${({theme}) => theme.colors.secondary};
+            color:${({theme}) => theme.colors.tertiary};
             display:flex;
             font-size:2.1rem;
             font-weight:700;
@@ -34,7 +34,7 @@ export const CardWrapper = styled.li`
             position:relative;
             z-index:0;
             &::before{
-                background-color:${({theme}) => theme.colors.secondary};
+                background-color:${({theme}) => theme.colors.tertiary};
                 border-radius:.85rem;
                 bottom:0;
                 height:.15rem;

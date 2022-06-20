@@ -17,12 +17,6 @@ export const BlogWrapper = styled.div`
         row-gap:2rem;
         padding:1rem 0;
         text-align:center;
-        & > h2{
-            color:${({theme}) => theme.colors.primary};
-            font-size:5.85rem;
-            font-weight:500;
-            width:100%;
-        }
         & > p {
             color:${({theme}) => theme.colors.color};
             font-size:1.8rem;
@@ -58,9 +52,6 @@ export const BlogWrapper = styled.div`
         @media (max-width:650px){
             width:99%;
             & > section{
-                & > h2{
-                    font-size:4.5rem;
-                }
                 & > p {
                     font-size:1.65rem;
                     line-height:1.7;

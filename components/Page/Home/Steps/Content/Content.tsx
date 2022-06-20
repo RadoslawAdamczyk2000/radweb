@@ -1,9 +1,13 @@
+import { Title } from "../../../../All/Title/Page/Page";
 import { IntContent } from "./interface";
 import { ContentWrapper } from "./styles";
 const Content = ({content,title}:IntContent) => {
     return(
         <ContentWrapper>
-            <h2>{title}</h2>
+             <Title
+                isPrimary={true}
+                title={title}
+            />
             <p dangerouslySetInnerHTML={{__html:content}} />
         </ContentWrapper>
     )

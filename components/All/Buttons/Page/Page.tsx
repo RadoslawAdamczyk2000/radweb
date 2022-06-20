@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { IntButton } from "./interface"
-import { Primary } from "./styles"
+import { Primary, Secondary } from "./styles"
 
 export const PrimaryButton = ({button,path}:IntButton) => {
     return(
@@ -18,13 +18,25 @@ export const PrimaryButton = ({button,path}:IntButton) => {
     )
 }
 
-export const SecondaryButton = () => {
+export const SecondaryButton = ({button,path}:IntButton) => {
     return(
-        
+        <Secondary>
+            <Link href={path}>
+                <a>
+                    {button}
+                </a>
+            </Link>
+        </Secondary>
     )
 }
-export const TertiaryButton = () => {
+export const TertiaryButton = ({button,path}:IntButton) => {
     return(
-
+        <div>
+            <Link href={path}>
+                <a>
+                    {button}
+                </a>
+            </Link>
+        </div>
     )
 }

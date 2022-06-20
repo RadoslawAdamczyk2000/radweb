@@ -1,24 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { IntContentWrapper } from './interface';
-const bar = keyframes`
-    0%{
-        height:.25rem;
-        width:0;
-    }
-    25%{
-        height:.25rem;
-        width:100%;
-    }
-    75%{
-        height:100%;
-        width:100%;
-    }
-    100%{
-        height:100%;
-        width:100%;
-    }
-`
-
 export const ContentWrapper = styled.div<IntContentWrapper>`
     background-attachment:fixed;
     background-blend-mode:overlay;
@@ -47,36 +28,6 @@ export const ContentWrapper = styled.div<IntContentWrapper>`
             font-weight:700;
             line-height:2;
         }
-        & > div {
-            & > a{
-                color:${({theme}) => theme.colors.background};
-                font-size:2.7rem;
-                font-weight:600;
-                padding:1rem 1.5rem;
-                position:relative;
-                text-align:center;
-                transition:.2s .2s linear color;
-                z-index:0;
-                &::before{
-                    background:${({theme}) => theme.colors.background};
-                    bottom:0;
-                    height:.25rem;
-                    width:0;
-                    left:0;
-                    z-index:-1;
-                }
-                &:focus,
-                &:hover{
-                    color:${({theme}) => theme.colors.tertiary};
-                    transition:.2s linear color;
-                    &::before{
-                        animation:${bar} 1.15s linear 1;
-                        height:100%;
-                        width:100%;
-                    }
-                }
-            }
-        }
     }
     @media only screen {
         @media (max-width:730px){
@@ -97,12 +48,6 @@ export const ContentWrapper = styled.div<IntContentWrapper>`
             & > section{
                 & > h2{
                     font-size:3rem;
-                }
-                & > div {
-                    & > a{
-                        font-size:2.1rem;
-                        padding:.75rem 1rem;
-                    }
                 }
             }
         }
