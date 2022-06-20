@@ -9,6 +9,8 @@ export const Wrapper = styled.div`
         font-style:normal;
         row-gap:1rem;
         font-weight:700;
+        word-break:break-word;
+        word-wrap:break-word;
         & > a{
             transition:.2s linear color;
             &:focus,
