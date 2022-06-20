@@ -5,6 +5,7 @@ import Blog from "../components/Page/Home/Blog/Blog";
 import Hero from "../components/Page/Home/Hero/Hero/Hero";
 import Offers from "../components/Page/Home/Offers/Offers/Offers";
 import Projects from "../components/Page/Home/Projects/Projects/Projects";
+import Steps from "../components/Page/Home/Steps/Steps/Steps";
 import { home } from "../content/home";
 import { isLocaleAccepted } from "../lib/functions/isLocaleAccepted";
 import Layout from "../schemas/Layout";
@@ -41,6 +42,11 @@ const Page:NextPage = () => {
             locale="pl"
             path="#"
             title="Oferty"
+          />
+          <Steps
+            content="Proces tworzenia stron internetowych przeze mnie jest kompletny, gdzie najważniejszy nacisk nakładam na klienta, użytkownika strony oraz wyszukiwarkę.Jeśli chcesz abym zrealizował dla Ciebie stronę internetową, to warto wiedzieć jak wygląda ten proces. "
+            locale="pl"
+            title="Proces realizacji zamówień"
           />
           <About
             button={locale && isLocaleAccepted(locale) ? home[locale].about.button : ''}
