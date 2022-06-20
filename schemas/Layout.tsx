@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components"
+import Footer from "../components/Layout/Footer/Footer/Footer"
 import Lang from "../components/Layout/Lang/Lang/Lang"
 import Navigation from "../components/Layout/Navigation/Navigation/Navigation"
 import { LangProvider } from "../context/LangContext"
@@ -20,6 +21,7 @@ const Layout = ({children,isHome=false}:IntLayout) => {
                             {children}
                         </>
                         <Lang/>
+                        <Footer/>
                     </>
                 </LangProvider>
             </MenuProvider>
