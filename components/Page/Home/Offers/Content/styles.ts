@@ -12,6 +12,7 @@ export const ContentWrapper = styled.section`
         width:100%;
     }
     & > h2{
+        color:${({theme}) => theme.colors.primary};
         font-size:5rem;
         font-weight:500;
         padding:.25rem .45rem;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const OffersWrapper = styled.div`
     display:grid;
     grid-template-columns:4fr 1fr 3.5fr;
-    margin:2rem auto;
+    margin:4rem auto;
     width:95%;
     & > div{
         grid-column:1;
