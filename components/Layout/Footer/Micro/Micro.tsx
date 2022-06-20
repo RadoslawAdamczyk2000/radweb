@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { footer } from "../../../../data/footer"
+import { Wrapper } from "./styles";
 const Micro = () => {
     const {author,mail,phone,place,url} = footer.micro;
     return(
-        <div>
+        <Wrapper>
             <address>
                 <h3 className='url'>{url}</h3>
                 <h3 className='author'>{author}</h3>
@@ -19,7 +20,7 @@ const Micro = () => {
                     </a>
                 </Link>
             </address>
-        </div>
+        </Wrapper>
     )
 }
 export default Micro;
