@@ -1,14 +1,15 @@
 import Link from "next/link"
 import { IntItem } from "./interface";
+import { Wrapper } from "./styles";
 const Item = ({path,title}:IntItem) => {
     return(
-        <li>
+        <Wrapper>
             <Link href={path}>
                 <a>
                     {title}
                 </a>
             </Link>
-        </li>
+        </Wrapper>
     )
 }
 export default Item;

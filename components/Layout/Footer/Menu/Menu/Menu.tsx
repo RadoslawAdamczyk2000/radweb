@@ -2,11 +2,12 @@ import { useRouter } from 'next/router';
 import {menu} from '../../../../../data/menu';
 import { isLocaleAccepted } from '../../../../../lib/functions/isLocaleAccepted';
 import Item from '../Item/Item';
+import { Wrapper } from './styles';
 const Menu = () => {
     console.log(menu.pl)
     const {locale} = useRouter();
     return(
-        <menu>
+        <Wrapper>
             {locale && isLocaleAccepted(locale) && menu[locale].map(({path,submenu,title},key) =>
                 <>
                     {
@@ -27,7 +28,7 @@ const Menu = () => {
                     
                 </>
             )}
-        </menu>
+        </Wrapper>
     )
 }
 export default Menu;
