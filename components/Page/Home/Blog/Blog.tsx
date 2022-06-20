@@ -1,5 +1,6 @@
 import BlogCard from "../../../All/BlogCard/BlogCard";
 import { PrimaryButton } from "../../../All/Buttons/Page/Page";
+import { ContentHome } from "../../../All/Content/Page/Page";
 import { Title } from "../../../All/Title/Page/Page";
 import { IntBlog } from "./interface";
 import { BlogWrapper } from "./styles";
@@ -11,7 +12,11 @@ const Blog = ({button,content,path,title}:IntBlog) => {
                     isPrimary={true}
                     title={title}
                 />
-                <p dangerouslySetInnerHTML={{__html:content}}/>
+                <ContentHome
+                    isCenter={true}
+                    isPrimary={true}
+                    content={content}
+                />
                 <PrimaryButton
                     button={button}
                     path={path}

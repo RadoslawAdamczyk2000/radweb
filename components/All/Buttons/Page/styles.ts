@@ -89,13 +89,18 @@ export const Primary = styled.div`
 `
 export const Secondary = styled.div`
     & > a{
+        align-items:center;
         color:${({theme}) => theme.colors.background};
+        display:flex;
+        justify-content:center;
         font-size:2.7rem;
         font-weight:600;
-        padding:1rem 1.5rem;
+        line-height:1.7;
+        padding:.25rem 1.5rem;
         position:relative;
         text-align:center;
         transition:.2s .2s linear color;
+        word-wrap:break-word;
         z-index:0;
         &::before{
             background:${({theme}) => theme.colors.background};
@@ -119,8 +124,8 @@ export const Secondary = styled.div`
     @media only screen {
         @media (max-width:400px){
             & > a{
-                font-size:2.1rem;
-                padding:.75rem 1rem;
+                font-size:1.8rem;
+                padding:.75rem 1.5rem;
             }
         }
     }

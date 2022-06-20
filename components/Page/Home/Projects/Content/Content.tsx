@@ -1,4 +1,5 @@
 import { SecondaryButton } from "../../../../All/Buttons/Page/Page";
+import { ContentHome } from "../../../../All/Content/Page/Page";
 import { Title } from "../../../../All/Title/Page/Page";
 import { IntContent } from "./interface";
 import { ContentWrapper } from "./styles";
@@ -10,7 +11,10 @@ const Content = ({button,content,image,path,title}:IntContent) => {
                     isSecondary={true}
                     title={title}
                 />
-                <p dangerouslySetInnerHTML={{__html:content}}/>
+                <ContentHome
+                    content={content}
+                    isTertiary
+                />
                 <SecondaryButton
                     button={button}
                     path={path}

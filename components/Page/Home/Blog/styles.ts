@@ -16,13 +16,6 @@ export const BlogWrapper = styled.div`
         justify-content:center;
         row-gap:2rem;
         padding:1rem 0;
-        text-align:center;
-        & > p {
-            color:${({theme}) => theme.colors.color};
-            font-size:1.8rem;
-            line-height:2.1;
-            padding:.25rem;
-        }
     }
     & > ul{
         align-content:center;
@@ -51,12 +44,6 @@ export const BlogWrapper = styled.div`
         }
         @media (max-width:650px){
             width:99%;
-            & > section{
-                & > p {
-                    font-size:1.65rem;
-                    line-height:1.7;
-                }
-            }
             & > ul{
                 grid-template-columns:repeat(1,1fr);
             }

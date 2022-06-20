@@ -4,15 +4,9 @@ export const ContentWrapper = styled.section`
         display:flex;
         flex-flow:column;
         justify-content:center;
-        margin:1rem auto;
+        margin:1rem auto .5rem;
         row-gap:2rem;
         padding:1rem 0;
         text-align:center;
-        width:85%;
-        & > p {
-            color:${({theme}) => theme.colors.color};
-            font-size:1.8rem;
-            line-height:2.1;
-            padding:.25rem;
-        }
+        width:65%;
 `

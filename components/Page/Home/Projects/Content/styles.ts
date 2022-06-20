@@ -20,28 +20,11 @@ export const ContentWrapper = styled.div<IntContentWrapper>`
         grid-column:1;
         justify-content:flex-start;
         row-gap:2rem;
-        & > h2{
-            font-size:5rem;
-        }
-        & > p {
-            font-size:2.2rem;
-            font-weight:700;
-            line-height:2;
-        }
     }
     @media only screen {
         @media (max-width:730px){
             & > section{
                 grid-column:1/-1;
-            }
-        }
-        @media (max-width:550px){
-            & > section{
-                & > p {
-                    font-size:1.7rem;
-                    font-weight:600;
-                    line-height:2;
-                }
             }
         }
         @media (max-width:400px){
