@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 export const CardWrapper = styled.li`
     align-items:center;
-    background-color:${({theme}) => theme.colors.tertiary};
-    background-image:linear-gradient(to bottom right,${({theme}) => theme.colors.color},${({theme}) => theme.colors.color},${({theme}) => theme.colors.tertiary});
-    color:${({theme}) => theme.colors.background};
+    border:.15rem solid ${({theme}) => theme.colors.tertiary};
+    color:${({theme}) => theme.colors.color};
     display:flex;
     flex-flow:column;
     justify-content:center;
@@ -12,15 +11,15 @@ export const CardWrapper = styled.li`
     row-gap:1.5rem;
     width:38rem;
     & > div{
-        background-color:${({theme}) => theme.colors.color};
+        background-color:${({theme}) => theme.colors.tertiary};
         border-radius:50%;
-        border:3px solid ${({theme}) => theme.colors.background};
         height:7rem;
         width:7rem;
         align-items:center;
         display:flex;
         justify-content:center;
         & > p{
+            color:${({theme}) => theme.colors.background};
             font-size:3rem;
             line-height:7rem;
             font-weight:900;
@@ -34,6 +33,7 @@ export const CardWrapper = styled.li`
         text-align:center;
         width:100%;
         & > h3{
+            color:${({theme}) => theme.colors.tertiary};
             font-size:3rem;
             font-weight:500;
         }

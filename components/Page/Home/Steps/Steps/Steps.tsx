@@ -1,14 +1,15 @@
 import Card from "../Card/Card"
 import Content from "../Content/Content"
 import {IntSteps} from "./interface"
+import { Cards, Wrapper } from "./styles"
 const Steps = ({content,locale,title}:IntSteps) => {
     return(
-        <div>
+        <Wrapper>
             <Content
                 content={content}
                 title={title}
             />
-            <ul>
+            <Cards>
                 <Card
                     content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
                     number={0}
@@ -69,8 +70,8 @@ const Steps = ({content,locale,title}:IntSteps) => {
                     number={9}
                     title='Kontakt z klientem'
                 />
-            </ul>
-        </div>
+            </Cards>
+        </Wrapper>
     )
 }
 export default Steps;
