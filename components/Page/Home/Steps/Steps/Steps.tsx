@@ -1,8 +1,12 @@
+import { useRouter } from "next/router"
+import { home } from "../../../../../content/home"
+import { isLocaleAccepted } from "../../../../../lib/functions/isLocaleAccepted"
 import Card from "../Card/Card"
 import Content from "../Content/Content"
 import {IntSteps} from "./interface"
 import { Cards, Wrapper } from "./styles"
-const Steps = ({content,locale,title}:IntSteps) => {
+const Steps = ({content,locale:locales,title}:IntSteps) => {
+    const {locale} = useRouter();
     return(
         <Wrapper>
             <Content
@@ -10,66 +14,18 @@ const Steps = ({content,locale,title}:IntSteps) => {
                 title={title}
             />
             <Cards>
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={9}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={9}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={0}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={9}
-                    title='Kontakt z klientem'
-                />
-                <Card
-                    content='Rozmowa z klientem na temat tego, jaką ma wizję na stronę, wraz z preferowanymi funkcjonalnościami oraz paletą barw.'
-                    number={9}
-                    title='Kontakt z klientem'
-                />
+                {   locale && isLocaleAccepted(locale) ?
+                    home[locale].steps.cards.map(({content,title},key) =>
+                        <>
+                            <Card
+                                content={content}
+                                key={key}
+                                number={key}
+                                title={title}
+                            />
+                        </>    
+                    ) : ''
+                }
             </Cards>
         </Wrapper>
     )

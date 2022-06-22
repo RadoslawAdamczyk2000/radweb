@@ -1,9 +1,13 @@
+import { useRouter } from "next/router";
+import { home } from "../../../../../content/home";
+import { isLocaleAccepted } from "../../../../../lib/functions/isLocaleAccepted";
 import Card from "../Card/Card";
 import Content from "../Content/Content";
 import { IntOffers } from "./interface";
 import { OffersWrapper } from "./styles";
 
-const Offers = ({button,card,content,locale,path,title}:IntOffers) => {
+const Offers = ({button,card,content,locale:locales,path,title}:IntOffers) => {
+    const {locale}  = useRouter();
     return(
         <OffersWrapper>
             <div>
@@ -15,36 +19,15 @@ const Offers = ({button,card,content,locale,path,title}:IntOffers) => {
                 />
             </div>
             <ul>
-                <Card
-                    button={card}
-                    content="Strona internetowa jest idealnym pomysłem na rozszerzenie swojej działalności na internet, z którego można pozyskać nowych klientów. Dlatego postaw na niepowtarzalne i responsywne strony internetowe."
-                    path="#"
-                    title="Tworzenie stron internetowych"
-                />
-                <Card
-                    button={card}
-                    content="Strona internetowa jest idealnym pomysłem na rozszerzenie swojej działalności na internet, z którego można pozyskać nowych klientów. Dlatego postaw na niepowtarzalne i responsywne strony internetowe."
-                    path="#"
-                    title="Tworzenie stron internetowych"
-                />
-                <Card
-                    button={card}
-                    content="Strona internetowa jest idealnym pomysłem na rozszerzenie swojej działalności na internet, z którego można pozyskać nowych klientów. Dlatego postaw na niepowtarzalne i responsywne strony internetowe."
-                    path="#"
-                    title="Tworzenie stron internetowych"
-                />
-                <Card
-                    button={card}
-                    content="Strona internetowa jest idealnym pomysłem na rozszerzenie swojej działalności na internet, z którego można pozyskać nowych klientów. Dlatego postaw na niepowtarzalne i responsywne strony internetowe."
-                    path="#"
-                    title="Tworzenie stron internetowych"
-                />
-                <Card
-                    button={card}
-                    content="Strona internetowa jest idealnym pomysłem na rozszerzenie swojej działalności na internet, z którego można pozyskać nowych klientów. Dlatego postaw na niepowtarzalne i responsywne strony internetowe."
-                    path="#"
-                    title="Tworzenie stron internetowych"
-                />
+                {locale && isLocaleAccepted(locale) ? home[locale].offers.cards.map(({content,path,title},key) =>
+                        <Card
+                        button={card}
+                        content={content}
+                        key={key}
+                        path={path}
+                        title={title}
+                    />
+                ) : ''}
             </ul>
         </OffersWrapper>
     )

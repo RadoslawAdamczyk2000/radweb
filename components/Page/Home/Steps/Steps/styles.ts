@@ -3,7 +3,7 @@ export const Wrapper = styled.div`
     margin:8rem auto;
 `
 export const Cards = styled.ul`
-    align-items:flex-start;
+    align-items:stretch;
     display:flex;
     flex-flow:row wrap;
     justify-content:center;
