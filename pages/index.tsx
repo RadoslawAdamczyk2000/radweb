@@ -22,31 +22,31 @@ const Page:NextPage = () => {
         />
         <main>
           <Blog
-            button="Wszystkie artykuły"
-            content="Strony internetowe i historia - dwie dziedziny, które są moimi największymi pasjami. Przeszłość i przyszłość. Znajdziesz u mnie tematy związane ze stronami internetowymi, ich tworzeniem oraz pozycjonowaniem jak i zagdanienia historyczne, poczynając od historii lokalnej a kończąc na historii globalnej."
-            path=""
-            title="Blog"
+            button={locale && isLocaleAccepted(locale) ? home[locale].blog.button : ''}
+            content={locale && isLocaleAccepted(locale) ? home[locale].blog.content : ''}
+            path={locale && isLocaleAccepted(locale) ? home[locale].blog.path : ''}
+            title={locale && isLocaleAccepted(locale) ? home[locale].blog.title : ''}
           />
           <Projects
-            button="Poznaj wszystkie"
-            content="Tworzeniem stron oraz aplikacji internetowych zajmuję się już od 2016 roku. Natomiast na poziom komercyjny wkroczyłem na przełomie 2020/2021 roku, kiedy to zacząłem zbierać pierwsze zamówienia. Dlaczego projekty są tak istotne? Niezależnie od tego, czy to realizacja prywatna lub komercyjna, to projekty prezentują rozwój developera."
+            button={locale && isLocaleAccepted(locale) ? home[locale].projects.button : ''}
+            content={locale && isLocaleAccepted(locale) ? home[locale].projects.content : ''}
             image="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            locale="pl"
-            path="#"
-            title="Projekty"
+            locale={locale && isLocaleAccepted(locale) ? locale : 'pl'}
+            path={locale && isLocaleAccepted(locale) ? home[locale].projects.path : ''}
+            title={locale && isLocaleAccepted(locale) ? home[locale].projects.title : ''}
           />
           <Offers
-            button="Wszystkie"
-            card="więcej"
-            content="Istnieje wiele sposobów nawiązania ze mną efektywnej współpracy. Co oferuję? Znajdziesz u mnie głównie możliwość napisania strony internetowej typu blog, czy też portfolio. Ponadto istnieje opcja nawiązania komercyjnej współpracy przy pozycjonowaniu oraz optymalizacji, czyli wprowadzaniu zmian na istniejących już stronach."
-            locale="pl"
-            path="#"
-            title="Oferty"
+            button={locale && isLocaleAccepted(locale) ? home[locale].offers.button : ''}
+            card={locale && isLocaleAccepted(locale) ? home[locale].offers.card : ''}
+            content={locale && isLocaleAccepted(locale) ? home[locale].offers.content : ''}
+            locale={locale && isLocaleAccepted(locale) ? locale : 'pl'}
+            path={locale && isLocaleAccepted(locale) ? home[locale].offers.path : ''}
+            title={locale && isLocaleAccepted(locale) ? home[locale].offers.title : ''}
           />
           <Steps
-            content="Proces tworzenia stron internetowych przeze mnie jest kompletny, gdzie najważniejszy nacisk nakładam na klienta, użytkownika strony oraz wyszukiwarkę.Jeśli chcesz abym zrealizował dla Ciebie stronę internetową, to warto wiedzieć jak wygląda ten proces. "
-            locale="pl"
-            title="Proces realizacji zamówień"
+            content={locale && isLocaleAccepted(locale) ? home[locale].steps.content : ''}
+            locale={locale && isLocaleAccepted(locale) ? locale : 'pl'}
+            title={locale && isLocaleAccepted(locale) ? home[locale].steps.title : ''}
           />
           <About
             button={locale && isLocaleAccepted(locale) ? home[locale].about.button : ''}

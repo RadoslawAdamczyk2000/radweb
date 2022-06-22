@@ -137,23 +137,23 @@ export const menu:IntMenu = {
         {
             isExpand:true,
             title:'Blog',
-            path:'/blog',
+            path:'/blogue',
             submenu:[
                 {
                     title:'Programação',
-                    path:'/blog/programacao',
+                    path:'/blogue/programacao',
                 },
                 {
                     title:'SEO',
-                    path:'/blog/seo',
+                    path:'/blogue/seo',
                 },
                 {
                     title:'História',
-                    path:'/blog/historia',
+                    path:'/blogue/historia',
                 },
                 {
                     title:'O restante',
-                    path:'/blog',
+                    path:'/blogue',
                 },
             ],
         },
