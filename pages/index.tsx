@@ -12,52 +12,56 @@ import Layout from "../schemas/Layout";
 const Page:NextPage = () => {
   const {locale} = useRouter();
   return(
-    <Layout
-      isHome={true}
-    >
-      <>
+  <Layout
+    isHome={true}
+  >
+    <>
+      {
+      locale && isLocaleAccepted(locale) ?  <>
         <Hero
           movie="/assets/movies/corridor.mp4"
-          title={locale && isLocaleAccepted(locale) ? home[locale].hero : ''}
+          title={home[locale].hero}
         />
         <main>
           <Blog
-            button={locale && isLocaleAccepted(locale) ? home[locale].blog.button : ''}
-            content={locale && isLocaleAccepted(locale) ? home[locale].blog.content : ''}
-            path={locale && isLocaleAccepted(locale) ? home[locale].blog.path : ''}
-            title={locale && isLocaleAccepted(locale) ? home[locale].blog.title : ''}
+            button={home[locale].blog.button}
+            content={home[locale].blog.content}
+            path={home[locale].blog.path}
+            title={home[locale].blog.title}
           />
           <Projects
-            button={locale && isLocaleAccepted(locale) ? home[locale].projects.button : ''}
-            content={locale && isLocaleAccepted(locale) ? home[locale].projects.content : ''}
+            button={home[locale].projects.button}
+            content={home[locale].projects.content}
             image="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            locale={locale && isLocaleAccepted(locale) ? locale : 'pl'}
-            path={locale && isLocaleAccepted(locale) ? home[locale].projects.path : ''}
-            title={locale && isLocaleAccepted(locale) ? home[locale].projects.title : ''}
+            locale={locale}
+            path={home[locale].projects.path}
+            title={home[locale].projects.title}
           />
           <Offers
-            button={locale && isLocaleAccepted(locale) ? home[locale].offers.button : ''}
-            card={locale && isLocaleAccepted(locale) ? home[locale].offers.card : ''}
-            content={locale && isLocaleAccepted(locale) ? home[locale].offers.content : ''}
-            locale={locale && isLocaleAccepted(locale) ? locale : 'pl'}
-            path={locale && isLocaleAccepted(locale) ? home[locale].offers.path : ''}
-            title={locale && isLocaleAccepted(locale) ? home[locale].offers.title : ''}
+            button={home[locale].offers.button}
+            card={home[locale].offers.card}
+            content={home[locale].offers.content}
+            locale={locale}
+            path={home[locale].offers.path}
+            title={home[locale].offers.title}
           />
           <Steps
-            content={locale && isLocaleAccepted(locale) ? home[locale].steps.content : ''}
-            locale={locale && isLocaleAccepted(locale) ? locale : 'pl'}
-            title={locale && isLocaleAccepted(locale) ? home[locale].steps.title : ''}
+            content={home[locale].steps.content}
+            locale={locale}
+            title={home[locale].steps.title}
           />
           <About
-            button={locale && isLocaleAccepted(locale) ? home[locale].about.button : ''}
-            content={locale && isLocaleAccepted(locale) ? home[locale].about.content : ''}
+            button={home[locale].about.button}
+            content={home[locale].about.content}
             image="/assets/images/tower.webp"
-            path={locale && isLocaleAccepted(locale) ? home[locale].about.path : ''}
-            title={locale && isLocaleAccepted(locale) ? home[locale].about.title : ''}
-          />
+            path={home[locale].about.path}
+            title={home[locale].about.title}
+          />  
         </main>
-      </>
-    </Layout>
+      </> : ''
+      }
+    </>
+  </Layout>
   )
 }
 export default Page;
