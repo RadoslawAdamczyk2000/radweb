@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
+import Seo from "../components/Layout/Seo/Seo";
 import About from "../components/Page/Home/About/About/About";
 import Blog from "../components/Page/Home/Blog/Blog";
 import Hero from "../components/Page/Home/Hero/Hero/Hero";
@@ -18,6 +19,11 @@ const Page:NextPage = () => {
     <>
       {
       locale && isLocaleAccepted(locale) ?  <>
+        <Seo
+          description={home[locale].seo.description}
+          image='/assets/images/wall.jpg'
+          title={home[locale].seo.title}
+        />
         <Hero
           movie="/assets/movies/corridor.mp4"
           title={home[locale].hero}
