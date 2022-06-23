@@ -13,6 +13,10 @@ const Page:NextPage = () => {
                     title="Kim jestem?"
                     tags={['programista','pozycjoner','historyk']}
                 />
+                <Content
+                    cn="excerpt"
+                    content="Nazywam się Radosław Adamczyk, znany w internecie jako RadWEB i urodziłem się 9 października 2000 roku. Już od najmłodszych lat interesuję się wszystkim co jest związane ze stronami internetowymi. W sposób świadomy rozpocząłem przygodę z tym światem w 2016 roku kiedy to napisałem swoją pierwszą prostą stronę internetową w Notatniku. Dziś mój wachalrz umiejętności znacznie się rozszerzyły czego dowodem są blog i projekty."
+                />
                 <AboutHomeWrapper>
                     <Content
                         cn="biography"

@@ -7,4 +7,16 @@ export const AboutHomeWrapper  = styled.main`
     justify-self:center;
     margin:2rem auto;
     width:90%;
+    @media only screen {
+        @media (max-width:930px){
+            align-items:center;
+            display:flex;
+            flex-flow:column;
+            justify-content:flex-start;
+            row-gap:1rem;
+            & > * {
+                width:100%;
+            }
+        }
+    }
 `
