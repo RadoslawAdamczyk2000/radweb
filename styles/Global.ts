@@ -31,6 +31,11 @@ export const Global = createGlobalStyle`
     button{
         cursor:pointer;
     }
+    iframe{
+        all:unset;
+        aspect-ratio:16/9;
+        width:100%;
+    }
     html{
         font-size:62.5%;
     }
