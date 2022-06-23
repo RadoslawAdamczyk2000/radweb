@@ -7,7 +7,7 @@ import Movies from "../../components/Page/About/Movies/Movies/Movies";
 import Seo from "../../components/Layout/Seo/Seo";
 import { about } from "../../content/about";
 const Page:NextPage = () => {
-    const {seo,hero,excerpt,biography,education,programming,passions} = about.pl.home;
+    const {seo,hero,excerpt,biography,education,programming,passions} = about.fr.home;
     return(
         <Layout>
             <>
